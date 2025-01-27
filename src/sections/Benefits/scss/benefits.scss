@@ -1,0 +1,96 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.benefits{
+    position: relative;
+    min-height: 851px;
+    padding-top: 70px;
+    @include respond(pc){
+        min-height: 780px;
+        padding: 140px;
+    }
+
+    &__background{
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    &__inner{
+        position: relative;
+        z-index: 1;
+        @include respond(pc){
+            display: flex;
+        }
+    }
+
+    &__cards{
+        position: relative;
+        width: 100%;
+        @include respond(pc) {
+            margin-left: auto;
+        }
+    }
+
+    &__title{
+        text-align: center;
+        margin-bottom: 36px;
+        @include respond(pc){
+            flex-shrink: 0;
+            text-align: left;
+            width: 400px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__card{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        z-index: 1;
+        transform: translate(-50%, 0);
+        transition: all .3s;
+
+        &:nth-child(2) {
+            z-index: 2;
+            transform: translate(-50%, 49px);
+        }
+        &:nth-child(3) {
+            z-index: 3;
+            transform: translate(-50%, 49px * 2);
+        }
+        &:nth-child(4) {
+            z-index: 4;
+            transform: translate(-50%, 49px * 3);
+        }
+        &:nth-child(5) {
+            z-index: 5;
+            transform: translate(-50%, 49px * 4);
+        }
+
+        @include respond(pc){
+            left: auto;
+            right: 0;
+            transform: translate(0);
+            &:nth-child(2) {
+                z-index: 2;
+                transform: translate(-49px, 49px);
+            }
+            &:nth-child(3) {
+                z-index: 3;
+                transform: translate(-49px * 2, 49px * 2);
+            }
+            &:nth-child(4) {
+                z-index: 4;
+                transform: translate(-49px * 3, 49px * 3);
+            }
+            &:nth-child(5) {
+                z-index: 5;
+                transform: translate(-49px * 4, 49px * 4);
+            }
+        }
+    }
+}

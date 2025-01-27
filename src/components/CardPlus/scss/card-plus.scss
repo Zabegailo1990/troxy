@@ -1,0 +1,26 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.card-plus{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 240px;
+    height: 165px;
+    padding: 16px 21px 12px 15px;
+    @include respond(tablet){
+        width: 340px;
+        height: 209px;
+    }
+    @include respond(pc){
+        width: 296px;
+    }
+
+    &__img{
+        width: 64px;
+        height: 64px;
+    }
+
+    &__text{
+        text-align: right;
+    }
+}

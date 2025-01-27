@@ -1,0 +1,16 @@
+.benefit-card{
+    width: 100%;
+    max-width: 713px;
+    min-height: 323px;
+    padding: 27px 22px;
+
+    &__title{
+        margin-bottom: 20px;
+    }
+    
+    &__text{
+        &:not(:last-child){
+            margin-bottom: 20px;
+        }
+    }
+}

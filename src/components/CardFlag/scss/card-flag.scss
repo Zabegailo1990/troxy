@@ -1,0 +1,14 @@
+.card-flag{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 12px;
+    width: 200px;
+    height: 147px;
+    
+    &__img{
+        width: 88px;
+        height: 64px;
+    }
+}

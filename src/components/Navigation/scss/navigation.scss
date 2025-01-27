@@ -1,0 +1,23 @@
+.navigation{
+    &__list{
+        display: flex;
+    }
+
+    &__item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:not(:last-child){
+            margin-right: 36px;
+        }
+    }
+
+    &__link{
+        font-size: 16px;
+    }
+
+    &--theme--dark{
+        
+    }
+    
+}

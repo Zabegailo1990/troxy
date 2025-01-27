@@ -1,0 +1,25 @@
+.statistic{
+    &__list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        &:not(:last-child){
+            border-right: 1px solid #fff;
+            padding-right: 24px;
+        }
+        &:not(:first-child){
+            padding-left: 24px;
+        }
+    }
+
+    &__text{
+        
+    }
+}

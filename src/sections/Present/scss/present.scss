@@ -1,0 +1,110 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.present{
+    position: relative;
+    min-height: 620px;
+    overflow: hidden;
+
+    &__background{
+        position: absolute;
+        inset: 0;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+    }
+
+    &__inner{
+        position: relative;
+        height: 100%;
+        z-index: 2;
+    }
+
+    &__promo{
+        margin-bottom: 50px;
+    }
+
+    &__header{
+        margin-bottom: 65px;
+        @include respond(tablet){
+            margin-bottom: 116px;
+        }
+    }
+
+    &__title{
+        text-align: center;
+        height: 140px;
+        margin-bottom: 28px;
+
+        @include respond(tablet){
+            height: 192px; 
+            margin-bottom: 34px;
+        }
+        @include respond(pc){
+            width: 1027px;
+            height: 128px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+    
+    &__text{
+        text-align: center;
+        margin-bottom: 28px;
+
+        @include respond(tablet){
+            margin-bottom: 34px;
+        }
+    }
+
+    &__row{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    &__rating{
+        display: none;
+        @include respond(tablet){
+            display: flex;
+            margin-bottom: 52px;
+        }
+    }
+
+    &__trustpilot{
+        &:not(:last-child){
+            margin-right: 25px;
+        }
+    }
+    
+    &__buttons{
+        @include respond(tablet){
+            margin-bottom: 91px;
+        }
+    }
+
+    &__button{
+        &:not(:last-child){
+            margin-right: 8px;
+        }
+    }
+
+    &__lock{
+        position: absolute;
+        bottom: -132px;
+        right: -127px;
+        z-index: 1;
+    }
+
+    &__statistic{
+        text-align: center;
+        display: none;
+        @include respond(tablet){
+            display: block;
+            margin-bottom: 205px;
+        }
+        @include respond(pc){
+            margin-bottom: 176px;
+        }
+    }
+}

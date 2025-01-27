@@ -1,0 +1,49 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.test{
+    position: relative;
+    padding: 52px 0;
+    @include respond(tablet){
+        padding: 85px 0;
+    }
+    @include respond(pc){
+        padding: 96px 0;
+    }
+
+    &__background{
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+    }
+
+    &__inner{
+        position: relative;
+        width: 260px;
+        z-index: 1;
+        @include respond(tablet){
+            width: 402px;
+        }
+        @include respond(tablet){
+            width: 500px;
+        }
+    }
+
+    &__title{
+        margin-bottom: 14px;
+        @include respond(tablet){
+            margin-bottom: 27px;
+        }
+    }
+
+    &__text{
+        margin-bottom: 14px;
+        @include respond(tablet){
+            margin-bottom: 27px;
+        }
+    }
+
+}

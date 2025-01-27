@@ -1,0 +1,22 @@
+<div class="present">
+    <img class="present__background" src="./images/present_section_bg.jpg" alt="">
+    <div class="present__inner">
+        @@include('../../components/Promo/index.html')
+        <div class="container">
+            @@include('../../components/Header/index.html', { class: "present__header" })
+            <div class="present__row present__rating">
+                <img class="present__trustpilot" src="./images/present_section_trustpilot.svg" alt="">
+                <img class="present__trustpilot" src="./images/present_section_trustpilot.svg" alt="">
+                <img class="present__trustpilot" src="./images/present_section_trustpilot.svg" alt="">
+            </div>
+            <h1 class="title title--type--main title--color--white title--weight--medium present__title">Effective proxies for business with a unique digital footprint from $0.058</h1>
+            <p class="text text--color--white present__text">Get a convenient and economical proxy service</p>
+            <div class="present__row present__buttons">
+                <button class="button button--color--white button--rounded button--bg--blue present__button">Choose tariff</button>
+                <button class="button button--color--dark button--rounded button--bg--white present__button">Sign up</button>
+            </div>
+            @@include('../../components/Statistic/index.html', { class: "present__statistic" })
+        </div>
+    </div>
+    <img class="present__lock" src="./images/present_section_lock.png" alt="">
+</div>

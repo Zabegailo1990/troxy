@@ -1,0 +1,46 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.proxyware{
+
+    &__title{
+        text-align: center;
+        margin-bottom: 36px;
+        @include respond(tablet) {
+            margin-bottom: 76px;
+        }
+    }
+
+    &__cards{
+        display: flex;
+        overflow: hidden;
+        column-gap: 10px;
+        //тех.долг
+        @include respond(tablet){
+            column-gap: 0;
+            row-gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            // overflow: auto;
+        }
+        @include respond(pc){
+            row-gap: 0;
+            flex-wrap: nowrap;
+            column-gap: 19px;
+        }
+    }
+
+    &__cell{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        @include respond(tablet){
+            flex-direction: row;
+            row-gap: 0;
+            column-gap: 19px;
+        }
+        @include respond(pc){
+            flex-direction: column;
+            row-gap: 22px;
+        }
+    }
+}

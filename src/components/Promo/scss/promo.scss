@@ -1,0 +1,24 @@
+@use '../../../assets/scss/variables' as *;
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.promo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 51px;
+    background: linear-gradient(to right, rgba(114, 172, 247, 1), rgba(205, 60, 198, 1));
+    padding: 0 20px;
+
+    &__button{
+        font-size: $button-fz-small;
+        margin-left: 18px;
+        padding: 9px 18px;
+        opacity: 80%;
+        display: none;
+
+        @include respond(tablet){
+            display: block;
+        }
+    }
+}

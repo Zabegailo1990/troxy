@@ -1,0 +1,75 @@
+/*! reset.scss | Meyer Reset v2.0 | License: public domain */
+
+/* Box sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove all margins */
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+dl, dd, ol, ul, figure, hr, fieldset, legend {
+  margin: 0;
+}
+
+/* Remove list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* Reset padding */
+blockquote, figure, fieldset, legend, ul, ol {
+  padding: 0;
+}
+
+/* Remove borders */
+fieldset, img {
+  border: 0;
+}
+
+/* Set default font styles */
+html, body, button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.5;
+  color: inherit;
+}
+
+/*Connect fonts*/
+body{
+  font-family: 'Funnel Display';
+}
+
+/* Remove background and borders from links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Make images behave like block elements */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure forms inherit styles */
+button, input, select, textarea {
+  background: none;
+  border: none;
+  padding: 0;
+  outline: none;
+  appearance: none;
+}
+
+/* Reset table styles */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+caption {
+  display: none;
+}
