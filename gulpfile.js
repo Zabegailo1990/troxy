@@ -19,29 +19,29 @@ const sassCompiler = gulpSass(sass);
 const paths = {
     html: {
         src: 'index.html',
-        dest: 'dist/',
+        dest: 'docs/',
     },
     pages: {
         src: './src/pages/**/*.html',
-        dest: 'dist/pages/',
+        dest: 'docs/pages/',
     },
     styles: {
         src: './src/assets/scss/main.scss',
-        dest: 'dist/css/',
+        dest: 'docs/css/',
     },
     scripts: {
         src: './src/assets/js/**/*.js',
-        dest: 'dist/js/',
+        dest: 'docs/js/',
     },
     images: {
         src: './src/assets/images/**/*',
-        dest: 'dist/images/',
+        dest: 'docs/images/',
     }
 };
 
 // Удаление папки сборки
 function deleteDist() {
-    return del(['dist']);
+    return del(['docs']);
 }
 
 // Обновление папки сборки
@@ -93,7 +93,7 @@ function styles() {
 // Копирование шрифтов
 function fonts() {
     return gulp.src('./src/assets/fonts/*', { encoding: false })
-        .pipe(gulp.dest('dist/fonts/'))
+        .pipe(gulp.dest('docs/fonts/'))
 }  
 
 // Сбока скриптов
@@ -118,7 +118,7 @@ export function images() {
 export function serve() {
     browserSync.init({
         server: {
-            baseDir: './dist',
+            baseDir: './docs',
         },
     });
 
