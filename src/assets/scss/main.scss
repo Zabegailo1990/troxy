@@ -4,6 +4,8 @@
 @use './_variables.scss';
 @use './_entities.scss';
 
+@use "../../vendors/swiper/swiper-bundle.min.css";
+
 // Компоненты
 @use '../../components/Promo/scss/promo.scss';
 @use '../../components/Logo/scss/logo.scss';

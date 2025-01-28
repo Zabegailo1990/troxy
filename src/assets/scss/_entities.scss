@@ -26,9 +26,6 @@
             padding-right: 40px;
         }
     }
-    &--left-free{
-
-    }
 }
 
 .card{
@@ -72,6 +69,10 @@
     &--color--white{
         color: $text-color-white;
     }
+
+    &--footer{
+        
+    }
 }
 .title{
     font-size: $title-fz-small;
@@ -112,6 +113,7 @@
     font-size: $button-fz-small;
     font-weight: 600;
     display: block;
+    width: fit-content;
     cursor: pointer;
     @include respond(tablet) {
         font-size: $button-fz-large;
@@ -139,6 +141,12 @@
         @include respond(tablet){
             padding: 17px 34px;
         }
+    }
+
+    &--promo{
+        font-size: $button-fz-small;
+        padding: 9px 18px;
+        opacity: 80%;
     }
 }
 .link{}

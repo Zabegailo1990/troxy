@@ -1,0 +1,36 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.business{
+    
+    &__title{
+        text-align: center;
+        margin-bottom: 36px;
+    }
+
+    &__cards{
+        display: flex;
+        overflow: hidden;
+        margin-bottom: 36px;
+        column-gap: 10px;
+        @include respond(tablet) {
+            justify-content: center;
+            column-gap: 0;
+        }
+    }
+
+    &__cell{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        @include respond(tablet) {
+            &:not(:first-child){
+                margin-left: -160px;
+            }
+        }
+    }
+
+    &__button{
+        margin: 0 auto;
+    }
+}
