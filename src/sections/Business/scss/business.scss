@@ -1,6 +1,14 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .business{
+    position: relative;
+
+    &__background{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
     
     &__title{
         text-align: center;
@@ -12,6 +20,7 @@
         overflow: hidden;
         margin-bottom: 36px;
         column-gap: 10px;
+
         @include respond(tablet) {
             justify-content: center;
             column-gap: 0;
@@ -23,14 +32,34 @@
         display: flex;
         flex-direction: column;
         row-gap: 10px;
-        @include respond(tablet) {
-            &:not(:first-child){
-                margin-left: -160px;
-            }
+
+        @include respond(tablet){
+            margin-left: -160px;
+        }
+        @include respond(pc){
+            margin-left: -120px;
         }
     }
 
     &__button{
         margin: 0 auto;
+
+        @include respond(tablet){
+            display: none;
+        }
+    }
+}
+
+@include respond(pc){
+    .business{
+        &__inner{
+            display: flex;
+        }
+        &__title{
+            text-align: left;
+        }
+        &__cards{
+            flex-shrink: 0;
+        }
     }
 }

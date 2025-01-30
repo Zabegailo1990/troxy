@@ -3,9 +3,11 @@
 
 .section{
     padding: 70px 0 70px 0;
+
     @include respond(tablet){
         padding: 110px 0 110px 0;
     }
+
     @include respond(pc){
         padding: 140px 0 140px 0;
     }
@@ -16,6 +18,7 @@
     padding: 0 24px;
     width: 100%;
     margin: 0 auto;
+
     @include respond(tablet){
         padding: 0 40px;
     }
@@ -26,6 +29,14 @@
             padding-right: 40px;
         }
     }
+}
+
+.background,
+.background img,
+.background source{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card{
@@ -52,11 +63,16 @@
             z-index: -1;
         }
     }
+
+    &--frame--blue{
+        border: 1px solid #2E7AF5;
+    }
 }
 
 .text{
     font-size: $text-fz-small;
     line-height: $text-lh-small;
+
     @include respond(tablet) {
         font-size: $text-fz-large;
         line-height: $text-lh-large;
@@ -77,6 +93,7 @@
 .title{
     font-size: $title-fz-small;
     line-height: $title-lh-extra-small;
+
     @include respond(tablet){
         font-size: $title-fz-medium;
         line-height: $title-lh-medium;
@@ -85,6 +102,7 @@
     &--type--main{
         line-height: $title-lh-small;
         font-size: $title-fz-medium;
+        
         @include respond(tablet) {
             font-size: $title-fz-large;
             line-height: $title-lh-large;

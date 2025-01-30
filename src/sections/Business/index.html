@@ -1,56 +1,70 @@
-<div class=" section business">
+<div class="section business">
+    <picture class="background business__background">
+        <source media="(min-width: 1440px)" srcset="./images/section_business_bg_pc.jpg">
+        <source media="(min-width: 780px)" srcset="./images/section_business_bg_tb.jpg">
+        <img src="./images/section_business_bg_mb.jpg">
+    </picture> 
     <div class="container">
-        <h2 class="title business__title">Proxies for <span class="title--color--blue">any purpose of your business</span></h2>
-    </div>
-    <div class="container container--right-free">
-        <div class="business__cards">
-            <div class="business__cell">
-                @@include('../../components/CardService/index.html', {
-                    src: "./images/service-google.svg",
-                    title: "Google",
-                    text: "Brief description of the purpose",
-                })
-                @@include('../../components/CardService/index.html', {
-                    src: "./images/service-ebay.svg",
-                    title: "Amazon",
-                    text: "Brief description of the purpose",
-                })
-            </div>
-            <div class="business__cell">
-                @@include('../../components/CardService/index.html', {
-                    src: "./images/service-amazon.svg",
-                    title: "Instagram",
-                    text: "Brief description of the purpose",
-                })
-                @@include('../../components/CardService/index.html', {
-                    src: "./images/service-booking.svg",
-                    title: "Facebook",
-                    text: "Brief description of the purpose",
-                })
-            </div>
-            <div class="business__cell">
-                @@include('../../components/CardService/index.html', {
-                    src: "./images/service-facebook.svg",
-                    title: "YouTube",
-                    text: "Brief description of the purpose",
-                })
-                @@include('../../components/CardService/index.html', {
-                    src: "./images/service-instagram.svg",
-                    title: "Twitter",
-                    text: "Brief description of the purpose",
-                })
-            </div>
-            <div class="business__cell">
-                @@include('../../components/CardService/index.html', {
-                    src: "./images/service-linkedin.svg",
-                    title: "Linkedin",
-                    text: "Brief description of the purpose",
-                })
-                @@include('../../components/CardService/index.html')
+        <div class="business__inner">
+            <h2 class="title business__title">Proxies for <span class="title--color--blue">any purpose of your business</span></h2>
+            <div class="business__cards">
+                <div class="business__cell">
+                    @@include('../../components/CardService/index.html', {
+                        prevClass: "card--frame",
+                        src: "./images/service-google.svg",
+                        title: "Google",
+                        text: "Brief description of the purpose",
+                    })
+                    @@include('../../components/CardService/index.html', {
+                        prevClass: "card--frame",
+                        src: "./images/service-ebay.svg",
+                        title: "Amazon",
+                        text: "Brief description of the purpose",
+                    })
+                </div>
+                <div class="business__cell">
+                    @@include('../../components/CardService/index.html', {
+                        prevClass: "card--frame",
+                        src: "./images/service-amazon.svg",
+                        title: "Instagram",
+                        text: "Brief description of the purpose",
+                    })
+                    @@include('../../components/CardService/index.html', {
+                        prevClass: "card--frame",
+                        src: "./images/service-booking.svg",
+                        title: "Facebook",
+                        text: "Brief description of the purpose",
+                    })
+                </div>
+                <div class="business__cell">
+                    @@include('../../components/CardService/index.html', {
+                        prevClass: "card--frame",
+                        src: "./images/service-facebook.svg",
+                        title: "YouTube",
+                        text: "Brief description of the purpose",
+                    })
+                    @@include('../../components/CardService/index.html', {
+                        prevClass: "card--frame",
+                        src: "./images/service-instagram.svg",
+                        title: "Twitter",
+                        text: "Brief description of the purpose",
+                    })
+                </div>
+                <div class="business__cell">
+                    @@include('../../components/CardService/index.html', {
+                        prevClass: "card--frame",
+                        src: "./images/service-linkedin.svg",
+                        title: "Linkedin",
+                        text: "Brief description of the purpose",
+                    })
+                    @@include('../../components/CardService/index.html', {
+                        prevClass: "card--frame--blue",
+                        class: "card-service--theme-simple",
+                        title: "All features",
+                    })
+                </div>
             </div>
         </div>
-        <div class="container">
-            <a class="button button--rounded button--bg--blue button--color--white business__button">All purposes</a>
-        </div>
+        <a class="button button--rounded button--bg--blue button--color--white business__button">All purposes</a>
     </div>
 </div>

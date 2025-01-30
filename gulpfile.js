@@ -60,7 +60,7 @@ function main() {
             basepath: '@file',
             indent: true,
         }))
-        .pipe(replace(/\s*@@class\s*/g, ''))
+        .pipe(replace(/\s+@@[a-zA-Z0-9-_]+/g, ''))
         .pipe(replace(/<[^>]+>@@.*?<\/[^>]+>/g, ''))
         .pipe(replace(/([a-zA-Z-]+)="@@[^"]*"/g, '$1=""'))
         .pipe(gulp.dest(paths.html.dest));
@@ -74,7 +74,7 @@ function pages() {
             basepath: '@file',
             indent: true,
         }))
-        .pipe(replace(/\s*@@.\s*/g, ''))
+        .pipe(replace(/\s+@@[a-zA-Z0-9-_]+/g, ''))
         .pipe(replace(/<[^>]+>@@.*?<\/[^>]+>/g, ''))
         .pipe(replace(/([a-zA-Z-]+)="@@[^"]*"/g, '$1=""'))
         .pipe(flatten())

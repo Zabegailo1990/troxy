@@ -1,9 +1,12 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
+@use '../../../assets/scss/variables' as *;
+
 
 .card-service{
     width: 242px;
     height: 170px;
     padding: 28px;
+
     @include respond(tablet){
         display: flex;
         flex-direction: column;
@@ -16,6 +19,7 @@
         width: 46px;
         height: 46px;
         margin-bottom: 20px;
+
         @include respond(tablet){
             margin-bottom: auto;
         }
@@ -23,5 +27,35 @@
 
     &__title{
         margin-bottom: 8px;
+    }
+
+    &__icon{
+        display: none;
+    }
+
+    &--theme-simple{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 21px;
+
+        .card-service{
+            &__img,
+            &__text{
+                display: none;
+            }
+
+            &__title{
+                color: $title-color-blue;
+                margin-bottom: 10px;
+            }
+            
+            &__icon{
+                width: 42px;
+                height: 42px;
+                display: block;
+                margin-left: auto;
+            }
+        }
     }
 }

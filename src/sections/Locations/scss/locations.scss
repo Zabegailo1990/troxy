@@ -1,31 +1,86 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .locations{
+    position: relative;
+
+    &__background{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
     &__inner{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        row-gap: 18px;
-        margin-bottom: 36px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__title{
+        text-align: center;
+        margin-bottom: 18px;
+
         @include respond(tablet){
-            row-gap: 30px;
+            margin-bottom: 30px;
         }
+
         @include respond(pc){
-            row-gap: 25px;
+            margin-bottom: 25px;
         }
     }
 
     &__text{
         text-align: center;
+        margin-bottom: 18px;
+
+        @include respond(tablet){
+            margin-bottom: 30px;
+        }
+
+        @include respond(pc){
+            margin-bottom: 25px;
+        }
+    }
+
+    &__button{
+        display: block;
+        margin: 0 auto 36px;
+
+        @include respond(tablet){
+            margin-bottom: 51px;
+        }
+
+        @include respond(pc){
+            margin-bottom: 65px;
+        }
+    }
+
+    &__slider{
+        position: relative;
+        overflow: hidden;
+        min-height: 147px;
+        padding-left: 24px;
+        z-index: 1;
+
+        @include respond(tablet){
+            padding-left: 0;
+        }
+        @include respond(pc){
+            max-width: 1236px;
+            margin: 0 auto;
+        }
     }
 
     &__cards{
         display: flex;
         column-gap: 21px;
         overflow: hidden;
-        margin-bottom: 40px;
-        @include respond(tablet){
 
+        @include respond(tablet){
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            column-gap: 24px;
         }
     }
 
@@ -33,16 +88,42 @@
         display: flex;
         flex-direction: column;
         row-gap: 14px;
+
         @include respond(tablet){
-            
+            flex-direction: row;
+            align-items: center;
+            row-gap: 0;
+            column-gap: 24px;
         }
     }
 
-    &__button{
-        margin: 0 auto;
-        display: none;
-        @include respond(pc){
-            display: block;
+    &__card{
+        &--first-left,
+        &--first-right{
+
+            @include respond(tablet){
+                opacity: 75%;
+                width: 178px;
+                height: 126px;
+            }
+        }
+        &--second-left,
+        &--second-right{
+
+            @include respond(tablet){
+                opacity: 50%;
+                width: 148px;
+                height: 105px; 
+            }
+        }
+
+        &--third-left,
+        &--third-right{
+            @include respond(pc){
+                width: 118px;
+                height: 84px;
+                opacity: 35%;
+            }
         }
     }
 
