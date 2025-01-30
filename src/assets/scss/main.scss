@@ -17,15 +17,20 @@
 @use '../../components/CardPlus/scss/card-plus.scss';
 @use '../../components/CardFlag/scss/card-flag.scss';
 @use '../../components/CardService/scss/card-service.scss';
+@use '../../components/CardAdvanced/scss/card-advanced.scss';
 
 
 // Секции
 @use '../../sections/Present/scss/present.scss';
 @use '../../sections/Benefits/scss/benefits.scss';
 @use '../../sections/Proxyware/scss/proxyware.scss';
+@use '../../sections/Banner/scss/banner.scss';
+
 @use '../../sections/Test/scss/test.scss';
 @use '../../sections/Locations/scss/locations.scss';
 @use '../../sections/Business/scss/business.scss';
+@use '../../sections/Advantages/scss/advantages.scss';
+@use '../../sections/Supplier/scss/supplier.scss';
 
 
 

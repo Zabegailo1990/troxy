@@ -1,0 +1,32 @@
+<div class="section advantages">
+    <picture class="background advantages__background">
+        <source media="(min-width: 1440px)" srcset="./images/section_benefits_bg_pc.jpg">
+        <source media="(min-width: 780px)" srcset="./images/section_benefits_bg_tb.jpg">
+        <img src="./images/section_benefits_bg_mb.jpg">
+    </picture>   
+    <div class="container">
+        <div class="advantages__inner">
+            <h2 class="title advantages__title">Take advantage of Troxy's <span class="title--color--blue">free services</span></h2>
+            <div class="advantages__slider">
+                @@include('../../components/CardAdvanced/index.html', {
+                    class: "advantages__card",
+                    src: "./images/card-advanced_1.jpg",
+                    title: "Free proxy",
+                    text: "Use free data center proxies and evaluate the quality of work",
+                })
+                @@include('../../components/CardAdvanced/index.html', {
+                    class: "advantages__card",
+                    src: "./images/card-advanced_2.jpg",
+                    title: "Proxy checker",
+                    text: "Check availability, supported protocols, proxy country and response time",
+                })
+                @@include('../../components/CardAdvanced/index.html', {
+                    class: "advantages__card",
+                    src: "./images/card-advanced_3.jpg",
+                    title: "Show my IP",
+                    text: "Find out your current IP address and other information",
+                })
+            </div>
+        </div>
+    </div>
+</div>
