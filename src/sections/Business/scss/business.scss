@@ -9,16 +9,42 @@
         left: 0;
         z-index: 0;
     }
+
+    &__inner{
+        position: relative;
+        z-index: 1;
+
+        @include respond(pc){
+            display: flex;
+            align-items: flex-start;
+        }
+    }
     
     &__title{
         text-align: center;
         margin-bottom: 36px;
+
+        @include respond(pc){
+            text-align: left;
+            margin-right: 44px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__slider{
+        flex-shrink: 0;
+        overflow: hidden;
+        margin-right: -24px;
+        margin-bottom: 36px;
+
+        @include respond(tablet) {
+            margin-left: 0;
+            margin-bottom: 0;
+        }
     }
 
     &__cards{
         display: flex;
-        overflow: hidden;
-        margin-bottom: 36px;
         column-gap: 10px;
 
         @include respond(tablet) {
@@ -32,12 +58,18 @@
         display: flex;
         flex-direction: column;
         row-gap: 10px;
+        transition: all .3s;
 
         @include respond(tablet){
-            margin-left: -160px;
+            &:not(:first-child){
+                margin-left: -160px;
+            }
         }
+
         @include respond(pc){
-            margin-left: -120px;
+            &:not(:first-child){
+                margin-left: -120px;
+            }
         }
     }
 
@@ -46,20 +78,6 @@
 
         @include respond(tablet){
             display: none;
-        }
-    }
-}
-
-@include respond(pc){
-    .business{
-        &__inner{
-            display: flex;
-        }
-        &__title{
-            text-align: left;
-        }
-        &__cards{
-            flex-shrink: 0;
         }
     }
 }

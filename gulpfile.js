@@ -63,6 +63,7 @@ function main() {
         .pipe(replace(/\s+@@[a-zA-Z0-9-_]+/g, ''))
         .pipe(replace(/<[^>]+>@@.*?<\/[^>]+>/g, ''))
         .pipe(replace(/([a-zA-Z-]+)="@@[^"]*"/g, '$1=""'))
+        .pipe(replace(/<(\w+)([^>]*)>\s*<\/\1>/g, ''))
         .pipe(gulp.dest(paths.html.dest));
 };
 
@@ -77,6 +78,7 @@ function pages() {
         .pipe(replace(/\s+@@[a-zA-Z0-9-_]+/g, ''))
         .pipe(replace(/<[^>]+>@@.*?<\/[^>]+>/g, ''))
         .pipe(replace(/([a-zA-Z-]+)="@@[^"]*"/g, '$1=""'))
+        .pipe(replace(/<(\w+)([^>]*)>\s*<\/\1>/g, ''))
         .pipe(flatten())
         .pipe(gulp.dest(paths.pages.dest));
 };

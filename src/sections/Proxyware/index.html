@@ -1,9 +1,14 @@
 <div class="section proxyware">
+    <picture class="background proxyware__background">
+        <source media="(min-width: 1440px)" srcset="./images/section_proxyware_bg_pc.jpg">
+        <source media="(min-width: 780px)" srcset="./images/section_proxyware_bg_tb.jpg">
+        <img src="./images/section_proxyware_bg_mb.jpg">
+    </picture>    
     <div class="proxyware__inner">
         <div class="container">
             <h2 class="title proxyware__title">Maximum simplicity and quality of proxies <span class="title--color--blue">with a digital footprint at the price of regular ones</span></h2>
         </div>
-        <div class="container container--right-free">
+        <div class="proxyware__slider">
             <div class="proxyware__cards">
                 <div class="proxyware__cell">
                     @@include('../../components/CardPlus/index.html', { 

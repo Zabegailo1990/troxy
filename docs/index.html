@@ -134,11 +134,16 @@
             </div>
         </div>
         <div class="section proxyware">
+            <picture class="background proxyware__background">
+                <source media="(min-width: 1440px)" srcset="./images/section_proxyware_bg_pc.jpg">
+                <source media="(min-width: 780px)" srcset="./images/section_proxyware_bg_tb.jpg">
+                <img src="./images/section_proxyware_bg_mb.jpg">
+            </picture>    
             <div class="proxyware__inner">
                 <div class="container">
                     <h2 class="title proxyware__title">Maximum simplicity and quality of proxies <span class="title--color--blue">with a digital footprint at the price of regular ones</span></h2>
                 </div>
-                <div class="container container--right-free">
+                <div class="proxyware__slider">
                     <div class="proxyware__cards">
                         <div class="proxyware__cell">
                             <div class="card card--bg--blur card--frame card-plus proxyware__card">
@@ -185,7 +190,11 @@
             </div>
         </div>
         <div class="test">
-            <img class="test__background" src="./images/test_section_bg.jpg" alt="">
+            <picture class="background test__background">
+                <source media="(min-width: 1440px)" srcset="./images/section_test_bg_pc.jpg">
+                <source media="(min-width: 780px)" srcset="./images/section_test_bg_tb.jpg">
+                <img src="./images/section_test_bg_mb.jpg">
+            </picture> 
             <div class="container">
                 <div class="test__inner">
                     <h2 class="title title--color--white test__title">Test our proxies to ensure their quality</h2>
@@ -297,70 +306,86 @@
             <div class="container">
                 <div class="business__inner">
                     <h2 class="title business__title">Proxies for <span class="title--color--blue">any purpose of your business</span></h2>
-                    <div class="business__cards">
-                        <div class="business__cell">
-                            <div class="card card--bg--blur card--frame card-service">
-                                <img class="card-service__img" src="./images/service-google.svg" alt="">
-                                <h3 class="card-service__title">Google</h3>
-                                <p class="text card-service__text">Brief description of the purpose</p>
-                                <img class="card-service__icon" src="./images/arrow.svg" alt="">
+                    <div class="business__slider">
+                        <div class="business__cards">
+                            <div class="business__cell">
+                                <div class="card card--bg--blur card--frame card-service">
+                                    <img class="card-service__img" src="./images/service-google.svg" alt="">
+                                    <h3 class="card-service__title">Google</h3>
+                                    <p class="text card-service__text">Brief description of the purpose</p>
+                                    <img class="card-service__icon" src="./images/arrow.svg" alt="">
+                                </div>
+                                <div class="card card--bg--blur card--frame card-service">
+                                    <img class="card-service__img" src="./images/service-ebay.svg" alt="">
+                                    <h3 class="card-service__title">Amazon</h3>
+                                    <p class="text card-service__text">Brief description of the purpose</p>
+                                    <img class="card-service__icon" src="./images/arrow.svg" alt="">
+                                </div>
                             </div>
-                            <div class="card card--bg--blur card--frame card-service">
-                                <img class="card-service__img" src="./images/service-ebay.svg" alt="">
-                                <h3 class="card-service__title">Amazon</h3>
-                                <p class="text card-service__text">Brief description of the purpose</p>
-                                <img class="card-service__icon" src="./images/arrow.svg" alt="">
+                            <div class="business__cell">
+                                <div class="card card--bg--blur card--frame card-service">
+                                    <img class="card-service__img" src="./images/service-amazon.svg" alt="">
+                                    <h3 class="card-service__title">Instagram</h3>
+                                    <p class="text card-service__text">Brief description of the purpose</p>
+                                    <img class="card-service__icon" src="./images/arrow.svg" alt="">
+                                </div>
+                                <div class="card card--bg--blur card--frame card-service">
+                                    <img class="card-service__img" src="./images/service-booking.svg" alt="">
+                                    <h3 class="card-service__title">Facebook</h3>
+                                    <p class="text card-service__text">Brief description of the purpose</p>
+                                    <img class="card-service__icon" src="./images/arrow.svg" alt="">
+                                </div>
                             </div>
-                        </div>
-                        <div class="business__cell">
-                            <div class="card card--bg--blur card--frame card-service">
-                                <img class="card-service__img" src="./images/service-amazon.svg" alt="">
-                                <h3 class="card-service__title">Instagram</h3>
-                                <p class="text card-service__text">Brief description of the purpose</p>
-                                <img class="card-service__icon" src="./images/arrow.svg" alt="">
+                            <div class="business__cell">
+                                <div class="card card--bg--blur card--frame card-service">
+                                    <img class="card-service__img" src="./images/service-facebook.svg" alt="">
+                                    <h3 class="card-service__title">YouTube</h3>
+                                    <p class="text card-service__text">Brief description of the purpose</p>
+                                    <img class="card-service__icon" src="./images/arrow.svg" alt="">
+                                </div>
+                                <div class="card card--bg--blur card--frame card-service">
+                                    <img class="card-service__img" src="./images/service-instagram.svg" alt="">
+                                    <h3 class="card-service__title">Twitter</h3>
+                                    <p class="text card-service__text">Brief description of the purpose</p>
+                                    <img class="card-service__icon" src="./images/arrow.svg" alt="">
+                                </div>
                             </div>
-                            <div class="card card--bg--blur card--frame card-service">
-                                <img class="card-service__img" src="./images/service-booking.svg" alt="">
-                                <h3 class="card-service__title">Facebook</h3>
-                                <p class="text card-service__text">Brief description of the purpose</p>
-                                <img class="card-service__icon" src="./images/arrow.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="business__cell">
-                            <div class="card card--bg--blur card--frame card-service">
-                                <img class="card-service__img" src="./images/service-facebook.svg" alt="">
-                                <h3 class="card-service__title">YouTube</h3>
-                                <p class="text card-service__text">Brief description of the purpose</p>
-                                <img class="card-service__icon" src="./images/arrow.svg" alt="">
-                            </div>
-                            <div class="card card--bg--blur card--frame card-service">
-                                <img class="card-service__img" src="./images/service-instagram.svg" alt="">
-                                <h3 class="card-service__title">Twitter</h3>
-                                <p class="text card-service__text">Brief description of the purpose</p>
-                                <img class="card-service__icon" src="./images/arrow.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="business__cell">
-                            <div class="card card--bg--blur card--frame card-service">
-                                <img class="card-service__img" src="./images/service-linkedin.svg" alt="">
-                                <h3 class="card-service__title">Linkedin</h3>
-                                <p class="text card-service__text">Brief description of the purpose</p>
-                                <img class="card-service__icon" src="./images/arrow.svg" alt="">
-                            </div>
-                            <div class="card card--bg--blur card--frame--blue card-service card-service--theme-simple">
-                                <img class="card-service__img" src="" alt="">
-                                <h3 class="card-service__title">All features</h3>
-                                
-                                <img class="card-service__icon" src="./images/arrow.svg" alt="">
+                            <div class="business__cell">
+                                <div class="card card--bg--blur card--frame card-service">
+                                    <img class="card-service__img" src="./images/service-linkedin.svg" alt="">
+                                    <h3 class="card-service__title">Linkedin</h3>
+                                    <p class="text card-service__text">Brief description of the purpose</p>
+                                    <img class="card-service__icon" src="./images/arrow.svg" alt="">
+                                </div>
+                                <div class="card card--bg--blur card--frame--blue card-service card-service--theme-simple">
+                                    <img class="card-service__img" src="" alt="">
+                                    <h3 class="card-service__title">All features</h3>
+                                    
+                                    <img class="card-service__icon" src="./images/arrow.svg" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <a class="button button--rounded button--bg--blue button--color--white business__button">All purposes</a>
                 </div>
-                <a class="button button--rounded button--bg--blue button--color--white business__button">All purposes</a>
+            </div>
+        </div>
+        <div class="banner">
+            <picture class="background bunner__background">
+                <source media="(min-width: 1440px)" srcset="">
+                <source media="(min-width: 780px)" srcset="">
+                <img src="">
+            </picture>
+            <div class="banner__inner">
+                <h2 class="title">Does your business need a customized solution?</h2>
+                <p class="text">We will select a high-quality and effective solution for you personally at the best price</p>
+                <div class="banner__row">
+                    
+                </div>
             </div>
         </div>
     </div>
-    <script type="module" src="./js/main.min.js"></script>
-    <script type="module" src="./js/main.min.js"></script>
+    
+    
 </body>
 </html>
