@@ -1,0 +1,13 @@
+.faq{
+
+    &__title{
+        text-align: center;
+        margin-bottom: 36px;
+    }
+
+    &__question{
+        &:not(:last-child){
+            margin-bottom: 8px;
+        }
+    }
+}
