@@ -1,0 +1,108 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.footer{
+    position: relative;
+
+    &__background{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    &__inner{
+        position: relative;
+        z-index: 1;
+
+        @include respond(pc){
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+
+    &__row{
+        margin-bottom: 34px;
+
+        @include respond(tablet){
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            margin-bottom: 64px;
+        }
+    }
+    
+    &__authbar{
+        position: relative;
+        z-index: 1;
+        margin-bottom: 36px;
+
+        @include respond(tablet){
+            margin-bottom: 0;
+        }
+        
+        &--pc{
+            &--hidden{
+                @include respond(pc){
+                    display: none;
+                }
+            }
+            &--visible{
+                display: none;
+                @include respond(pc){
+                    display: flex;
+                }
+            }
+        }
+    }
+    
+    &__logo{
+        margin: 0 auto;
+        flex-shrink: 0;
+
+        @include respond(tablet){
+            margin: 0;
+        }
+
+        @include respond(pc){
+            margin-right: 130px;
+        }
+    }
+
+    &__column{
+
+        &--tablet-visible{
+            display: none;
+
+            @include respond(tablet){
+                display: block;
+            } 
+        }
+    }
+
+    &__lists {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+
+    }
+    
+    &__list {
+        &:not(:last-child){
+            margin-bottom: 40px;
+        }
+
+        &--tablet-hidden{
+            @include respond(tablet){
+                display: none;
+            }
+        }
+    
+    }
+
+    &__title{
+        margin-bottom: 12px;
+    }
+}
