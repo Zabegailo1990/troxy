@@ -1,3 +1,11 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
 .tariffs{
-    
+    &__countries{
+        display: none;
+
+        @include respond(tablet){
+            display: block;
+        }
+    }
 }

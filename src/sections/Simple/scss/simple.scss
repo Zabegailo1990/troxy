@@ -1,0 +1,26 @@
+.simple{
+    position: relative;
+
+    &__background{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    &__inner{
+        position: relative;
+        z-index: 1;
+    }
+
+    &__title{
+        text-align: center;
+        margin-bottom: 36px;
+    }
+
+    &__text{
+        &:not(:last-child){
+            margin-bottom: 24px;
+        }
+    }
+}

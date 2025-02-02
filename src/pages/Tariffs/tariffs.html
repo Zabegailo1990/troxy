@@ -8,24 +8,30 @@
     </head>
     <body>
         <div class="tariffs">
+            @@include('../../sections/Countries/index.html', {
+                class: "tariffs__countries",
+                title: "Best proxy locations <span class='title--color--blue'>by country</span>",
+                button: "View all locations (195)"
+            })
             @@include('../../sections/Banner/index.html', {
-                bgPc: "/images/section_bunner-1_bg_pc.jpg",
-                bgTb: "/images/section_bunner-1_bg_tb.jpg",
-                bgMb: "/images/section_bunner-1_bg_mb.jpg",
+                bgPc: "/images/section_banner-1_bg_pc.jpg",
+                bgTb: "/images/section_banner-1_bg_tb.jpg",
+                bgMb: "/images/section_banner-1_bg_mb.jpg",
                 title: "Test our proxies to ensure their quality",
                 text: "We will select a high-quality and effective solution for you personally at the best price",
                 button_1: "Test free"
             })
             @@include('../../sections/Proxyware/index.html')
             @@include('../../sections/Banner/index.html', {
-                bgPc: "/images/section_bunner-2_bg_pc.jpg",
-                bgTb: "/images/section_bunner-2_bg_tb.jpg",
-                bgMb: "/images/section_bunner-2_bg_mb.jpg",
+                bgPc: "/images/section_banner-2_bg_pc.jpg",
+                bgTb: "/images/section_banner-2_bg_tb.jpg",
+                bgMb: "/images/section_banner-2_bg_mb.jpg",
                 title: "Create a personal tariff from 1000 to 200,000 IPs and more",
                 text: "We will select a high-quality and effective solution for you personally at the best price",
                 button_1: "Buy proxy",
                 button_2: "Test free"
             })
+            @@include('../../sections/Simple/index.html')
             @@include('../../sections/Faq/index.html')
             @@include('../../sections/SliderNews/index.html')
             @@include("../../sections/Footer/index.html")
