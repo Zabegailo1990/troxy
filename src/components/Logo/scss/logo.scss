@@ -2,4 +2,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &__signature{
+        fill: #fff;
+    }
+
+    &__fingerprint{
+        fill: #fff
+    }
+
+    &--theme-dark{
+        .logo{
+            &__signature{
+                fill: #17263F;
+            }
+
+            &__fingerprint{
+                fill: #2E7AF5;
+            }
+        }
+
+    }
 }

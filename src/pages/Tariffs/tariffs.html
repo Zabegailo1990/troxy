@@ -8,6 +8,17 @@
     </head>
     <body>
         <div class="tariffs">
+            @@include('../../sections/Present/index.html', {
+                bgPc: "/images/section_present-tariffs_bg_pc.jpg",
+                bgTb: "/images/section_present-tariffs_bg_tb.jpg",
+                bgMb: "/images/section_present-tariffs_bg_mb.jpg",
+                title: "Proxy tariffs",
+                theme: "present--theme-dark",
+                themeLogo: "logo--theme-dark",
+                themeNav: "navigation--theme--dark",
+                themeAuthbar: "authbar--theme--dark",
+                rating: "present__rating--hidden"
+            })
             @@include('../../sections/Countries/index.html', {
                 class: "tariffs__countries",
                 title: "Best proxy locations <span class='title--color--blue'>by country</span>",

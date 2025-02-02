@@ -17,7 +17,11 @@
     }
 
     &--theme--dark{
-        
+        .navigation{
+            &__link{
+                color: #17263F;
+            }
+        }
     }
     
 }

@@ -8,7 +8,12 @@
 </head>
 <body>
     <div class="home">
-        @@include('./src/sections/Present/index.html')
+        @@include('./src/sections/Present/index.html', {
+            bgPc: "/images/section_present_bg_pc.jpg",
+            bgTb: "/images/section_present_bg_tb.jpg",
+            bgMb: "/images/section_present_bg_mb.jpg",
+            title: "Effective proxies for business with a unique digital footprint from $0.058"
+        })
         @@include('./src/sections/Benefits/index.html')
         @@include('./src/sections/Proxyware/index.html')
         @@include('./src/sections/Banner/index.html', {

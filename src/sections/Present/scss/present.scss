@@ -33,16 +33,13 @@
 
     &__title{
         text-align: center;
-        height: 140px;
         margin-bottom: 28px;
 
         @include respond(tablet){
-            height: 192px; 
             margin-bottom: 34px;
         }
         @include respond(pc){
             width: 1027px;
-            height: 128px;
             margin-right: auto;
             margin-left: auto;
         }
@@ -65,9 +62,14 @@
     
     &__rating{
         display: none;
+
         @include respond(tablet){
             display: flex;
             margin-bottom: 52px;
+        }
+
+        &--hidden{
+            display: none;
         }
     }
 
@@ -96,15 +98,52 @@
         z-index: 1;
     }
 
-    &__statistic{
-        text-align: center;
-        display: none;
+    &__list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__list{
         @include respond(tablet){
-            display: block;
             margin-bottom: 205px;
         }
         @include respond(pc){
             margin-bottom: 176px;
+        }
+    }
+
+    &__item{
+        display: none;
+
+        @include respond(tablet){
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            height: 50px;
+            &:not(:last-child){
+                border-right: 1px solid #fff;
+                padding-right: 24px;
+            }
+            &:not(:first-child){
+                padding-left: 24px;
+            }
+        }
+    }
+
+    &--theme-dark{
+        .present{
+            &__title,
+            &__statistic,
+            &__text{
+                color: #313844;
+            }
+
+            &__item{
+                border-color: #313844;
+            }
+
         }
     }
 }
