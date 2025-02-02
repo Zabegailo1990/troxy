@@ -2,6 +2,11 @@
 
 .footer{
     position: relative;
+    padding-top: 40px;
+
+    @include respond(tablet){
+        padding-top: 64px;
+    }
 
     &__background{
         position: absolute;
@@ -31,6 +36,11 @@
             justify-content: space-between;
             margin-bottom: 64px;
         }
+
+        @include respond(pc){
+            display: block;
+            flex-shrink: 0;
+        }
     }
     
     &__authbar{
@@ -40,6 +50,10 @@
 
         @include respond(tablet){
             margin-bottom: 0;
+        }
+
+        @include respond(pc){
+            margin-bottom: 40px;
         }
         
         &--pc{
@@ -85,8 +99,11 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
+        margin-bottom: 52px;
 
-
+        @include respond(pc){
+            margin-bottom: 16px;
+        } 
     }
     
     &__list {
@@ -104,5 +121,19 @@
 
     &__title{
         margin-bottom: 12px;
+
+        @include respond(tablet){
+            margin-bottom: 14px;
+        }
+    }
+
+    &__bottom{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 88px;
+        background-color: #273854;
+        z-index: 1;
     }
 }

@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
     <title>Document</title>
 </head>
@@ -14,13 +11,21 @@
         @@include('./src/sections/Present/index.html')
         @@include('./src/sections/Benefits/index.html')
         @@include('./src/sections/Proxyware/index.html')
-        @@include('./src/sections/Test/index.html')
+        @@include('./src/sections/Banner/index.html', {
+            bgPc: "/images/section_bunner-1_bg_pc.jpg",
+            bgTb: "/images/section_bunner-1_bg_tb.jpg",
+            bgMb: "/images/section_bunner-1_bg_mb.jpg",
+            title: "Does your business need a customized solution?",
+            text: "We will select a high-quality and effective solution for you personally at the best price",
+            button_1: "Choose solution",
+            button_2: "Test free"
+        })
         @@include('./src/sections/Locations/index.html')
         @@include('./src/sections/Business/index.html')
         @@include('./src/sections/Banner/index.html', {
-            bgPc: "./images/section_bunner-2_bg_pc.jpg",
-            bgTb: "./images/section_bunner-2_bg_tb.jpg",
-            bgMb: "./images/section_bunner-2_bg_mb.jpg",
+            bgPc: "/images/section_bunner-2_bg_pc.jpg",
+            bgTb: "/images/section_bunner-2_bg_tb.jpg",
+            bgMb: "/images/section_bunner-2_bg_mb.jpg",
             title: "Does your business need a customized solution?",
             text: "We will select a high-quality and effective solution for you personally at the best price",
             button_1: "Choose solution",
@@ -30,7 +35,11 @@
         @@include('./src/sections/Supplier/index.html')
         @@include('./src/sections/Faq/index.html')
         @@include('./src/sections/SliderNews/index.html')
-        @@include('./src/sections/Footer/index.html')
+        @@include('./src/sections/Footer/index.html', {
+            bgPc: "./images/section_footer_bg_pc.jpg",
+            bgTb: "./images/section_footer_bg_tb.jpg",
+            bgMb: "./images/section_footer_bg_mb.jpg"
+        })
     </div>
     <script type="module" src="./js/main.min.js"></script>
     <script type="module" src="./js/main.min.js"></script>
