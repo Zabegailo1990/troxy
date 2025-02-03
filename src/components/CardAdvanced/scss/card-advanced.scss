@@ -21,9 +21,6 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
         z-index: 0;
     }
 
@@ -72,8 +69,23 @@
         margin-left: auto;
     }
 
-    &--theme--light{
+    &--size--medium{
         width: 240px;
-        height: 420px;
+        height: 260px;
+
+        @include respond(tablet){
+            width: 340px;
+            height: 463px;
+        }
+
+        @include respond(pc) {
+            width: 610px;
+            height: 337px;
+        }
     }
+    &--size--large{
+        
+    }
+
+
 }

@@ -1,8 +1,13 @@
-<div class="card-advanced @@class">
-    <img class="card-advanced__background" src="@@src" alt="">
+<div class="card-advanced @@theme @@class">
+    <picture class="background card-advanced__background">
+        <source media="(min-width: 1440px)" srcset="@@bgPc">
+        <source media="(min-width: 780px)" srcset="@@bgTb">
+        <img src="@@bgMb">
+    </picture>
     <div class="card-advanced__inner">
         <h3 class="card-advanced__title">@@title</h3>
         <p class="text text--color--white card-advanced__text">@@text</p>
+        <div class="card-advanced__price">@@price</div>
         <img class="card-advanced__icon" src="/images/arrow-white.svg" alt="" >
     </div>
 </div>
