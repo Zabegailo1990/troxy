@@ -5,10 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
     <title>Document</title>
-    <base href="/troxy/">
 </head>
 <body>
     <div class="home">
+
+        @@include("./src/components/CardAdvanced/index.html", {
+            theme: "card-advanced--size--medium",
+            class: "slider-proxies__card",
+            bgPc: "/images/component_slider-proxies-1_pc.jpg",
+            bgTb: "/images/component_slider-proxies-1_tb.jpg",
+            bgMb: "/images/component_slider-proxies-1_mb.jpg",
+            title: "Proxies by country",
+            text: "World mixes, Europe, America, Asia and other variations",
+        })
         @@include('./src/sections/Present/index.html', {
             bgPc: "/images/section_present_bg_pc.jpg",
             bgTb: "/images/section_present_bg_tb.jpg",
@@ -47,7 +56,5 @@
             bgMb: "/images/section_footer_bg_mb.jpg"
         })
     </div>
-    <script type="module" src="./js/main.min.js"></script>
-    <script type="module" src="./js/main.min.js"></script>
 </body>
 </html>
