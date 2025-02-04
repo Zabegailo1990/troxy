@@ -6,20 +6,20 @@
     </picture>  
     <div class="present__inner">
         @@include('../../components/Promo/index.html')
+        @@include('../../components/Header/index.html', { 
+            class: "present__header",
+            themeLogo: "@@themeLogo",
+            themeNav: "@@themeNav",
+            themeAuthbar: "@@themeAuthbar",
+        })
         <div class="container">
-            @@include('../../components/Header/index.html', { 
-                class: "present__header",
-                themeLogo: "@@themeLogo",
-                themeNav: "@@themeNav",
-                themeAuthbar: "@@themeAuthbar",
-            })
             <div class="present__row present__rating @@rating">
                 <img class="present__trustpilot" src="/images/present_section_trustpilot.svg" alt="">
                 <img class="present__trustpilot" src="/images/present_section_trustpilot.svg" alt="">
                 <img class="present__trustpilot" src="/images/present_section_trustpilot.svg" alt="">
             </div>
             <h1 class="title title--type--main title--color--white title--weight--medium present__title">@@title</h1>
-            <p class="text text--color--white present__text">Get a convenient and economical proxy service</p>
+            <p class="text text--color--white present__text">@@text</p>
             <div class="present__row present__buttons">
                 <button class="button button--color--white button--rounded button--bg--blue present__button">Choose tariff</button>
                 <button class="button button--color--dark button--rounded button--bg--white present__button">Sign up</button>

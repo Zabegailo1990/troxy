@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Location</title>
+</head>
+<body>
+    <div class="location">
+        @@include('../../sections/Present/index.html', {
+            bgPc: "/images/section_present-tariffs_bg_pc.jpg",
+            bgTb: "/images/section_present-tariffs_bg_tb.jpg",
+            bgMb: "/images/section_present-tariffs_bg_mb.jpg",
+            title: "Proxy by location",
+            theme: "present--theme-dark",
+            themeLogo: "logo--theme-dark",
+            themeNav: "navigation--theme--dark",
+            themeAuthbar: "authbar--theme--dark",
+            rating: "present__rating--hidden"
+        })
+        @@include('../../sections/Countries/index.html', {
+            class: "location__countries",
+            title: "Select the location <span class='title--color--blue'>you need</span>",
+        })
+        @@include('../../sections/Banner/index.html', {
+            bgPc: "/images/section_banner-1_bg_pc.jpg",
+            bgTb: "/images/section_banner-1_bg_tb.jpg",
+            bgMb: "/images/section_banner-1_bg_mb.jpg",
+            title: "Test our proxies to ensure their quality",
+            text: "We will select a high-quality and effective solution for you personally at the best price",
+            button_1: "Test free"
+        })
+        @@include('../../sections/Advantages/index.html')
+        @@include('../../sections/Simple/index.html')
+        @@include('../../sections/Faq/index.html')
+        @@include('../../sections/SliderNews/index.html')
+        @@include("../../sections/Footer/index.html")
+    </div>
+</body>
+</html>

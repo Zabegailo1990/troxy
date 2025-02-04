@@ -1,16 +1,18 @@
 <header class="header @@class">
-    <div class="header__inner">
-        @@include('../Logo/index.html', { 
-            class: "header__logo",
-            theme: "@@themeLogo" 
-        })
-        @@include('../Navigation/index.html', { 
-            class: "header__navigation",
-            theme: "@@themeNav"
-        })
-        @@include('../Authbar/index.html', { 
-            class: "authbar--theme--default header__authbar",
-            theme: "authbar--responsive @@themeAuthbar"  
-        })
+    <div class="container">
+        <div class="header__inner">
+            @@include('../Logo/index.html', { 
+                class: "header__logo",
+                theme: "@@themeLogo" 
+            })
+            @@include('../Navigation/index.html', { 
+                class: "header__navigation",
+                theme: "@@themeNav"
+            })
+            @@include('../Authbar/index.html', { 
+                class: "authbar--theme--default header__authbar",
+                theme: "authbar--responsive @@themeAuthbar"  
+            })
+        </div>
     </div>
 </header>

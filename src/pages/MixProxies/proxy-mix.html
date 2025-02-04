@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Mix proxies</title>
+</head>
+<body>
+    <div class="proxy-mix">
+        @@include('../../sections/Present/index.html', {
+            bgPc: "/images/section_present-tariffs_bg_pc.jpg",
+            bgTb: "/images/section_present-tariffs_bg_tb.jpg",
+            bgMb: "/images/section_present-tariffs_bg_mb.jpg",
+            title: "Proxy tariffs",
+            theme: "present--theme-dark",
+            themeLogo: "logo--theme-dark",
+            themeNav: "navigation--theme--dark",
+            themeAuthbar: "authbar--theme--dark",
+            rating: "present__rating--hidden"
+        })
+        @@include("../../sections/Footer/index.html")
+    </div>
+</body>
+</html>

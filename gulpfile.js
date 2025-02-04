@@ -1,7 +1,6 @@
 import gulp from 'gulp';
 import * as sass from 'sass';
 import gulpSass from 'gulp-sass';
-import sassGlob  from 'gulp-sass-glob';
 import autoprefixer from 'gulp-autoprefixer';
 import cleanCSS from 'gulp-clean-css';
 import del from 'del';
@@ -13,6 +12,7 @@ import browserSync from 'browser-sync';
 import flatten from 'gulp-flatten';
 import replace from 'gulp-replace';
 import babel from 'gulp-babel';
+import htmlmin from 'gulp-htmlmin';
 
 const sassCompiler = gulpSass(sass);
 
@@ -60,13 +60,21 @@ function main() {
             basepath: '@file',
             indent: true,
         }))
-        .pipe(replace(/<[^>]+\s+[a-zA-Z-]+="@@[^"]*"[^>]*\/?>/g, ''))   // 1. Удаляем одиночные теги с @@ в атрибутах
-        .pipe(replace(/<(\w+)[^>]*>\s*[^<>]*@@[^<>]*\s*<\/\1>/g, ''))   // 2. Удаляем парные теги с @@ в содержимом
-        .pipe(replace(/\s+@@[a-zA-Z0-9-_]+/g, ''))                      // 3. Удаляем @@ в class (оставляя сам класс)
-        .pipe(replace(/<(\w+)[^>]*>\s*<\/\1>/g, ''))                    // 1. Удаляем полностью пустые теги (например, <div></div>)
-        .pipe(replace(/<(\w+)[^>]*>\s*(<\w+[^>]*>\s*<\/\w+>\s*)+<\/\1>/g, ''))  // 2. Удаляем теги, содержащие только другие пустые теги
+        // 1. Удаляем одиночные теги с @@ в атрибутах (например, <div class="@@var"></div>)
+        .pipe(replace(/<[^>]+\s+[a-zA-Z-]+="@@[^"]*"[^>]*\/?>/g, ''))
+        // 2. Удаляем парные теги, если внутри них есть @@ (например, <div>@@text</div>)
+        .pipe(replace(/<(\w+)[^>]*>\s*[^<>]*@@[^<>]*\s*<\/\1>/g, ''))
+        // 3. Удаляем @@ внутри class, оставляя сам класс (например, class="btn @@hidden" → class="btn")
+        .pipe(replace(/\s+@@[a-zA-Z0-9-_]+/g, ''))
+        // 4. Удаляем полностью пустые теги (например, <div></div>)
+        .pipe(replace(/<(\w+)[^>]*>\s*<\/\1>/g, ''))
+        // 5. Удаляем родительский тег, если внутри него только пустые теги (кроме одиночных, таких как <img>, <br>, <input>)
+        .pipe(replace(/<(\w+)[^>]*>\s*(?:<(?!img|br|hr|meta|link|input|source|area|col|embed|param|track|wbr)[\w-]+[^>]*>\s*<\/[\w-]+>\s*)+<\/\1>/g, ''))
+        .pipe(replace(/^\s*[\r\n]/gm, '')) 
+        
         .pipe(gulp.dest(paths.html.dest));
 };
+
 
 // Возможность подключения компонентов html к pages
 function pages() {
@@ -76,11 +84,17 @@ function pages() {
             basepath: '@file',
             indent: true,
         }))
-        .pipe(replace(/<[^>]+\s+[a-zA-Z-]+="@@[^"]*"[^>]*\/?>/g, ''))   // 1. Удаляем одиночные теги с @@ в атрибутах
-        .pipe(replace(/<(\w+)[^>]*>\s*[^<>]*@@[^<>]*\s*<\/\1>/g, ''))   // 2. Удаляем парные теги с @@ в содержимом
-        .pipe(replace(/\s+@@[a-zA-Z0-9-_]+/g, ''))                      // 3. Удаляем @@ в class (оставляя сам класс)
-        .pipe(replace(/<(\w+)[^>]*>\s*<\/\1>/g, ''))                    // 1. Удаляем полностью пустые теги (например, <div></div>)
-        .pipe(replace(/<(\w+)[^>]*>\s*(<\w+[^>]*>\s*<\/\w+>\s*)+<\/\1>/g, '')) // 2. Удаляем теги, содержащие только другие пустые теги
+        // 1. Удаляем одиночные теги с @@ в атрибутах (например, <div class="@@var"></div>)
+        .pipe(replace(/<[^>]+\s+[a-zA-Z-]+="@@[^"]*"[^>]*\/?>/g, ''))
+        // 2. Удаляем парные теги, если внутри них есть @@ (например, <div>@@text</div>)
+        .pipe(replace(/<(\w+)[^>]*>\s*[^<>]*@@[^<>]*\s*<\/\1>/g, ''))
+        // 3. Удаляем @@ внутри class, оставляя сам класс (например, class="btn @@hidden" → class="btn")
+        .pipe(replace(/\s+@@[a-zA-Z0-9-_]+/g, ''))
+        // 4. Удаляем полностью пустые теги (например, <div></div>)
+        .pipe(replace(/<(\w+)[^>]*>\s*<\/\1>/g, ''))
+        // 5. Удаляем родительский тег, если внутри него только пустые теги (кроме одиночных, таких как <img>, <br>, <input>)
+        .pipe(replace(/^\s*[\r\n]/gm, '')) 
+
         .pipe(flatten())
         .pipe(gulp.dest(paths.pages.dest));
 };
