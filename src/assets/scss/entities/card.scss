@@ -1,0 +1,152 @@
+@use '../mixins/mediaQuery' as *;
+
+.card{
+    position: relative;
+    overflow: hidden;
+
+    &__img,
+    &__background{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__background{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    &__inner{
+        position: relative;
+        z-index: 1;
+    }
+
+    &--radius--small{
+        border-radius: 20px;
+    }
+
+    &--radius--medium{
+        border-radius: 30px;
+    }
+    
+    &--bg--blur{
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    
+    &--frame--gradient{
+        &::before{
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(160deg, #FFFFFF, #E7F0FF);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            z-index: 0;
+        }
+    }
+
+    &--frame--blue{
+        border: 1px solid #2E7AF5;
+    }
+
+
+    &--theme--advanced{}
+    &--theme--sale{}
+    &--theme--goal{}
+    &--theme--feature{}
+    &--theme--country{}
+    &--theme--service{}
+    &--theme--benefit{}
+
+    &--size--medium{
+        width: 240px;
+        height: 260px;
+
+        @include respond(tablet){
+            width: 340px;
+            height: 463px;
+        }
+
+        @include respond(pc) {
+            width: 610px;
+            height: 337px;
+        }
+    }
+
+    &--size--small-rect {
+        width: 240px;
+        height: 360px;
+
+        @include respond(tablet) {
+            width: 340px;
+            height: 463px;
+        }
+
+        @include respond(pc){
+            width: 610px;
+            height: 337px;
+        }
+    }
+
+    &--size--medium-rect {
+        width: 240px;
+        height: 420px;
+
+        @include respond(tablet){
+            width: 320px;
+            height: 463px;
+        }
+
+        @include respond(pc){
+            width: 400px;
+            height: 400px;
+        }
+    }
+
+    &--size--large-square {
+        width: 400px;
+        height: 400px;
+        
+        @include respond(tablet){
+            width: 300px;
+            height: 500px;
+        }
+    }
+      
+    &--size--wide-rect {
+        width: 300px;
+        height: 420px;
+
+        @include respond(tablet) {
+            width: 620px;
+            height: 377px;
+        }
+
+        @include respond(pc) {
+            width: 610px;
+            height: 377px;
+        }
+    }
+
+    &--size--tall-rect {
+        width: 240px;
+        height: 342px;
+
+        @include respond(tablet){
+            width: 320px;
+            height: 400px;
+        }
+
+        @include respond(tablet){
+            width: 400px;
+            height: 500px;
+        }
+    }
+}

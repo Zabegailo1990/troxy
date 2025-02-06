@@ -51,6 +51,11 @@
 
     }
 
+    &__subtitle{
+        color: #fff;
+        font-size: 18px;
+    }
+
     &__text{
         margin-bottom: 12px;
 
@@ -60,7 +65,6 @@
     }
 
     &__price{
-
     }
 
     &__icon{
@@ -83,9 +87,21 @@
             height: 337px;
         }
     }
-    &--size--large{
-        
-    }
+    
 
+    &--theme--sale{
+        width: 240px;
+        height: 360px;
+
+        @include respond(tablet){
+            width: 340px;
+            height: 463px;
+        }
+
+        @include respond(pc){
+            width: 610px;
+            height: 337px;
+        }
+    }
 
 }

@@ -8,6 +8,68 @@
 </head>
 <body>
     <div class="proxy-rotating">
+        @@include('../../sections/Present/index.html', {
+            bgPc: "/images/section_present-tariffs_bg_pc.jpg",
+            bgTb: "/images/section_present-tariffs_bg_tb.jpg",
+            bgMb: "/images/section_present-tariffs_bg_mb.jpg",
+            title: "Proxy tariffs",
+            theme: "present--theme-dark",
+            themeLogo: "logo--theme-dark",
+            themeNav: "navigation--theme--dark",
+            themeAuthbar: "authbar--theme--dark",
+            rating: "present__rating--hidden"
+        })
+        @@include("../../sections/Goal/index.html", {
+            title: "Ready-made solutions <span class='title--color--blue'>for your goals</span>",
+            
+            src_1: "/images/component_card-goal_bg-1.png",
+            title_1: "2.5 million requests",
+            text_1: "2.5 million requests worldwide",
+            subtitle_1: "$120/month",
+
+            src_2: "/images/component_card-goal_bg-2.png",
+            title_2: "5 million requests",
+            text_2: "5 million requests worldwide",
+            subtitle_2: "$120/month",
+
+            src_3: "/images/component_card-goal_bg-3.png",
+            title_3: "10 million requests",
+            text_3: "10 million requests worldwide",
+            subtitle_3: "$120/month",
+
+            src_4: "/images/component_card-goal_bg-4.png",
+            title_4: "50 million requests",
+            text_4: "50 million requests worldwide",
+            subtitle_4: "$120/month",
+
+            src_5: "/images/component_card-goal_bg-5.png",
+            title_5: "100 million requests",
+            text_5: "100 million requests worldwide",
+            subtitle_5: "$120/month",
+
+            src_6: "/images/component_card-goal_bg-6.png",
+            title_6: "200 million requests",
+            text_6: "200 million requests worldwide",
+            subtitle_6: "$120/month",
+
+            src_7: "/images/component_card-goal_bg-7.png",
+            title_7: "400 million requests",
+            text_7: "400 million requests worldwide",
+            subtitle_7: "$120/month",
+        })
+        @@include('../../sections/Banner/index.html', {
+            bgPc: "/images/section_banner-1_bg_pc.jpg",
+            bgTb: "/images/section_banner-1_bg_tb.jpg",
+            bgMb: "/images/section_banner-1_bg_mb.jpg",
+            title: "Test our proxies to ensure their quality",
+            text: "We will select a high-quality and effective solution for you personally at the best price",
+            button_1: "Test free"
+        })
+        @@include('../../sections/Advantages/index.html')
+        @@include('../../sections/Proxyware/index.html')
+        @@include('../../sections/Simple/index.html')
+        @@include('../../sections/Faq/index.html')
+        @@include('../../sections/SliderNews/index.html')
         @@include("../../sections/Footer/index.html")
     </div>
 </body>

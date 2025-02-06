@@ -1,0 +1,21 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.goal{
+
+    &__title{
+        text-align: center;
+        margin-bottom: 36px;
+    }
+
+    &__slider{
+        margin-right: -24px;
+
+        @include respond(tablet){
+            margin-right: -40px;
+        }
+
+        @include respond(pc){
+            margin-right: 0;
+        }
+    }
+}

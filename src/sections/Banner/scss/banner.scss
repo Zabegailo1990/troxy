@@ -2,6 +2,15 @@
 
 .banner{
     position: relative;
+    padding: 98px 0 98px 0;
+
+    @include respond(tablet) {
+        padding: 65px 0 65px 0;
+    }
+
+    @include respond(pc) {
+        padding: 92px 0 94px 0;
+    }
 
     &__background{
         position: absolute;
@@ -31,7 +40,6 @@
         @include respond(tablet){
             margin-bottom: 27px;
         }
-
     }
 
     &__row{

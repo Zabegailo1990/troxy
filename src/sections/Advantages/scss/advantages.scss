@@ -10,11 +10,6 @@
         z-index: 0;
     }
 
-    &__inner{
-        position: relative;
-        z-index: 1;
-    }
-
     &__title{
         text-align: center;
         margin-bottom: 36px;
@@ -25,19 +20,14 @@
     }
 
     &__slider{
-        display: flex;
         margin-right: -24px;
-        overflow: hidden;
 
         @include respond(tablet){
             margin-right: -40px;
         }
-    }
-
-    &__card{
-        flex-shrink: 0;
-        &:not(:last-child){
-            margin-right: 14px;
+        
+        @include respond(px){
+            margin: 0 auto;
         }
     }
 }

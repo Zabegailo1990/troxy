@@ -1,0 +1,63 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.card-goal{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 240px;
+    height: 420px;
+    overflow: hidden;
+    padding: 24px;
+
+    @include respond(tablet){
+        width: 320px;
+        height: 463px;
+    }
+
+    @include respond(pc){
+        width: 400px;
+        height: 400px;
+    }
+
+    &__img{
+        position: absolute;
+        object-fit: contain;
+        top: 0;
+        right: 0;
+        width: 288px;
+        z-index: -1;
+    }
+
+    &__title,
+    &__subtitle{
+        font-size: 18px;
+
+        @include respond(tablet){
+            font-size: 23px;
+        }
+    }
+
+    &__title{
+        margin-bottom: 12px;
+    }
+
+    &__text{
+        margin-bottom: 12px;
+    }
+
+    &__icon{
+        width: 36px;
+        height: 36px;
+        margin-left: auto;
+    }
+
+    &--theme--personal{
+        width: 300px;
+        height: 463px;
+
+        @include respond(tablet){
+            width: 400px;
+            height: 400px;
+        }
+    }
+}

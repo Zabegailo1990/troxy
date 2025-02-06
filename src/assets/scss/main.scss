@@ -2,6 +2,7 @@
 @use './_fonts.scss';
 @use './mixins/_mediaQuery';
 @use './_variables.scss';
+@use './entities/card.scss';
 @use './_entities.scss';
 
 @use "../../vendors/swiper/swiper-bundle.min.css";
@@ -19,6 +20,12 @@
 @use '../../components/CardAdvanced/scss/card-advanced.scss';
 @use '../../components/Question/scss/question.scss';
 @use '../../components/CardNews/scss/card-news.scss';
+@use '../../components/SliderAdvantages/scss/slider-advantages.scss';
+@use '../../components/SliderQuality/scss/slider-quality.scss';
+@use '../../components/CardGoal/scss/card-goal.scss';
+@use '../../components/CardSale/scss/card-sale.scss';
+@use '../../components/SliderGoal/scss/slider-goal.scss';
+
 
 
 // Секции
@@ -36,6 +43,7 @@
 @use '../../sections/Simple/scss/simple.scss';
 @use '../../sections/Countries/scss/countries.scss';
 @use '../../sections/SliderProxies/scss/slider-proxies.scss';
+@use '../../sections/Goal/scss/goal.scss';
 
 
 

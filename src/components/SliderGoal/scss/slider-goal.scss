@@ -1,0 +1,16 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.slider-goal{
+    display: flex;
+    column-gap: 20px;
+    overflow: hidden;
+
+    @include respond(pc){
+        row-gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    &__slide{
+        flex-shrink: 0;
+    }
+}
