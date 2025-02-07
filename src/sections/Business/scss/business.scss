@@ -1,83 +1,29 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .business{
-    position: relative;
 
-    &__background{
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 0;
-    }
+    &__title{
+        text-align: left;
+        margin-bottom: 36px;
 
-    &__inner{
-        position: relative;
-        z-index: 1;
-
-        @include respond(pc){
-            display: flex;
-            align-items: flex-start;
+        @include respond(tablet){
+            margin-bottom: 65px;
         }
     }
     
-    &__title{
-        text-align: center;
-        margin-bottom: 36px;
-
-        @include respond(pc){
-            text-align: left;
-            margin-right: 44px;
-            margin-bottom: 0;
-        }
-    }
-
     &__slider{
-        flex-shrink: 0;
-        overflow: hidden;
         margin-right: -24px;
-        margin-bottom: 36px;
-
-        @include respond(tablet) {
-            margin-left: 0;
-            margin-bottom: 0;
-        }
-    }
-
-    &__cards{
-        display: flex;
-        column-gap: 10px;
-
-        @include respond(tablet) {
-            justify-content: center;
-            column-gap: 0;
-        }
-    }
-
-    &__cell{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        row-gap: 10px;
-        transition: all .3s;
-
-        @include respond(tablet){
-            &:not(:first-child){
-                margin-left: -160px;
-            }
-        }
-
-        @include respond(pc){
-            &:not(:first-child){
-                margin-left: -120px;
-            }
-        }
-    }
-
-    &__button{
-        margin: 0 auto;
 
         @include respond(tablet){
             display: none;
+        }
+    }
+
+    &__gallery{
+        display: none;
+
+        @include respond(tablet){
+            display: flex;
         }
     }
 }

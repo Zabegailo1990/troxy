@@ -33,6 +33,16 @@
         display: none;
     }
 
+    &--theme--responsive{
+        @include respond(tablet){
+            width: 340px;
+        }
+
+        @include respond(pc){
+            width: 295px;
+        }
+    }
+
     &--theme-simple{
         display: flex;
         flex-direction: column;

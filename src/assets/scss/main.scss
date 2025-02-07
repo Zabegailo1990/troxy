@@ -21,10 +21,11 @@
 @use '../../components/Question/scss/question.scss';
 @use '../../components/CardNews/scss/card-news.scss';
 @use '../../components/SliderAdvantages/scss/slider-advantages.scss';
-@use '../../components/SliderQuality/scss/slider-quality.scss';
+@use '../../components/SliderPlans/scss/slider-plans.scss';
 @use '../../components/CardGoal/scss/card-goal.scss';
 @use '../../components/CardSale/scss/card-sale.scss';
 @use '../../components/SliderGoal/scss/slider-goal.scss';
+@use '../../components/SliderServices/scss/slider-services.scss';
 
 
 
@@ -34,7 +35,7 @@
 @use '../../sections/Proxyware/scss/proxyware.scss';
 @use '../../sections/Banner/scss/banner.scss';
 @use '../../sections/Locations/scss/locations.scss';
-@use '../../sections/Business/scss/business.scss';
+@use '../../sections/Solutions/scss/solutions.scss';
 @use '../../sections/Advantages/scss/advantages.scss';
 @use '../../sections/Supplier/scss/supplier.scss';
 @use '../../sections/Faq/scss/faq.scss';
@@ -42,8 +43,9 @@
 @use '../../sections/Footer/scss/footer.scss';
 @use '../../sections/Simple/scss/simple.scss';
 @use '../../sections/Countries/scss/countries.scss';
-@use '../../sections/SliderProxies/scss/slider-proxies.scss';
+@use '../../sections/ProxyPlans/scss/proxy-plans.scss';
 @use '../../sections/Goal/scss/goal.scss';
+@use '../../sections/Business/scss/business.scss';
 
 
 

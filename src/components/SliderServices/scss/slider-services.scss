@@ -1,0 +1,16 @@
+.slider-services{
+    display: flex;
+    overflow: hidden;
+
+    &__cell{
+        &:not(:last-child){
+            margin-right: 20px;
+        }
+    }
+
+    &__slide {
+        &:not(:last-child){
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -41,14 +41,14 @@ const paths = {
 
 // Удаление папки сборки
 function deleteDist() {
-    return del(['docs']);
+    return del(['docs/**', '!docs/images', '!docs/images/**']);
 }
 
 // Обновление папки сборки
 function buildDist(done) {
     return gulp.series(
         deleteDist,
-        gulp.parallel(styles, scripts, images, main, pages)
+        gulp.parallel(styles, scripts, main, pages)
     )(done);
 };
 
@@ -70,7 +70,10 @@ function main() {
         .pipe(replace(/<(?!script\b)(\w+)[^>]*>\s*<\/\1>/g, ''))
         // 5. Удаляем родительский тег, если внутри него только пустые теги (кроме одиночных, таких как <img>, <br>, <input>)
         .pipe(replace(/<(\w+)[^>]*>\s*(?:<(?!img|br|hr|meta|link|input|source|area|col|embed|param|track|wbr)[\w-]+[^>]*>\s*<\/[\w-]+>\s*)+<\/\1>/g, ''))
+        .pipe(replace(/<img[^>]+src="@@[^"]*"[^>]*>/g, ''))
         .pipe(replace(/^\s*[\r\n]/gm, '')) 
+
+        .pipe(replace(/@@emptyClear@@\s*<div[^>]*>.*?<\/div>/gs, ''))
         
         .pipe(gulp.dest(paths.html.dest));
 };
@@ -93,7 +96,12 @@ function pages() {
         // 4. Удаляем полностью пустые теги (например, <div></div>)
         .pipe(replace(/<(?!script\b)(\w+)[^>]*>\s*<\/\1>/g, ''))
         // 5. Удаляем родительский тег, если внутри него только пустые теги (кроме одиночных, таких как <img>, <br>, <input>)
+        .pipe(replace(/<(\w+)[^>]*>\s*(?:<(?!img|br|hr|meta|link|input|source|area|col|embed|param|track|wbr)[\w-]+[^>]*>\s*<\/[\w-]+>\s*)+<\/\1>/g, ''))
+        .pipe(replace(/<img[^>]+src="@@[^"]*"[^>]*>/g, ''))
         .pipe(replace(/^\s*[\r\n]/gm, '')) 
+
+        .pipe(replace(/@@emptyClear@@\s*<div[^>]*>.*?<\/div>/gs, ''))
+
 
         .pipe(flatten())
         .pipe(gulp.dest(paths.pages.dest));
@@ -117,10 +125,6 @@ function fonts() {
 // Сбока скриптов
 function scripts() {
     return gulp.src(paths.scripts.src)
-        .pipe(babel({
-            presets: ['@babel/preset-env'],
-            sourceType: 'module' // Даем Babel понять, что используем ESM (import/export)
-        }))
         .pipe(concat('main.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest(paths.scripts.dest));
@@ -174,4 +178,4 @@ export function serve() {
 };
 
 // Выполнение выше описанных тасок
-export default gulp.series(buildDist, fonts, styles, scripts, copyVendors, images, main, pages, serve);
+export default gulp.series(buildDist, fonts, styles, scripts, copyVendors, main, pages, serve);

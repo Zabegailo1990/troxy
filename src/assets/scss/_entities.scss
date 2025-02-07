@@ -65,9 +65,14 @@
 
 // Gallery
 .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 20px;
+    row-gap: 20px;
 
-    &__inner{
-
+    &__card{
+        flex-shrink: 0;
     }
 }
 
