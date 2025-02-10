@@ -1,0 +1,22 @@
+@use '../mixins/mediaQuery' as *;
+
+.slider{
+    display: flex;
+    overflow: hidden;
+    
+    &__slide{
+        flex-shrink: 0;
+    }
+
+    &--grid--tablet{
+        @include respond(tablet){
+            flex-wrap: wrap;
+        }
+    }
+
+    &--grid--pc{
+        @include respond(pc){
+            flex-wrap: wrap;
+        }
+    }
+}

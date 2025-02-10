@@ -1,17 +1,23 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .card-news{
-
+    width: 242px;
+    
+    @include respond(tablet){
+        width: 320px;
+    }
+    
+    @include respond(pc){
+        width: 400px;
+    }
+    
     &__frame{
-        width: 242px;
-        height: 150px;
+        width: inherit;
+        overflow: hidden;
         border-radius: 20px;
         margin-bottom: 12px;
-        overflow: hidden;
 
         @include respond(tablet){
-            width: 320px;
-            height: 200px;
             margin-bottom: 16px;
         }
     }
@@ -35,6 +41,32 @@
 
         @include respond(tablet){
             font-size: 23px;
+        }
+    }
+
+    &--theme--large{
+        width: 326px;
+        height: 338px;
+
+        .card-news__title{
+            font-size: 23px;
+        }
+
+        @include respond(tablet){
+            width: 339px;
+            height: 407px;
+
+            .card-news__frame{
+                height: 233px;
+            }
+        }
+
+        @include respond(pc){
+            width: 400px;
+
+            .card-news__frame{
+                height: 251px;
+            }
         }
     }
 }

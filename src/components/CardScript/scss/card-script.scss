@@ -1,0 +1,19 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.card-script{
+    display: flex;
+    align-items: flex-end;
+    background-color: #fff;
+    width: 327px;
+    min-height: 131px;
+    border-radius: 20px;
+    padding: 20px 26px;
+
+    @include respond(tablet){
+        width: 339px;
+    }
+
+    @include respond(pc){
+        width: 399px;
+    }
+}

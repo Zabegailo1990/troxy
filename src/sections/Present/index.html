@@ -1,41 +1,41 @@
 <div class="present @@theme">
     <picture class="background present__background">
-        <source media="(min-width: 1440px)" srcset="@@bgPc">
-        <source media="(min-width: 780px)" srcset="@@bgTb">
-        <img src="@@bgMb">
+        <source media="(min-width: 1440px)" srcset="/images/section_present-@@bgNum_bg_pc.jpg">
+        <source media="(min-width: 780px)" srcset="/images/section_present-@@bgNum_bg_pc.jpg">
+        <img src="/images/section_present-@@bgNum_bg_pc.jpg">
     </picture>  
     <div class="present__inner">
         @@include('../../components/Promo/index.html')
         @@include('../../components/Header/index.html', { 
             class: "present__header",
             themeLogo: "@@themeLogo",
-            themeNav: "@@themeNav",
+            colorButtonNav: "@@colorButtonNav",
             themeAuthbar: "@@themeAuthbar",
         })
         <div class="container">
-            <div class="present__row present__rating @@rating">
-                <img class="present__trustpilot" src="/images/present_section_trustpilot.svg" alt="">
-                <img class="present__trustpilot" src="/images/present_section_trustpilot.svg" alt="">
-                <img class="present__trustpilot" src="/images/present_section_trustpilot.svg" alt="">
+            <div class="present__row present__rating">
+                <img class="present__trustpilot" src="@@rating" alt="">
+                <img class="present__trustpilot" src="@@rating" alt="">
+                <img class="present__trustpilot" src="@@rating" alt="">
             </div>
-            <h1 class="title title--type--main title--color--white title--weight--medium present__title">@@title</h1>
-            <p class="text text--color--white present__text">@@text</p>
+            <h1 class="title title--type--main @@colorTitle title--weight--medium present__title">@@title</h1>
+            <p class="text @@colorText present__text">@@text</p>
             <div class="present__row present__buttons">
                 <button class="button button--color--white button--rounded button--bg--blue present__button">Choose tariff</button>
                 <button class="button button--color--dark button--rounded button--bg--white present__button">Sign up</button>
             </div>
             <ul class="present__list">
                 <li class="present__item">
-                    <p class="text text--color--white present__statistic">99,99% uptime</p>
+                    <p class="text @@colorText present__statistic">99,99% uptime</p>
                 </li>
                 <li class="present__item">
-                    <p class="text text--color--white present__statistic">&lt;0.2s avg speed</p>
+                    <p class="text @@colorText present__statistic">&lt;0.2s avg speed</p>
                 </li>
                 <li class="present__item">
-                    <p class="text text--color--white present__statistic">195+ locations</p>
+                    <p class="text @@colorText present__statistic">195+ locations</p>
                 </li>
                 <li class="present__item">
-                    <p class="text text--color--white present__statistic">25 000+ clients</p>
+                    <p class="text @@colorText present__statistic">25 000+ clients</p>
                 </li>
             </ul>
         </div>

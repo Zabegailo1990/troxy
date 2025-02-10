@@ -1,0 +1,19 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.slider-pluses{
+    column-gap: 10px;
+
+    @include respond(tablet) {
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 699px;
+        margin: 0 auto;
+    }
+    
+    &__slide{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+}

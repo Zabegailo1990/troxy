@@ -1,0 +1,23 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.scripts{
+
+    &__cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 700px;
+        row-gap: 12px;
+        margin: 0 auto;
+
+        @include respond(tablet){
+            flex-direction: row;align-items: normal;
+            flex-wrap: wrap;
+            gap: 21px;
+        }
+
+        @include respond(pc){
+            max-width: none;
+        }
+    }
+}

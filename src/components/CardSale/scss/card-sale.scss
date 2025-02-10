@@ -23,12 +23,49 @@
         margin-bottom: 12px;
 
         @include respond(tablet){
+            width: 326px;
             margin-bottom: 19px;
         }
     }
 
+    &__title,
+    &__subtitle{
+        width: 200px;
+        font-size: 18px;
+        @include respond(tablet){
+            width: 248px;
+            font-size: 23px;
+        }
+    }
 
     &__icon{
         margin-left: auto;
+    }
+
+    &--size--large{
+        width: 300px;
+        height: 420px;
+        
+        @include respond(tablet){
+            width: 620px;
+            height: 377px;
+        }
+        
+        @include respond(pc){
+            width: 610px;
+            height: 377px;
+        }
+
+        .card-sale{
+            &__img{
+                top: 0;
+                right: 0;
+                width: 300px;
+
+                @include respond(tablet){
+                    width: 412px;
+                }
+            }
+        }
     }
 }

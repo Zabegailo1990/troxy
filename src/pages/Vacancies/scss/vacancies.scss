@@ -1,0 +1,25 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.vacancies{
+
+    &__title{
+        font-size: 32px;
+        margin-bottom: 24px;
+
+        @include respond(tablet){
+            font-size: 52px;
+            margin-bottom: 32px;
+        }
+
+    }
+
+    &__tabs{
+        margin-bottom: 24px;
+    }
+
+    &__card{
+        &:not(:last-child){
+            margin-bottom: 14px;
+        }
+    }
+}

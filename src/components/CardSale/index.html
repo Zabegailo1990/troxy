@@ -1,14 +1,14 @@
-@@emptyClear@@
-<div class="card card--radius--medium card-sale @@class">
+@@marker
+<div class="card card--radius--medium @@cardClass card-sale @@size @@class">
     <picture class="card__background">
-        <source class="card__img" media="(min-width: 1440px)" srcset="@@bgPc">
-        <source class="card__img" media="(min-width: 780px)" srcset="@@bgTb">
-        <img class="card__img" src="@@bgMb">
+        <source class="card__img card-sale__img" media="(min-width: 1440px)" srcset="@@bgPc">
+        <source class="card__img card-sale__img" media="(min-width: 780px)" srcset="@@bgTb">
+        <img class="card__img card-sale__img" src="@@bgMb">
     </picture>
     <div class="card__inner">
-        <h3 class="title title--color--white card-sale__title">@@title</h3>
-        <p class="text text--color--white card-sale__text">@@text</p>
-        <h3 class="itle title--color--white  card-sale__subtitle">@@subtitle</h3>
-        <img class="card-sale__icon" src="/images/arrow-white.svg" alt="">
+        <h3 class="title @@colorTitle card-sale__title">@@title</h3>
+        <p class="text @@colorText card-sale__text">@@text</p>
+        <h3 class="title @@colorTitle card-sale__subtitle">@@subtitle</h3>
+        <img class="card-sale__icon" src="@@icon" alt="">
     </div>    
 </div>

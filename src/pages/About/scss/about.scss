@@ -1,0 +1,112 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.about{
+
+    &__title{
+        font-size: 32px;
+        font-weight: 500;
+        margin-bottom: 24px;
+
+        @include respond(tablet){
+           font-size: 52px;
+           margin-bottom: 32px;
+        }
+    }
+    &__supplier{
+        margin-bottom: 36px;
+
+        @include respond(tablet){
+            margin-bottom: 54px;
+        }
+
+        @include respond(pc){
+            margin-bottom: 65px;
+        }
+    }
+
+    &__player{
+        position: relative;
+        width: 325px;
+        height: 185px;
+        border-radius: 20px;
+        margin-bottom: 24px;
+        overflow: hidden;
+
+        @include respond(tablet){
+            width: 698px;
+            height: 397px;
+            margin-bottom: 33px;
+        }
+
+        @include respond(pc){
+            width: 100%;
+            height: 706px;
+            margin-bottom: 65px;
+        }
+    }
+
+    &__video{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    &__play{
+        position: absolute;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 26px;
+        height: 34px;
+        z-index: 15;
+
+        @include respond(tablet){
+            width: 57px;
+            height: 73px;
+        }
+        
+        @include respond(pc){
+            width: 100px;
+            height: 130px;
+        }
+    }
+
+    &__group{
+        &:not(:last-child){
+            margin-bottom: 32px;
+
+            @include respond(tablet){
+                margin-bottom: 42px;
+            
+            }
+            @include respond(pc){
+    
+            }
+        }
+    }
+
+    &__subtitle{
+        margin-bottom: 14px;
+
+        @include respond(tablet){
+            margin-bottom: 24px;
+        }
+        @include respond(pc){
+            margin-bottom: 28px;
+        }
+    }
+
+    &__text{
+       &:not(:last-child){
+            margin-bottom: 14px;
+
+            @include respond(tablet){
+            
+            }
+            @include respond(pc){
+    
+            }
+       }
+    }
+}

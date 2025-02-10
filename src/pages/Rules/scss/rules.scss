@@ -1,0 +1,33 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.rules{
+
+    &__title{
+        margin-bottom: 18px;
+        
+        @include respond(tablet){
+            margin-bottom: 32px;
+        }
+
+        @include respond(tablet){
+            margin-bottom: 42px;
+        }
+    }
+
+    &__list{
+        list-style-type: decimal;
+        padding-left: 20px;
+
+    }
+    
+    &__item{
+        &::marker{
+            font-size: 12px;
+
+            @include respond(tablet){
+                font-size: 16px;
+            }
+        }
+
+    }
+}

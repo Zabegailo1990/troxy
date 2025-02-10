@@ -1,0 +1,46 @@
+@use "../../../assets/scss/mixins/mediaQuery" as *;
+
+.news-page{
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+
+    &__cards{
+        display: flex;
+        flex-direction: column;
+        column-gap: 20px;
+        margin: 0 auto;
+
+        @include respond(tablet){
+            max-width: 698px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap: 20px;
+        }
+
+        @include respond(pc){
+            max-width: none;
+        }
+    }
+
+    &__row{
+        display: flex;
+        justify-content: center;
+    }
+
+    &__button{
+        margin-right: 18px;
+    }
+
+    &__pagination{
+        display: none;
+
+        @include respond(tablet){
+            display: flex;
+            align-items: center;
+        }
+    }
+}

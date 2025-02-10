@@ -6,11 +6,14 @@
     justify-content: space-between;
     width: 240px;
     height: 165px;
-    padding: 16px 21px 12px 15px;
+    padding: 16px;
+
     @include respond(tablet){
         width: 340px;
         height: 209px;
+        padding: 20px;
     }
+
     @include respond(pc){
         width: 296px;
     }
@@ -20,7 +23,48 @@
         height: 64px;
     }
 
+    &__description{
+        @include respond(tablet){
+            width: 254px;
+        }
+    }
+
+    &__title{
+        font-size: 16px;
+        margin-bottom: 10px;
+
+        @include respond(tablet){
+            font-size: 19px;
+        }
+    }
+
     &__text{
         text-align: right;
+    }
+
+    &--theme-affiliate{
+
+        width: 240px;
+        height: 250px;
+        
+        @include respond(tablet){
+            width: 340px;
+            height: 225px;
+        }
+        
+        @include respond(pc){
+            width: 400px;
+        }
+
+        .card-plus{
+
+            &__img{
+                margin-left: auto;
+            }
+
+            &__text{
+                text-align: left;
+            }
+         }
     }
 }

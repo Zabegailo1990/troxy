@@ -12,13 +12,103 @@
             bgPc: "/images/section_present-tariffs_bg_pc.jpg",
             bgTb: "/images/section_present-tariffs_bg_tb.jpg",
             bgMb: "/images/section_present-tariffs_bg_mb.jpg",
-            title: "Proxy tariffs",
+            title: "Sell ​​proxies and earn with our affiliate program",
+            text: "Limit proxies can be useful in a variety of areas such as internet marketing, data analysis, website testing and other areas where it is necessary to control access to proxy servers.",
             theme: "present--theme-dark",
             themeLogo: "logo--theme-dark",
             themeNav: "navigation--theme--dark",
             themeAuthbar: "authbar--theme--dark",
-            rating: "present__rating--hidden"
         })
+        @@include("../../sections/Proxyware/proxyware_2.html", {
+            title: "Features of the <span class='title--color--blue'>affiliate program</span>",
+            theme: "card-plus--theme-affiliate",
+            src_1: "/images/card-plus_affiliate_1.svg",
+            src_2: "/images/card-plus_affiliate_2.svg",
+            src_3: "/images/card-plus_affiliate_3.svg",
+            src_4: "/images/card-plus_affiliate_4.svg",
+            src_5: "/images/card-plus_affiliate_5.svg",
+            src_6: "/images/card-plus_affiliate_6.svg",
+            titleCard_1: "Lifetime commission",
+            titleCard_2: "Simple method",
+            titleCard_3: "Fast crediting",
+            titleCard_4: "Use as you wish",
+            titleCard_5: "Constant income",
+            titleCard_6: "Unlimited income",
+            text_1: "Earn 10% on all payments made by clients you refer",
+            text_2: "Attract clients using your referral link",
+            text_3: "Commissions are credited 30 days after the client's payment",
+            text_4: "You can withdraw from $100 via USDT TRC20 or pay for a proxy inside the TROXY platform",
+            text_5: "Users registered through your link remain linked to you for commission purposes",
+            text_6: "There are no limits on your income, we will pay as much as you can earn",
+        })
+        @@include("../../sections/Banner/index.html", {
+            bgNum: "1",
+            title: "Increase your income with TROXY proxy provider",
+            text: "Fill in all the fields of the form and send the application if you want to become our partner",
+            button_1: "Become a partner",
+        })
+        <div class="section">
+            <div class="container">
+                <h2 class="title section__title partner__title">Rules and recommendations <span class="title--color--blue">of the program</span></h2>
+                <div class="partner__cards">
+                    @@include("../../components/CardAffiliate/index.html", {
+                        class: "partner__card",
+                        title: "Don't be misled",
+                        text: "Promote our services accurately and honestly",
+                    })
+                    @@include("../../components/CardAffiliate/index.html", {
+                        class: "partner__card",
+                        title: "Work without spam",
+                        text: "Comply with anti-spam laws and respect opt-out requests",
+                    })
+                    @@include("../../components/CardAffiliate/index.html", {
+                        class: "partner__card",
+                        title: "No incentive registrations",
+                        text: "Promote our services accurately and honestly",
+                    })
+                    @@include("../../components/CardAffiliate/index.html", {
+                        class: "partner__card",
+                        title: "Clear disclosure of information",
+                        text: "Be transparent about your partnerships",
+                    })
+                    @@include("../../components/CardAffiliate/index.html", {
+                        class: "partner__card",
+                        title: "Don't be misled",
+                        text: "Use only authorized incentives for registration",
+                    })
+                    @@include("../../components/CardAffiliate/index.html", {
+                        class: "partner__card",
+                        title: "Respect for intellectual property",
+                        text: "Avoid violating any intellectual property rights",
+                    })
+                    @@include("../../components/CardAffiliate/index.html", {
+                        class: "partner__card",
+                        title: "Work legally",
+                        text: "Do not engage in or promote illegal activities",
+                    })
+                    @@include("../../components/CardAffiliate/index.html", {
+                        class: "partner__card",
+                        title: "Compliance with the rules",
+                        text: "Follow third party platform guidelines",
+                    })
+                    @@include("../../components/CardAffiliate/index.html", {
+                        class: "partner__card",
+                        title: "One Account Policy",
+                        text: "Creating multiple accounts for self-transition is prohibited",
+                    })
+                    @@include("../../components/CardAffiliate/index.html", {
+                        class: "partner__card",
+                        title: "Responsible Marketing",
+                        text: "Please ensure that promotions do not harm our brand or violate any laws.",
+                    })
+                    @@include("../../components/CardAffiliate/index.html", {
+                        class: "partner__card",
+                        title: "Regular updates",
+                        text: "Stay informed and update promotions as needed",
+                    })
+                </div>
+            </div>
+        </div>
         @@include("../../sections/Footer/index.html")
     </div>
 </body>

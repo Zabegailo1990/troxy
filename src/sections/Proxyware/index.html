@@ -1,62 +1,78 @@
 <div class="section proxyware">
-    <picture class="section__background">
+    <picture class="background proxyware__background">
         <source media="(min-width: 1440px)" srcset="/images/section_proxyware_bg_pc.jpg">
         <source media="(min-width: 780px)" srcset="/images/section_proxyware_bg_tb.jpg">
         <img src="/images/section_proxyware_bg_mb.jpg">
     </picture>    
-    <div class="container">
-        <div class="section__inner">
-            <h2 class="title proxyware__title">Maximum simplicity and quality of proxies <span class="title--color--blue">with a digital footprint at the price of regular ones</span></h2>
-            <div class="proxyware__slider">
-                <div class="proxyware__cards">
-                    <div class="proxyware__cell">
-                        @@include('../../components/CardPlus/index.html', { 
-                            class: "proxyware__card",
-                            src: "/images/plus_1.svg",
-                            text: "IPv4: HTTP, HTTPS,SOCKS4/5",
-                        })
-                        @@include('../../components/CardPlus/index.html', { 
-                            class: "proxyware__card",
-                            src: "/images/plus_2.svg",
-                            text: "IPv4: HTTP, HTTPS,SOCKS4/5",
-                        })
-                    </div>
-                    <div class="proxyware__cell">
-                        @@include('../../components/CardPlus/index.html', { 
-                            class: "proxyware__card",
-                            src: "/images/plus_3.svg",
-                            text: "IPv4: HTTP, HTTPS,SOCKS4/5",
-                        })
-                        @@include('../../components/CardPlus/index.html', { 
-                            class: "proxyware__card",
-                            src: "/images/plus_4.svg",
-                            text: "IPv4: HTTP, HTTPS,SOCKS4/5",
-                        })
-                    </div> 
-                    <div class="proxyware__cell">
-                        @@include('../../components/CardPlus/index.html', { 
-                            class: "proxyware__card",
-                            src: "/images/plus_5.svg",
-                            text: "IPv4: HTTP, HTTPS,SOCKS4/5",
-                        })
-                        @@include('../../components/CardPlus/index.html', { 
-                            class: "proxyware__card",
-                            src: "/images/plus_6.svg",
-                            text: "IPv4: HTTP, HTTPS,SOCKS4/5",
-                        })
-                    </div>
-                    <div class="proxyware__cell">
-                        @@include('../../components/CardPlus/index.html', { 
-                            class: "proxyware__card",
-                            src: "/images/plus_7.svg",
-                            text: "IPv4: HTTP, HTTPS,SOCKS4/5",
-                        })
-                        @@include('../../components/CardPlus/index.html', { 
-                            class: "proxyware__card",
-                            src: "/images/plus_8.svg",
-                            text: "IPv4: HTTP, HTTPS,SOCKS4/5",
-                        })
-                    </div>
+    <div class="proxyware__inner">
+        <div class="container">
+            <h2 class="title proxyware__title">@@title</h2>
+        </div>
+        <div class="proxyware__slider">
+            <div class="proxyware__cards">
+                <div class="proxyware__cell">
+                    @@include('../../components/CardPlus/index.html', { 
+                        class: "proxyware__card",
+                        theme: "@@theme",
+                        src: "@@src_1",
+                        text: "@@text_1",
+                        title: "@@titleCard_1"
+                    })
+                    @@include('../../components/CardPlus/index.html', { 
+                        class: "proxyware__card",
+                        theme: "@@theme",
+                        src: "@@src_2",
+                        text: "@@text_2",
+                        title: "@@titleCard_2"
+                    })
+                </div>
+                <div class="proxyware__cell">
+                    @@include('../../components/CardPlus/index.html', { 
+                        class: "proxyware__card",
+                        theme: "@@theme",
+                        src: "@@src_3",
+                        text: "@@text_3",
+                        title: "@@titleCard_3"
+                    })
+                    @@include('../../components/CardPlus/index.html', { 
+                        class: "proxyware__card",
+                        theme: "@@theme",
+                        src: "@@src_4",
+                        text: "@@text_4",
+                        title: "@@titleCard_4"
+                    })
+                </div> 
+                <div class="proxyware__cell">
+                    @@include('../../components/CardPlus/index.html', { 
+                        class: "proxyware__card",
+                        theme: "@@theme",
+                        src: "@@src_5",
+                        text: "@@text_5",
+                        title: "@@titleCard_5"
+                    })
+                    @@include('../../components/CardPlus/index.html', { 
+                        class: "proxyware__card",
+                        theme: "@@theme",
+                        src: "@@src_6",
+                        text: "@@text_6",
+                        title: "@@titleCard_6"
+                    })
+                </div>
+                <div class="proxyware__cell" @@empty>
+                    @@include('../../components/CardPlus/index.html', { 
+                        class: "proxyware__card",
+                        theme: "@@theme",
+                        src: "@@src_7",
+                        text: "@@text_7",
+                        title: "@@titleCard_7"
+                    })
+                    @@include('../../components/CardPlus/index.html', { 
+                        class: "proxyware__card",
+                        theme: "@@theme",
+                        src: "@@src_8",
+                        text: "@@text_8",
+                        title: "@@titleCard_8"
+                    })
                 </div>
             </div>
         </div>

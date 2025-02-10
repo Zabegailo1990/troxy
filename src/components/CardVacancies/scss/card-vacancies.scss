@@ -1,0 +1,70 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.card-vacancies{
+    padding: 32px 32px 36px 32px;
+
+    @include respond(tablet){
+        padding: 40px;
+    }
+
+    &__description{
+        max-width: 888px;
+        margin-bottom: 18px;
+
+        @include respond(tablet){
+            margin-bottom: 26px;
+        }
+    }
+
+    &__title{
+        margin-bottom: 18px;
+
+        @include respond(tablet){
+            margin-bottom: 26px;
+        }
+    }
+
+    &__row{
+        display: flex;
+        flex-direction: column;
+
+        @include respond(tablet){
+            flex-direction: row;
+        }
+    }
+
+    &__icon{
+        margin-left: auto;
+    }
+
+    &__content{
+        border-top: 1px solid #CED3DC;
+        padding-top: 42px;
+        margin-top: 32px;
+    }
+
+    &__line{
+        height: 1px;
+        background-color: #CED3DC;
+        display: block;
+        width: 100%;
+        margin-bottom: 42px;
+    }
+
+    &__group{
+        margin-bottom: 32px;
+    }
+
+    &__subtitle{
+        margin-bottom: 16px;
+        
+        @include respond(tablet){
+            margin-bottom: 24px;
+        }
+    }
+
+    &__list{
+        list-style-type: disc;
+        padding-left: 24px;
+    }
+}

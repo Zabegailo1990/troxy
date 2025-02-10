@@ -1,0 +1,79 @@
+@use '../mixins/mediaQuery' as *;
+
+$button-fz-small: 14px; 
+$button-fz-large: 16px; 
+$button-color-white: #fff;
+$button-color-dark: #17263F;
+$button-color-blue: #2E7AF5;
+$button-bg-blue: linear-gradient(90deg, rgba(46, 122, 245, 1) 0%, rgba(103, 161, 255, 1) 100%);
+$button-bg-white: #fff;
+
+.button{
+    font-size: $button-fz-small;
+    font-weight: 600;
+    display: block;
+    width: fit-content;
+    cursor: pointer;
+    @include respond(tablet) {
+        font-size: $button-fz-large;
+    }
+
+    &--color--dark{
+        color: $button-color-dark;
+    }
+
+    &--color--white{
+        color: $button-color-white;
+    }
+
+    &--color-gray{
+        color: #617597;
+    }
+
+    &--bg--white{
+        background-color: $button-bg-white;
+    }
+
+    &--bg--blue{
+        background: $button-bg-blue;
+    }
+
+    &--theme--square{
+        width: 32px;
+        height: 32px;
+        color: $button-color-blue;
+        background-color: $button-bg-white;
+        border-radius: 8px;
+    }
+
+    &--rounded{
+        padding: 12px 32px;
+        border-radius: 40px;
+        @include respond(tablet){
+            padding: 17px 34px;
+        }
+    }
+
+    &--radius-large{
+        border-radius: 32px;
+    }
+
+    &--indent-medium{
+        padding: 15px 32px;
+    }
+
+    &--promo{
+        font-size: $button-fz-small;
+        padding: 9px 18px;
+        opacity: 80%;
+    }
+
+    &--inactive{
+        opacity: 30%;
+    }
+
+    &--active-tab{
+        background-color: #fff;
+        color: #17263F;
+    }
+}

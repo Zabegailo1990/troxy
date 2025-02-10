@@ -2,8 +2,12 @@
 @use './_fonts.scss';
 @use './mixins/_mediaQuery';
 @use './_variables.scss';
+@use './entities/button.scss';
+@use './entities/slider.scss';
 @use './entities/card.scss';
+@use './entities/section.scss';
 @use './_entities.scss';
+
 
 @use "../../vendors/swiper/swiper-bundle.min.css";
 
@@ -22,16 +26,21 @@
 @use '../../components/CardNews/scss/card-news.scss';
 @use '../../components/SliderAdvantages/scss/slider-advantages.scss';
 @use '../../components/SliderPlans/scss/slider-plans.scss';
+@use '../../components/SliderPluses/scss/slider-pluses.scss';
 @use '../../components/CardGoal/scss/card-goal.scss';
 @use '../../components/CardSale/scss/card-sale.scss';
+@use '../../components/CardScript/scss/card-script.scss';
+@use '../../components/CardVacancies/scss/card-vacancies.scss';
+@use '../../components/CardAffiliate/scss/card-affiliate.scss';
 @use '../../components/SliderGoal/scss/slider-goal.scss';
 @use '../../components/SliderServices/scss/slider-services.scss';
+@use '../../components/SliderDeals/scss/slider-deals.scss';
+@use '../../components/Tabs/scss/tabs.scss';
 
 
 
 // Секции
 @use '../../sections/Present/scss/present.scss';
-@use '../../sections/Benefits/scss/benefits.scss';
 @use '../../sections/Proxyware/scss/proxyware.scss';
 @use '../../sections/Banner/scss/banner.scss';
 @use '../../sections/Locations/scss/locations.scss';
@@ -46,8 +55,22 @@
 @use '../../sections/ProxyPlans/scss/proxy-plans.scss';
 @use '../../sections/Goal/scss/goal.scss';
 @use '../../sections/Business/scss/business.scss';
+@use '../../sections/Deals/scss/deals.scss';
 
 
 
 // Страницы
+@use '../../pages/Home/scss/home.scss';
 @use '../../pages/Tariffs/scss/tariffs.scss';
+@use '../../pages/LimitProxy/scss/proxy-limit.scss';
+@use '../../pages/NewsPage/scss/news-page.scss';
+@use '../../pages/NewsInside/scss/news-inside.scss';
+@use '../../pages/About/scss/about.scss';
+@use '../../pages/Vacancies/scss/vacancies.scss';
+@use '../../pages/Partner/scss/partner.scss';
+@use '../../pages/TermsService/scss/terms.scss';
+@use '../../pages/Rules/scss/rules.scss';
+@use '../../pages/Privacy/scss/privacy.scss';
+@use '../../pages/Limitations/scss/limitations.scss';
+@use '../../pages/Finance/scss/finance.scss';
+@use '../../pages/Scripts/scss/scripts.scss';

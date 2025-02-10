@@ -9,28 +9,69 @@
 <body>
     <div class="home">
         @@include('./src/sections/Present/index.html', {
-            bgPc: "/images/section_present_bg_pc.jpg",
-            bgTb: "/images/section_present_bg_tb.jpg",
-            bgMb: "/images/section_present_bg_mb.jpg",
-            title: "Effective proxies for business with a unique digital footprint from $0.058"
+            bgNum: "1",
+            colorButtonNav: "button--color--white",
+            colorTitle: "title--color--white",
+            colorText: "text--color--white",
+            title: "Effective proxies for business with a unique digital footprint from $0.058",
+            rating: "/images/present_section_trustpilot.svg"
         })
-        @@include('./src/sections/Benefits/index.html')
+        <div class="home__benefits section">
+            <div class="container">
+                <div class="section__inner home__row">
+                    <h2 class="title home__title home__title--left">Troxy – proxy service based on <span class="title--color--blue">technology and ease of use</span></h2>
+                    <div class="home__cards-plus">
+                        @@include('./src/components/CardBenefit/index.html', {
+                            class: "home__card-plus", 
+                            title: "Unique digital footprint",
+                            paragraph_1: 'Digital footprint is a technology that provides natural traffic. Our "digital footprint" technology is based on the actions of real users who create natural traffic through our proxy services. These are ordinary people doing their daily business on the Internet: from watching TV series to shopping in online stores.', 
+                            paragraph_2: "This solution is ideal for SEO specialists, Internet marketers, parsers and developers who are looking for the most convenient and profitable option for using proxies.", 
+                        })
+                        @@include('./src/components/CardBenefit/index.html', {
+                            class: "home__card-plus", 
+                            title: "Only from $0.058/IP",
+                            paragraph_1: "One of the best prices for 1 IP among data center proxies on the market We offer the best prices for IP addresses among all data center proxy providers. Thanks to the affordable cost of our proxies, you will be able to scale your projects without significant costs.", 
+                            paragraph_2: "Our proxies provide stable work with high performance, which makes them ideal for both startups and large companies that need large-scale solutions. Affordable price and high quality make us one of the market leaders.", 
+                        })
+                        @@include('./src/components/CardBenefit/index.html', {
+                            class: "home__card-plus", 
+                            title: "Technical support 24/7",
+                            paragraph_1: "Technical support with one of the fastest responses on the market - average response &lt;4 minutes. Our technical support is characterized by a quick response to requests, with an average response time of less than 4 minutes. This is critical for business, as delays can lead to loss of traffic and conversions.", 
+                            paragraph_2: "This solution is ideal for SEO specialists, Internet marketers, parsers and developers who are looking for the most convenient and profitable option for using proxies.", 
+                        })
+                        @@include('./src/components/CardBenefit/index.html', {
+                            class: "home__card-plus", 
+                            title: "13 years of experience",
+                            paragraph_1: "13 years of experience in selling proxies under various brands Our team has over 13 years of experience in selling and providing proxy services. During this time, we have learned to deeply understand the needs of customers and adapt to changes in the proxy market.", 
+                            paragraph_2: "We have used our knowledge and experience to create solutions that help our customers achieve their goals. Our experience allows us to offer reliable and high-quality proxies for a variety of tasks - from SEO to managing high-load online systems.", 
+                        })
+                        @@include('./src/components/CardBenefit/index.html', {
+                            class: "home__card-plus", 
+                            title: "Flexible tariffs",
+                            paragraph_1: "Proxies not only by IP and traffic, but also by requests We offer flexible terms of use of proxy services, which allows customers to choose the best tariff plan based on their needs. You can choose a plan based on the number of IP addresses, traffic volume or number of requests, which allows flexible cost management.", 
+                            paragraph_2: "This solution is ideal for SEO specialists, Internet marketers, parsers and developers who are looking for the most convenient and profitable option for using proxies.", 
+                        })
+                    </div>
+                </div>
+            </div>
+        </div>
         @@include('./src/sections/Proxyware/index.html')
         @@include('./src/sections/Banner/index.html', {
-            bgPc: "/images/section_banner-1_bg_pc.jpg",
-            bgTb: "/images/section_banner-1_bg_tb.jpg",
-            bgMb: "/images/section_banner-1_bg_mb.jpg",
+            bgNum: "1",
             title: "Does your business need a customized solution?",
             text: "We will select a high-quality and effective solution for you personally at the best price",
             button_1: "Choose solution",
             button_2: "Test free"
         })
-        @@include('./src/sections/Locations/index.html')
+        <div class="container">
+            @@include('./src/components/SliderFlags/index.html', { 
+                class: "home__slider",
+                mode: "slider__slide--mode-grid" 
+            })
+        </div>
         @@include('./src/sections/Solutions/index.html')
         @@include('./src/sections/Banner/index.html', {
-            bgPc: "/images/section_banner-2_bg_pc.jpg",
-            bgTb: "/images/section_banner-2_bg_tb.jpg",
-            bgMb: "/images/section_banner-2_bg_mb.jpg",
+            bgNum: "2",
             title: "Does your business need a customized solution?",
             text: "We will select a high-quality and effective solution for you personally at the best price",
             button_1: "Choose solution",

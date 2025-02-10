@@ -14,6 +14,39 @@
             themeNav: "navigation--theme--dark",
             themeAuthbar: "authbar--theme--dark",
         })
+        <div class="section">
+            <div class="container">
+                <h1 class="title about__title">About Us</h1>
+            </div>
+            @@include("../../sections/Supplier/index.html", { 
+                class: "about__supplier",
+                titleMode: "supplier__title--left"
+            })
+            <div class="container">
+                <div class="about__player">
+                    <video class="about__video" poster="/images/poster.jpg">
+                        <source src="" type="">
+                    </video>
+                    <button class="about__play">
+                        <img src="/images/play.svg" alt="">
+                    </button>
+                </div>
+                <div class="about__group">
+                    <h2 class="title about__subtitle">Strong reputation and digital footprint</h2>
+                    <p class="text about__text">Each of our IP addresses is equipped with a digital footprint that mimics the behavior of real users online. This means that thousands of people use our IPs for everyday tasks - from browsing websites to online shopping. This digital footprint reduces the number of captchas and reduces the likelihood of blocking, creating a smooth proxy experience for you.</p>
+                </div>
+                <div class="about__group">
+                    <h2 class="title about__subtitle">Fair and transparent conditions</h2>
+                    <p class="text about__text">At Troxy.org you pay only for proxies, no hidden fees or unnecessary extra charges. We take an honest approach, providing transparent conditions for customers.</p>
+                </div>
+                <div class="about__group">
+                    <h2 class="title about__subtitle">Reliable and high performance</h2>
+                    <p class="text about__text">Our proxies provide a stable and fast connection with 99.99% uptime. This allows you to work with large volumes of data, minimizing delays and ensuring uninterrupted operation for the most demanding taskswith a digital footprint at the price of regular ones."</p>
+                    <p class="text about__text">Troxy.org is a combination of simplicity, reliability and cost-effectiveness. Our proxies offer the benefits of residential IPs at the price of regular ones, providing high quality without compromise. If you are looking for a solution to reduce blocking and captchas, Troxy is your perfect choice.</p>
+                    <p class="text about__text">Our promise: "Ultimate simplicity and quality of proxies with a digital footprint at the price of regular ones."</p>
+                </div>
+            </div>
+        </div>
         @@include("../../sections/Footer/index.html")
     </div>
 </body>

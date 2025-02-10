@@ -1,0 +1,29 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.card-affiliate{
+    display: flex;
+    align-items: center;
+
+    @include respond(tablet){
+        width: 340px;
+    }
+    
+    @include respond(pc){
+        width: 611px;
+    }
+    
+    &__icon{
+        width: 72px;
+        height: 72px;
+        margin-right: 11px;
+    }
+
+    &__title{
+        font-size: 16px;
+        margin-bottom: 7px;
+
+        @include respond(tablet){
+            font-size: 19px;
+        }
+    }
+}

@@ -13,6 +13,60 @@
         themeNav: "navigation--theme--dark",
         themeAuthbar: "authbar--theme--dark",
     })
+    <div class="section">
+        <div class="container">
+            <h1 class="title vacancies__title">Join our team</h1>
+            @@include("../../components/Tabs/index.html", {
+                class: "vacancies__tabs",
+                tab_1: "All",
+                tab_2: "Design",
+                tab_3: "Marketing",
+                tab_4: "Management",
+                tab_5: "Engeenering",
+                tab_6: "QA",
+            })
+            @@include("../../components/CardVacancies/index.html", {
+                class: "vacancies__card",
+                title: "Senior Release Engineer",
+                description: "We're looking for a Release Engineer with strong programming skills to join the game project team. You'll develop and support the processes of production and operation of our games. More specifically, you will determine the development of build systems, delivery, and testing of our games, work with various relevant tools, and bring your ideas and experience to the product.",
+                location: " Remotely (except Russia, Belarus, Ukraine)",
+                subtitle_1: "Responsibilities",
+                item_1_1: "Provide effective and accurate customer support via email and live chat.",
+                item_1_2: "Troubleshoot technical issues with our services and provide clear and effective solutions.",
+                item_1_3: "Gain a comprehensive understanding of our products and services to offer personalized advice and support.",
+                item_1_4: "Collect and share customer feedback to help improve our services.",
+                subtitle_2: "Requirements",
+                item_2_1: "Fluency in English and Russian, both written and spoken.",
+                item_2_2: "Excellent communication skills, friendly and outgoing demeanor.",
+                item_2_3: "Remote position that allows you to work from anywhere.",
+                item_2_4: "Strong interest in web technologies and a desire to learn.",
+                item_2_5: "Previous experience in customer support or similar positions is welcome, but not required.",
+                item_2_6: "Must reside outside of Russia, Ukraine and Belarus.",
+                subtitle_3: "Salary from $600 to $1000",
+                textContent: "Salary will be determined based on interview results. Full-time with a minimum salary of $800. The first three months after training will be on a $600 program with the possibility of increasing depending on qualifications and experience.",
+                button: "Apply to position",
+            })
+            @@include("../../components/CardVacancies/index.html", {
+                class: "vacancies__card",
+                title: "Tech Lead Full Stack (Web Services)",
+                description: "We're looking for a Release Engineer with strong programming skills to join the game project team. You'll develop and support the processes of production and operation of our games. More specifically, you will determine the development of build systems, delivery, and testing of our games, work with various relevant tools, and bring your ideas and experience to the product.",
+                location: " Remotely (except Russia, Belarus, Ukraine)",
+            })
+            @@include("../../components/CardVacancies/index.html", {
+                class: "vacancies__card",
+                title: "​​Projects & Facilities Manager",
+                description: "We're looking for a Release Engineer with strong programming skills to join the game project team. You'll develop and support the processes of production and operation of our games. More specifically, you will determine the development of build systems, delivery, and testing of our games, work with various relevant tools, and bring your ideas and experience to the product.",
+                location: " Remotely (except Russia, Belarus, Ukraine)",
+            })
+            @@include("../../components/CardVacancies/index.html", {
+                class: "vacancies__card",
+                title: "Middle C++ Software Engineer",
+                description: "We're looking for a Release Engineer with strong programming skills to join the game project team. You'll develop and support the processes of production and operation of our games. More specifically, you will determine the development of build systems, delivery, and testing of our games, work with various relevant tools, and bring your ideas and experience to the product.",
+                location: " Remotely (except Russia, Belarus, Ukraine)",
+            })
+
+        </div>
+    </div>
     @@include("../../sections/Footer/index.html")
     
 </body>

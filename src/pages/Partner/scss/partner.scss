@@ -1,0 +1,30 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.partner{
+
+    &__title{
+        text-align: center;
+    }
+
+    &__cards{
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        max-width: 698px;
+        margin: 0 auto;
+
+        @include respond(tablet){
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 18px;
+        }
+
+        @include respond(pc){
+            max-width: 100%;
+        }
+    }
+
+    &__card{
+        flex-shrink: 0;
+    }
+}

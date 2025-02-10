@@ -26,7 +26,6 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 65px;
         }
     }
     
@@ -53,15 +52,16 @@
         @include respond(tablet){
             margin-right: -40px;
         }
+        @include respond(pc){
+            margin-right: 0;
+        }
     }
 
     &__card{
+        flex-shrink: 0;
+
         &:not(:last-child){
             margin-right: 20px;
-
-            @include respond(tablet){
-                
-            }
         }
     }
 }
