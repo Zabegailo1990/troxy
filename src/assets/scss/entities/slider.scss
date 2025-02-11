@@ -3,20 +3,27 @@
 .slider{
     display: flex;
     overflow: hidden;
+    column-gap: 10px;
+
+    @include respond(tablet){
+        column-gap: 19px;
+    }
     
     &__slide{
         flex-shrink: 0;
-    }
 
-    &--grid--tablet{
-        @include respond(tablet){
-            flex-wrap: wrap;
-        }
-    }
-
-    &--grid--pc{
-        @include respond(pc){
-            flex-wrap: wrap;
+        &--column{
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            
+            @include respond(tablet){
+                row-gap: 12px;
+            }
+            
+            @include respond(tablet){
+                row-gap: 22px;
+            }
         }
     }
 }

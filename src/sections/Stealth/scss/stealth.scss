@@ -1,20 +1,6 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.proxyware{
-    position: relative;
-
-    &__background{
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-    }
-
-    &__inner{
-        position: relative;
-        z-index: 1;
-    }
-
+.stealth{
     &__title{
         text-align: center;
         margin-bottom: 36px;
@@ -25,46 +11,41 @@
     }
 
     &__slider{
-        padding-left: 24px;
+        display: flex;
+        overflow: hidden;
+        column-gap: 10px;
+        margin-right: -24px;
 
         @include respond(tablet) {
+            row-gap: 12px;
+            column-gap: 19px;
+            flex-wrap: wrap;
+            max-width: 699px;
             padding-left: 0;
+            margin: 0 auto;
+
         }
         
-        @include respond(tablet) {
-            max-width: 1244px;
+        @include respond(pc) {
+            row-gap: 22px;
+            flex-wrap: nowrap;
+            max-width: none;
             margin: 0 auto;
         }
     }
 
-    &__cards{
-        display: flex;
-        overflow: hidden;
-        column-gap: 10px;
-        //тех.долг
-        @include respond(tablet){
-            column-gap: 0;
-            row-gap: 12px;
-            justify-content: center;
-            flex-wrap: wrap;
-            // overflow: auto;
-        }
-        @include respond(pc){
-            row-gap: 0;
-            flex-wrap: nowrap;
-            column-gap: 19px;
-        }
-    }
 
-    &__cell{
+    &__slide{
         display: flex;
         flex-direction: column;
         row-gap: 10px;
+
         @include respond(tablet){
             flex-direction: row;
             row-gap: 0;
             column-gap: 19px;
         }
+        
         @include respond(pc){
             flex-direction: column;
             row-gap: 22px;

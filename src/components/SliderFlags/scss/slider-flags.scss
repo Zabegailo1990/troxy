@@ -1,0 +1,16 @@
+.slider-flags{
+    display: flex;
+    overflow: hidden;
+
+    &__slide{
+        &:not(:last-child){
+            margin-right: 21px;
+        }
+    }
+
+    &__card{
+        &:not(:last-child){
+            margin-bottom: 14px;
+        }
+    }
+}

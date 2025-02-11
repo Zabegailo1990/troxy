@@ -7,12 +7,47 @@
     <title>Scripts inside</title>
 </head>
 <body>
-    <div class="scripts-inside">
+    <div class="script-inside">
         @@include("../../components/Header/index.html", {
             class: "header--bg--white",
             themeLogo: "logo--theme-dark",
             themeNav: "navigation--theme--dark",
             themeAuthbar: "authbar--theme--dark",
+        })
+        <div class="section">
+            <div class="container">
+                <h1 class="title script-inside__title">Script for working with Google-Translate-API. Python</h1>
+                <p class="text text--color--gray script-inside__text">12.08.2024</p>
+                <div class="script-inside__group">
+                    <p class="text script-inside__text">To work with the Google Translate API using Python, you can use the googletrans library, which is a wrapper around the Google Translate API. Below is a simple script demonstrating how to use this library to translate text.</p>
+                    <p class="text script-inside__text">First, you need to install the library:</p>
+                </div>
+                <div class="script-inside__frame">
+                    <img class="script-inside__img script-inside__img--small" src="/images/page_script-inside_small.jpg" alt="">
+                </div>
+                <div class="script-inside__group">
+                    <p class="text script-inside__text">Here is a basic example script for translating text using the googletrans library:</p>
+                </div>
+                <div class="script-inside__frame">
+                    <img class="script-inside__img script-inside__img--large" src="/images/page_script-inside_large.jpg" alt="">
+                </div>
+                <div class="script-inside__group">
+                    <p class="text script-inside__text">This script performs the following steps:</p>
+                    <p class="text script-inside__text">Imports the Translator class from the googletrans library.
+                        Defines a translate_text function that takes the text to translate, the source language, and the target language as arguments.
+                        Uses a Translator object to perform the translation and handles any exceptions that may occur.
+                        The if __name__ == "__main__": block demonstrates how to use the translate_text function with an example.
+                        You can change the src_language and dest_language variables to translate between different languages. The src_lang parameter can be set to 'auto' to automatically detect the source language.</p>
+                    <p class="text script-inside__text">Feel free to extend this script or integrate it into a larger application as needed</p>
+                </div>
+            </div>
+        </div>
+        @@include("../../sections/Banner/index.html", {
+            bgNum: "2",
+            title: "Does your business need a customized solution?",
+            text: "We will select a high-quality and effective solution for you personally at the best price",
+            button_1: "Choose solution",
+            button_2: "Test free",
         })
         @@include("../../sections/Footer/index.html")
     </div>

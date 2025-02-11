@@ -1,3 +1,5 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
 .card-flag{
     display: flex;
     flex-direction: column;
@@ -6,20 +8,36 @@
     row-gap: 12px;
     width: 218px;
     height: 147px;
-    
-    &__img{
-        width: 88px;
-        height: 64px;
+
+    &__frame{
+        width: 90px;
+        height: 66px;
+        border-radius: 12px;
+        overflow: hidden;
     }
-
-
-    &--front{}
     
-    &--first-left{}
-    &--second-left{}
-    &--third-left{}
+    &__icon{
+        width: inherit;
+        height: inherit;
+    }
+    
+    &--small{
+        width: 155px;
+        height: 104px;
 
-    &--first-right{}
-    &--second-right{}
-    &--third-right{}
+        @include respond(tablet){
+            width: 218px;
+            height: 147px;
+        }
+        
+        .card-flag__frame{
+            width: 64px;
+            height: 47px;
+
+            @include respond(tablet){
+                width: 90px;
+                height: 66px;
+            }
+        }
+    }
 }

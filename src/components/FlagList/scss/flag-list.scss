@@ -1,0 +1,12 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.flag-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 17px;
+    margin: 0 auto;
+
+    @include respond(tablet){
+        max-width: 698px;
+    }
+}

@@ -1,0 +1,54 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.script-inside{
+
+    &__title{
+        margin-bottom: 14px;
+
+        @include respond(tablet){
+            margin-bottom: 21px;
+        }
+    }
+
+    &__date{
+        margin-bottom: 14px;
+
+        @include respond(tablet){
+            margin-bottom: 31px;
+        }
+    }
+
+    &__text{
+        &:not(:last-child){
+            margin-bottom: 14px;
+            
+            @include respond(tablet){
+                margin-bottom: 18px;
+            }
+        }
+    }
+
+    &__group {
+        margin-bottom: 42px;
+
+        @include respond(tablet){
+            margin-bottom: 28px;
+        }        
+    }
+    
+    &__frame{
+        margin-left: -24px;
+        margin-right: -24px;
+        margin-bottom: 42px;
+        
+        @include respond(tablet){
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 28px;
+        }
+    }
+
+    &__img{
+        object-fit: cover;
+    }
+}

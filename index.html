@@ -19,34 +19,34 @@
         <div class="home__benefits section">
             <div class="container">
                 <div class="section__inner home__row">
-                    <h2 class="title home__title home__title--left">Troxy – proxy service based on <span class="title--color--blue">technology and ease of use</span></h2>
-                    <div class="home__cards-plus">
+                    <h2 class="title home__subtitle home__subtitle--left">Troxy – proxy service based on <span class="title--color--blue">technology and ease of use</span></h2>
+                    <div class="home__cards-benefits">
                         @@include('./src/components/CardBenefit/index.html', {
-                            class: "home__card-plus", 
+                            class: "home__card-benefit", 
                             title: "Unique digital footprint",
                             paragraph_1: 'Digital footprint is a technology that provides natural traffic. Our "digital footprint" technology is based on the actions of real users who create natural traffic through our proxy services. These are ordinary people doing their daily business on the Internet: from watching TV series to shopping in online stores.', 
                             paragraph_2: "This solution is ideal for SEO specialists, Internet marketers, parsers and developers who are looking for the most convenient and profitable option for using proxies.", 
                         })
                         @@include('./src/components/CardBenefit/index.html', {
-                            class: "home__card-plus", 
+                            class: "home__card-benefit", 
                             title: "Only from $0.058/IP",
                             paragraph_1: "One of the best prices for 1 IP among data center proxies on the market We offer the best prices for IP addresses among all data center proxy providers. Thanks to the affordable cost of our proxies, you will be able to scale your projects without significant costs.", 
                             paragraph_2: "Our proxies provide stable work with high performance, which makes them ideal for both startups and large companies that need large-scale solutions. Affordable price and high quality make us one of the market leaders.", 
                         })
                         @@include('./src/components/CardBenefit/index.html', {
-                            class: "home__card-plus", 
+                            class: "home__card-benefit", 
                             title: "Technical support 24/7",
                             paragraph_1: "Technical support with one of the fastest responses on the market - average response &lt;4 minutes. Our technical support is characterized by a quick response to requests, with an average response time of less than 4 minutes. This is critical for business, as delays can lead to loss of traffic and conversions.", 
                             paragraph_2: "This solution is ideal for SEO specialists, Internet marketers, parsers and developers who are looking for the most convenient and profitable option for using proxies.", 
                         })
                         @@include('./src/components/CardBenefit/index.html', {
-                            class: "home__card-plus", 
+                            class: "home__card-benefit", 
                             title: "13 years of experience",
                             paragraph_1: "13 years of experience in selling proxies under various brands Our team has over 13 years of experience in selling and providing proxy services. During this time, we have learned to deeply understand the needs of customers and adapt to changes in the proxy market.", 
                             paragraph_2: "We have used our knowledge and experience to create solutions that help our customers achieve their goals. Our experience allows us to offer reliable and high-quality proxies for a variety of tasks - from SEO to managing high-load online systems.", 
                         })
                         @@include('./src/components/CardBenefit/index.html', {
-                            class: "home__card-plus", 
+                            class: "home__card-benefit", 
                             title: "Flexible tariffs",
                             paragraph_1: "Proxies not only by IP and traffic, but also by requests We offer flexible terms of use of proxy services, which allows customers to choose the best tariff plan based on their needs. You can choose a plan based on the number of IP addresses, traffic volume or number of requests, which allows flexible cost management.", 
                             paragraph_2: "This solution is ideal for SEO specialists, Internet marketers, parsers and developers who are looking for the most convenient and profitable option for using proxies.", 
@@ -55,7 +55,9 @@
                 </div>
             </div>
         </div>
-        @@include('./src/sections/Proxyware/index.html')
+        @@include('./src/sections/Stealth/index.html', {
+            title: "Maximum simplicity and quality of proxies <span class='title--color--blue'>with a digital footprint at the price of regular ones</span>",
+        })
         @@include('./src/sections/Banner/index.html', {
             bgNum: "1",
             title: "Does your business need a customized solution?",
@@ -63,11 +65,93 @@
             button_1: "Choose solution",
             button_2: "Test free"
         })
-        <div class="container">
-            @@include('./src/components/SliderFlags/index.html', { 
-                class: "home__slider",
-                mode: "slider__slide--mode-grid" 
-            })
+        <div class="section">
+            <div class="container">
+                <h2 class="title home__subtitle home__subtitle--space-small">All popular locations</h2>
+                <p class="text home__text">Didn't find the proxy type or location you need? We will select and provide a personal solution for your purposes upon request</p>
+                <button class="button--rounded button--bg--blue button--color--white home__button">All locations</button>
+                @@include('./src/components/SliderFlags/index.html', { 
+                    class: "home__slider",
+                    mode: "slider__slide--mode-grid" 
+                })
+                <div class="home__marquee">
+                    @@include('./src/components/CardFlag/index.html', {
+                        class: "home__card-flag",
+                        iconName: "ru",
+                        title: "Russia"
+                    })
+                    @@include('./src/components/CardFlag/index.html', {
+                        class: "home__card-flag",
+                        iconName: "us",
+                        title: "USA"
+                    })
+                    @@include('./src/components/CardFlag/index.html', {
+                        class: "home__card-flag",
+                        iconName: "ch",
+                        title: "China"
+                    })
+                    @@include('./src/components/CardFlag/index.html', {
+                        class: "home__card-flag",
+                        iconName: "ua",
+                        title: "Ukraine"
+                    })
+                    @@include('./src/components/CardFlag/index.html', {
+                        class: "home__card-flag home__card-flag--first home__card-flag--first-left",
+                        iconName: "au",
+                        title: "Australia"
+                    })
+                    @@include('./src/components/CardFlag/index.html', {
+                        class: "home__card-flag home__card-flag--second home__card-flag--second-left",
+                        iconName: "in",
+                        title: "India"
+                    })
+                    @@include('./src/components/CardFlag/index.html', {
+                        class: "home__card-flag home__card-flag--third home__card-flag--third-left",
+                        iconName: "de",
+                        title: "Germany"
+                    })
+                    @@include('./src/components/CardFlag/index.html', {
+                        class: "home__card-flag home__card-flag--center",
+                        iconName: "tr",
+                        title: "Turkey"
+                    })
+                    @@include('./src/components/CardFlag/index.html', {
+                        class: "home__card-flag home__card-flag--third home__card-flag--third-right",
+                        iconName: "pk",
+                        title: "Pakistan"
+                    })
+                    @@include('./src/components/CardFlag/index.html', {
+                        class: "home__card-flag home__card-flag--second home__card-flag--second-right",
+                        iconName: "nl",
+                        title: "Netherlands"
+                    })
+                    @@include('./src/components/CardFlag/index.html', {
+                        class: "home__card-flag home__card-flag--first home__card-flag--first-right",
+                        iconName: "uk",
+                        title: "UK"
+                    })
+                    @@include('./src/components/CardFlag/index.html', {
+                        class: "home__card-flag",
+                        iconName: "pl",
+                        title: "Poland"
+                    })
+                    @@include('./src/components/CardFlag/index.html', {
+                        class: "home__card-flag",
+                        iconName: "fr",
+                        title: "France"
+                    })
+                    @@include('./src/components/CardFlag/index.html', {
+                        class: "home__card-flag",
+                        iconName: "br",
+                        title: "Brazil"
+                    })
+                    @@include('./src/components/CardFlag/index.html', {
+                        class: "home__card-flag",
+                        iconName: "es",
+                        title: "Spain"
+                    })
+                </div>
+            </div>
         </div>
         @@include('./src/sections/Solutions/index.html')
         @@include('./src/sections/Banner/index.html', {

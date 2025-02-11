@@ -28,6 +28,10 @@ $button-bg-white: #fff;
 
     &--color-gray{
         color: #617597;
+    } 
+
+    &--color-blue{
+        color: #2E7AF5;
     }
 
     &--bg--white{
@@ -38,12 +42,19 @@ $button-bg-white: #fff;
         background: $button-bg-blue;
     }
 
-    &--theme--square{
+    &--theme-square{
         width: 32px;
         height: 32px;
-        color: $button-color-blue;
-        background-color: $button-bg-white;
-        border-radius: 8px;
+    }
+
+    &--theme-square-large{
+        width: 42px;
+        height: 42px;
+        
+        @include respond(tablet){
+            width: 54px;
+            height: 54px;
+        }
     }
 
     &--rounded{
@@ -58,6 +69,10 @@ $button-bg-white: #fff;
         border-radius: 32px;
     }
 
+    &--radius-small{
+        border-radius: 8px;
+    }
+
     &--indent-medium{
         padding: 15px 32px;
     }
@@ -66,6 +81,10 @@ $button-bg-white: #fff;
         font-size: $button-fz-small;
         padding: 9px 18px;
         opacity: 80%;
+    }
+
+    &--transparent{
+        opacity: 50%;
     }
 
     &--inactive{

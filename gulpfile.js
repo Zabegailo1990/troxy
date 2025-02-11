@@ -48,7 +48,7 @@ function deleteDist() {
 function buildDist(done) {
     return gulp.series(
         deleteDist,
-        gulp.parallel(styles, scripts, main, pages)
+        gulp.parallel(styles, scripts, main, pages, copySprites)
     )(done);
 };
 
@@ -158,7 +158,7 @@ export function images() {
 
 function copySprites() {
     return gulp.src('./src/assets/sprites/**/*')
-      .pipe(gulp.dest('docs/sprites'));
+        .pipe(gulp.dest('docs/sprites'));
   }
 
 // Вотчеры и live server
@@ -195,7 +195,7 @@ export function serve() {
         done();
     }));
     
-    gulp.watch('./src/assets/sprites/**/*', gulp.series(copySprites, (done) => {
+    gulp.watch('./src/assets/sprites/**/*', gulp.series(copySprites, main, pages, (done) => {
         browserSync.reload();
         done();
     }));

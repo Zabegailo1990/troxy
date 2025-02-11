@@ -1,0 +1,91 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.wiki{
+
+    &__title{
+        margin-bottom: 18px;
+
+        @include respond(tablet){
+            margin-bottom: 34px;
+        }
+
+        @include respond(pc){
+            margin-bottom: 42px;
+        }
+
+    }
+
+    &__field{
+        margin-bottom: 20px;
+
+        @include respond(tablet){
+            margin-bottom: 32px;
+        }
+    }
+
+    &__keyboard{
+        display: flex;
+        gap: 10px;
+        overflow-x: scroll;
+        margin-bottom: 42px;
+
+        &::-webkit-scrollbar{
+            display: none;
+        }
+
+        @include respond(tablet){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &__button{
+        flex-shrink: 0;
+    }
+
+    &__index{
+        @include respond(tablet){
+            display: flex;
+            flex-wrap: wrap;
+            gap: 21px;
+        }
+
+    }
+
+    &__list{
+        width: 339px;
+        flex-shrink: 0;
+
+        @include respond(pc){
+            width: 399px;
+        }
+
+        &:not(:last-child){
+            margin-bottom: 44px;
+
+            @include respond(tablet){
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__item{
+        
+        &:not(:last-child){
+            margin-bottom: 18px;
+        }
+        
+        &--title{
+            border-bottom: 1px solid #CED3DC;
+            padding-bottom: 18px;
+        }
+    }
+
+    &__link{
+        font-size: 16px;
+        font-weight: 700;
+        color: #2E7AF5;
+        text-decoration: underline;
+    }
+}

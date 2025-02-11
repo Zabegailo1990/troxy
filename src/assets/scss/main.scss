@@ -3,6 +3,7 @@
 @use './mixins/_mediaQuery';
 @use './_variables.scss';
 @use './entities/button.scss';
+@use './entities/icon.scss';
 @use './entities/slider.scss';
 @use './entities/card.scss';
 @use './entities/section.scss';
@@ -17,31 +18,38 @@
 @use '../../components/Navigation/scss/navigation.scss';
 @use '../../components/Authbar/scss/authbar.scss';
 @use '../../components/Header/scss/header.scss';
+@use '../../components/Question/scss/question.scss';
+
+@use '../../components/Tabs/scss/tabs.scss';
+@use '../../components/Pagination/scss/pagination.scss';
+@use '../../components/Input/scss/field.scss';
+
 @use '../../components/CardBenefit/scss/card-benefit.scss';
 @use '../../components/CardPlus/scss/card-plus.scss';
 @use '../../components/CardFlag/scss/card-flag.scss';
 @use '../../components/CardService/scss/card-service.scss';
 @use '../../components/CardAdvanced/scss/card-advanced.scss';
-@use '../../components/Question/scss/question.scss';
-@use '../../components/CardNews/scss/card-news.scss';
-@use '../../components/SliderAdvantages/scss/slider-advantages.scss';
-@use '../../components/SliderPlans/scss/slider-plans.scss';
-@use '../../components/SliderPluses/scss/slider-pluses.scss';
 @use '../../components/CardGoal/scss/card-goal.scss';
 @use '../../components/CardSale/scss/card-sale.scss';
 @use '../../components/CardScript/scss/card-script.scss';
 @use '../../components/CardVacancies/scss/card-vacancies.scss';
 @use '../../components/CardAffiliate/scss/card-affiliate.scss';
+@use '../../components/CardNews/scss/card-news.scss';
+
+@use '../../components/FlagList/scss/flag-list.scss';
+@use '../../components/SliderAdvantages/scss/slider-advantages.scss';
+@use '../../components/SliderPlans/scss/slider-plans.scss';
+@use '../../components/SliderPluses/scss/slider-pluses.scss';
 @use '../../components/SliderGoal/scss/slider-goal.scss';
+@use '../../components/SliderFlags/scss/slider-flags.scss';
 @use '../../components/SliderServices/scss/slider-services.scss';
 @use '../../components/SliderDeals/scss/slider-deals.scss';
-@use '../../components/Tabs/scss/tabs.scss';
 
 
 
 // Секции
 @use '../../sections/Present/scss/present.scss';
-@use '../../sections/Proxyware/scss/proxyware.scss';
+@use '../../sections/Stealth/scss/stealth.scss';
 @use '../../sections/Banner/scss/banner.scss';
 @use '../../sections/Locations/scss/locations.scss';
 @use '../../sections/Solutions/scss/solutions.scss';
@@ -74,3 +82,6 @@
 @use '../../pages/Limitations/scss/limitations.scss';
 @use '../../pages/Finance/scss/finance.scss';
 @use '../../pages/Scripts/scss/scripts.scss';
+@use '../../pages/ScriptsInside/scss/script-inside.scss';
+@use '../../pages/Detector/scss/detector.scss';
+@use '../../pages/Wiki/scss/wiki.scss';
