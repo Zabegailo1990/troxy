@@ -1,3 +1,5 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
 .question{
     background-color: #fff;
     overflow: hidden;
@@ -14,6 +16,16 @@
     &__title{
         font-size: 16px;
         margin-right: 52px;
+
+        @include respond(tablet){
+            font-size: 19px;
+        }
+    }
+
+    &__icon{
+        flex-shrink: 0;
+        width: 12px;
+        height: 18px;
     }
 
     &__answer{

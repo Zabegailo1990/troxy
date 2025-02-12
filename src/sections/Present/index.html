@@ -11,6 +11,13 @@
             themeLogo: "@@themeLogo",
             colorButtonNav: "@@colorButtonNav",
             themeAuthbar: "@@themeAuthbar",
+            tariffs: "@@tariffs",
+            countries: "@@countries",
+            information: "@@information",
+            goals: "@@goals",
+            services: "@@services",
+            api: "@@api"
+            
         })
         <div class="container">
             <div class="present__row present__rating">
@@ -18,7 +25,16 @@
                 <img class="present__trustpilot" src="@@rating" alt="">
                 <img class="present__trustpilot" src="@@rating" alt="">
             </div>
-            <h1 class="title title--type--main @@colorTitle title--weight--medium present__title">@@title</h1>
+            <div class="present__group">
+                @@if(typeof flag !== 'undefined' && flag) {
+                    <div class="present__frame">
+                        <svg class="icon present__icon">
+                            <use xlink:href="/sprites/flags.svg#icon-flag_@@flag"></use>
+                        </svg>
+                    </div>
+                }
+                <h1 class="title title--type--main @@colorTitle title--weight--medium present__title">@@title</h1>
+            </div>
             <p class="text @@colorText present__text">@@text</p>
             <div class="present__row present__buttons">
                 <button class="button button--color--white button--rounded button--bg--blue present__button">Choose tariff</button>

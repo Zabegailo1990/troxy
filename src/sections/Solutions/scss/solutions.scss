@@ -1,63 +1,22 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .solutions{
-    position: relative;
-
-    &__background{
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 0;
-    }
-
-    &__img{
-        object-fit: contain;
-    }
-
-    &__inner{
-        position: relative;
-        z-index: 1;
-
-        @include respond(pc){
-            display: flex;
-            align-items: flex-start;
-        }
-    }
-    
-    &__title{
-        text-align: center;
-        margin-bottom: 36px;
-
-        @include respond(pc){
-            text-align: left;
-            margin-right: 44px;
-            margin-bottom: 0;
-        }
-    }
-
     &__slider{
-        flex-shrink: 0;
+        display: flex;
+        column-gap: 10px;
         overflow: hidden;
         margin-right: -24px;
         margin-bottom: 36px;
 
         @include respond(tablet) {
+            justify-content: center;
+            column-gap: 0;
             margin-left: 0;
             margin-bottom: 0;
         }
     }
 
-    &__cards{
-        display: flex;
-        column-gap: 10px;
-
-        @include respond(tablet) {
-            justify-content: center;
-            column-gap: 0;
-        }
-    }
-
-    &__cell{
+    &__slide{
         position: relative;
         display: flex;
         flex-direction: column;

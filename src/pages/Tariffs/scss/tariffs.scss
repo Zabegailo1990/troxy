@@ -1,11 +1,36 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .tariffs{
-    &__countries{
-        display: none;
+
+    &__subtitle{
+        text-align: center;
+        margin-bottom: 36px;
+        
+        @include respond(tablet){
+            margin-bottom: 65px;
+        }
+    }
+
+    &__slider-flags{
+        margin-right: -24px;
+        margin-bottom: 34px;
 
         @include respond(tablet){
-            display: block;
+            display: none;
         }
+    }
+    
+    &__flag-list{
+        display: none;
+
+        
+        @include respond(tablet){
+            display: flex;
+            margin-bottom: 65px;
+        }
+    }
+
+    &__button{
+        margin: 0 auto;
     }
 }

@@ -9,24 +9,34 @@
 <body>
     <div class="location">
         @@include('../../sections/Present/index.html', {
-            bgPc: "/images/section_present-tariffs_bg_pc.jpg",
-            bgTb: "/images/section_present-tariffs_bg_tb.jpg",
-            bgMb: "/images/section_present-tariffs_bg_mb.jpg",
+            bgNum: "2",
             title: "Proxy by location",
             theme: "present--theme-dark",
             themeLogo: "logo--theme-dark",
             themeNav: "navigation--theme--dark",
             themeAuthbar: "authbar--theme--dark",
-            rating: "present__rating--hidden"
+            text: "Use our proxy packages or order a custom quantity based on your needs"
         })
-        @@include('../../sections/Countries/index.html', {
-            class: "location__countries",
-            title: "Select the location <span class='title--color--blue'>you need</span>",
-        })
+        <div class="section">
+            <div class="container">
+                <h2 class="title location__subtitle">Select the location <span class="title--color--blue">you need</span></h2>
+                @@include("../../components/Tabs/index.html", {
+                    class: "location__tabs",
+                    tab_1: "Europe",
+                    tab_2: "Africa",
+                    tab_3: "Asia",
+                    tab_4: "North America",
+                    tab_5: "South America",
+                    tab_6: "Oceania",
+                })
+                @@include("../../components/FlagList/index.html", {
+                    class: "location__flag-list",
+                    classCard: "card-flag--small",
+                })
+            </div>
+        </div>
         @@include('../../sections/Banner/index.html', {
-            bgPc: "/images/section_banner-1_bg_pc.jpg",
-            bgTb: "/images/section_banner-1_bg_tb.jpg",
-            bgMb: "/images/section_banner-1_bg_mb.jpg",
+            bgNum: "1",
             title: "Test our proxies to ensure their quality",
             text: "We will select a high-quality and effective solution for you personally at the best price",
             button_1: "Test free"

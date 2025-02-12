@@ -157,8 +157,8 @@ export function images() {
 };
 
 function copySprites() {
-    return gulp.src('./src/assets/sprites/**/*')
-        .pipe(gulp.dest('docs/sprites'));
+        return gulp.src('./src/assets/sprites/**/*')
+            .pipe(gulp.dest('docs/sprites'));
   }
 
 // Вотчеры и live server

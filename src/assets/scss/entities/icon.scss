@@ -1,17 +1,25 @@
 .icon{
     display: block;
+    width: fit-content;
     fill: #17263F;
+    
+    &--color-blue{
+        fill: #2E7AF5;
+    }
+    
+    &--color-stroke-blue{
+        stroke: #2E7AF5;
+    }
 
-    &--size{
+    &--color-stroke-white{
+        stroke: #fff;
+    }
 
-        &-small{
-            width: 24px;
-            height: 24px;
-        }
+    &--color-stroke-dark{
+        stroke: #17263F;
+    }
 
-        &-large{
-            width: 64px;
-            height: 64px;
-        }
+    &--color-white{
+        fill: #fff;
     }
 }

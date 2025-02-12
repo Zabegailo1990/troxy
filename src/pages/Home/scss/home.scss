@@ -138,8 +138,10 @@
     &__slider{
         margin-right: -24px;
 
-        @include respond(tablet){
-            display: none;
+        &--tablet-off{
+            @include respond(tablet){
+                display: none;
+            }
         }
     }
     
@@ -207,7 +209,5 @@
                 transform: scale(0.4) translateX(-500px);
             }
         }
-    }
-
-    
+    }   
 }

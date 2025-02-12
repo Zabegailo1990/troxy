@@ -3,10 +3,15 @@
 .proxy-plans{
     
     &__slider{
-        margin-right: -24px;
+        max-width: 700px;
+        margin: 0 -24px 0 0;
 
         @include respond(tablet){
-            margin-right: 0;
+            margin: 0 auto;
+        }
+
+        @include respond(pc){
+            max-width: none;
         }
     }
 

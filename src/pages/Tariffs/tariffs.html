@@ -9,43 +9,49 @@
     <body>
         <div class="tariffs">
             @@include('../../sections/Present/index.html', {
-                bgPc: "/images/section_present-tariffs_bg_pc.jpg",
-                bgTb: "/images/section_present-tariffs_bg_tb.jpg",
-                bgMb: "/images/section_present-tariffs_bg_mb.jpg",
+                bgNum: "2",
                 title: "Proxy tariffs",
                 theme: "present--theme-dark",
                 themeLogo: "logo--theme-dark",
                 themeNav: "navigation--theme--dark",
                 themeAuthbar: "authbar--theme--dark",
-                rating: "present__rating--hidden"
+                tariffs: "#",
+                countries: "by-country.html",
+                information: "",
+                goals: "",
+                services: "",
+                api: "",
             })
             @@include('../../sections/ProxyPlans/index.html')
-            @@include('../../sections/Countries/index.html', {
-                class: "tariffs__countries",
-                title: "Best proxy locations <span class='title--color--blue'>by country</span>",
-                button: "View all locations (195)"
-            })
+            <div class="section">
+                <div class="container">
+                    <h2 class="title tariffs__subtitle">Best proxy locations <span class="title--color--blue">by country</span></h2>
+                    @@include("../../components/SliderFlags/index.html", { class: "tariffs__slider-flags" })
+                    @@include("../../components/FlagList/index.html", { class: "tariffs__flag-list" })
+                    <button class="button button--bg--blue button--rounded button--color--white tariffs__button">View all locations (195)</button>
+                </div>
+            </div>
             @@include('../../sections/Banner/index.html', {
-                bgPc: "/images/section_banner-1_bg_pc.jpg",
-                bgTb: "/images/section_banner-1_bg_tb.jpg",
-                bgMb: "/images/section_banner-1_bg_mb.jpg",
+                bgNum: "1",
                 title: "Test our proxies to ensure their quality",
                 text: "We will select a high-quality and effective solution for you personally at the best price",
                 button_1: "Test free"
             })
-            @@include('../../sections/Stealth/index.html')
+            @@include('../../sections/Stealth/index.html', {
+                title: "Maximum simplicity and quality of proxies <span class='title--color--blue'>with a digital footprint at the price of regular ones</span>"
+            })
             @@include('../../sections/Banner/index.html', {
-                bgPc: "/images/section_banner-2_bg_pc.jpg",
-                bgTb: "/images/section_banner-2_bg_tb.jpg",
-                bgMb: "/images/section_banner-2_bg_mb.jpg",
+                bgNum: "2",
                 title: "Create a personal tariff from 1000 to 200,000 IPs and more",
                 text: "We will select a high-quality and effective solution for you personally at the best price",
                 button_1: "Buy proxy",
                 button_2: "Test free"
             })
             @@include('../../sections/Simple/index.html')
-            @@include('../../sections/Faq/index.html')
-            @@include('../../sections/SliderNews/index.html')
+            <div class="container">
+                @@include('../../sections/Faq/index.html')
+                @@include('../../sections/SliderNews/index.html')
+            </div>
             @@include("../../sections/Footer/index.html")
         </div>
     </body>

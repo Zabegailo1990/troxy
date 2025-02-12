@@ -41,11 +41,32 @@
         text: "@@text_6",
         subtitle: "@@subtitle_6",
     })
-    @@include("../CardGoal/index.html", {
-        class: "slider-goal__slide",
-        src: "@@src_7",
-        title: "@@title_7",
-        text: "@@text_7",
-        subtitle: "@@subtitle_7",
-    })
+    @@if(typeof subtitle_7 !== 'undefined' && subtitle_7) {
+        @@include("../CardGoal/index.html", {
+            class: "slider-goal__slide",
+            src: "@@src_7",
+            title: "@@title_7",
+            text: "@@text_7",
+            subtitle: "@@subtitle_7",
+        })
+    }
+    @@if(typeof subtitle_8 !== 'undefined' && subtitle_8) {
+        @@include("../CardGoal/index.html", {
+            class: "slider-goal__slide",
+            src: "@@src_8",
+            title: "@@title_8",
+            text: "@@text_8",
+            subtitle: "@@subtitle_8",
+        })
+    }
+    @@if(typeof subtitle_9 !== 'undefined' && subtitle_9) {
+        @@include("../CardGoal/index.html", {
+            class: "slider-goal__slide",
+            src: "@@src_9",
+            title: "@@title_9",
+            text: "@@text_9",
+            subtitle: "@@subtitle_9",
+        })
+    }
+   
 </div>

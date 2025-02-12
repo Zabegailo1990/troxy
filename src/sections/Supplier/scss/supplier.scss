@@ -1,21 +1,11 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .supplier{
-    position: relative;
-
-    &__background{
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 0;
-    }
 
     &__inner{
-        position: relative;
         display: flex;
         flex-direction: column;
         margin-bottom: 44px;
-        z-index: 1;
 
         @include respond(pc){
             flex-direction: row;
@@ -94,12 +84,11 @@
         object-fit: cover
     }
 
-    &__statistic{
-        position: relative;
+    &__group{
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
         row-gap: 17px;
-        z-index: 1;
 
         @include respond(tablet){
             row-gap: 44px;
@@ -113,15 +102,11 @@
         }
     }
     
-    &__cell{
-        display: flex;
-        flex: 1 1 338px;
-        flex-direction: column;
-        height: 94px;
-        row-gap: 10px;
+    &__column{
+        width: 153px;
 
         @include respond(tablet){
-            row-gap: 14px;
+            width: 338px;
         }
 
         @include respond(pc){

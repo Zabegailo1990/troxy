@@ -31,18 +31,40 @@
         }
     }
 
-    &__title{
-        text-align: center;
+    &__group{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto 28px auto;
+        
+        @include respond(tablet){
+            flex-direction: row-reverse;
+            max-width: 1027px;
+            margin: 0 auto 34px auto;
+        }
+    }
+
+    &__frame{
+        width: 58px;
+        height: 41px;
+        border-radius: 8px;
+        overflow: hidden;
         margin-bottom: 28px;
 
         @include respond(tablet){
-            margin-bottom: 34px;
+            margin-bottom: 0;
+            margin-left: 28px;
         }
-        @include respond(pc){
-            width: 1027px;
-            margin-right: auto;
-            margin-left: auto;
-        }
+    }
+
+    &__icon{
+        width: inherit;
+        height: inherit;
+    }
+
+    &__title{
+        text-align: center;
     }
     
     &__text{
