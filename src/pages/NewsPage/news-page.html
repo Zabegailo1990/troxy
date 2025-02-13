@@ -16,7 +16,7 @@
         })
         <div class="container">
             <div class="section">
-                <h1 class="title section__title">Proxy news and useful articles</h1>
+                <h1 class="title news-page__title">Proxy news and useful articles</h1>
                 <div class="news-page__inner">
                     <div class="news-page__cards">
                         @@include("../../components/CardNews/index.html", {
@@ -84,17 +84,7 @@
                         })
                     </div>
                 </div>
-                <div class="news-page__row">
-                    <button class="button button--rounded button--bg--blue button--color--white button--inactive news-page__button">Previuos</button>
-                        <div class="news-page__pagination">
-                            <button class="button button--theme--square">1</button>
-                            <button class="button button--theme--square button--inactive">2</button>
-                            <button class="button button--theme--square button--inactive">3</button>
-                            <button class="button button--theme--square button--inactive">...</button>
-                            <button class="button button--theme--square button--inactive news-page__button">21</button>
-                        </div>
-                    <button class="button button--rounded button--bg--blue button--color--white">Next</button>
-                </div>
+                @@include('../../components/Pagination/index.html', { class: "news-page__pagination"})
             </div>
         </div>
         @@include("../../sections/Simple/index.html")

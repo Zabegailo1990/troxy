@@ -23,8 +23,49 @@
             max-width: 100%;
         }
     }
-
+    
     &__card{
         flex-shrink: 0;
+    }
+    
+    &__subtitle{
+        text-align: center;
+        margin-bottom: 36px;
+        
+        @include respond(pc){
+            margin-bottom: 65px;
+        }
+    }
+    
+    &__slider{
+        display: flex;
+        column-gap: 20px;
+        overflow: auto;
+        margin: 0 -24px;
+
+        &::-webkit-scrollbar{
+            display: none;
+        }
+
+        @include respond(tablet){
+            overflow: auto;
+            margin: 0 -40px;  
+        }
+
+        @include respond(pc){
+            overflow: auto;
+            margin: 0; 
+        }
+    }
+
+    &__stub{
+        width: 24px;
+    }
+
+    &__slide{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
     }
 }

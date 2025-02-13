@@ -4,6 +4,15 @@
     display: flex;
     column-gap: 20px;
     overflow: hidden;
+    max-width: 700px;
+
+    @include respond(tablet){
+        margin: 0 auto;
+    }
+
+    @include respond(pc){
+        max-width: none;
+    }
 
     @include respond(tablet){
         flex-wrap: wrap;

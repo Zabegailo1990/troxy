@@ -28,6 +28,15 @@
         }
     }
 
+    &__row{
+        display: flex;
+        align-items: center;
+    }
+
+    &__label{
+        margin-right: 8px;
+    }
+
     &__title,
     &__subtitle{
         width: 200px;

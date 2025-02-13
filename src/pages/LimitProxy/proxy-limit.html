@@ -9,83 +9,49 @@
 <body>
     <div class="proxy-limit">
         @@include('../../sections/Present/index.html', {
-            bgPc: "/images/section_present-tariffs_bg_pc.jpg",
-            bgTb: "/images/section_present-tariffs_bg_tb.jpg",
-            bgMb: "/images/section_present-tariffs_bg_mb.jpg",
-            title: "Proxy tariffs",
+            bgNum: "2",
+            title: "Limit proxies",
+            text: "Limit proxies can be useful in a variety of areas such as internet marketing, data analysis, website testing and other areas where it is necessary to control access to proxy servers.",
             theme: "present--theme-dark",
             themeLogo: "logo--theme-dark",
             themeNav: "navigation--theme--dark",
             themeAuthbar: "authbar--theme--dark",
-            rating: "present__rating--hidden"
         })
         <div class="section">
             <div class="container">
                 <h1 class="title section__title">Special rates for proxies <span class="title--color--blue">for Google</span></h1>
-                <div class="slider slider--grid--pc proxy-limit__slider">
-                    @@include("../../components/CardSale/index.html", {
-                        class: "slider__slide",
-                        cardClass: "card--bg--blur card--frame--gradient",
-                        textColor: "text--color--dark",
-                        subtitleColor: "title--color--dark",
-                        size: "card-sale--size--large",
-                        bgPc: "/images/component_card-sale_deal_pc-1.png",
-                        bgTb: "/images/component_card-sale_deal_tb-1.png",
-                        bgMb: "/images/component_card-sale_deal_mb-1.png",
-                        title: "Unlimited datacenter proxies",
-                        titleColor: "title--color--blue",
-                        text: "For bulk data parsing, SEO and monitoring",
-                        subtitle: "From $0.58",
-                        icon: "/images/arrow.svg",
-                    })
-                    @@include("../../components/CardSale/index.html", {
-                        class: "slider__slide",
-                        cardClass: "card--bg--blur card--frame--gradient",
-                        textColor: "text--color--dark",
-                        subtitleColor: "title--color--dark",
-                        size: "card-sale--size--large",
-                        bgPc: "/images/component_card-sale_deal_pc-2.png",
-                        bgTb: "/images/component_card-sale_deal_tb-2.png",
-                        bgMb: "/images/component_card-sale_deal_mb-2.png",
-                        title: "Unlimited datacenter proxies",
-                        titleColor: "title--color--blue",
-                        text: "For bulk data parsing, SEO and monitoring",
-                        subtitle: "From $0.58",
-                        icon: "/images/arrow.svg",
-                    })
-                    @@include("../../components/CardSale/index.html", {
-                        class: "slider__slide",
-                        cardClass: "card--bg--blur card--frame--gradient",
-                        textColor: "text--color--dark",
-                        subtitleColor: "title--color--dark",
-                        size: "card-sale--size--large",
-                        bgPc: "/images/component_card-sale_deal_pc-3.png",
-                        bgTb: "/images/component_card-sale_deal_tb-3.png",
-                        bgMb: "/images/component_card-sale_deal_mb-3.png",
-                        title: "Unlimited datacenter proxies",
-                        titleColor: "title--color--blue",
-                        text: "For bulk data parsing, SEO and monitoring",
-                        subtitle: "From $0.58",
-                        icon: "/images/arrow.svg",
-                    })
-                </div>
+                @@include('../../components/SliderDeals/index.html', { 
+                    class: "proxy-limit__slider",
+                    
+                    bgPc_1: "component_card-sale_limit_1_pc.png",
+                    bgTb_1: "component_card-sale_limit_1_tb.png",
+                    bgMb_1: "component_card-sale_limit_1_mb.png",
+                    title_1: "Unlimited datacenter proxies",
+                    text_1: "For bulk data parsing, SEO and monitoring",
+                    subtitle_1: "$0.58",
+
+                    bgPc_2: "component_card-sale_limit_2_pc.png",
+                    bgTb_2: "component_card-sale_limit_2_tb.png",
+                    bgMb_2: "component_card-sale_limit_2_mb.png",
+                    title_2: "Limit proxies",
+                    text_2: "For accurate data collection without unnecessary overhead",
+                    subtitle_2: "$0.62",
+                })
+
             </div>
         </div>
         @@include('../../sections/Banner/index.html', {
-            bgPc: "/images/section_banner-1_bg_pc.jpg",
-            bgTb: "/images/section_banner-1_bg_tb.jpg",
-            bgMb: "/images/section_banner-1_bg_mb.jpg",
+            bgNum: "1",
             title: "Test our proxies to ensure their quality",
             text: "We will select a high-quality and effective solution for you personally at the best price",
             button_1: "Test free"
         })
         @@include('../../sections/Stealth/index.html')
         @@include('../../sections/Banner/index.html', {
-            bgPc: "/images/section_banner-1_bg_pc.jpg",
-            bgTb: "/images/section_banner-1_bg_tb.jpg",
-            bgMb: "/images/section_banner-1_bg_mb.jpg",
+            bgNum: "2",
             title: "Test our proxies to ensure their quality",
             text: "We will select a high-quality and effective solution for you personally at the best price",
+            button_2: "Buy proxy",
             button_1: "Test free"
         })
         @@include('../../sections/Simple/index.html')

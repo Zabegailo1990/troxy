@@ -11,12 +11,22 @@
         }
     }
 
-    &__slider-flags{
+    &__slider{
         margin-right: -24px;
+
+    }
+
+    &__slider-flags{
         margin-bottom: 34px;
 
         @include respond(tablet){
             display: none;
+        }
+    }
+    
+    &__slider-plans{
+        @include respond(tablet){
+            margin: 0 auto;
         }
     }
     

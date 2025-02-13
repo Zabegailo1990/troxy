@@ -16,7 +16,7 @@
         })
         <div class="section">
             <div class="container">
-                <h1 class="title about__title">About Us</h1>
+                <h1 class="about__title">About Us</h1>
             </div>
             @@include("../../sections/Supplier/index.html", { 
                 class: "about__supplier",
@@ -27,9 +27,13 @@
                     <video class="about__video" poster="/images/poster.jpg">
                         <source src="" type="">
                     </video>
-                    <button class="about__play">
-                        <img src="/images/play.svg" alt="">
-                    </button>
+                    <div class="about__label">
+                        <button class="about__play">
+                            <img class="about__img" src="/images/play.svg" alt="">
+                        </button>
+                        <h4 class="title title--color--white about__tagline">Create the best with Troxy</h4>
+                        <p class="text text--color--white about__text-tagline">Use our proxy packages or order a custom quantity based on your needs</p>
+                    </div>
                 </div>
                 <div class="about__group">
                     <h2 class="title about__subtitle">Strong reputation and digital footprint</h2>

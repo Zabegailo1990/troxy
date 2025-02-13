@@ -26,7 +26,7 @@
                 tab_6: "QA",
             })
             @@include("../../components/CardVacancies/index.html", {
-                class: "vacancies__card",
+                class: "vacancies__card vacancies__card--active",
                 title: "Senior Release Engineer",
                 description: "We're looking for a Release Engineer with strong programming skills to join the game project team. You'll develop and support the processes of production and operation of our games. More specifically, you will determine the development of build systems, delivery, and testing of our games, work with various relevant tools, and bring your ideas and experience to the product.",
                 location: " Remotely (except Russia, Belarus, Ukraine)",
@@ -64,8 +64,8 @@
                 description: "We're looking for a Release Engineer with strong programming skills to join the game project team. You'll develop and support the processes of production and operation of our games. More specifically, you will determine the development of build systems, delivery, and testing of our games, work with various relevant tools, and bring your ideas and experience to the product.",
                 location: " Remotely (except Russia, Belarus, Ukraine)",
             })
-
         </div>
+        @@include("../../components/Pagination/index.html", { class: "vacancies__pagination"})
     </div>
     @@include("../../sections/Footer/index.html")
     

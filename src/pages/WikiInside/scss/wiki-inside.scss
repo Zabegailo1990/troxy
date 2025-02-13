@@ -1,0 +1,122 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.wiki-inside{
+
+    &__title{
+        margin-bottom: 14px;
+
+        @include respond(tablet){
+            margin-bottom: 21px;
+        }
+    }
+
+    &__date{
+        margin-bottom: 20px;
+
+        @include respond(tablet){
+            margin-bottom: 32px;
+        }
+    }
+
+    &__inner{
+
+        @include respond(tablet){
+            display: flex;
+        }
+    }
+
+    &__content{
+        @include respond(tablet){
+            margin-right: 21px;
+        }
+    }
+
+    &__group{
+        &:not(:last-child){
+            margin-bottom: 42px;
+        }
+    }
+
+    &__subtitle{
+        margin-bottom: 24px;
+
+        @include respond(tablet){
+            margin-bottom: 28px;
+        }
+    }
+
+    &__text{
+        &:not(:last-child){
+            margin-bottom: 26px;
+
+            @include respond(tablet){
+                margin-bottom: 36px;
+            }
+        }
+
+        &--banner{
+            margin-bottom: 16px;
+        }
+    }
+    
+    &__aside{
+        display: none;
+
+        @include respond(pc){
+            flex-shrink: 0;
+            display: block;
+        }
+    }
+
+    &__list{
+        width: 399px;
+        padding: 32px;
+        border-radius: 20px;
+        background-color: #fff;
+        margin-bottom: 22px;
+
+    }
+
+    &__sublist{
+        padding-left: 25px;
+    }
+
+    &__link{
+        text-decoration: underline;
+        color: #2E7AF5;
+        font-weight: 500;
+    }
+
+    &__banner{
+        position: relative;
+        text-align: center;
+        width: 400px;
+        height: 595px;
+        overflow: hidden;
+        border-radius: 20px;
+        padding: 71px 26px 26px 26px;
+    }
+
+    &__background{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    &__column{
+        position: relative;
+        z-index: 1;
+    }
+
+    &__tagline{
+        font-size: 23px;
+        color: #fff;
+        width: 300px;
+        margin: 0 auto 16px auto;
+    }
+
+    &__button{
+        margin: 0 auto;
+    }
+}

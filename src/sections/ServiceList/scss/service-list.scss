@@ -1,34 +1,11 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .service-list{
-    @include respond(tablet){
+
+    &__inner{
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
     }
 
-    &__title{
-        text-align: left;
-        margin-bottom: 36px;
-
-        @include respond(tablet){
-            margin-bottom: 65px;
-        }
-    }
-    
-    &__slider{
-        margin-right: -24px;
-
-        @include respond(tablet){
-            display: none;
-        }
-    }
-
-    &__gallery{
-        display: none;
-
-        @include respond(tablet){
-            display: flex;
-        }
-    }
 }

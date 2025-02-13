@@ -1,4 +1,3 @@
-@@marker
 <div class="card card--radius--medium @@cardClass card-sale @@size @@class">
     <picture class="card__background">
         <source class="card__img card-sale__img" media="(min-width: 1440px)" srcset="@@bgPc">
@@ -8,8 +7,13 @@
     <div class="card__inner">
         <h3 class="title @@colorTitle card-sale__title">@@title</h3>
         <p class="text @@colorText card-sale__text">@@text</p>
-        <h3 class="title @@colorTitle card-sale__subtitle">@@subtitle</h3>
-        <svg class="icon icon--color-white card-sale__icon">
+        @@if(typeof subtitle !== 'undefined' && subtitle){
+            <div class="card-sale__row">
+                <span class="card-sale__label">From </span>
+                <h3 class="title @@colorSubtitle card-sale__subtitle"> @@subtitle</h3>
+            </div>
+        }
+        <svg class="icon @@colorIcon card-sale__icon">
             <use xlink:href="/sprites/icons.svg#icon-arrow"></use>
         </svg>
     </div>    

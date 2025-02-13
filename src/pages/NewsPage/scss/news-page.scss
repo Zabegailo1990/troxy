@@ -2,10 +2,32 @@
 
 .news-page{
 
+    &__title{
+        text-align: left;
+        font-weight: 500;
+        line-height: 35px;
+        font-size: 32px;
+        margin-bottom: 36px;
+        
+        @include respond(tablet){
+            font-size: 52px;
+            line-height: 64px;
+            margin-bottom: 65px;
+        }
+    }
+
     &__inner{
         display: flex;
         flex-direction: column;
-        margin-bottom: 25px;
+        margin-bottom: 35px;
+
+        @include respond(tablet){
+            margin-bottom: 52px;
+        }
+    }
+
+    &__subtitle{
+        margin-bottom: 24px;
     }
 
     &__cards{
@@ -26,21 +48,7 @@
         }
     }
 
-    &__row{
-        display: flex;
-        justify-content: center;
-    }
-
-    &__button{
-        margin-right: 18px;
-    }
-
     &__pagination{
-        display: none;
-
-        @include respond(tablet){
-            display: flex;
-            align-items: center;
-        }
+        margin: 0 auto;
     }
 }
