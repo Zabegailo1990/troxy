@@ -132,7 +132,17 @@
     
     &__button{
         display: block;
-        margin: 0 auto 36px auto;
+        margin: 0 auto;
+
+        &--space{
+            margin-bottom: 36px;
+        }
+
+        &--tablet-off{
+            @include respond(tablet){
+                display: none;
+            }
+        }
     }
     
     &__slider{
@@ -209,5 +219,34 @@
                 transform: scale(0.4) translateX(-500px);
             }
         }
-    }   
+    }
+    
+    &__slider-services{
+        margin-bottom: 48px;
+    }
+    
+    &__purpose{
+        display: none;
+
+        @include respond(tablet){
+            display: flex;
+            justify-content: center;
+            row-gap: 10px;
+        }
+    }
+
+    &__group{
+        display: flex;
+        flex-direction: column;
+        row-gap: 21px;
+
+        &:not(:first-child){
+            margin-left: -160px;
+        }
+        @include respond(pc){
+            &:not(:first-child){
+                margin-left: -120px;
+            }
+        }
+    }
 }

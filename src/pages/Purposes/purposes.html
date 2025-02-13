@@ -14,8 +14,12 @@
             themeNav: "navigation--theme--dark",
             themeAuthbar: "authbar--theme--dark",
         })
-
-        @@include("../../sections/Business/index.html")
+        <div class="section">
+            <div class="container">
+                @@include("../../components/SliderServices/index.html", { class: "purposes__slider" })
+                @@include("../../sections/ServiceList/index.html", { class: "purposes__service-list" })
+            </div>
+        </div>
         @@include("../../sections/Banner/index.html", {
             bgPc: "/images/section_banner_2_bg-3.png",
             bgTb: "/images/section_banner_2_bg-2.png",

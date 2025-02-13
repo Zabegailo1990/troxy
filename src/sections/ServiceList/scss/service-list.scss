@@ -1,6 +1,11 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.business{
+.service-list{
+    @include respond(tablet){
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
 
     &__title{
         text-align: left;
