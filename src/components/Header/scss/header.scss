@@ -27,11 +27,20 @@
         }
     }
 
-    &__authbar{
+    &__row{
+        display: flex;
+        align-items: center;
         margin-left: auto;
+    }
+
+    &__search{
+        display: none;
+        margin-right: 35px;
+        width: 358px;
     }
 
     &--bg--white{
         background-color: #fff;
     }
+    
 }

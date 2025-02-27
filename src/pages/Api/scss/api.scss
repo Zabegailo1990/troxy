@@ -1,0 +1,548 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.api{
+
+    &__header{
+        margin-bottom: 20px;
+    }
+
+    &__inner{
+        @include respond(pc){
+            display: flex;
+            align-items: flex-start;
+        }
+    }
+    
+    &__menu{
+        display: none;
+        flex-shrink: 0;
+        width: 269px;
+        height: 581px;
+        overflow-y: auto;
+        background-color: #fff;
+        border-radius: 5px;
+        margin-right: 29px;
+        padding: 12px;
+
+        &::-webkit-scrollbar {
+            width: 6px;
+            height: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #D9D9D9;
+            border-radius: 5px;
+        }
+
+        @include respond(pc){
+            display: block;
+        }
+    }
+
+    &__submenu{
+        display: none;
+        border-left: 1px solid #F1F1F1;
+        margin-top: 6px;
+        margin-left: 12px;
+
+        &--active{
+            display: block;
+        }
+    }
+
+    &__item{
+        border-radius: 4px;
+        &:not(:last-child){
+            margin-bottom: 6px;
+        }
+
+        &--main{
+            background-color: #F1F1F1;
+            padding: 4px 12px;
+        }
+    }
+
+    &__subitem{
+        &:not(:last-child){
+            margin-bottom: 6px;
+        }
+    }
+
+    &__main{
+        padding-top: 18px;
+    }
+
+
+    &__title{
+
+        &--main{
+            padding-bottom: 24px;
+            margin-bottom: 18px;
+            border-bottom: 1px solid #CED3DC;
+
+            @include respond(tablet){
+                margin-bottom: 42px;
+            }
+        }
+
+        &--main-small{
+            padding-bottom: 16px;
+            margin-bottom: 28px;
+            border-bottom: 1px solid #CED3DC;
+        }
+
+        &--size-large{
+            font-size: 32px;
+
+            @include respond(tablet){
+                font-size: 52px;
+            }
+        }
+
+        &--size-medium{
+            font-size: 24px;
+
+            @include respond(tablet){
+                font-size: 32px;
+            }
+
+            @include respond(pc){
+                font-size: 24px;
+            }
+        }
+
+        &--size-small{
+            font-size: 18px;
+
+            @include respond(tablet){
+                font-size: 23px;
+            }
+            
+            @include respond(pc){
+                font-size: 18px;
+            }
+        }
+        
+        &--size-extra-small{
+            font-size: 12px;
+        }
+        
+        &--size-extra-small-main{
+            font-size: 12px;
+            margin-bottom: 12px;
+            @include respond(tablet){
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+        }
+
+        &--ancor{
+            margin-bottom: 12px;
+        }
+    }
+
+
+    &__content{
+        @include respond(pc){
+           max-width: 327px;
+        }
+    }
+
+    &__page-menu{
+        display: none;
+        margin-left: 24px;
+        width: 242px;
+        flex-shrink: 0;
+
+        @include respond(pc){
+            display: block;
+        }
+    }
+
+    &__page-item{
+
+        &--title{
+            font-size: 15px;
+            font-weight: 700;
+            border-bottom: 1px solid #CED3DC;
+            padding-bottom: 6px;
+        }
+
+        &:not(:last-child){
+            margin-bottom: 6px;
+        }
+    }
+
+    &__page-btn{
+        height: 28px;
+        font-size: 15px;
+        font-weight: 500;
+        color: #617597;
+
+        &--active{
+            color: #2E7AF5;
+        }
+    }
+
+    &__page-subbtn{
+        font-size: 15px;
+        color: #617597;
+        height: 28px;
+    }
+
+    &__page-submenu{
+        padding-left: 23px;
+        margin-top: 6px;
+    }
+
+    &__page-subitem{
+        &:not(:last-child){
+            margin-bottom: 6px;
+        }
+    }
+
+    &__button{
+        font-weight: 400;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 4px 12px;
+
+    }
+
+    &__icon-right{
+        width: 22px;
+        height: 25px;
+        flex-shrink: 0;
+        transition: all .3s;
+
+        &--active{
+            transform: rotate(90deg);
+        }
+    }
+
+    &__group{
+        &:not(:last-child){
+            margin-bottom: 42px;
+        }
+
+        &--hidden{
+            display: none;
+            
+            @include respond(pc){
+                display: block;
+            }
+        }
+    }
+
+    &__subtitle{
+        margin-bottom: 24px;
+
+        @include respond(tablet){
+            margin-bottom: 28px;
+        }
+        
+        @include respond(pc){
+            margin-bottom: 24px;
+        }
+    }
+    
+    &__text{
+        font-size: 12px;
+
+        &:not(:last-child){
+            margin-bottom: 28px;
+
+            @include respond(pc){
+                margin-bottom: 18px;
+            }
+        }
+
+        @include respond(tablet){
+            font-size: 16px;
+        }
+
+        @include respond(tablet){
+            font-size: 12px;
+        }
+
+    }
+
+    &__notification{
+        display: flex;
+        padding: 10px;
+        border: 1px solid #0F54C4;
+        border-radius: 8px;
+        background-color: rgba(144, 186, 255, 0.5);
+        font-size: 12px;
+        color: #0F54C4;
+        margin-bottom: 42px;
+
+        &--hidden{
+            display: none;
+
+            @include respond(pc){
+                display: flex;
+            }
+        }
+    }
+
+    &__tag{
+        font-size: 12px;
+        padding: 2px 9px;
+        border-radius: 6px;
+        border: 1px solid rgba(0, 0, 0, 0.04);
+        background: rgba(0, 0, 0, 0.03);
+
+        &--size-large{
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+
+    &__code{
+        padding: 16px;
+        background: rgba(236, 241, 255, 0.5); /* 50% прозрачности */
+        border-radius: 12px;
+        overflow: hidden;
+
+        @include respond(pc){
+            width: 648px;
+        }
+    }
+
+    &__editor{
+        list-style-type: decimal;
+        white-space: nowrap;
+        min-width: 100%;
+        overflow-x: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+
+    }
+
+    &__caption{
+        font-size: 12px;
+        background-color: #ECF1FF;
+        padding: 8px 16px;
+        margin-top: -16px;
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+
+    &__str{
+        padding-left: 30px;
+        margin-left: 28px;
+        color: #D32F2F;
+
+        &:first-child,
+        &:last-child{
+            color: #313844;
+            padding-left: 15px;
+        }
+
+        &::marker{
+            font-size: 12px;
+            color: #617597;
+        }
+    }
+
+    &__charts{
+        font-size: 12px;
+
+        &--color-blue{
+            color: #1976D2;
+        }
+
+        &--color-green{
+            color: #22863A;
+        }
+
+        &--color-red{
+            color: #D32F2F;
+        }
+    }
+
+    &__pre{
+        padding: 16px;
+        background-color: #ECF1FF;
+        border-radius: 12px;
+
+        &:not(:last-child){
+            margin-bottom: 28px;
+
+            @include respond(pc){
+                margin-bottom: 18px;
+            }
+        }
+
+        @include respond(pc){
+            width: 661px;
+        }
+    }
+
+    &__icon{
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+        margin-right: 14px;
+    }
+
+    &__table {
+        display: block;
+        font-size: 12px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    
+        @include respond(tablet) {
+            font-size: 14px;
+        }
+
+        @include respond(pc){
+            min-width: 376px;
+        }
+    }
+    
+    &__th {
+        height: 36px;
+    }
+    
+    &__th, 
+    &__td {
+        vertical-align: middle;
+        border-bottom: 1px solid #E5E7EB;
+        font-weight: 700;
+        height: 41px;
+        text-align: left;
+        white-space: nowrap;
+    
+        &:first-child {
+            min-width: 92px;
+        }
+    
+        &:nth-child(2) {
+            min-width: 94px;
+            padding-left: 16px;
+        }
+    }
+    
+    &__td {
+        height: 41px;
+    
+        &:first-child {
+            color: #14B8A6;
+        }
+    
+        &:nth-child(2) {
+            color: #64748B;
+        }
+    
+        &:last-child {
+            font-weight: 400;
+        }
+    }
+
+    &__tabs{
+
+    }
+
+    &__tabs-row{
+        display: flex;
+        border-bottom: 2px solid #CED3DC;
+        margin-bottom: 28px;
+    }
+
+    &__tab{
+        color: #617597;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 8px;
+
+        &:not(:last-child){
+            margin-right: 6px;
+        }
+
+        &--active{
+            color: #0086E6;
+        }
+    }
+
+    &__pagination{
+        font-size: 12px;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 42px;
+        margin-bottom: 33px;
+
+        @include respond(tablet){
+            font-size: 16px;
+            margin-bottom: 78px;
+        }
+    }
+
+    &__pagination-col{
+        display: flex;
+        align-items: center;
+    }
+
+    &__pagination-icon{
+        width: 28px;
+        height: 28px;
+    }
+
+    &__footer{
+        position: relative;
+        background-color: #273854;
+        padding: 0 24px;
+
+        @include respond(tablet){
+            display: flex;
+            justify-content: space-between;
+            padding: 0 40px;
+        }
+        @include respond(pc){
+            justify-content: flex-start;
+        }
+    }
+
+    &__top{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 88px;
+        background-color: #17263F;
+
+        @include respond(tablet){
+            background-color: transparent;
+        }
+    }
+    
+    &__bottom{
+        height: 88px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+
+        @include respond(tablet){
+            background-color: transparent;
+        }
+        @include respond(pc){
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    
+}

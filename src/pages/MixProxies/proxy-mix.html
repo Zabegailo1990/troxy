@@ -77,7 +77,12 @@
             button_1: "Test free"
         })
         @@include('../../sections/Advantages/index.html')
-        @@include('../../sections/Stealth/index.html')
+        <div class="section">
+            <div class="container">
+                <h2 class="title proxy-mix__subtitle">Maximum simplicity and quality of proxies <span class='title--color--blue'>with a digital footprint at the price of regular ones</span></h2>
+                @@include("../../components/SliderPluses/index.html", {class: "tariffs__slider"})
+            </div>
+        </div>
         @@include('../../sections/Simple/index.html')
         @@include('../../sections/Faq/index.html')
         @@include('../../sections/SliderNews/index.html')

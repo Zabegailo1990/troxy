@@ -1,72 +1,85 @@
-<div class="slider-goal @@mode @@class">
-    @@include("../CardGoal/index.html", {
-        class: "slider-goal__slide",
-        src: "@@src_1",
-        title: "@@title_1",
-        text: "@@text_1",
-        subtitle: "@@subtitle_1",
-    })
-    @@include("../CardGoal/index.html", {
-        class: "slider-goal__slide",
-        src: "@@src_2",
-        title: "@@title_2",
-        text: "@@text_2",
-        subtitle: "@@subtitle_2",
-    })
-    @@include("../CardGoal/index.html", {
-        class: "slider-goal__slide",
-        src: "@@src_3",
-        title: "@@title_3",
-        text: "@@text_3",
-        subtitle: "@@subtitle_3",
-    })
-    @@include("../CardGoal/index.html", {
-        class: "slider-goal__slide",
-        src: "@@src_4",
-        title: "@@title_4",
-        text: "@@text_4",
-        subtitle: "@@subtitle_4",
-    })
-    @@include("../CardGoal/index.html", {
-        class: "slider-goal__slide",
-        src: "@@src_5",
-        title: "@@title_5",
-        text: "@@text_5",
-        subtitle: "@@subtitle_5",
-    })
-    @@include("../CardGoal/index.html", {
-        class: "slider-goal__slide",
-        src: "@@src_6",
-        title: "@@title_6",
-        text: "@@text_6",
-        subtitle: "@@subtitle_6",
-    })
-    @@if(typeof subtitle_7 !== 'undefined' && subtitle_7) {
+<div class="slider slider-goal @@mode @@class">
+    <span class="slider__stub slider-goal__stub"></span>
+    <div class="slider__inner slider-goal__inner">
         @@include("../CardGoal/index.html", {
             class: "slider-goal__slide",
-            src: "@@src_7",
-            title: "@@title_7",
-            text: "@@text_7",
-            subtitle: "@@subtitle_7",
+            src: "@@src_1",
+            title: "@@title_1",
+            text: "@@text_1",
+            subtitle: "@@subtitle_1",
+            label: "@@label",
         })
-    }
-    @@if(typeof subtitle_8 !== 'undefined' && subtitle_8) {
         @@include("../CardGoal/index.html", {
             class: "slider-goal__slide",
-            src: "@@src_8",
-            title: "@@title_8",
-            text: "@@text_8",
-            subtitle: "@@subtitle_8",
+            src: "@@src_2",
+            title: "@@title_2",
+            text: "@@text_2",
+            subtitle: "@@subtitle_2",
+            label: "@@label",
         })
-    }
-    @@if(typeof subtitle_9 !== 'undefined' && subtitle_9) {
         @@include("../CardGoal/index.html", {
             class: "slider-goal__slide",
-            src: "@@src_9",
-            title: "@@title_9",
-            text: "@@text_9",
-            subtitle: "@@subtitle_9",
+            src: "@@src_3",
+            title: "@@title_3",
+            text: "@@text_3",
+            subtitle: "@@subtitle_3",
+            label: "@@label",
         })
-    }
-   
+        @@include("../CardGoal/index.html", {
+            class: "slider-goal__slide",
+            label: "@@label",
+            src: "@@src_4",
+            title: "@@title_4",
+            text: "@@text_4",
+            subtitle: "@@subtitle_4",
+            label: "@@label",
+        })
+        @@include("../CardGoal/index.html", {
+            class: "slider-goal__slide",
+            src: "@@src_5",
+            title: "@@title_5",
+            text: "@@text_5",
+            subtitle: "@@subtitle_5",
+            label: "@@label",
+        })
+        @@include("../CardGoal/index.html", {
+            class: "slider-goal__slide",
+            src: "@@src_6",
+            title: "@@title_6",
+            text: "@@text_6",
+            subtitle: "@@subtitle_6",
+            label: "@@label",
+        })
+        @@if(typeof subtitle_7 !== 'undefined' && subtitle_7) {
+            @@include("../CardGoal/index.html", {
+                class: "slider-goal__slide",
+                src: "@@src_7",
+                title: "@@title_7",
+                text: "@@text_7",
+                subtitle: "@@subtitle_7",
+                label: "@@label",
+            })
+        }
+        @@if(typeof subtitle_8 !== 'undefined' && subtitle_8) {
+            @@include("../CardGoal/index.html", {
+                class: "slider-goal__slide",
+                src: "@@src_8",
+                title: "@@title_8",
+                text: "@@text_8",
+                subtitle: "@@subtitle_8",
+                label: "@@label",
+            })
+        }
+        @@if(typeof subtitle_9 !== 'undefined' && subtitle_9) {
+            @@include("../CardGoal/index.html", {
+                class: "slider-goal__slide",
+                src: "@@src_9",
+                title: "@@title_9",
+                text: "@@text_9",
+                subtitle: "@@subtitle_9",
+                label: "@@label",
+            })
+        }
+    </div>
+    <span class="slider__stub slider-goal__stub"></span>
 </div>

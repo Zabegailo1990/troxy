@@ -30,6 +30,7 @@
 
     &__title,
     &__subtitle{
+        line-height: normal;
         font-size: 18px;
 
         @include respond(tablet){
@@ -43,6 +44,15 @@
 
     &__text{
         margin-bottom: 12px;
+    }
+
+    &__row{
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__label{
+        margin-right: 6px;
     }
 
     &__icon{

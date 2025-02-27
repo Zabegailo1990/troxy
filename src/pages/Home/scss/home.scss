@@ -2,6 +2,49 @@
 
 .home{
 
+    &__present{
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__animate{
+        position: absolute;
+        transition: all .3s;
+        // object-fit: contain;
+
+        &--top{
+            display: none;
+
+            @include respond(tablet) {
+               display: block;
+               transform: rotate(10.34deg);
+               top: 86px; 
+               left: -308px;
+               min-width: 544px;
+               height: 581px;
+            }
+        }
+
+        &--bottom{
+            bottom: -269px;
+            right: -226px;
+            transform: rotate(6.48deg);
+            min-width: 579px;
+            height: 657px;
+
+            @include respond(tablet) {
+                bottom: -216px;
+            }
+
+            @include respond(pc) {
+                min-width: 580px;
+                height: 658px;
+                bottom: -154px;
+                right: -186px;
+            }
+        }
+    }
+
     &__subtitle{
         text-align: center;
         margin: 0 auto 36px auto;
@@ -144,9 +187,13 @@
             }
         }
     }
+
+    &__slider-pluses{
+        margin: 0 -24px;
+    }
     
     &__slider{
-        margin-right: -24px;
+        margin: 0 -24px;
 
         &--tablet-off{
             @include respond(tablet){

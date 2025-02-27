@@ -6,6 +6,10 @@
     gap: 14px 17px;
     margin: 0 auto;
 
+    &__card{
+        align-content: flex-start;
+    }
+
     @include respond(tablet){
         max-width: 698px;
     }

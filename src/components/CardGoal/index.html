@@ -2,8 +2,15 @@
     <img class="card-goal__img" src="@@src" alt="">
     <div class="card__inner">
         <h3 class="title title--color--blue card-goal__title">@@title</h3>
-        <p class="text card-goal__text">@@text</p>
-        <h3 class="title card-goal__subtitle">@@subtitle</h3>
+        @@if(typeof text !== 'undefined' && text){
+            <p class="text card-goal__text">@@text</p>
+        }
+        <div class="card-goal__row">
+            @@if(typeof label !== 'undefined' && label == 'true'){
+                <span class="text card-goal__label">From </span>
+            }
+            <h3 class="title card-goal__subtitle">@@subtitle</h3>
+        </div>
     </div>
     <img class="card-goal__icon" src="/images/arrow.svg" alt="">
 </div>

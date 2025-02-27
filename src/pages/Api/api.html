@@ -8,7 +8,350 @@
 </head>
 <body>
     <div class="api">
-        @@include("../../sections/Footer/index.html")
+        @@include('../../components/Header/index.html', {
+            theme: 'light',
+            class: 'header--bg--white api__header',
+            themeLogo: 'logo--theme-dark',
+            themeAuthbar: 'authbar--theme--dark authbar--theme--api'
+        })
+        <div class="container">
+            <div class="api__inner">
+                <ul class="api__menu">
+                    <li class="api__item api__item--main">
+                        Introduction
+                    </li>
+                    <li class="api__item">
+                        <button class="button button--color-gray api__button">
+                            <span class="api__label">Registration and Login</span>
+                            <svg class="icon icon--color-gray api__icon-right api__icon-right--active">
+                                <use xlink:href="../sprites/icons.svg#icon-chevron-right"></use>
+                            </svg>
+                        </button>
+                        <ul class="api__submenu api__submenu--active">
+                            <li class="api__subitem">
+                                <button class="button button--color-gray api__button">Local account</button>
+                            </li>
+                            <li class="api__subitem">
+                                <button class="button button--color-gray api__button">Social account</button>
+                            </li>
+                            <li class="api__subitem">
+                                <button class="button button--color-gray api__button">Change password</button>
+                            </li>
+                            <li class="api__subitem">
+                                <button class="button button--color-gray api__button">Reset password</button>
+                            </li>
+                            <li class="api__subitem">
+                                <button class="button button--color-gray api__button">Change email</button>
+                            </li>
+                            <li class="api__subitem">
+                                <button class="button button--color-gray api__button">Delete social account</button>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="api__item">
+                        <button class="button button--color-gray api__button">
+                            <span class="api__label">Two-factor auth</span>
+                            <svg class="icon icon--color-gray api__icon-right">
+                                <use xlink:href="../sprites/icons.svg#icon-chevron-right"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="api__item">
+                        <button class="button button--color-gray api__button">
+                            <span class="api__label">User profile</span>
+                            <svg class="icon icon--color-gray api__icon-right">
+                                <use xlink:href="../sprites/icons.svg#icon-chevron-right"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="api__item">
+                        <button class="button button--color-gray api__button">
+                            <span class="api__label">Notification</span>
+                            <svg class="icon icon--color-gray api__icon-right">
+                                <use xlink:href="../sprites/icons.svg#icon-chevron-right"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="api__item">
+                        <button class="button button--color-gray api__button">
+                            <span class="api__label">Proxy list</span>
+                            <svg class="icon icon--color-gray api__icon-right">
+                                <use xlink:href="../sprites/icons.svg#icon-chevron-right"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="api__item">
+                        <button class="button button--color-gray api__button">
+                            <span class="api__label">Proxy replacement</span>
+                            <svg class="icon icon--color-gray api__icon-right">
+                                <use xlink:href="../sprites/icons.svg#icon-chevron-right"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="api__item">
+                        <button class="button button--color-gray api__button">
+                            <span class="api__label">Proxy configuration</span>
+                            <svg class="icon icon--color-gray api__icon-right">
+                                <use xlink:href="../sprites/icons.svg#icon-chevron-right"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="api__item">
+                        <button class="button button--color-gray api__button">
+                            <span class="api__label">IP autorization</span>
+                            <svg class="icon icon--color-gray api__icon-right">
+                                <use xlink:href="../sprites/icons.svg#icon-chevron-right"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="api__item">
+                        <button class="button button--color-gray api__button">
+                            <span class="api__label">Proxy statistics</span>
+                            <svg class="icon icon--color-gray api__icon-right">
+                                <use xlink:href="../sprites/icons.svg#icon-chevron-right"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="api__item">
+                        <button class="button button--color-gray api__button">
+                            <span class="api__label">Subscription</span>
+                            <svg class="icon icon--color-gray api__icon-right">
+                                <use xlink:href="../sprites/icons.svg#icon-chevron-right"></use>
+                            </svg>
+                        </button>
+                    </li>
+
+                </ul>
+                <div class="api__main">
+                    <h4 class="api__title api__title--size-extra-small-main">Introduction</h4>
+                    <h1 class="api__title api__title--size-large api__title--main">Proxy Server API</h1>
+                    <div class="api__group">
+                        <h2 class="api__title api__title--size-medium api__subtitle">Introduction</h2>
+                        <p class="text">The Webshare API follows the principles of Representational State Transfer (REST) architecture. It has been designed to provide predictable resource-oriented URLs, accept JSON-encoded request bodies, return JSON-encoded responses, and use standard HTTP response codes, authentication, and verbs.
+                            One of the key features of the Webshare API is its support for backwards compatibility, which ensures that any changes made to the API are always backwards compatible. This means that clients using previous versions of the API will not be affected by the updates.
+                            In addition to its features, the Webshare API also provides language examples. You can find these code examples on the every feature's page. To switch between the two programming languages, use the tabs located in the top right corner.
+                            By leveraging the Webshare API, developers can easily integrate Webshare's functionality into their applications, allowing them to enhance their users' experience and increase the efficiency of their workflow.</p>
+                    </div>
+                    <div class="api__notification">
+                        <svg class="icon icon--color-stroke-dark-blue api__icon">
+                            <use xlink:href="../sprites/icons.svg#icon-warning"></use>
+                        </svg>
+                        <p class="">This API is an Asynchronous API which means it will return a proxy replacement request with validating state, you will need to keep calling retrive endpoint to get the last updates on that request until it's completed.</p>
+                    </div>
+                    <div class="api__content">
+                        <div class="api__group api__group--hidden">
+                            <h3 class="api__title api__title--size-extra-small api__title--ancor">Introduction</h3>
+                            <h2 class="api__title api__title--main-small api__title--size-medium api__subtitle">Proxy Server API</h2>
+                            <p class="api__text">The Webshare API follows the principles of Representational State Transfer (REST) architecture. It has been designed to provide predictable resource-oriented URLs, accept JSON-encoded request bodies, return JSON-encoded responses, and use standard HTTP response codes, authentication, and verbs.
+                                One of the key features of the Webshare API is its support for backwards compatibility, which ensures that any changes made to the API are always backwards compatible. This means that clients using previous versions of the API will not be affected by the updates.
+                                In addition to its features, the Webshare API also provides language examples. You can find these code examples on the every feature's page. To switch between the two programming languages, use the tabs located in the top right corner.
+                                By leveraging the Webshare API, developers can easily integrate Webshare's functionality into their applications, allowing them to enhance their users' experience and increase the efficiency of their workflow.</p>
+                        </div>
+                        <div class="api__notification api__notification--hidden">
+                            <svg class="icon icon--color-stroke-dark-blue api__icon">
+                                <use xlink:href="../sprites/icons.svg#icon-warning"></use>
+                            </svg>
+                            <p class="">This API is an Asynchronous API which means it will return a proxy replacement request with validating state, you will need to keep calling retrive endpoint to get the last updates on that request until it's completed.</p>
+                        </div>
+                        <div class="api__group">
+                            <h2 class="api__title api__title--size-medium api__subtitle">Authentication</h2>
+                            <p class="api__text">Webshare API uses token to allow access to the API. You will receive token after a successful login request. Alternatively, you can register a new Webshare API key at our API keys(opens in a new tab) page.Webshare API expects for the token to be included in all API requests to the server in a header that looks like the following: Authorization: Token &lt;TOKEN&gt;</p>
+                        </div>
+                        <div class="api__group">
+                            <h2 class="api__title api__title--size-medium api__subtitle">Payment method object</h2>
+                            <table class="api__table">
+                                <thead class="api__thead">
+                                    <tr class="api__tr">
+                                        <th class="api__th">Attributes</th>
+                                        <th class="api__th">Type</th>
+                                        <th class="api__th">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="api__tbody">
+                                    <tr class="api__tr">
+                                        <td class="api__td">id</td>
+                                        <td class="api__td">string</td>
+                                        <td class="api__td">Unique identifier of the payment method instance.</td>
+                                    </tr>
+                                    <tr class="api__tr">
+                                        <td class="api__td">type</td>
+                                        <td class="api__td">string</td>
+                                        <td class="api__td">Unique identifier of the payment type. Example values: StripeCard, </td>
+                                    </tr>
+                                    <tr class="api__tr">
+                                        <td class="api__td">created_at</td>
+                                        <td class="api__td">string</td>
+                                        <td class="api__td">The timestamp of when the payment method was created.</td>
+                                    </tr>
+                                    <tr class="api__tr">
+                                        <td class="api__td">updated_at</td>
+                                        <td class="api__td">string</td>
+                                        <td class="api__td">The timestamp of when the payment method was last updated.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="api__group">
+                            <h2 class="api__title api__title--size-small api__subtitle">Fields for StripeCard</h2>
+                            <p class="api__text">The fields below are available only when the PaymentMethod.type is StripeCard <span class="api__tag">StripeCard</span></p>
+                        </div>
+                        <div class="api__group">
+                            <h2 class="api__title api__title--size-small api__subtitle">In json format</h2>
+                            <div class="api__code">
+                                <div class="api__caption">stripe_card.json</div>
+                                <ol class="api__editor">
+                                    <li class="api__str">
+                                        <span class="api__charts">{</span>
+                                    </li>
+                                    <li class="api__str">
+                                        <span class="api__charts">"id": <span class="api__charts--color-blue">1</span></span>,
+                                    </li>
+                                    <li class="api__str">
+                                        <span class="api__charts">"type": <span class="api__charts--color-green">"StripeCard"</span></span>,
+                                    </li>
+                                    <li class="api__str">
+                                        <span class="api__charts">"brand": <span class="api__charts--color-green">"visa"</span></span>,
+                                    </li>
+                                    <li class="api__str">
+                                        <span class="api__charts">"last4": <span class="api__charts--color-green">"4242"</span></span>,
+                                    </li>
+                                    <li class="api__str">
+                                        <span class="api__charts">"name": <span class="api__charts--color-blue">null</span></span>,
+                                    </li>
+                                    <li class="api__str">
+                                        <span class="api__charts">"expiration_year": <span class="api__charts--color-blue">2023</span></span>,
+                                    </li>
+                                    <li class="api__str">
+                                        <span class="api__charts">"expiration_month": <span class="api__charts--color-blue">6</span></span>,
+                                    </li>
+                                    <li class="api__str">
+                                        <span class="api__charts">"created_at": <span class="api__charts--color-green">"2022-06-14T11:58:10.246406-07:00"</span></span>,
+                                    </li>
+                                    <li class="api__str">
+                                        <span class="api__charts">"updated_at": <span class="api__charts--color-green">"2022-06-14T11:58:10.246406-07:00"</span></span>
+                                    </li>
+                                    <li class="api__str">
+                                        <span class="api__charts">}</span>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="api__group">
+                            <h2 class="api__title api__title--size-small api__subtitle">Fields for StripeCard <span class="api__tag api__tag--size-large">LinkPayment</span></h2>
+                            <p class="api__text">The fields below are available only when the PaymentMethod.type is StripeCard</p>
+                        </div>
+                        <div class="api__group">
+                            <h2 class="api__title api__title--size-medium api__subtitle">Request & Response</h2>
+                            <div class="api__pre">
+                                <span class="api__charts"><span class="api__charts--color-red">GET</span> https://proxy.webshare.io/api/v2/stats/aggregate/</span>
+                            </div>
+                            <p class="api__text">or in case of targeting a specific plan</p>
+                            <div class="api__pre">
+                                <span class="api__charts"><span class="api__charts--color-red">GET</span> https://proxy.webshare.io/api/v2/stats/aggregate/</span>
+                            </div>
+                        </div>
+                        <div class="api__tabs">
+                            <div class="api__tabs-row">
+                                <div class="api__tab api__tab--active">Python</div>
+                                <div class="api__tab">Javascript</div>
+                                <div class="api__tab">cURL</div>
+                            </div>
+                            <div class="api__tabs-content">
+                                <div class="api__code">
+                                    <div class="api__caption">stripe_card.json</div>
+                                    <ol class="api__editor">
+                                        <li class="api__str">
+                                            <span class="api__charts">{</span>
+                                        </li>
+                                        <li class="api__str">
+                                            <span class="api__charts">"id": <span class="api__charts--color-blue">1</span></span>,
+                                        </li>
+                                        <li class="api__str">
+                                            <span class="api__charts">"type": <span class="api__charts--color-green">"StripeCard"</span></span>,
+                                        </li>
+                                        <li class="api__str">
+                                            <span class="api__charts">"brand": <span class="api__charts--color-green">"visa"</span></span>,
+                                        </li>
+                                        <li class="api__str">
+                                            <span class="api__charts">"last4": <span class="api__charts--color-green">"4242"</span></span>,
+                                        </li>
+                                        <li class="api__str">
+                                            <span class="api__charts">"name": <span class="api__charts--color-blue">null</span></span>,
+                                        </li>
+                                        <li class="api__str">
+                                            <span class="api__charts">"expiration_year": <span class="api__charts--color-blue">2023</span></span>,
+                                        </li>
+                                        <li class="api__str">
+                                            <span class="api__charts">"expiration_month": <span class="api__charts--color-blue">6</span></span>,
+                                        </li>
+                                        <li class="api__str">
+                                            <span class="api__charts">"created_at": <span class="api__charts--color-green">"2022-06-14T11:58:10.246406-07:00"</span></span>,
+                                        </li>
+                                        <li class="api__str">
+                                            <span class="api__charts">"updated_at": <span class="api__charts--color-green">"2022-06-14T11:58:10.246406-07:00"</span></span>
+                                        </li>
+                                        <li class="api__str">
+                                            <span class="api__charts">}</span>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="api__page-menu">
+                    <li class="api__page-item api__page-item--title">On this page</li>
+                    <li class="api__page-item">
+                        <button class="api__page-btn api__page-btn--active">Introduction</button>
+                    </li>
+                    <li class="api__page-item">
+                        <button class="api__page-btn">Request parameters</button>
+                    </li>
+                    <li class="api__page-item">
+                        <button class="api__page-btn">Authentification</button>
+                        <ul class="api__page-submenu">
+                            <li class="api__page-subitem">
+                                <button class="api__page-subbtn">Responce format</button>
+                            </li>
+                            <li class="api__page-subitem">
+                                <button class="api__page-subbtn">Example</button>
+                            </li>
+                            <li class="api__page-subitem">
+                                <button class="api__page-subbtn">Pricing</button>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="api__page-item">
+                        <button class="api__page-btn">Federated access</button>
+                    </li>
+                    <li class="api__page-item">
+                        <button class="api__page-btn">Search</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="api__pagination">
+                <div class="api__pagination-col">
+                    <svg class="icon api__pagination-icon">
+                        <use xlink:href="../sprites/icons.svg#icon-chevron-left"></use>
+                    </svg>
+                    Introduction
+                </div>
+                <div class="api__pagination-col">
+                    Registration and login
+                    <svg class="icon api__pagination-icon">
+                        <use xlink:href="../sprites/icons.svg#icon-chevron-right"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="api__footer">
+            <div class="api__top">@@include('../../components/Logo/index.html')</div>
+            <div class="api__bottom">© 2024 Troxy, All Rights Reserved</div>
+        </footer>
     </div>
+
+    <script src="../vendors/jquery/jquery.min.js"></script>
+    <script src="../js/main.min.js"></script>
 </body>
 </html>

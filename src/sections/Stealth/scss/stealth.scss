@@ -12,9 +12,13 @@
 
     &__slider{
         display: flex;
-        overflow: hidden;
+        overflow-x: auto;
         column-gap: 10px;
         margin-right: -24px;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
 
         @include respond(tablet) {
             row-gap: 12px;

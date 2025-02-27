@@ -20,11 +20,13 @@
             
         })
         <div class="container">
-            <div class="present__row present__rating">
-                <img class="present__trustpilot" src="@@rating" alt="">
-                <img class="present__trustpilot" src="@@rating" alt="">
-                <img class="present__trustpilot" src="@@rating" alt="">
-            </div>
+            @@if(typeof rating !== 'undefined' && rating) {
+                <div class="present__row present__rating">
+                    <img class="present__trustpilot" src="@@rating" alt="">
+                    <img class="present__trustpilot" src="@@rating" alt="">
+                    <img class="present__trustpilot" src="@@rating" alt="">
+                </div>
+            }
             <div class="present__group">
                 @@if(typeof flag !== 'undefined' && flag) {
                     <div class="present__frame">

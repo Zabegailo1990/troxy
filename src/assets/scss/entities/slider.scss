@@ -2,27 +2,33 @@
 
 .slider{
     display: flex;
-    overflow: hidden;
-    column-gap: 10px;
+    overflow-x: auto;
 
-    @include respond(tablet){
-        column-gap: 19px;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    
+    &__stub{
+        flex-shrink: 0;
+        width: 24px;
+
+        @include respond(tablet){
+            width: 40px;
+        }
+    }
+
+    &__inner{
+        display: flex;
     }
     
     &__slide{
         flex-shrink: 0;
 
-        &--column{
-            display: flex;
-            flex-direction: column;
-            row-gap: 10px;
-            
+        &:not(:last-of-type){
+            margin-right: 10px;
+
             @include respond(tablet){
-                row-gap: 12px;
-            }
-            
-            @include respond(tablet){
-                row-gap: 22px;
+                margin-right: 19px;
             }
         }
     }

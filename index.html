@@ -8,20 +8,24 @@
 </head>
 <body>
     <div class="home">
-        @@include('./src/sections/Present/index.html', {
-            bgNum: "1",
-            colorButtonNav: "button--color--white",
-            colorTitle: "title--color--white",
-            colorText: "text--color--white",
-            title: "Effective proxies for business with a unique digital footprint from $0.058",
-            rating: "/images/present_section_trustpilot.svg",
-            tariffs: "pages/tariffs.html",
-            countries: "by-country.html",
-            information: "@@information",
-            goals: "@@goals",
-            services: "@@services",
-            api: "@@api"
-        })
+        <div class="home__present">
+            @@include('./src/sections/Present/index.html', {
+                bgNum: "1",
+                colorButtonNav: "button--color--white",
+                colorTitle: "title--color--white",
+                colorText: "text--color--white",
+                title: "Effective proxies for business with a unique digital footprint from $0.058",
+                rating: "/images/present_section_trustpilot.svg",
+                tariffs: "pages/tariffs.html",
+                countries: "by-country.html",
+                information: "@@information",
+                goals: "@@goals",
+                services: "@@services",
+                api: "@@api"
+            })
+            <img class="home__animate home__animate--top" src="/images/page_home_ani_2.png" alt="">
+            <img class="home__animate home__animate--bottom" src="/images/page_home_ani_1.png" alt="">
+        </div>
         <div class="home__benefits section">
             <div class="container">
                 <div class="section__inner home__row">
@@ -61,9 +65,12 @@
                 </div>
             </div>
         </div>
-        @@include('./src/sections/Stealth/index.html', {
-            title: "Maximum simplicity and quality of proxies <span class='title--color--blue'>with a digital footprint at the price of regular ones</span>",
-        })
+        <div class="section">
+            <div class="container">
+                <h2 class="title home__subtitle">Maximum simplicity and quality of proxies <span class='title--color--blue'>with a digital footprint at the price of regular ones</span></h2>
+                @@include("./src/components/SliderPluses/index.html", {class: "home__slider-pluses"})
+            </div>
+        </div>
         @@include('./src/sections/Banner/index.html', {
             bgNum: "1",
             title: "Does your business need a customized solution?",

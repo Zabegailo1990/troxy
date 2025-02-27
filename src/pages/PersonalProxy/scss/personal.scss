@@ -1,6 +1,47 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .personal{
+
+    &__present{
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__animate-top{
+        display: none;
+        position: absolute;
+
+        @include respond(tablet){
+            display: block;
+            min-width: 516px;
+            height: 516px;
+            top: -16px;
+            left: -68px;
+        }
+
+        @include respond(tablet){
+            min-width: 504px;
+            height: 504px;
+            top: -18px;
+            left: -77px;
+        }
+    }
+
+    &__animate-bottom{
+        min-width: 424px;
+        height: 424px;
+        bottom: -62px;
+        right: -97px;
+        position: absolute;
+
+        @include respond(tablet){
+            min-width: 554px;
+            height: 554px;
+            bottom: -93px;
+            right: -105px;
+        }
+    }
+
     &__subtitle{
         text-align: center;
         margin-bottom: 36px;
@@ -11,35 +52,48 @@
     }
     
     &__slider{
-        display: flex;
-        column-gap: 20px;
-        overflow: hidden;
-        column-gap: 19px;
-        margin-right: -24px;
+        margin: 0 -24px;
     
+        @include respond(tablet){
+            margin: 0 -40px;
+        }
+        
         @include respond(pc){
+            overflow: visible;
+            margin: 0;
             row-gap: 20px;
             flex-wrap: wrap;
         }
-    
-        @include respond(tablet){
-            margin-right: -40px;
+    }
+
+    &__stub{
+        @include respond(pc){
+           display: none;
         }
-        
-        
+    }
+
+    &__inner{
+        column-gap: 19px;
     }
     
     &__slide{
-        flex-shrink: 0;
         display: flex;
         column-gap: 19px;
 
         @include respond(tablet){
+            flex-direction: column;
             column-gap: normal;
             row-gap: 19px;
-            flex-direction: column;
         }
     }
 
+    &__card{
+        width: 300px;
+        height: 463px;
 
+        @include respond(tablet){
+            width: 400px;
+            height: 400px;
+        }
+    }
 }

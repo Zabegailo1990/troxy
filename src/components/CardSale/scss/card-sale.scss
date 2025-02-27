@@ -35,6 +35,10 @@
 
     &__label{
         margin-right: 8px;
+
+        &--color-white{
+            color: #fff;
+        }
     }
 
     &__title,
@@ -45,10 +49,6 @@
             width: 248px;
             font-size: 23px;
         }
-    }
-
-    &__label{
-        color: #fff;
     }
 
     &__icon{

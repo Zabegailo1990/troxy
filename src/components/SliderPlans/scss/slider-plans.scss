@@ -1,10 +1,20 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .slider-plans{
-    display: flex;
-    column-gap: 20px;
-    overflow: hidden;
     max-width: 700px;
+
+    @include respond(tablet){
+        overflow: visible;
+    }
+
+    &__inner{
+        column-gap: 19px;
+
+        @include respond(tablet){
+            row-gap: 19px;
+            flex-wrap: wrap;
+        }
+    }
 
     @include respond(tablet){
         margin: 0 auto;

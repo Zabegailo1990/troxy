@@ -2,15 +2,13 @@
 @use './_fonts.scss';
 @use './mixins/_mediaQuery';
 @use './_variables.scss';
+@use './entities/container.scss';
 @use './entities/button.scss';
 @use './entities/icon.scss';
 @use './entities/slider.scss';
 @use './entities/card.scss';
 @use './entities/section.scss';
 @use './_entities.scss';
-
-
-@use "../../vendors/swiper/swiper-bundle.min.css";
 
 // Компоненты
 @use '../../components/Promo/scss/promo.scss';
@@ -92,3 +90,5 @@
 @use '../../pages/ScriptsInside/scss/script-inside.scss';
 @use '../../pages/Detector/scss/detector.scss';
 @use '../../pages/Wiki/scss/wiki.scss';
+@use '../../pages/Test/scss/test.scss';
+@use '../../pages/Api/scss/api.scss';

@@ -1,8 +1,17 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .slider-advantages{
-    display: flex;
-    overflow: hidden;
+
+    &__stub{
+        @include respond(pc){
+            display: none;
+        } 
+    }
+    
+    &__inner{
+        margin: 0 auto;
+
+    }
 
     @include respond(pc){
         justify-content: space-between; 

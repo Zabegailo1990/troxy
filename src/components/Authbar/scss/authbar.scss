@@ -35,6 +35,7 @@
             background: $button-bg-blue;
         }
     }
+
     
     &--responsive{
         .authbar__button--signin,
@@ -43,6 +44,15 @@
             @include respond(pc){
                 display: flex;
             }
+        }
+    }
+
+
+    &--theme--api{
+        flex-direction: row-reverse;
+        
+        .authbar__button--signup{
+            display: none;
         }
     }
 }

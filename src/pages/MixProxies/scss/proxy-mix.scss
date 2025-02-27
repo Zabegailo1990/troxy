@@ -12,10 +12,13 @@
     }
     
     &__slider{
-        margin-right: -24px;
+        margin: 0 -24px;
 
         @include respond(tablet){
-            margin-right: -40px;
+            margin: 0 -40px;
+        }
+        @include respond(pc){
+            margin: 0;
         }
     }
 }

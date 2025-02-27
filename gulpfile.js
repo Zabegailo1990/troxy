@@ -144,7 +144,7 @@ function scripts() {
         .pipe(gulp.dest(paths.scripts.dest));
 }
 
-function copyVendors() {
+export function copyVendors() {
     return gulp.src('src/vendors/**/*.js') // Исходная папка
         .pipe(gulp.dest('docs/vendors')); // Куда копируем
 }

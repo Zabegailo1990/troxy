@@ -8,62 +8,70 @@
 </head>
 <body>
     <div class="personal">
-        @@include('../../sections/Present/index.html', {
-            bgNum: "2",
-            title: "Personal proxies",
-            theme: "present--theme-dark",
-            themeLogo: "logo--theme-dark",
-            themeNav: "navigation--theme--dark",
-            themeAuthbar: "authbar--theme--dark",
-            text: "Enjoy security and speed with a UDP connection that's ideal for PC gaming, video streaming, and file sharing."
-        })
+        <div class="personal__present">
+            @@include('../../sections/Present/index.html', {
+                bgNum: "2",
+                title: "Personal proxies",
+                theme: "present--theme-dark",
+                themeLogo: "logo--theme-dark",
+                themeNav: "navigation--theme--dark",
+                themeAuthbar: "authbar--theme--dark",
+                text: "Enjoy security and speed with a UDP connection that's ideal for PC gaming, video streaming, and file sharing."
+            })
+            <img class="personal__animate-top" src="/images/page_personal_ani_2.png" alt="">
+            <img class="personal__animate-bottom" src="/images/page_personal_ani_1.png" alt="">
+        </div>
         <div class="section">
             <div class="container">
                 <h2 class="title personal__subtitle">Ready-made solutions for <span class="title--color--blue">your goals</span></h2>
-                <div class="personal__slider">
-                    <div class="personal__slide">
-                        @@include("../../components/CardGoal/index.html", {
-                            class: "personal__card",
-                            src: "/images/component_card-sale_pers-1.png",
-                            title: "UDP 1 IP",
-                            subtitle: "$5/month",
-                        })
-                        @@include("../../components/CardGoal/index.html", {
-                            class: "personal__card",
-                            src: "/images/component_card-sale_pers-2.png",
-                            title: "UDP MIX 5 IP",
-                            subtitle: "$5/month",
-                        })
+                <div class="slider personal__slider">
+                    <span class="slider__stub personal__stub"></span>
+                    <div class="slider__inner personal__inner">
+                        <div class="personal__slide">
+                            @@include("../../components/CardGoal/index.html", {
+                                class: "personal__card",
+                                src: "/images/component_card-sale_pers-1.png",
+                                title: "UDP 1 IP",
+                                subtitle: "$5/month",
+                            })
+                            @@include("../../components/CardGoal/index.html", {
+                                class: "personal__card",
+                                src: "/images/component_card-sale_pers-2.png",
+                                title: "UDP MIX 5 IP",
+                                subtitle: "$5/month",
+                            })
+                        </div>
+                        <div class="personal__slide">
+                            @@include("../../components/CardGoal/index.html", {
+                                class: "personal__card",
+                                src: "/images/component_card-sale_pers-3.png",
+                                title: "UDP MIX 10 IP",
+                                subtitle: "$5/month",
+                            })
+                            @@include("../../components/CardGoal/index.html", {
+                                class: "personal__card",
+                                src: "/images/component_card-sale_pers-4.png",
+                                title: "UDP MIX 25 IP",
+                                subtitle: "$5/month",
+                            })
+    
+                        </div>
+                        <div class="personal__slide">
+                            @@include("../../components/CardGoal/index.html", {
+                                class: "personal__card",
+                                src: "/images/component_card-sale_pers-5.png",
+                                title: "UDP MIX 50 IP",
+                                subtitle: "$5/month",
+                            })
+                            @@include("../../components/CardGoal/index.html", {
+                                class: "personal__card",
+                                src: "/images/component_card-sale_pers-6.png",
+                                title: "UDP MIX 100 IP",
+                                subtitle: "$5/month",
+                            })
+                        </div>
                     </div>
-                    <div class="personal__slide">
-                        @@include("../../components/CardGoal/index.html", {
-                            class: "personal__card",
-                            src: "/images/component_card-sale_pers-3.png",
-                            title: "UDP MIX 10 IP",
-                            subtitle: "$5/month",
-                        })
-                        @@include("../../components/CardGoal/index.html", {
-                            class: "personal__card",
-                            src: "/images/component_card-sale_pers-4.png",
-                            title: "UDP MIX 25 IP",
-                            subtitle: "$5/month",
-                        })
-
-                    </div>
-                    <div class="personal__slide">
-                        @@include("../../components/CardGoal/index.html", {
-                            class: "personal__card",
-                            src: "/images/component_card-sale_pers-5.png",
-                            title: "UDP MIX 50 IP",
-                            subtitle: "$5/month",
-                        })
-                        @@include("../../components/CardGoal/index.html", {
-                            class: "personal__card",
-                            src: "/images/component_card-sale_pers-6.png",
-                            title: "UDP MIX 100 IP",
-                            subtitle: "$5/month",
-                        })
-                    </div>
+                    <span class="slider__stub personal__stub"></span>
                 </div>
             </div>
         </div>
@@ -74,7 +82,12 @@
             button_1: "Test free"
         })
         @@include('../../sections/Advantages/index.html')
-        @@include('../../sections/Stealth/index.html')
+        <div class="section">
+            <div class="container">
+                <h2 class="title personal__subtitle">Maximum simplicity and quality of proxies <span class='title--color--blue'>with a digital footprint at the price of regular ones</span></h2>
+                @@include("../../components/SliderPluses/index.html", {class: "tariffs__slider"})
+            </div>
+        </div>
         @@include('../../sections/Simple/index.html')
         @@include('../../sections/Faq/index.html')
         @@include('../../sections/SliderNews/index.html')

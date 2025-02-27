@@ -1,14 +1,23 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .slider-goal{
-    display: flex;
-    column-gap: 20px;
-    overflow: hidden;
 
-    @include respond(pc){
-        row-gap: 20px;
-        flex-wrap: wrap;
+    &__stub{
+        @include respond(pc){
+            display: none;
+        }
     }
+
+    &__inner{
+        column-gap: 19px;
+
+        @include respond(pc){
+            row-gap: 20px;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+    }
+
 
     &__slide{
         flex-shrink: 0;

@@ -1,26 +1,6 @@
 @use './variables' as *;
 @use './mixins/mediaQuery' as *;
 
-
-// Container
-.container{
-    max-width: 1320px;
-    padding: 0 24px;
-    width: 100%;
-    margin: 0 auto;
-
-    @include respond(tablet){
-        padding: 0 40px;
-    }
-
-    &--right-free{
-        padding-right: 0;
-        @include respond(tablet){
-            padding-right: 40px;
-        }
-    }
-}
-
 .background,
 .background img,
 .background source{

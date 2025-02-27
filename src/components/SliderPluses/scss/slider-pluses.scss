@@ -1,19 +1,42 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .slider-pluses{
-    column-gap: 10px;
 
-    @include respond(tablet) {
-        flex-wrap: wrap;
-        justify-content: center;
-        max-width: 699px;
-        margin: 0 auto;
+    @include respond(tablet){
+        overflow: visible;
+    }
+
+    &__stub{
+        @include respond(tablet){
+            display: none;
+        }
+    }
+    
+    &__inner{
+        gap: 10px;
+        
+        @include respond(tablet){
+            max-width: 699px;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+
+        @include respond(pc){
+            gap: 19px;
+            max-width: none;
+        }
     }
     
     &__slide{
         display: flex;
         flex-direction: column;
         row-gap: 10px;
-    }
 
+        @include respond(pc){
+            gap: 22px;
+            max-width: none;
+        }
+    }
 }

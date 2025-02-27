@@ -2,22 +2,22 @@
 
 .footer{
     position: relative;
-    padding-top: 40px;
-
-    @include respond(tablet){
-        padding-top: 64px;
-    }
-
+    
     &__background{
         position: absolute;
         top: 0;
         left: 0;
         z-index: 0;
     }
-
+    
     &__inner{
         position: relative;
+        padding-top: 40px;
         z-index: 1;
+        
+        @include respond(tablet){
+            padding-top: 64px;
+        }
 
         @include respond(pc){
             display: flex;
@@ -40,6 +40,14 @@
         @include respond(pc){
             display: block;
             flex-shrink: 0;
+        }
+
+        &--bg-dark{
+            background-color: #17263F;
+        }
+
+        &--space-non{
+            margin-bottom: 0;
         }
     }
     
@@ -116,7 +124,6 @@
                 display: none;
             }
         }
-    
     }
 
     &__title{
