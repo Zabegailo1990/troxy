@@ -1,6 +1,57 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .proxy-rotating{
+
+    &__present{
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__animate{
+        position: absolute;
+        transition: all .3s;
+
+        &--top{
+            display: none;
+
+            @include respond(tablet){
+                display: block;
+                min-width: 491px;
+                height: 491px;
+                top: 151px;
+                left: -150px;
+            }
+
+            @include respond(pc){
+                min-width: 592px;
+                height: 592px;
+                top: 114px;
+                left: -218px;
+            }
+        }
+
+        &--bottom{
+            min-width: 451px;
+            height: 451px;
+            right: -147px;
+            bottom: -81px;
+
+            @include respond(tablet){
+                min-width: 558px;
+                height: 558px;
+                right: -185px;
+                bottom: -140px;
+            }
+
+            @include respond(pc){
+                bottom: -74px;
+                right: -158px;
+
+            }
+        }
+    }
+
+
     &__subtitle{
         text-align: center;
         margin-bottom: 36px;

@@ -8,70 +8,76 @@
 </head>
 <body>
     <div class="partner">
-        @@include('../../sections/Present/index.html', {
-            bgNum: "2",
-            title: "Sell ​​proxies and earn with our affiliate program",
-            text: "Limit proxies can be useful in a variety of areas such as internet marketing, data analysis, website testing and other areas where it is necessary to control access to proxy servers.",
-            theme: "present--theme-dark",
-            themeLogo: "logo--theme-dark",
-            themeNav: "navigation--theme--dark",
-            themeAuthbar: "authbar--theme--dark",
-        })
+        <div class="partner__present">
+            @@include('../../sections/Present/index.html', {
+                bgNum: "2",
+                title: "Sell ​​proxies and earn with our affiliate program",
+                text: "Limit proxies can be useful in a variety of areas such as internet marketing, data analysis, website testing and other areas where it is necessary to control access to proxy servers.",
+                theme: "present--theme-dark",
+                themeLogo: "logo--theme-dark",
+                themeNav: "navigation--theme--dark",
+                themeAuthbar: "authbar--theme--dark",
+            })
+            <img class="partner__animate partner__animate--top" src="/images/page_partner_ani_2.png" alt="">
+            <img class="partner__animate partner__animate--bottom" src="/images/page_partner_ani_1.png" alt="">
+        </div>
         <div class="section">
             <div class="container">
                 <h2 class="title partner__subtitle">Features of the <span class='title--color--blue'>affiliate program</span></h2>
-                <div class="partner__slider">
-                    <span class="partner__stub"></span>
-                    <div class="partner__slide">
-                        @@include("../../components/CardPlus/index.html", {
-                            theme: "card-plus--theme-affiliate",
-                            class: "",
-                            iconNum: "/sprites/affiliates.svg#icon-card-plus_affiliate_1",
-                            title: "Lifetime commission",
-                            text: "Earn 10% on all payments made by clients you refer",
-                        })
-                        @@include("../../components/CardPlus/index.html", {
-                            theme: "card-plus--theme-affiliate",
-                            class: "",
-                            iconNum: "/sprites/affiliates.svg#icon-card-plus_affiliate_2",
-                            title: "Simple method",
-                            text: "Attract clients using your referral link",
-                        })
+                <div class="slider partner__slider">
+                    <span class="slider__stub partner__stub"></span>
+                    <div class="slider__inner partner__inner">
+                        <div class="partner__slide">
+                            @@include("../../components/CardPlus/index.html", {
+                                theme: "card-plus--theme-affiliate",
+                                class: "",
+                                icon: "/sprites/affiliates.svg#icon-card-plus_affiliate_1",
+                                title: "Lifetime commission",
+                                text: "Earn 10% on all payments made by clients you refer",
+                            })
+                            @@include("../../components/CardPlus/index.html", {
+                                theme: "card-plus--theme-affiliate",
+                                class: "",
+                                icon: "/sprites/affiliates.svg#icon-card-plus_affiliate_2",
+                                title: "Simple method",
+                                text: "Attract clients using your referral link",
+                            })
+                        </div>
+                        <div class="partner__slide">
+                            @@include("../../components/CardPlus/index.html", {
+                                theme: "card-plus--theme-affiliate",
+                                class: "",
+                                icon: "/sprites/affiliates.svg#icon-card-plus_affiliate_3",
+                                title: "Fast crediting",
+                                text: "Commissions are credited 30 days after the client's payment",
+                            })
+                            @@include("../../components/CardPlus/index.html", {
+                                theme: "card-plus--theme-affiliate",
+                                class: "",
+                                icon: "/sprites/affiliates.svg#icon-card-plus_affiliate_4",
+                                title: "Use as you wish",
+                                text: "You can withdraw from $100 via USDT TRC20 or pay for a proxy inside the TROXY platform",
+                            })
+                            
+                        </div>
+                        <div class="partner__slide">
+                            @@include("../../components/CardPlus/index.html", {
+                                theme: "card-plus--theme-affiliate",
+                                class: "",
+                                icon: "/sprites/affiliates.svg#icon-card-plus_affiliate_5",
+                                title: "Constant income",
+                                text: "Users registered through your link remain linked to you for commission purposes",
+                            })
+                            @@include("../../components/CardPlus/index.html", {
+                                theme: "card-plus--theme-affiliate",
+                                class: "",
+                                icon: "/sprites/affiliates.svg#icon-card-plus_affiliate_6",
+                                title: "Unlimited income",
+                                text: "There are no limits on your income, we will pay as much as you can earn",
+                            })
+                        </div>
                     </div>
-                    <div class="partner__slide">
-                        @@include("../../components/CardPlus/index.html", {
-                            theme: "card-plus--theme-affiliate",
-                            class: "",
-                            iconNum: "/sprites/affiliates.svg#icon-card-plus_affiliate_3",
-                            title: "Fast crediting",
-                            text: "Commissions are credited 30 days after the client's payment",
-                        })
-                        @@include("../../components/CardPlus/index.html", {
-                            theme: "card-plus--theme-affiliate",
-                            class: "",
-                            iconNum: "/sprites/affiliates.svg#icon-card-plus_affiliate_4",
-                            title: "Use as you wish",
-                            text: "You can withdraw from $100 via USDT TRC20 or pay for a proxy inside the TROXY platform",
-                        })
-                        
-                    </div>
-                    <div class="partner__slide">
-                        @@include("../../components/CardPlus/index.html", {
-                            theme: "card-plus--theme-affiliate",
-                            class: "",
-                            iconNum: "/sprites/affiliates.svg#icon-card-plus_affiliate_5",
-                            title: "Constant income",
-                            text: "Users registered through your link remain linked to you for commission purposes",
-                        })
-                        @@include("../../components/CardPlus/index.html", {
-                            theme: "card-plus--theme-affiliate",
-                            class: "",
-                            iconNum: "/sprites/affiliates.svg#icon-card-plus_affiliate_6",
-                            title: "Unlimited income",
-                            text: "There are no limits on your income, we will pay as much as you can earn",
-                        })
-                    </div>
-                    <span class="partner__stub"></span>
+                    <span class="slider__stub partner__stub"></span>
                 </div>
             </div>
         </div>

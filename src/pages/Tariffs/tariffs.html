@@ -8,20 +8,24 @@
     </head>
     <body>
         <div class="tariffs">
-            @@include('../../sections/Present/index.html', {
-                bgNum: "2",
-                title: "Proxy tariffs",
-                theme: "present--theme-dark",
-                themeLogo: "logo--theme-dark",
-                themeNav: "navigation--theme--dark",
-                themeAuthbar: "authbar--theme--dark",
-                tariffs: "#",
-                countries: "by-country.html",
-                information: "",
-                goals: "",
-                services: "",
-                api: "",
-            })
+            <div class="tariffs__present">
+                @@include('../../sections/Present/index.html', {
+                    bgNum: "2",
+                    title: "Proxy tariffs",
+                    theme: "present--theme-dark",
+                    themeLogo: "logo--theme-dark",
+                    themeNav: "navigation--theme--dark",
+                    themeAuthbar: "authbar--theme--dark",
+                    tariffs: "#",
+                    countries: "by-country.html",
+                    information: "",
+                    goals: "",
+                    services: "",
+                    api: "",
+                })
+                <img class="tariffs__animate tariffs__animate--top" src="/images/page_tariffs_ani_2.png" alt="">
+                <img class="tariffs__animate tariffs__animate--bottom" src="/images/page_tariffs_ani_1.png" alt="">
+            </div>
             <div class="section">
                 <div class="container">
                     <h2 class="title tariffs__subtitle">High-quality proxies from 5 to 200,000+ IPs <span class="title--color--blue">at affordable prices</span></h2>

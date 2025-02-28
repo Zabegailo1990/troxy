@@ -2,6 +2,57 @@
 
 .by-country{
 
+    &__present{
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__animate{
+        position: absolute;
+        transition: all .3s;
+
+        &--top{
+            display: none;
+
+            @include respond(tablet){
+                display: block;
+                min-width: 578px;
+                height: 578px;
+                top: -76px;
+                left: -229px;
+            }
+
+            @include respond(pc){
+                min-width: 648px;
+                height: 648px;
+                top: 34px;
+                left: -265px;
+            }
+        }
+
+        &--bottom{
+            min-width: 398px;
+            height: 398px;
+            bottom: -107px;
+            right: -100px;
+
+            @include respond(tablet){
+                min-width: 647px;
+                height: 647px;
+                bottom: -146px;
+                right: -162px;
+            }
+
+            @include respond(pc){
+                min-width: 701px;
+                height: 701px;
+                bottom: -158px;
+                right: -217px;
+            }
+        }
+        
+    }
+
     &__title{
         text-align: center;
         margin-bottom: 36px;

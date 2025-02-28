@@ -8,15 +8,19 @@
 </head>
 <body>
     <div class="location">
-        @@include('../../sections/Present/index.html', {
-            bgNum: "2",
-            title: "Proxy by location",
-            theme: "present--theme-dark",
-            themeLogo: "logo--theme-dark",
-            themeNav: "navigation--theme--dark",
-            themeAuthbar: "authbar--theme--dark",
-            text: "Use our proxy packages or order a custom quantity based on your needs"
-        })
+        <div class="location__present">
+            @@include('../../sections/Present/index.html', {
+                bgNum: "2",
+                title: "Proxy by location",
+                theme: "present--theme-dark",
+                themeLogo: "logo--theme-dark",
+                themeNav: "navigation--theme--dark",
+                themeAuthbar: "authbar--theme--dark",
+                text: "Use our proxy packages or order a custom quantity based on your needs"
+            })
+            <img class="location__animate location__animate--top" src="/images/page_location_ani_2.png" alt="">
+            <img class="location__animate location__animate--bottom" src="/images/page_location_ani_1.png" alt="">
+        </div>
         <div class="section">
             <div class="container">
                 <h2 class="title location__subtitle">Select the location <span class="title--color--blue">you need</span></h2>

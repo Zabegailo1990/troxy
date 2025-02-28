@@ -2,6 +2,53 @@
 
 .partner{
 
+    &__present{
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__animate{
+        position: absolute;
+        transition: all .3s;
+
+        &--top{
+            display: none;
+
+            @include respond(tablet){
+                display: block;
+                min-width: 659px;
+                height: 659px;
+                top: -87px;
+                left: -269px;
+            }
+
+            @include respond(pc){
+                min-width: 718px;
+                height: 718px;
+                top: -129px;
+                left: -242px;
+            }
+        }
+
+        &--bottom{
+            min-width: 539px;
+            height: 539px;
+            bottom: -206px;
+            right: -192px;
+
+            @include respond(tablet){
+                min-width: 664px;
+                height: 664px;
+                bottom: -176px;
+                right: -260px;
+            }
+
+            @include respond(pc){
+                right: -176px;
+            }
+        }
+    }
+
     &__title{
         text-align: center;
     }
@@ -38,32 +85,29 @@
     }
     
     &__slider{
-        display: flex;
-        column-gap: 20px;
-        overflow: auto;
         margin: 0 -24px;
 
-        &::-webkit-scrollbar{
-            display: none;
-        }
-
         @include respond(tablet){
-            overflow: auto;
             margin: 0 -40px;  
         }
 
         @include respond(pc){
-            overflow: auto;
+            overflow: visible;
             margin: 0; 
         }
     }
 
     &__stub{
-        width: 24px;
+        @include respond(pc){
+           display: none;
+        }
+    }
+
+    &__inner{
+        column-gap: 20px;
     }
 
     &__slide{
-        position: relative;
         display: flex;
         flex-direction: column;
         row-gap: 20px;

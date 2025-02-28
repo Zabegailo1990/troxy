@@ -1,6 +1,57 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .location{
+
+    &__present{
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__animate{
+        position: absolute;
+        transition: all .3s;
+
+        &--top{
+            display: none;
+            
+            @include respond(tablet){
+                display: block;
+                min-width: 607px;
+                height: 607px;
+                top: -18px;
+                left: -217px;
+            }
+            
+            @include respond(pc){
+                min-width: 830px;
+                height: 830px;
+                top: -127px;
+                left: -354px;
+            }
+        }
+
+        &--bottom{
+            min-width: 408px;
+            height: 408px;
+            bottom: -44px;
+            right: -127px;
+            
+            @include respond(tablet){
+                min-width: 590px;
+                height: 590px;
+                bottom: -68px;
+                right: -164px;
+            }
+            
+            @include respond(pc){
+                min-width: 753px;
+                height: 753px;
+                bottom: -147px;
+                right: -268px;
+            }
+        }
+    }
+
     &__subtitle{
         text-align: center;
         margin-bottom: 36px;

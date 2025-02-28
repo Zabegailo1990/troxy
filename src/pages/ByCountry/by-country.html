@@ -8,17 +8,26 @@
 </head>
 <body>
     <div class="by-country">
-        @@include('../../sections/Present/index.html', {
-            bgNum: "2",
-            title: "Proxy in USA",
-            text: "Get quality US proxies that are ideal for both business owners  and private users",
-            theme: "present--theme-dark",
-            themeLogo: "logo--theme-dark",
-            themeNav: "navigation--theme--dark",
-            themeAuthbar: "authbar--theme--dark",
-            flag: "us"
-        })
-        @@include('../../sections/Stealth/index.html')
+        <div class="by-country__present">
+            @@include('../../sections/Present/index.html', {
+                bgNum: "2",
+                title: "Proxy in USA",
+                text: "Get quality US proxies that are ideal for both business owners  and private users",
+                theme: "present--theme-dark",
+                themeLogo: "logo--theme-dark",
+                themeNav: "navigation--theme--dark",
+                themeAuthbar: "authbar--theme--dark",
+                flag: "us"
+            })
+            <img class="by-country__animate by-country__animate--top" src="/images/page_by-country_ani_2.png" alt="">
+            <img class="by-country__animate by-country__animate--bottom" src="/images/page_by-country_ani_1.png" alt="">
+        </div>
+        <div class="section">
+            <div class="container">
+                <h2 class="title home__subtitle">Maximum simplicity and quality of proxies <span class='title--color--blue'>with a digital footprint at the price of regular ones</span></h2>
+                @@include("../../components/SliderPluses/index.html", {class: "tariffs__slider"})
+            </div>
+        </div>
         @@include('../../sections/Banner/index.html', {
             bgNum: "1",
             title: "Test our proxies to ensure their quality",

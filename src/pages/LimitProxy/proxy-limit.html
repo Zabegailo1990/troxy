@@ -8,15 +8,19 @@
 </head>
 <body>
     <div class="proxy-limit">
-        @@include('../../sections/Present/index.html', {
-            bgNum: "2",
-            title: "Limit proxies",
-            text: "Limit proxies can be useful in a variety of areas such as internet marketing, data analysis, website testing and other areas where it is necessary to control access to proxy servers.",
-            theme: "present--theme-dark",
-            themeLogo: "logo--theme-dark",
-            themeNav: "navigation--theme--dark",
-            themeAuthbar: "authbar--theme--dark",
-        })
+        <div class="proxy-limit__present">
+            @@include('../../sections/Present/index.html', {
+                bgNum: "2",
+                title: "Limit proxies",
+                text: "Limit proxies can be useful in a variety of areas such as internet marketing, data analysis, website testing and other areas where it is necessary to control access to proxy servers.",
+                theme: "present--theme-dark",
+                themeLogo: "logo--theme-dark",
+                themeNav: "navigation--theme--dark",
+                themeAuthbar: "authbar--theme--dark",
+            })
+            <img class="proxy-limit__animate proxy-limit__animate--top" src="/images/page_proxy-limit_ani_2.png" alt="">
+            <img class="proxy-limit__animate proxy-limit__animate--bottom" src="/images/page_proxy-limit_ani_1.png" alt="">
+        </div>
         <div class="section">
             <div class="container">
                 <h1 class="title section__title">Special rates for proxies <span class="title--color--blue">for Google</span></h1>
@@ -46,7 +50,12 @@
             text: "We will select a high-quality and effective solution for you personally at the best price",
             button_1: "Test free"
         })
-        @@include('../../sections/Stealth/index.html')
+        <div class="section">
+            <div class="container">
+                <h2 class="title proxy-mix__subtitle">Maximum simplicity and quality of proxies <span class='title--color--blue'>with a digital footprint at the price of regular ones</span></h2>
+                @@include("../../components/SliderPluses/index.html", {class: "tariffs__slider"})
+            </div>
+        </div>
         @@include('../../sections/Banner/index.html', {
             bgNum: "2",
             title: "Test our proxies to ensure their quality",

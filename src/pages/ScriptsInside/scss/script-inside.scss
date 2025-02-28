@@ -35,18 +35,6 @@
             margin-bottom: 28px;
         }        
     }
-    
-    &__frame{
-        margin-left: -24px;
-        margin-right: -24px;
-        margin-bottom: 42px;
-        
-        @include respond(tablet){
-            margin-left: 0;
-            margin-right: 0;
-            margin-bottom: 28px;
-        }
-    }
 
     &__img{
         object-fit: cover;

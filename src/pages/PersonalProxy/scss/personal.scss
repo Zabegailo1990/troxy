@@ -7,38 +7,47 @@
         overflow: hidden;
     }
 
-    &__animate-top{
-        display: none;
+    &__animate{
         position: absolute;
+        transition: all .3s;
 
-        @include respond(tablet){
-            display: block;
-            min-width: 516px;
-            height: 516px;
-            top: -16px;
-            left: -68px;
+        &--top{
+            display: none;
+
+            @include respond(tablet){
+                display: block;
+                min-width: 516px;
+                height: 516px;
+                top: -16px;
+                left: -68px;
+            }
+
+            @include respond(pc){
+                min-width: 504px;
+                height: 504px;
+                top: 68px;
+                left: -77px;
+            }
         }
 
-        @include respond(tablet){
-            min-width: 504px;
-            height: 504px;
-            top: -18px;
-            left: -77px;
-        }
-    }
+        &--bottom{
+            min-width: 424px;
+            height: 424px;
+            bottom: -62px;
+            right: -97px;
+            position: absolute;
+        
+            @include respond(tablet){
+                min-width: 554px;
+                height: 554px;
+                bottom: -93px;
+                right: -104px;
+            }
 
-    &__animate-bottom{
-        min-width: 424px;
-        height: 424px;
-        bottom: -62px;
-        right: -97px;
-        position: absolute;
-
-        @include respond(tablet){
-            min-width: 554px;
-            height: 554px;
-            bottom: -93px;
-            right: -105px;
+            @include respond(pc){
+                right: -99px;
+                bottom: -71px;
+            }
         }
     }
 

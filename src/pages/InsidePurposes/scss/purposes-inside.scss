@@ -2,6 +2,58 @@
 
 .purposes-inside{
 
+    &__present{
+        position: relative;
+        overflow: hidden;
+        transition: all .3s;
+    }
+
+    &__animate{
+        position: absolute;
+        transition: all .3s;
+
+        &--top{
+            display: none;
+
+            @include respond(tablet){
+                display: block;
+                min-width: 500px;
+                height: 500px;
+                top: -155px;
+                left: -120px;
+            }
+
+            @include respond(pc){
+                min-width: 629px;
+                height: 629px;
+                top: -135px;
+                left: -227px;
+            }
+        }
+
+        &--bottom{
+            min-width: 391px;
+            height: 391px;
+            bottom: -81px;
+            right: 0;
+            
+            @include respond(tablet){
+                min-width: 595px;
+                height: 595px;
+                bottom: -117px;
+                right: -150px;
+            }
+            
+            
+            @include respond(pc){
+                min-width: 617px;
+                height: 617px;
+                bottom: -128px;
+                right: -63px;
+            }
+        }
+    }
+
     &__subtitle{
         text-align: center;
         margin-bottom: 36px;
@@ -12,14 +64,14 @@
     }
     
     &__slider{
-        margin-right: -24px;
+        margin: 0 -24px;
 
         @include respond(tablet){
-            margin-right: -40px;
+            margin: 0 -40px;
         }
         
         @include respond(pc){
-            margin-right: 0;
+            margin: 0;
         }
     }
 }

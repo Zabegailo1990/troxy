@@ -8,15 +8,19 @@
 </head>
 <body>
     <div class="purposes-inside">
-        @@include('../../sections/Present/index.html', {
-            bgNum: "2",
-            title: "Proxy for purpose",
-            text: "Use quality proxies with a digital footprint when working with #### services, for advertising, market research, SEO, WEB development or bypassing GEO restrictions",
-            theme: "present--theme-dark",
-            themeLogo: "logo--theme-dark",
-            themeNav: "navigation--theme--dark",
-            themeAuthbar: "authbar--theme--dark",
-        })
+        <div class="purposes-inside__present">
+            @@include('../../sections/Present/index.html', {
+                bgNum: "2",
+                title: "Proxy for purpose",
+                text: "Use quality proxies with a digital footprint when working with #### services, for advertising, market research, SEO, WEB development or bypassing GEO restrictions",
+                theme: "present--theme-dark",
+                themeLogo: "logo--theme-dark",
+                themeNav: "navigation--theme--dark",
+                themeAuthbar: "authbar--theme--dark",
+            })
+            <img class="purposes-inside__animate purposes-inside__animate--top" src="/images/page_purposes-inside_ani_2.png" alt="">
+            <img class="purposes-inside__animate purposes-inside__animate--bottom" src="/images/page_purposes-inside_ani_1.png" alt="">
+        </div>
         <div class="section">
             <div class="container">
                 <h2 class="title purposes-inside__subtitle">Special rates <span class="title--color--blue">for proxies for Google</span></h2>
@@ -52,7 +56,12 @@
             text: "We will select a high-quality and effective solution for you personally at the best price",
             button_1: "Test free"
         })
-        @@include('../../sections/Stealth/index.html')
+        <div class="section">
+            <div class="container">
+                <h2 class="title home__subtitle">Maximum simplicity and quality of proxies <span class='title--color--blue'>with a digital footprint at the price of regular ones</span></h2>
+                @@include("../../components/SliderPluses/index.html", {class: "tariffs__slider"})
+            </div>
+        </div>
         @@include('../../sections/Banner/index.html', {
             bgNum: "2",
             title: "Test our proxies to ensure their quality",

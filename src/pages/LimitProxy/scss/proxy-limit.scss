@@ -2,11 +2,64 @@
 
 .proxy-limit{
 
+    &__present{
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__animate{
+        position: absolute;
+        transition: all .3s;
+
+        &--top{
+            display: none;
+
+            @include respond(tablet){
+                display: block;
+                min-width: 554px;
+                height: 554px;
+                top: -35px;
+                left: -164px;
+            }
+    
+            @include respond(pc){
+                display: block;
+                min-width: 656px;
+                height: 656px;
+                top: 53px;
+                left: -219px;
+            }
+        }
+
+        &--bottom{
+            min-width: 435px;
+            height: 435px;
+            bottom: -115px;
+            right: -86px;
+
+            @include respond(tablet){
+                min-width: 656px;
+                height: 656px;
+                bottom: -213px;
+                right: -178px;
+            }
+    
+            @include respond(pc){
+                bottom: -165px;
+                right: -192px;
+            }
+        }
+    }
+
     &__slider{
-        margin-right: -24px;
+        margin: 0 -24px;
 
         @include respond(tablet){
-            margin-right: -40px;
+            margin: 0 -40px;
+        }
+
+        @include respond(pc){
+            margin: 0;
         }
     }
 }
