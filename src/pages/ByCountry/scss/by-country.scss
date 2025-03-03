@@ -63,7 +63,7 @@
     }
     
     &__slider-flags{
-        margin-right: -24px;
+        margin: 0 -24px;
         
         @include respond(tablet){
             display: none;

@@ -16,6 +16,8 @@
 
     &__inner{
         position: relative;
+        display: flex;
+        flex-direction: column;
         height: 100%;
         z-index: 2;
     }
@@ -25,9 +27,22 @@
     }
 
     &__header{
-        margin-bottom: 65px;
+        // margin-bottom: 65px;
+        // @include respond(tablet){
+        //     margin-bottom: 116px;
+        // }
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 0 24px;
+
         @include respond(tablet){
-            margin-bottom: 116px;
+            padding: 0 40px;
         }
     }
 
@@ -65,14 +80,20 @@
 
     &__title{
         text-align: center;
+        max-width: 924px;
     }
     
     &__text{
         text-align: center;
         margin-bottom: 28px;
-
+        
         @include respond(tablet){
+            max-width: 455px;
             margin-bottom: 34px;
+        }
+
+        @include respond(pc){
+            max-width: 610px;
         }
     }
 
@@ -87,7 +108,7 @@
 
         @include respond(tablet){
             display: flex;
-            margin-bottom: 52px;
+            margin-bottom: 37px;
         }
 
         &--hidden{
@@ -127,12 +148,12 @@
     }
 
     &__list{
-        @include respond(tablet){
-            margin-bottom: 262px;
-        }
-        @include respond(pc){
-            margin-bottom: 176px;
-        }
+        // @include respond(tablet){
+        //     margin-bottom: 262px;
+        // }
+        // @include respond(pc){
+        //     margin-bottom: 176px;
+        // }
     }
 
     &__item{

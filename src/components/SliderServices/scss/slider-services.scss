@@ -1,16 +1,12 @@
-.slider-services{
-    display: flex;
-    overflow: hidden;
+.slider-services{    
 
-    &__cell{
-        &:not(:last-child){
-            margin-right: 20px;
-        }
+    &__inner{
+        column-gap: 20px;
     }
 
-    &__slide {
-        &:not(:last-child){
-            margin-bottom: 20px;
-        }
+    &__slide{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
     }
 }

@@ -503,9 +503,9 @@
     &__footer{
         position: relative;
         background-color: #273854;
-        padding: 0 24px;
-
+        
         @include respond(tablet){
+            padding: 0 24px;
             display: flex;
             justify-content: space-between;
             padding: 0 40px;

@@ -17,23 +17,22 @@
             goals: "@@goals",
             services: "@@services",
             api: "@@api"
-            
         })
-        <div class="container">
+        <div class="present__content">
             @@if(typeof rating !== 'undefined' && rating) {
-                <div class="present__row present__rating">
-                    <img class="present__trustpilot" src="@@rating" alt="">
-                    <img class="present__trustpilot" src="@@rating" alt="">
-                    <img class="present__trustpilot" src="@@rating" alt="">
-                </div>
+            <div class="present__row present__rating">
+                <img class="present__trustpilot" src="@@rating" alt="">
+                <img class="present__trustpilot" src="@@rating" alt="">
+                <img class="present__trustpilot" src="@@rating" alt="">
+            </div>
             }
             <div class="present__group">
                 @@if(typeof flag !== 'undefined' && flag) {
-                    <div class="present__frame">
-                        <svg class="icon present__icon">
-                            <use xlink:href="/sprites/flags.svg#icon-flag_@@flag"></use>
-                        </svg>
-                    </div>
+                <div class="present__frame">
+                    <svg class="icon present__icon">
+                        <use xlink:href="/sprites/flags.svg#icon-flag_@@flag"></use>
+                    </svg>
+                </div>
                 }
                 <h1 class="title title--type--main @@colorTitle title--weight--medium present__title">@@title</h1>
             </div>
