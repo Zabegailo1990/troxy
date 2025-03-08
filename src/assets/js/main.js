@@ -33,32 +33,37 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
-    $("body").on("click", ".check-proxy__select", function (e) {
-        e.stopPropagation(); // Останавливаем всплытие, чтобы не срабатывало на body
-        $(".check-proxy__options").removeClass("check-proxy__options--active"); // Закрываем все открытые списки
-        $(this).find(".check-proxy__options").addClass("check-proxy__options--active");
+    // Открытие списка при клике на .select__front
+    $("body").on("click", ".proxy-checker__select .select__front, .proxy-list__select .select__front", function (e) {
+        e.stopPropagation(); // Останавливаем всплытие
+        $(".select__options").removeClass("select__options--active"); // Закрываем другие списки
+        $(this).siblings(".select__options").toggleClass("select__options--active"); // Открываем текущий список
     });
 
     // Выбор элемента из списка
-    $("body").on("click", ".check-proxy__value", function (e) {
+    $("body").on("click", ".proxy-checker__select .select__value, .proxy-list__select .select__value", function (e) {
         e.stopPropagation(); // Останавливаем всплытие
-        let $select = $(this).closest(".check-proxy__select");
-        let $name = $select.find(".check-proxy__name");
+
+        let $select = $(this).closest(".proxy-checker__select, .proxy-list__select"); 
+        let $name = $select.find(".select__name"); 
         
         // Обновляем текст в блоке
         $name.text($(this).text());
 
         // Убираем старый selected и добавляем к текущему
-        $select.find(".check-proxy__value").removeClass("check-proxy__value--selected");
-        $(this).addClass("check-proxy__value--selected");
+        $select.find(".select__value").removeClass("select__value--selected"); 
+        $(this).addClass("select__value--selected"); 
 
         // Закрываем список
-        $select.find(".check-proxy__options").removeClass("check-proxy__options--active");
+        $select.find(".select__options").removeClass("select__options--active"); 
     });
 
-    // Закрытие при клике вне элемента
+    // Закрытие списка при клике вне него
     $(document).on("click", function () {
-        $(".check-proxy__options").removeClass("check-proxy__options--active");
+        $(".select__options").removeClass("select__options--active");
     });
 });
+
+
+
 
