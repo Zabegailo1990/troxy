@@ -7,51 +7,206 @@
     <title>Document</title>
 </head>
 <body>
+    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <symbol id="icon-download" viewBox="0 0 24 25">
+                <path fill="none" d="M4 8.59961V17.3996C4 18.5197 4 19.0794 4.21799 19.5072C4.40973 19.8835 4.71547 20.1901 5.0918 20.3818C5.5192 20.5996 6.07899 20.5996 7.19691 20.5996H16.8031C17.921 20.5996 18.48 20.5996 18.9074 20.3818C19.2837 20.1901 19.5905 19.8835 19.7822 19.5072C20 19.0798 20 18.5206 20 17.4027V8.59961M4 8.59961H20M4 8.59961L5.36518 6.2105C5.7002 5.62421 5.86768 5.33112 6.10325 5.11768C6.31184 4.92868 6.55859 4.78566 6.82617 4.69832C7.12861 4.59961 7.46623 4.59961 8.14258 4.59961H15.8571C16.5334 4.59961 16.8723 4.59961 17.1747 4.69832C17.4423 4.78566 17.6879 4.92868 17.8965 5.11768C18.1322 5.33129 18.3002 5.62468 18.6357 6.21191L20 8.59961M12 11.5996V17.5996M12 17.5996L15 15.5996M12 17.5996L9 15.5996" stroke="#313844" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </symbol>
+        </defs>
+    </svg>
+
     <div class="checker">
-        <div class="container">
-            <div class="check-proxy">
-                <div class="check-proxy__fields">
-                    <div class="check-proxy__col">
-                        <label class="check-proxy__label">Type</label>
-                        <div class="check-proxy__input check-proxy__input--size-s check-proxy__select">
-                            <div class="check-proxy__front">
-                                <div class="check-proxy__name">HTTPS</div>
-                                <svg class="icon check-proxy__icon">
+        @@include('../../components/Promo/index.html')
+        @@include('../../components/Header/index.html')
+        <div class="container checker__container">
+            <div class="proxy-checker checker__proxy-checker">
+                <div class="proxy-checker__fields">
+                    <div class="proxy-checker__col">
+                        <label class="proxy-checker__label">Type</label>
+                        <div class="select select--border proxy-checker__select">
+                            <div class="select__front">
+                                <div class="select__name">HTTPS</div>
+                                <svg class="icon select__icon">
                                     <use xlink:href="../sprites/icons.svg#icon-chevron-down"></use>
                                 </svg>
                             </div>
-                            <ul class="check-proxy__options">
-                                <li class="check-proxy__value">HTTP</li>
-                                <li class="check-proxy__value check-proxy__value--selected">HTTPS</li>
-                                <li class="check-proxy__value">SOCKS4</li>
-                                <li class="check-proxy__value">SOCKS5</li>
+                            <ul class="select__options">
+                                <li class="select__value">HTTP</li>
+                                <li class="select__value select__value--selected">HTTPS</li>
+                                <li class="select__value">SOCKS4</li>
+                                <li class="select__value">SOCKS5</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="check-proxy__col">
-                        <label for="ip" class="check-proxy__label">IP</label>
-                        <input id="ip" type="text" class="check-proxy__input check-proxy__input--size-m" placeholder="127.0.0.1">
+                    <div class="proxy-checker__col">
+                        <label for="ip" class="proxy-checker__label">IP</label>
+                        <input id="ip" type="text" class="proxy-checker__input proxy-checker__input--ip" placeholder="127.0.0.1">
                     </div>
-                    <div class="check-proxy__col">
-                        <label for="port" class="check-proxy__label">Port</label>
-                        <input id="port" type="text" class="check-proxy__input check-proxy__input--size-xs" placeholder="22">
+                    <div class="proxy-checker__col">
+                        <label for="port" class="proxy-checker__label">Port</label>
+                        <input id="port" type="text" class="proxy-checker__input proxy-checker__input--port" placeholder="22">
                     </div>
-                    <div class="check-proxy__col">
-                        <label for="user" class="check-proxy__label">User</label>
-                        <input id="user" type="text" class="check-proxy__input check-proxy__input--size-s" placeholder="<empty>">
+                    <div class="proxy-checker__col">
+                        <label for="user" class="proxy-checker__label">User</label>
+                        <input id="user" type="text" class="proxy-checker__input proxy-checker__input--user" placeholder="<empty>">
                     </div>
-                    <div class="check-proxy__col">
-                        <label for="password" class="check-proxy__label">Password</label>
-                        <input id="password" type="text" class="check-proxy__input check-proxy__input--size-l" placeholder="<empty>">
+                    <div class="proxy-checker__col">
+                        <label for="password" class="proxy-checker__label">Password</label>
+                        <input id="password" type="text" class="proxy-checker__input proxy-checker__input--pass" placeholder="<empty>">
                     </div>
                 </div>
-                <div class="check-proxy__control">
-                    <button class="button button--rounded button--border-gray check-proxy__button check-proxy__button--size-s">Plain text</button>
-                    <button class="button button--rounded button--border-gray check-proxy__button check-proxy__button--size-m">Add to queue</button>
-                    <button class="button button--bg--blue button--rounded button--color--white check-proxy__button check-proxy__button--size-l">Check proxy</button>
+                <div class="proxy-checker__control">
+                    <button class="button button--rounded button--border-gray proxy-checker__button proxy-checker__button--plain">Plain text</button>
+                    <button class="button button--rounded button--border-gray proxy-checker__button proxy-checker__button--add">Add to queue</button>
+                    <button class="button button--bg--blue button--rounded button--color--white proxy-checker__button proxy-checker__button--check">Check proxy</button>
+                </div>
+            </div>
+            <div class="checker__row">
+                <div class="proxy-filters checker__proxy-filters">
+                    <div class="proxy-filters__header">
+                        <h3 class="proxy-filters__title">Filters</h3>
+                    </div>
+                    <div class="proxy-filters__inner">
+                        <div class="proxy-filters__col">
+                            <div class="proxy-filters__name">Status:</div>
+                            <div class="proxy-filters__row">
+                                <div class="proxy-filters__item">
+                                    <input id="status" type="checkbox" class="proxy-filters__checkbox">
+                                    <label for="status" class="proxy-filters__label">All</label>
+                                </div>
+                                <div class="proxy-filters__item">
+                                    <input id="on" type="checkbox" class="proxy-filters__checkbox">
+                                    <label for="on" class="proxy-filters__label">On</label>
+                                </div>
+                                <div class="proxy-filters__item">
+                                    <input id="off" type="checkbox" class="proxy-filters__checkbox">
+                                    <label for="off" class="proxy-filters__label">Off</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proxy-filters__col">
+                            <div class="proxy-filters__name">Procotols:</div>
+                            <div class="proxy-filters__row">
+                                <div class="proxy-filters__item">
+                                    <input id="https" type="checkbox" class="proxy-filters__checkbox">
+                                    <label for="https" class="proxy-filters__label">HTTPS</label>
+                                </div>
+                                <div class="proxy-filters__item">
+                                    <input id="http" type="checkbox" class="proxy-filters__checkbox">
+                                    <label for="http" class="proxy-filters__label">HTTP</label>
+                                </div>
+                                <div class="proxy-filters__item">
+                                    <input id="socks4" type="checkbox" class="proxy-filters__checkbox">
+                                    <label for="socks4" class="proxy-filters__label">SOCKS4</label>
+                                </div>
+                                <div class="proxy-filters__item">
+                                    <input id="socks5" type="checkbox" class="proxy-filters__checkbox">
+                                    <label for="socks5" class="proxy-filters__label">SOCKS5</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proxy-filters__col">
+                            <div class="proxy-filters__name">Countries:</div>
+                            <div class="proxy-filters__row">
+                                <div class="proxy-filters__item">
+                                    <input id="countries" type="checkbox" class="proxy-filters__checkbox">
+                                    <label for="countries" class="proxy-filters__label">All</label>
+                                </div>
+                                <div class="proxy-filters__item">
+                                    <input id="de" type="checkbox" class="proxy-filters__checkbox">
+                                    <label for="de" class="proxy-filters__label">De</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proxy-filters__col">
+                            <div class="proxy-filters__name">Max. response:</div>
+                            <input type="text" class="proxy-filters__input" placeholder="22">
+                        </div>
+                        <div class="proxy-filters__control">
+                            <button class="button button--rounded button--color--white button--bg--blue proxy-filters__button">Apply</button>
+                            <button class="button button--rounded button--border-gray proxy-filters__button">Clear</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="proxy-list checker__proxy-list">
+                    <div class="proxy-list__header">
+                        <h3 class="proxy-list__title">Proxy list</h3>
+                        <div class="proxy-list__count">
+                            <div class="proxy-list__checked">Checked 2 out of 2</div>
+                            <div class="proxy-list__available">Available 1 out of 2</div>
+                        </div>
+                        <div class="proxy-list__row">
+                            <div class="select proxy-list__select proxy-list__select--hidden">
+                                <div class="select__front">
+                                    <div class="select__name select__name--fz-small">Filters</div>
+                                    <svg class="icon select__icon">
+                                        <use xlink:href="../sprites/icons.svg#icon-chevron-down"></use>
+                                    </svg>
+                                </div>
+                                <ul class="select__options">
+                                    <li class="select__value">HTTP</li>
+                                    <li class="select__value select__value--selected">HTTPS</li>
+                                    <li class="select__value">SOCKS4</li>
+                                    <li class="select__value">SOCKS5</li>
+                                </ul>
+                            </div>
+                            <button class="proxy-list__button">
+                                <svg class="icon proxy-list__icon">
+                                    <use xlink:href="#icon-download"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="proxy-list__inner">
+                        <div class="proxy-list__notification proxy-list__notification--hidden">The list is empty</div>
+                        <table class="proxy-list__table">
+                            <thead class="proxy-list__thead">
+                                <tr class="proxy-list__tr">
+                                    <th class="proxy-list__th">Adress</th>
+                                    <th class="proxy-list__th">Port</th>
+                                    <th class="proxy-list__th">User</th>
+                                    <th class="proxy-list__th">Password</th>
+                                    <th class="proxy-list__th">Type</th>
+                                    <th class="proxy-list__th">Location</th>
+                                    <th class="proxy-list__th">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="proxy-list__tbody">
+                                <tr class="proxy-list__tr">
+                                    <td class="proxy-list__td">46.4.96.137</td>
+                                    <td class="proxy-list__td">1080</td>
+                                    <td class="proxy-list__td"></td>
+                                    <td class="proxy-list__td"></td>
+                                    <td class="proxy-list__td">HTTPS</td>
+                                    <td class="proxy-list__td">Germany</td>
+                                    <td class="proxy-list__td proxy-list__td--color-green">Online</td>
+                                </tr>
+                                <tr class="proxy-list__tr">
+                                    <td class="proxy-list__td">52.4.96.237</td>
+                                    <td class="proxy-list__td">8080</td>
+                                    <td class="proxy-list__td"></td>
+                                    <td class="proxy-list__td"></td>
+                                    <td class="proxy-list__td">HTTPS</td>
+                                    <td class="proxy-list__td">Russia</td>
+                                    <td class="proxy-list__td proxy-list__td--color-red">Not working</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
+        @@include('../../sections/Banner/index.html', {
+            bgNum: "2",
+            title: "Does your business need a customized solution?",
+            text: "We will select a high-quality and effective solution for you personally at the best price",
+            button_1: "Choose solution",
+            button_2: "Test free",
+        })
+        <div class="section">
+            @@include('../../sections/Faq/index.html')
+        </div>
+        @@include('../../sections/Footer/index.html')
     </div>
 
     <script src="../vendors/jquery/jquery.min.js"></script>
