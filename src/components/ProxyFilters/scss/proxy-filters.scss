@@ -1,0 +1,93 @@
+.proxy-filters{
+    display: flex;
+    flex-direction: column;
+    max-width: 295px;
+    height: 494px;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1px solid #CED3DC;
+    overflow: hidden;
+
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        background-color: #F8F8F8;
+        height: 60px;
+    }
+
+    &__title{
+        font-size: 23px;
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 17px 23px 19px 23px;
+    }
+
+    &__group{
+        margin-bottom: 18px;
+    }
+
+    &__name{
+        font-size: 16px;
+        margin-bottom: 7px;
+    }
+
+    &__row{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 4px;
+        column-gap: 20px;
+    }
+
+    &__checkbox[type="checkbox"]{
+        display: none;
+    }
+
+    &__label{
+        position: relative;
+        display: inline-flex;
+        gap: 4px;
+        align-items: center;
+        font-size: 14px;
+        color: #000;
+        cursor: pointer;
+
+        &::before{
+            content: "";
+            width: 14px;
+            height: 14px;
+            border: 1px solid #313844;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+    }
+    
+    &__checkbox:checked + &__label::before {
+        background-color: #313844;
+        box-shadow: inset 0 0 0 2px #fff;
+    }
+
+    &__input{
+        font-size: 16px;
+        width: 121px;
+        border: 1px solid #CED3DC;
+        border-radius: 10px;
+        padding: 10px 12px;
+    }
+
+    &__control{
+        display: flex;
+        gap: 8px;
+    }
+
+    &__button{
+        height: 54px;
+        min-width: 113px;
+        padding: 0;
+    }
+}

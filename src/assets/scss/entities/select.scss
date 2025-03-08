@@ -1,0 +1,87 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.select{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    padding-left: 12px;
+    padding-right: 10px;
+
+    &--border{
+        border: 1px solid #CED3DC;
+    }
+
+    &__front{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    &__name{
+        font-size: 12px;
+
+        @include respond(tablet){
+            font-size: 16px;
+        }
+
+        &--fz-small{
+            font-size: 14px;
+        }
+    }
+
+    &__icon{
+        flex-shrink: 0;
+        width: 10px;
+        height: 10px;
+        margin-left: 8px;
+    }
+
+    &__options{
+        position: absolute;
+        top: -22px;
+        right: 10px;
+        width: 183px;
+        background-color: #fff;
+        border-radius: 10px;
+        border: 1px solid #CED3DC;
+        overflow: hidden;
+        padding: 6px 0;
+        
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-5px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+
+        &--active{
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    }
+
+    &__value{
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        height: 28px;
+        padding: 0 18px;
+        transition: all .3s;
+        cursor: pointer;
+
+        &:hover{
+            background-color: rgba(144, 186, 255, 0.5);
+        }
+
+        &--selected{
+            background-color: rgba(144, 186, 255, 0.5);
+        }
+
+        @include respond(tablet){
+            font-size: 16px;
+        }
+    }
+}

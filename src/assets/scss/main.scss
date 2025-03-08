@@ -9,6 +9,7 @@
 @use './entities/card.scss';
 @use './entities/section.scss';
 @use './entities/code.scss';
+@use './entities/select.scss';
 @use './_entities.scss';
 
 // Компоненты
@@ -43,6 +44,9 @@
 @use '../../components/SliderFlags/scss/slider-flags.scss';
 @use '../../components/SliderServices/scss/slider-services.scss';
 @use '../../components/SliderDeals/scss/slider-deals.scss';
+@use '../../components/ProxyChecker/scss/proxy-checker.scss';
+@use '../../components/ProxyList/scss/proxy-list.scss';
+@use '../../components/ProxyFilters/scss/proxy-filters.scss';
 
 
 

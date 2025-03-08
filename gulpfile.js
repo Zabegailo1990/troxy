@@ -71,7 +71,7 @@ function main() {
         // Удаляем @@ внутри class, оставляя сам класс
         .pipe(replace(/\s+@@[a-zA-Z0-9-_]+/g, ''))
         // Удаляем полностью пустые теги (кроме <script>, <use>, <span>)
-        .pipe(replace(/<(?!script\b|use\b|span\b|td\b|th\b)(\w+)[^>]*>\s*<\/\1>/g, ''))
+        .pipe(replace(/<(?!script\b|use\b|span\b|td\b|th\b|textarea\b)(\w+)[^>]*>\s*<\/\1>/g, ''))
         // Удаляем родительский тег, если внутри него только пустые теги (кроме одиночных)
         .pipe(replace(/<(\w+)[^>]*>\s*(?:<(?!img|td|span|use|br|hr|meta|link|input|source|area|col|embed|param|track|wbr)[\w-]+[^>]*>\s*<\/[\w-]+>\s*)+<\/\1>/g, ''))
         // Удаляем теги img с @@ в src
@@ -105,7 +105,7 @@ function pages() {
         // Удаляем @@ внутри class, оставляя сам класс
         .pipe(replace(/\s+@@[a-zA-Z0-9-_]+/g, ''))
         // Удаляем полностью пустые теги (кроме <script>, <use>, <span>)
-        .pipe(replace(/<(?!script\b|use\b|span\b|td\b|th\b)(\w+)[^>]*>\s*<\/\1>/g, ''))
+        .pipe(replace(/<(?!script\b|use\b|span\b|td\b|th\b|textarea\b)(\w+)[^>]*>\s*<\/\1>/g, ''))
         // Удаляем родительский тег, если внутри него только пустые теги (кроме одиночных)
         .pipe(replace(/<(\w+)[^>]*>\s*(?:<(?!img|td|span|use|br|hr|meta|link|input|source|area|col|embed|param|track|wbr)[\w-]+[^>]*>\s*<\/[\w-]+>\s*)+<\/\1>/g, ''))
         // Удаляем теги img с @@ в src
