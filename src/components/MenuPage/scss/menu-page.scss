@@ -1,0 +1,41 @@
+.menu-page{
+    width: 230px;
+
+    &__title{
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 25px;
+        border-bottom: 1px solid #CED3DC;
+        padding-bottom: 5px;
+        margin-bottom: 6px;
+    }
+
+    &__list{
+        color: #617597;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    &__item{
+        &:not(:last-child){
+            margin-bottom: 6px;
+        }
+
+    }
+
+    &__link{
+        display: flex;
+        align-items: center;
+        height: 28px;
+
+        &--active{
+            color: #2E7AF5;
+        }
+    }
+
+    &__sublist{
+        font-weight: 400;
+        padding-left: 23px;
+        margin-top: 6px;
+    }
+}

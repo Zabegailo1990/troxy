@@ -1,38 +1,4 @@
 $(document).ready(function () {
-  $("body").on("click", ".api__item > .api__button", function (event) {
-      let parentItem = $(this).closest(".api__item");
-      let icon = parentItem.find(".api__icon-right");
-      let submenu = parentItem.find(".api__submenu");
-
-      let isActive = parentItem.hasClass("api__item--active");
-
-      // Закрываем все другие пункты
-      $(".api__item").not(parentItem).removeClass("api__item--active");
-      $(".api__icon-right").not(icon).removeClass("api__icon-right--active");
-      $(".api__submenu").not(submenu).slideUp(300).removeClass("api__submenu--active");
-
-      // Тогглим текущий пункт
-      if (isActive) {
-          parentItem.removeClass("api__item--active");
-          icon.removeClass("api__icon-right--active");
-          submenu.slideUp(300).removeClass("api__submenu--active");
-      } else {
-          parentItem.addClass("api__item--active");
-          icon.addClass("api__icon-right--active");
-          submenu.slideDown(300).addClass("api__submenu--active");
-      }
-
-      event.stopPropagation(); // Останавливаем всплытие события
-  });
-
-  // Убираем закрытие при клике на вложенные элементы
-  $("body").on("click", ".api__submenu .api__subitem", function (event) {
-      event.stopPropagation();
-  });
-});
-
-
-$(document).ready(function () {
     // Открытие списка при клике на .select__front
     $("body").on("click", ".proxy-checker__select .select__front, .proxy-list__select .select__front", function (e) {
         e.stopPropagation(); // Останавливаем всплытие
@@ -63,6 +29,120 @@ $(document).ready(function () {
         $(".select__options").removeClass("select__options--active");
     });
 });
+
+$(document).ready(function() {
+    $('.menu-page__link').click(function(e) {
+        // Проверяем, находится ли кликнутый элемент в .menu-page__sublist
+        if ($(this).closest('.menu-page__sublist').length) {
+            // Удаляем активный класс у всех ссылок внутри sublist
+            $(this).closest('.menu-page__sublist').find('.menu-page__link').removeClass('menu-page__link--active');
+            
+            // Добавляем активный класс только к кликнутой ссылке
+            $(this).addClass('menu-page__link--active');
+            
+            e.stopPropagation();
+            return;
+        }
+        
+        e.preventDefault();
+        
+        let $currentSublist = $(this).closest('.menu-page__item').find('.menu-page__sublist');
+        
+        // Закрываем все открытые sublist, кроме текущего
+        $('.menu-page__sublist').not($currentSublist).slideUp(200);
+        
+        // Удаляем активный класс у всех ссылок
+        $('.menu-page__link').removeClass('menu-page__link--active');
+        
+        // Добавляем активный класс к текущей ссылке
+        $(this).addClass('menu-page__link--active');
+        
+        // Добавляем активный класс к родительской ссылке, если это элемент внутри sublist
+        $(this).closest('.menu-page__sublist').prev('.menu-page__row').find('.menu-page__link').addClass('menu-page__link--active');
+        
+        // Переключаем отображение текущего sublist
+        $currentSublist.slideToggle(200);
+    });
+});
+
+
+$(document).ready(function() {
+    $('.menu-api__link').click(function(e) {
+        if ($(this).closest('.menu-api__sublist').length) {
+            e.stopPropagation();
+            return;
+        }
+        
+        e.preventDefault();
+        
+        let $currentSublist = $(this).closest('.menu-api__item').find('.menu-api__sublist');
+        let $currentIcon = $(this).closest('.menu-api__row').find('.menu-api__icon');
+
+        let isActive = $currentIcon.hasClass('menu-api__icon--active');
+
+        // Закрываем все открытые sublist, кроме текущего
+        $('.menu-api__sublist').not($currentSublist).slideUp(200);
+        $('.menu-api__icon').removeClass('menu-api__icon--active');
+
+        // Если иконка уже активна, просто убираем класс и не открываем sublist
+        if (isActive) {
+            $currentSublist.slideUp(200);
+        } else {
+            $currentIcon.addClass('menu-api__icon--active');
+            $currentSublist.slideToggle(200);
+        }
+    });
+});
+
+
+$(document).ready(function () {
+    let $underline = $('.tabs-api__underline');
+
+    function moveUnderline($tab) {
+        $underline.css({
+            left: $tab.position().left,
+            width: $tab.outerWidth()
+        });
+    }
+
+    // Инициализация
+    moveUnderline($('.tabs-api__tab--active'));
+
+    $('.tabs-api__tab').click(function () {
+        if ($(this).hasClass('tabs-api__tab--active')) return;
+
+        $('.tabs-api__tab').removeClass('tabs-api__tab--active');
+        $(this).addClass('tabs-api__tab--active');
+
+        moveUnderline($(this));
+
+        $('.tabs-api__item').hide().eq($(this).index()).fadeIn(500);
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

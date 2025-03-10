@@ -8,7 +8,6 @@
 @use './entities/slider.scss';
 @use './entities/card.scss';
 @use './entities/section.scss';
-@use './entities/code.scss';
 @use './entities/select.scss';
 @use './_entities.scss';
 
@@ -47,6 +46,13 @@
 @use '../../components/ProxyChecker/scss/proxy-checker.scss';
 @use '../../components/ProxyList/scss/proxy-list.scss';
 @use '../../components/ProxyFilters/scss/proxy-filters.scss';
+@use '../../components/Code/scss/code.scss';
+@use '../../components/MenuPage/scss/menu-page.scss';
+@use '../../components/MenuApi/scss/menu-api.scss';
+@use '../../components/TabsApi/scss/tabs-api.scss';
+@use '../../components/TableApi/scss/table-api.scss';
+@use '../../components/Url/scss/url.scss';
+@use '../../components/NotifyApi/scss/notify-api.scss';
 
 
 
@@ -66,6 +72,7 @@
 @use '../../sections/Goal/scss/goal.scss';
 @use '../../sections/ServiceList/scss/service-list.scss';
 @use '../../sections/Deals/scss/deals.scss';
+@use '../../sections/FooterApi/scss/footer-api.scss';
 
 
 

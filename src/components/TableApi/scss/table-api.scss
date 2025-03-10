@@ -1,0 +1,65 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.table-api {
+    display: block;
+    font-size: 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @include respond(tablet) {
+        font-size: 14px;
+    }
+
+    @include respond(pc){
+        min-width: 376px;
+    }
+
+    &__th, 
+    &__td {
+        vertical-align: middle;
+        border-bottom: 1px solid #E5E7EB;
+        height: 41px;
+        text-align: left;
+        white-space: nowrap;
+
+        &:nth-child(2) {
+            padding-left: 16px;
+        }
+    }
+    
+    &__th {
+        font-weight: 700;
+        height: 36px;
+        
+        &:first-child {
+            min-width: 92px;
+        }
+    
+        &:nth-child(2) {
+            min-width: 94px;
+            padding-left: 16px;
+        }
+    }
+
+
+    &__td {
+        height: 41px;
+
+        &--color-green{
+            color: #14B8A6;
+        }
+
+        &--color-gray{
+            color: #64748B;
+        }
+
+        &--weight-bold{
+            font-weight: 700;
+        }
+    }
+}
