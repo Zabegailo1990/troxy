@@ -238,7 +238,7 @@
             button_2: "Test free"
         })
         <div class="container">
-            @@include('./src/components/SliderHome/index.html')
+            @@include('./src/components/SliderHome/index.html', class: "home__slider-home")
         </div>
         @@include('./src/sections/Advantages/index.html')
         <div class="section">
@@ -249,13 +249,13 @@
         </div>
         @@include('./src/sections/SliderNews/index.html')
         @@include('./src/sections/Footer/index.html', {
-            bgPc: "/images/section_footer_bg_pc.jpg",
-            bgTb: "/images/section_footer_bg_tb.jpg",
-            bgMb: "/images/section_footer_bg_mb.jpg"
+            bgPc: "./images/section_footer_bg_pc.jpg",
+            bgTb: "./images/section_footer_bg_tb.jpg",
+            bgMb: "./images/section_footer_bg_mb.jpg"
         })
     </div>
-    <script src="vendors/jquery/jquery.min.js"></script>
-    <script src="vendors/slick/slick.min.js"></script>
-    <script src="js/main.min.js"></script>
+    <script src="./vendors/jquery/jquery.min.js"></script>
+    <script src="./vendors/slick/slick.min.js"></script>
+    <script src="./js/main.min.js"></script>
 </body>
 </html>
