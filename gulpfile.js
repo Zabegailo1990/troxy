@@ -23,7 +23,7 @@ const paths = {
     },
     pages: {
         src: './src/pages/**/*.html',
-        dest: 'docs/pages/',
+        dest: 'docs/',
     },
     styles: {
         src: './src/assets/scss/main.scss',
@@ -145,7 +145,7 @@ function scripts() {
 }
 
 export function copyVendors() {
-    return gulp.src('src/vendors/**/*.js') // Исходная папка
+    return gulp.src('src/vendors/**/') // Исходная папка
         .pipe(gulp.dest('docs/vendors')); // Куда копируем
 }
 

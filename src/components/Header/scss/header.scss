@@ -4,10 +4,15 @@
     display: flex;
     align-items: center;
     height: 90px;
+
+    &--bg-white{
+        background-color: #fff;
+    }
     
     &__inner{
         display: flex;
         align-items: center;
+        justify-content: space-between;
         width: 100%;
     }
 
@@ -22,21 +27,29 @@
     &__navigation{
         display: none;
         @include respond(pc){
-            display: flex;
-            margin-right: 165px;
+            display: block;
+            margin-right: auto;
         }
     }
 
     &__row{
         display: flex;
         align-items: center;
-        margin-left: auto;
+    }
+    
+    &__item{
+        &:not(:last-child){
+            margin-right: 36px;
+        }
     }
 
     &__search{
         display: none;
-        margin-right: 35px;
         width: 358px;
+
+        @include respond(tablet){
+            display: block;
+        }
     }
 
     &--bg--white{

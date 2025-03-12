@@ -3,7 +3,30 @@
 .api{
 
     &__header{
-        margin-bottom: 20px;
+        margin-bottom: 40px;
+    }
+
+    &__name{
+        margin-bottom: 12px;
+
+        @include respond(tablet){
+            margin-bottom: 8px;
+        }
+    }
+
+    &__title{
+        font-size: 32px;
+        line-height: 35px;
+        border-bottom: 1px solid #CED3DC;
+        padding-bottom: 24px;
+        margin-bottom: 18px;
+
+        @include respond(tablet){
+            font-size: 52px;
+            line-height: 64px;
+            padding-bottom: 13px;
+            margin-bottom: 42px;
+        }
     }
 
     &__inner{
@@ -124,6 +147,14 @@
 
         @include respond(pc){
             display: block;
+        }
+    }
+    
+    &__navigation{
+        margin: 42px 0 33px 0;
+
+        @include respond(tablet){
+            margin-bottom: 78px;
         }
     }
 }

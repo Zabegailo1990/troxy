@@ -5,7 +5,7 @@
                 class: "header__logo",
                 theme: "@@themeLogo" 
             })
-            @@if(typeof theme == 'undefined') {
+            @@if(typeof navigation === 'undefined' || navigation !== 'off') {
                 @@include('../Navigation/index.html', { 
                     class: "header__navigation",
                     colorButtonNav: "@@colorButtonNav",
@@ -18,7 +18,11 @@
                 })
             }
             <div class="header__row">
-                @@include('../Input/index.html', {class: "field--theme-gray header__search"})
+                @@if(typeof search !== 'undefined' && search === 'on'){
+                    @@include('../Input/index.html', {
+                        class: "field--theme-gray header__search",
+                    })
+                }
                 @@include('../Authbar/index.html', { 
                     class: "authbar--theme--default header__authbar",
                     theme: "authbar--responsive @@themeAuthbar"  

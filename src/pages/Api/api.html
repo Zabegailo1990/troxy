@@ -9,15 +9,18 @@
 <body>
     <div class="api">
         @@include('../../components/Header/index.html', {
-            theme: 'light',
-            class: 'header--bg--white api__header',
-            themeLogo: 'logo--theme-dark',
-            themeAuthbar: 'authbar--theme--dark authbar--theme--api'
+            class: "header--bg-white api__header",
+            navigation: 'off',
+            search: 'on',
+            themeLogo: "logo--theme-dark",
+            themeAuthbar: "authbar--theme--dark",
         })
         <div class="container">
             <div class="api__inner">
                 @@include('../../components/MenuApi/index.html', { class: "api__menu-api" })
                 <div class="api__content">
+                    <p class="text text--weight-bold api__name">Introduction</p>
+                    <h1 class="api__title">Proxy Server API</h1>
                     <div class="api__group">
                         <h2 class="api__subtitle api__subtitle--size-large">Introduction</h2>
                         <p class="text">The Webshare API follows the principles of Representational State Transfer (REST) architecture. It has been designed to provide predictable resource-oriented URLs, accept JSON-encoded request bodies, return JSON-encoded responses, and use standard HTTP response codes, authentication, and verbs. One of the key features of the Webshare API is its support for backwards compatibility, which ensures that any changes made to the API are always backwards compatible. This means that clients using previous versions of the API will not be affected by the updates. In addition to its features, the Webshare API also provides language examples. You can find these code examples on the every feature's page. To switch between the two programming languages, use the tabs located in the top right corner. By leveraging the Webshare API, developers can easily integrate Webshare's functionality into their applications, allowing them to enhance their users' experience and increase the efficiency of their workflow.</p>
@@ -64,6 +67,7 @@
                 </div>
                 @@include('../../components/MenuPage/index.html', { class: "api__menu-page" })
             </div>
+            @@include('../../components/NavigationApi/index.html', { class: "api__navigation"})
         </div>
         @@include('../../sections/FooterApi/index.html')
     </div>

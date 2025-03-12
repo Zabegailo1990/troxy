@@ -11,6 +11,8 @@
 @use './entities/select.scss';
 @use './_entities.scss';
 
+@use '../../vendors/slick/slick.css';
+
 // Компоненты
 @use '../../components/Promo/scss/promo.scss';
 @use '../../components/Logo/scss/logo.scss';
@@ -53,6 +55,8 @@
 @use '../../components/TableApi/scss/table-api.scss';
 @use '../../components/Url/scss/url.scss';
 @use '../../components/NotifyApi/scss/notify-api.scss';
+@use '../../components/NavigationApi/scss/navigation-api.scss';
+@use '../../components/SliderHome/scss/slider-home.scss';
 
 
 
