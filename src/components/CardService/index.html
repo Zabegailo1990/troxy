@@ -1,7 +1,7 @@
 <div class="card card--bg--blur card--radius--small card--frame--gradient @@prevClass card-service @@class">
     @@if (typeof serviceName !== 'undefined' && serviceName) {
         <svg class="icon icon--color-blue card-service__icon">
-            <use xlink:href="/sprites/services.svg#icon-service-@@serviceName"></use>
+            <use xlink:href="./sprites/services.svg#icon-service-@@serviceName"></use>
         </svg>
     }
     <h3 class="card-service__title">@@title</h3>
@@ -10,7 +10,7 @@
     }
     @@if (typeof arrow !== 'undefined' && arrow) {
         <svg class="icon icon--color-stroke-blue card-service__icon-arrow">
-            <use xlink:href="/sprites/icons.svg#icon-@@arrow"></use>
+            <use xlink:href="./sprites/icons.svg#icon-@@arrow"></use>
         </svg>
     }
 </div>
