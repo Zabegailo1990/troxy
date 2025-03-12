@@ -1,21 +1,52 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
 .slider-home{
     position: relative;
 
     &__panel{
         position: absolute;
+        top: 149px;
+        right: 50%;
+        transform: translateX(-50%);
         width: 327px;
         height: 240px;
         padding: 32px;
         z-index: 1;
+
+        @include respond(tablet){
+            width: 340px;
+            height: 315px;
+            top: 49px;
+            right: 30px;
+            transform: translateX(0);
+            padding: 34px;
+        }
+
+        @include respond(pc){
+            top: 133px;
+            right: 71px;
+            width: 442px;
+            height: 327px;
+        }
     }
 
     &__title{
         font-size: 18px;
         margin-bottom: 12px;
-    }
+        max-width: 299px;
 
+        @include respond(tablet){
+            font-size: 23px;
+            margin-bottom: 24px;
+        }
+    }
+    
     &__text{
         margin-bottom: 12px;
+
+        @include respond(tablet){
+            margin-bottom: 24px;
+        }
     }
 
     &__row{
@@ -46,6 +77,41 @@
 
         &--prev{
             transform: rotate(180deg);
+        }
+    }
+
+    &__slide{
+        position: relative;
+        overflow: hidden;
+        height: 200px;
+        border-radius: 30px;
+
+        @include respond(tablet){
+            height: 394px;
+        }
+        @include respond(pc){
+            height: 609px;
+        }
+    }
+
+    .slick-slide {
+        margin: 0 10px;
+    }
+  
+    .slick-list {
+        margin: 0 -10px;
+    }
+
+    &__img{
+        position: absolute;
+        top: 84px;
+        left: 168px;
+        transform: scale(2);
+
+        @include respond(tablet){
+            position: static;
+            transform: scale(1);
+            height: 100%;
         }
     }
 }

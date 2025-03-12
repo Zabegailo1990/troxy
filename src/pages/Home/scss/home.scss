@@ -10,7 +10,6 @@
     &__animate{
         position: absolute;
         transition: all .3s;
-        // object-fit: contain;
 
         &--top{
             display: none;
@@ -59,6 +58,10 @@
                 max-width: 400px;
                 margin: 0;
             }
+        }
+
+        &--short{
+            max-width: 636px;
         }
         
         &--space-small{
@@ -294,6 +297,18 @@
             &:not(:first-child){
                 margin-left: -120px;
             }
+        }
+    }
+
+    &__dashboard{
+        min-height: 685px;
+    }
+
+    &__slider-home{
+        margin: 0 -24px;
+
+        @include respond(tablet){
+            margin: 0;
         }
     }
 }

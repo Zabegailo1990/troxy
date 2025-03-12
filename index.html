@@ -238,7 +238,10 @@
             button_2: "Test free"
         })
         <div class="container">
-            @@include('./src/components/SliderHome/index.html', class: "home__slider-home")
+            <div class="section home__dashboard">
+                <h2 class="title home__subtitle home__subtitle--short">Get a modern and convenient service <span class="title--color--blue">for comfortable work with proxy</span></h2>
+                @@include('./src/components/SliderHome/index.html', {class: "home__slider-home"})
+            </div>
         </div>
         @@include('./src/sections/Advantages/index.html')
         <div class="section">
