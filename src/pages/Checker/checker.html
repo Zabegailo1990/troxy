@@ -8,8 +8,6 @@
 </head>
 <body>
     <div class="checker">
-        <h1 class="checker__title">Proxy checker</h1>
-        <p class="text checker__text">Check availability, supported protocols, proxy country and response time with our free proxy checking service.</p>
         @@include('../../components/Promo/index.html')
         @@include('../../components/Header/index.html', {
             class: "header--bg-white checker__header",
@@ -17,6 +15,8 @@
             themeLogo: "logo--theme-dark",
         })
         <div class="container checker__container">
+            <h1 class="checker__title">Proxy checker</h1>
+            <p class="text checker__text">Check availability, supported protocols, proxy country and response time with our free proxy checking service.</p>
             @@include('../../components/ProxyChecker/index.html', { class: 'checker__proxy-checker' })
             <div class="checker__row">
                 @@include('../../components/ProxyFilters/index.html', { class: "checker__proxy-filters" })
