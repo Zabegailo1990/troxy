@@ -6,7 +6,7 @@
     &__panel{
         position: absolute;
         top: 149px;
-        right: 50%;
+        left: 50%;
         transform: translateX(-50%);
         width: 327px;
         height: 240px;
@@ -17,6 +17,7 @@
             width: 340px;
             height: 315px;
             top: 49px;
+            left: auto;
             right: 30px;
             transform: translateX(0);
             padding: 34px;
