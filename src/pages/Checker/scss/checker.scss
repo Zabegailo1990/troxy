@@ -3,6 +3,14 @@
 // checker
 .checker{
 
+    &__header{
+        margin-bottom: 40px;
+
+        @include respond(tablet){
+            margin-bottom: 80px;
+        }
+    }
+
     &__container{
         margin-bottom: 29px;
 

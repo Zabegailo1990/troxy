@@ -9,7 +9,11 @@
 <body>
     <div class="checker">
         @@include('../../components/Promo/index.html')
-        @@include('../../components/Header/index.html')
+        @@include('../../components/Header/index.html', {
+            class: "header--bg-white checker__header",
+            themeAuthbar: "authbar--theme--dark",
+            themeLogo: "logo--theme-dark",
+        })
         <div class="container checker__container">
             @@include('../../components/ProxyChecker/index.html', { class: 'checker__proxy-checker' })
             <div class="checker__row">
