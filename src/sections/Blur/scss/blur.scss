@@ -1,0 +1,66 @@
+.blur{
+    position: relative;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    filter: blur(40px);
+    overflow: hidden;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      z-index: 0;
+
+    &__blob {
+        position: absolute;
+        width: 500px;
+        height: 300px;
+        background-color: #D6E5FF;
+        border-radius: 50%;
+        
+        &--first{
+            animation: move-first 20s infinite alternate ease-in-out;
+        }
+
+        &--second{
+          animation: move-second 20s infinite alternate ease-in-out;
+        }
+      }
+      
+      @keyframes move-first {
+        0% { 
+          bottom: 0; 
+          right: 0; 
+          width: 500px; 
+        }
+        50% { 
+          bottom: 50%; 
+          right: 50%; 
+          width: 1000px; 
+          height: 250px; 
+          transform: rotate(90deg);
+        }
+        100% { 
+          bottom: 80vh; 
+          right: 80vh; 
+        }
+      }
+
+      @keyframes move-second {
+        0% { 
+          top: 0; 
+          left: 0; 
+          width: 500px; 
+        }
+        50% { 
+          top: 50%; 
+          left: 50%; 
+          width: 1400px; 
+          height: 500px; 
+        }
+        100% { 
+          top: 80vh; 
+          left: 80vh; 
+        }
+      }
+}
