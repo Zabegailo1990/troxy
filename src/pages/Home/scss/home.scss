@@ -107,7 +107,13 @@
         left: 50%;
         z-index: 1;
         transform: translate(-50%, 0);
+        opacity: 0; /* Скрыть карточки по умолчанию */
         transition: all .3s;
+
+        &.visible{
+            opacity: 1; /* Сделать карточки видимыми */
+            transform: translate(-50%, 0)
+        }
 
         &:nth-child(2) {
             z-index: 2;

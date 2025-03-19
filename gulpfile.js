@@ -71,7 +71,7 @@ function main() {
         // Удаляем @@ внутри class, оставляя сам класс
         .pipe(replace(/\s+@@[a-zA-Z0-9-_]+/g, ''))
         // Удаляем полностью пустые теги (кроме <script>, <use>, <span>)
-        .pipe(replace(/<(?!script\b|use\b|span\b|td\b|th\b|textarea\b)(\w+)[^>]*>\s*<\/\1>/g, ''))
+        .pipe(replace(/<(?!script\b|use\b|span\b|td\b|td\b|canvas\b|textarea\b)(\w+)[^>]*>\s*<\/\1>/g, ''))
         // Удаляем родительский тег, если внутри него только пустые теги (кроме одиночных)
         .pipe(replace(/<(\w+)[^>]*>\s*(?:<(?!img|td|span|use|br|hr|meta|link|input|source|area|col|embed|param|track|wbr)[\w-]+[^>]*>\s*<\/[\w-]+>\s*)+<\/\1>/g, ''))
         // Удаляем теги img с @@ в src
@@ -105,9 +105,9 @@ function pages() {
         // Удаляем @@ внутри class, оставляя сам класс
         .pipe(replace(/\s+@@[a-zA-Z0-9-_]+/g, ''))
         // Удаляем полностью пустые теги (кроме <script>, <use>, <span>)
-        .pipe(replace(/<(?!script\b|use\b|span\b|td\b|th\b|textarea\b)(\w+)[^>]*>\s*<\/\1>/g, ''))
+        .pipe(replace(/<(?!script\b|use\b|span\b|td\b|td\b|canvas\b|textarea\b)(\w+)[^>]*>\s*<\/\1>/g, ''))
         // Удаляем родительский тег, если внутри него только пустые теги (кроме одиночных)
-        .pipe(replace(/<(\w+)[^>]*>\s*(?:<(?!img|td|span|use|br|hr|meta|link|input|source|area|col|embed|param|track|wbr)[\w-]+[^>]*>\s*<\/[\w-]+>\s*)+<\/\1>/g, ''))
+        .pipe(replace(/<(\w+)[^>]*>\s*(?:<(?!img|td|canvas|span|use|br|hr|meta|link|input|source|area|col|embed|param|track|wbr)[\w-]+[^>]*>\s*<\/[\w-]+>\s*)+<\/\1>/g, ''))
         // Удаляем теги img с @@ в src
         .pipe(replace(/<img[^>]+src="@@[^"]*"[^>]*>/g, ''))
         // Удаляем пустые строки
@@ -139,7 +139,7 @@ function fonts() {
 // Сбока скриптов
 function scripts() {
     return gulp.src(paths.scripts.src)
-        .pipe(concat('main.min.js'))
+        // .pipe(concat('main.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest(paths.scripts.dest));
 }
@@ -185,7 +185,12 @@ export function serve() {
         })
     );
 
-    gulp.watch(['./src/assets/js/main.js','./src/components/**/*.js', './src/sections/**/*.js', './src/pages/**/*.js'], gulp.series(scripts, (done) => {
+    gulp.watch(['./src/assets/js/**/*.js',, './src/sections/**/*.js', './src/pages/**/*.js'], gulp.series(scripts, (done) => {
+        browserSync.reload();
+        done();
+    }));
+
+    gulp.watch(paths.images.src, gulp.series(images, (done) => {
         browserSync.reload();
         done();
     }));
