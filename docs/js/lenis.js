@@ -1,0 +1,1 @@
+let lenis=new Lenis({lerp:.1,smooth:!0,direction:"vertical"});lenis.on("scroll",ScrollTrigger.update),gsap.ticker.add(e=>{lenis.raf(1e3*e)}),gsap.ticker.lagSmoothing(0);
