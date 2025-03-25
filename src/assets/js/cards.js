@@ -4,6 +4,7 @@ const tl = gsap.timeline({
     scrollTrigger: {
         trigger: ".home__benefits",
         start: "top top",
+        end: "4000px",
         pin: true,
         scrub: true,
         markers: true
