@@ -1,1 +1,1 @@
-let cards=gsap.utils.toArray(".home__card-benefit"),tl=gsap.timeline({scrollTrigger:{trigger:".home__benefits",start:"top top",end:"4000px",pin:!0,scrub:!0,markers:!0}});cards.forEach(e=>{tl.to(e,{onStart:()=>e.classList.add("home__card-benefit--active"),onReverseComplete:()=>e.classList.remove("home__card-benefit--active")})});
+gsap.timeline({scrollTrigger:{scrub:1.5,trigger:".home__benefits",start:"top top",end:"4000px",pin:!0}}).fromTo(gsap.utils.toArray(".home__card-benefit"),{y:"100vh",x:"-100vw"},{y:e=>44*e,x:e=>-30*e,duration:3,stagger:2,ease:"power1.out"});
