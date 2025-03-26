@@ -1,1 +1,1 @@
-gsap.timeline({scrollTrigger:{scrub:1.5,trigger:".home__benefits",start:"top top",end:"4000px",pin:!0}}).fromTo(gsap.utils.toArray(".home__card-benefit"),{y:"100vh",x:"-100vw"},{y:e=>44*e,x:e=>-30*e,duration:3,stagger:2,ease:"power1.out"});
+gsap.timeline({scrollTrigger:{scrub:!0,trigger:".home__benefits",start:"top top",end:"4000px",pin:!0}}).fromTo(".home__card-benefit",{y:"100vh",x:"-100vw"},{y:0,x:0,duration:3,stagger:2,ease:"power1.out"});

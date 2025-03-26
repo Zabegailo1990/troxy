@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="vanta-bg"></div>
     @@include('./src/sections/Blur/index.html', { class: "home__blur"})
     <div class="home">
         <div class="home__present">
@@ -258,6 +259,9 @@
             bgMb: "./images/section_footer_bg_mb.jpg"
         })
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.fog.min.js"></script>
+    <script src="./js/background.js"></script>
     <!-- GSAP + ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
