@@ -1,0 +1,11 @@
+<div class="breadcrumbs @@class">
+    @@if(typeof item_1 !== 'undefined' && item_1){
+        <a class="breadcrumbs__item @@if(typeof item_2 !== 'undefined' && item_2){breadcrumbs__item--color-gray}" href="#">@@item_1</a>
+    }
+    @@if(typeof item_2 !== 'undefined' && item_2){
+        <a class="breadcrumbs__item @@if(typeof item_3 !== 'undefined' && item_3){breadcrumbs__item--color-gray}" href="#">@@item_2</a>
+    }
+    @@if(typeof item_3 !== 'undefined' && item_3){
+        <a class="breadcrumbs__item" href="#">@@item_3</a>
+    }
+</div>    

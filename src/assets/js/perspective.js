@@ -19,13 +19,13 @@ document.addEventListener('mousemove', (event) => {
         mouseY > sectionTop && mouseY < sectionTop + sectionHeight
     ) {
         // Вычисляем смещение для наклона (перспективы)
-        const offsetX = (mouseX / windowWidth - 0.5) * 30; // Вращение по оси X (влево/вправо)
-        const offsetY = (mouseY / windowHeight - 0.5) * 30; // Вращение по оси Y (вверх/вниз)
+        const offsetX = (mouseX / windowWidth - 0.5) * 50; // Увеличиваем смещение по X
+        const offsetY = (mouseY / windowHeight - 0.5) * 50; // Увеличиваем смещение по Y
 
         // Применяем трансформацию для topImage (с добавлением наклона и смещения)
-        topImage.style.transform = `translate(${offsetX * 2}px, ${offsetY * 2}px)`;
+        topImage.style.transform = `translate(${offsetX * 3}px, ${offsetY * 3}px)`; // Увеличиваем множитель для большего движения
 
         // Применяем трансформацию для bottomImage (с добавлением наклона и смещения)
-        bottomImage.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+        bottomImage.style.transform = `translate(${offsetX * 2}px, ${offsetY * 2}px)`; // Увеличиваем множитель для bottomImage
     }
 });

@@ -2,6 +2,14 @@
 
 .scripts{
 
+    &__breadcrumbs{
+        margin-bottom: 14px;
+
+        @include respond(tablet){
+            margin-bottom: 21px;
+        }
+    }
+
     &__inner{
         max-width: 327px;
         margin: 0 auto;

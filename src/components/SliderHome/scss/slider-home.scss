@@ -81,6 +81,10 @@
         }
     }
 
+    &__carousel{
+        overflow: hidden;
+    }
+
     &__slide{
         position: relative;
         overflow: hidden;

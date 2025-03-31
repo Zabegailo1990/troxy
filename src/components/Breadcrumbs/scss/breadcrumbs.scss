@@ -1,0 +1,24 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.breadcrumbs{
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item{
+        font-size: 12px;
+        cursor: pointer;
+
+        @include respond(tablet){
+            font-size: 14px;
+        }
+
+        &:not(:last-child)::after{
+            content: '/';
+            margin: 0 4px;
+        }
+
+        &--color-gray{
+            color: #617597;
+        }
+    }
+}

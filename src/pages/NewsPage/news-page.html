@@ -16,6 +16,11 @@
         })
         <div class="container">
             <div class="section">
+                @@include('../../components/Breadcrumbs/index.html', { 
+                    class: 'news-page__breadcrumbs',
+                    item_1: "Main",
+                    item_2: "News and articles",
+                })
                 <h1 class="title news-page__title">Proxy news and useful articles</h1>
                 <div class="news-page__inner">
                     <div class="news-page__cards">

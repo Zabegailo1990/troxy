@@ -2,6 +2,14 @@
 
 .about{
 
+    &__breadcrumbs{
+        margin-bottom: 14px;
+
+        @include respond(tablet){
+            margin-bottom: 21px;
+        }
+    }
+
     &__title{
         line-height: 35px;
         font-size: 32px;

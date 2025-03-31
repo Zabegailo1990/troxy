@@ -16,6 +16,11 @@
         })
         <div class="section">
             <div class="container">
+                @@include('../../components/Breadcrumbs/index.html', { 
+                    class: 'about__breadcrumbs',
+                    item_1: "Main",
+                    item_2: "About",
+                })
                 <h1 class="about__title">About Us</h1>
             </div>
             @@include("../../sections/Supplier/index.html", { 

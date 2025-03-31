@@ -1,1 +1,1 @@
-gsap.timeline({scrollTrigger:{scrub:!0,trigger:".home__benefits",start:"top top",end:"4000px",pin:!0}}).fromTo(".home__card-benefit",{y:"100vh",x:"-100vw"},{y:0,x:0,duration:3,stagger:2,ease:"power1.out"});
+let mm=gsap.matchMedia(),tl=gsap.timeline({scrollTrigger:{scrub:1,trigger:".home__benefits",start:"top top",end:"4000px",pin:!0}});mm.add("(min-width: 1441px)",()=>tl.vars.x="-100vw"),mm.add("(max-width: 1440px)",()=>tl.vars.x="0"),tl.fromTo(".home__card-benefit",{y:"100vh",x:tl.vars.x},{y:0,x:0,duration:3,stagger:2,ease:"power1.out"});

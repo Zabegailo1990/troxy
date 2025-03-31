@@ -6,12 +6,14 @@
 @use './entities/button.scss';
 @use './entities/icon.scss';
 @use './entities/slider.scss';
+@use './entities/perspective.scss';
 @use './entities/card.scss';
 @use './entities/section.scss';
 @use './entities/select.scss';
 @use './_entities.scss';
 
 @use '../../vendors/slick/slick.css';
+@use '../../vendors/swiper/swiper-bundle.css';
 
 // Компоненты
 @use '../../components/Promo/scss/promo.scss';
@@ -57,6 +59,9 @@
 @use '../../components/NotifyApi/scss/notify-api.scss';
 @use '../../components/NavigationApi/scss/navigation-api.scss';
 @use '../../components/SliderHome/scss/slider-home.scss';
+@use '../../components/Gradient/scss/gradient.scss';
+@use '../../components/Marquee/scss/marquee.scss';
+@use '../../components/Breadcrumbs/scss/breadcrumbs.scss';
 
 
 

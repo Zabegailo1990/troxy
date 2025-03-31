@@ -1,0 +1,12 @@
+.marquee{
+    overflow: hidden;
+
+    &__slider{
+        display: flex;
+    }
+
+    &__card{
+        flex-shrink: 0;
+        margin-right: 10px;
+    }
+}

@@ -3,7 +3,9 @@
         <use xlink:href="@@icon"></use>
     </svg>
     <div class="card-plus__description">
-        <h4 class="card-plus__title">@@title</h4>
+        @@if(typeof title !== 'undefined' && title){
+            <h4 class="card-plus__title">@@title</h4>
+        }
         <p class="text card-plus__text">@@text</p>
     </div>
 </div>
