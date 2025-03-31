@@ -38,7 +38,6 @@
 
     &__slider{
         display: flex;
-        column-gap: 20px;
         overflow-x: auto;
         padding: 0 24px;
         margin: 0 -24px;
@@ -52,14 +51,22 @@
             margin: 0 -40px;
         }
         @include respond(pc){
-           padding: 0;
+            padding: 0;
             margin: 0;
         }
     }
     
     &__card{
         height: 283px;
-        margin-right: 20px;
+
+        &:not(:last-child){
+            margin-right: 20px;
+        }
+
+        @include respond(tablet){
+            height: 350px;
+            width: 320px;
+        }
 
         @include respond(pc){
             height: 350px;

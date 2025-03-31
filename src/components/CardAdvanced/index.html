@@ -1,8 +1,12 @@
 <div class="card-advanced @@theme @@class">
-    <picture class="background card-advanced__background">
-        <source media="(min-width: 1440px)" srcset="@@bgPc">
-        <source media="(min-width: 780px)" srcset="@@bgTb">
-        <img src="@@bgMb">
+    <picture class="card-advanced__background">
+        @@if(typeof bgPc !== 'undefined' && bgPc){
+            <source class="card-advanced__img" media="(min-width: 1440px)" srcset="@@bgPc">
+        }
+        @@if(typeof bgTb !== 'undefined' && bgTb){
+            <source class="card-advanced__img" media="(min-width: 780px)" srcset="@@bgTb">
+        }
+        <img class="card-advanced__img" src="@@bgMb">
     </picture>
     <div class="card-advanced__inner">
         <h3 class="card-advanced__title">@@title</h3>
