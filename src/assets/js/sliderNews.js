@@ -23,9 +23,11 @@ $(document).ready(function(){
         $('.slider-news__slider').slick({
             slidesToShow: 3,
             slidesToScroll: 1,
-            prevArrow: $('.slider-news__prev'),
-            nextArrow: $('.slider-news__next'),
+            prevArrow: $('.slider-news__button--prev'),
+            nextArrow: $('.slider-news__button--next'),
             infinite: false,
+            variableWidth: true,
+            // centerMode: true,
             responsive: [
                 {
                     breakpoint: 1440,

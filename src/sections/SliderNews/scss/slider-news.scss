@@ -21,11 +21,20 @@
         }
     }
 
-    &__prev{
-        @include respond(pc){
-            margin-right: 6px;
+    &__button{
+        transition: all .3s;
+
+        &.slick-disabled{
+            opacity: 0.5;
+        }
+
+        &--prev{
+            @include respond(pc){
+                margin-right: 6px;
+            }
         }
     }
+
 
     &__slider{
         display: flex;
@@ -43,11 +52,18 @@
             margin: 0 -40px;
         }
         @include respond(pc){
-            margin-right: 0;
+           padding: 0;
+            margin: 0;
         }
     }
     
     &__card{
         height: 283px;
+        margin-right: 20px;
+
+        @include respond(pc){
+            height: 350px;
+            width: 400px;
+        }
     }
 }
