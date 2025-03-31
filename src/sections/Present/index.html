@@ -1,9 +1,11 @@
 <div class="present @@theme">
-    <picture class="background present__background">
-        <source media="(min-width: 1440px)" srcset="./images/section_present-@@bgNum_bg_pc.jpg">
-        <source media="(min-width: 780px)" srcset="./images/section_present-@@bgNum_bg_pc.jpg">
-        <img src="./images/section_present-@@bgNum_bg_pc.jpg">
-    </picture>  
+    @@if(typeof bgNum !== 'undefined' && bgNum){
+        <picture class="background present__background">
+            <source media="(min-width: 1440px)" srcset="./images/section_present-@@bgNum_bg_pc.jpg">
+            <source media="(min-width: 780px)" srcset="./images/section_present-@@bgNum_bg_pc.jpg">
+            <img src="./images/section_present-@@bgNum_bg_pc.jpg">
+        </picture>  
+    }
     <div class="present__inner">
         @@include('../../components/Promo/index.html')
         @@include('../../components/Header/index.html', { 

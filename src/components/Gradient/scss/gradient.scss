@@ -5,6 +5,7 @@
     width: 100vw;
     height: 100vh;
     filter: blur(50px);
+    z-index: -1;
     
     
     &__canvas {

@@ -1,1 +1,1 @@
-let lenis=new Lenis({lerp:.1,smooth:!0,syncTouch:!0,smoothTouch:!1,infinite:!1});function raf(e){lenis.raf(e),requestAnimationFrame(raf)}lenis.on("scroll",ScrollTrigger.update),requestAnimationFrame(raf);
+let lenis=new Lenis({lerp:.05,smooth:!0,syncTouch:!0,smoothTouch:!1,infinite:!1});function raf(e){lenis.raf(e),requestAnimationFrame(raf)}"undefined"!=typeof ScrollTrigger&&(gsap.registerPlugin(ScrollTrigger),lenis.on("scroll",()=>{ScrollTrigger.update()})),requestAnimationFrame(raf);

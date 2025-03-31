@@ -1,6 +1,6 @@
-const topImage = document.querySelector('.home__animate--top');
-const bottomImage = document.querySelector('.home__animate--bottom');
-const presentSection = document.querySelector('.home__present'); // Секция, в пределах которой будет работать анимация
+const topImage = document.querySelector('.perspective__first');
+const bottomImage = document.querySelector('.perspective__second');
+const presentSection = document.querySelector('.perspective'); // Секция, в пределах которой будет работать анимация
 
 // Функция для отслеживания движения мыши
 document.addEventListener('mousemove', (event) => {

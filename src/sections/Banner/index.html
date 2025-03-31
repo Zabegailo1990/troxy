@@ -10,7 +10,9 @@
             <p class="text text--color--white banner__text">@@text</p>
             <div class="banner__row">
                 <button class="button button--rounded button--bg--blue button--color--white banner__button">@@button_1</button>
-                <button class="button button--rounded button--bg--white banner__button">@@button_2</button>
+                @@if(typeof button_2 !== 'undefined' && button_2){
+                    <button class="button button--rounded button--bg--white banner__button">@@button_2</button>
+                }
             </div>
         </div>
     </div>
