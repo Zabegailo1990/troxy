@@ -8,9 +8,9 @@
 </head>
 <body>
     <div class="location">
-        <div class="location__present">
+        @@include('../../components/Gradient/index.html')
+        <div class="location__present perspective">
             @@include('../../sections/Present/index.html', {
-                bgNum: "2",
                 title: "Proxy by location",
                 theme: "present--theme-dark",
                 themeLogo: "logo--theme-dark",
@@ -18,8 +18,8 @@
                 themeAuthbar: "authbar--theme--dark",
                 text: "Use our proxy packages or order a custom quantity based on your needs"
             })
-            <img class="location__animate location__animate--top" src="./images/page_location_ani_2.png" alt="">
-            <img class="location__animate location__animate--bottom" src="./images/page_location_ani_1.png" alt="">
+            <img class="location__animate location__animate--top perspective__first" src="./images/page_location_ani_2.png" alt="">
+            <img class="location__animate location__animate--bottom perspective__second" src="./images/page_location_ani_1.png" alt="">
         </div>
         <div class="section">
             <div class="container">
@@ -51,5 +51,13 @@
         @@include('../../sections/SliderNews/index.html')
         @@include("../../sections/Footer/index.html")
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="./js/gradient.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="./js/smoothScroll.js"></script>
+    <script src="./vendors/jquery/jquery.min.js"></script>
+    <script src="./vendors/slick/slick.min.js"></script>
+    <script src="./js/sliderNews.js"></script>
+    <script src="./js/perspective.js"></script>
 </body>
 </html>

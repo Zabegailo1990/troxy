@@ -1,12 +1,10 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .tariffs{
-    position: relative;
-    z-index: 1;
+    overflow: hidden;
 
     &__present{
         position: relative;
-        overflow: hidden;
     }
 
     &__animate{
