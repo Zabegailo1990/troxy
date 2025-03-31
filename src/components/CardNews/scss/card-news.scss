@@ -1,6 +1,7 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .card-news{
+    display: block;
     width: 242px;
     
     @include respond(tablet){

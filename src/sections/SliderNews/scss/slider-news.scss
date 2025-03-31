@@ -2,11 +2,6 @@
 
 .slider-news{
 
-    &__inner{
-        position: relative;
-        z-index: 1;
-    }
-
     &__row{
         margin-bottom: 36px;
 
@@ -33,25 +28,30 @@
     }
 
     &__slider{
-        // display: flex;
-        // overflow: hidden;
-        margin-right: -24px;
+        display: flex;
+        column-gap: 20px;
+        overflow-x: auto;
+        padding: 0 24px;
+        margin: 0 -24px;
+
+        &::-webkit-scrollbar{
+            display: none;
+        }
 
         @include respond(tablet){
-            margin-right: -40px;
+            padding: 0 40px;
+            margin: 0 -40px;
         }
         @include respond(pc){
             margin-right: 0;
         }
     }
 
-    &__card{
-        width: 400px !important;
-        height: 350px;
-        flex-shrink: 0;
+    &__stub{
+        width: 24px;
+    }
 
-        &:not(:last-child){
-            margin-right: 20px;
-        }
+    &__card{
+        height: 283px;
     }
 }
