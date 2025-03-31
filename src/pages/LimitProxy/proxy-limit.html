@@ -8,9 +8,9 @@
 </head>
 <body>
     <div class="proxy-limit">
-        <div class="proxy-limit__present">
+        @@include('../../components/Gradient/index.html')
+        <div class="proxy-limit__present perspective">
             @@include('../../sections/Present/index.html', {
-                bgNum: "2",
                 title: "Limit proxies",
                 text: "Limit proxies can be useful in a variety of areas such as internet marketing, data analysis, website testing and other areas where it is necessary to control access to proxy servers.",
                 theme: "present--theme-dark",
@@ -18,8 +18,8 @@
                 themeNav: "navigation--theme--dark",
                 themeAuthbar: "authbar--theme--dark",
             })
-            <img class="proxy-limit__animate proxy-limit__animate--top" src="./images/page_proxy-limit_ani_2.png" alt="">
-            <img class="proxy-limit__animate proxy-limit__animate--bottom" src="./images/page_proxy-limit_ani_1.png" alt="">
+            <img class="proxy-limit__animate proxy-limit__animate--top perspective__first" src="./images/page_proxy-limit_ani_2.png" alt="">
+            <img class="proxy-limit__animate proxy-limit__animate--bottom perspective__second" src="./images/page_proxy-limit_ani_1.png" alt="">
         </div>
         <div class="section">
             <div class="container">
@@ -68,5 +68,14 @@
         @@include('../../sections/SliderNews/index.html')
         @@include("../../sections/Footer/index.html")
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="./js/gradient.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="./js/smoothScroll.js"></script>
+    <script src="./vendors/jquery/jquery.min.js"></script>
+    <script src="./vendors/slick/slick.min.js"></script>
+    <script src="./js/sliderNews.js"></script>
+    <script src="./js/perspective.js"></script>
 </body>
 </html>

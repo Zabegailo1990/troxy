@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="news-inside">
+        @@include('../../components/Gradient/index.html')
         @@include("../../components/Header/index.html", {
             class: "header--bg--white",
             themeLogo: "logo--theme-dark",
@@ -55,5 +56,13 @@
         @@include('../../sections/SliderNews/index.html')
         @@include("../../sections/Footer/index.html")
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="./js/gradient.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="./js/smoothScroll.js"></script>
+    <script src="./vendors/jquery/jquery.min.js"></script>
+    <script src="./vendors/slick/slick.min.js"></script>
+    <script src="./js/sliderNews.js"></script>
 </body>
 </html>

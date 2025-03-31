@@ -1,5 +1,13 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 .purposes{
+    
+    &__breadcrumbs{
+        margin-bottom: 14px;
+
+        @include respond(tablet){
+            margin-bottom: 21px;
+        }
+    }
 
     &__title{
         font-weight: 500;

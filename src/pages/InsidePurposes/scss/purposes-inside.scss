@@ -1,11 +1,10 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .purposes-inside{
+    overflow: hidden;
 
     &__present{
         position: relative;
-        overflow: hidden;
-        transition: all .3s;
     }
 
     &__animate{

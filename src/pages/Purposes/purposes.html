@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="purposes">
+        @@include('../../components/Gradient/index.html')
         @@include("../../components/Header/index.html", {
             class: "header--bg--white",
             themeLogo: "logo--theme-dark",
@@ -16,6 +17,11 @@
         })
         <div class="section">
             <div class="container">
+                @@include('../../components/Breadcrumbs/index.html', { 
+                    class: 'purposes__breadcrumbs',
+                    item_1: "Main",
+                    item_2: "Financial information",
+                })
                 <h1 class="purposes__title">Proxies for any purpose of your business</h1>
                 @@include("../../components/SliderServices/index.html", { class: "purposes__slider" })
                 @@include("../../sections/ServiceList/index.html", { class: "purposes__service-list" })
@@ -31,5 +37,10 @@
         @@include("../../sections/Simple/index.html")
         @@include("../../sections/Footer/index.html")
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="./js/gradient.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="./js/smoothScroll.js"></script>
 </body>
 </html>
