@@ -1,12 +1,57 @@
 .marquee{
-    overflow: hidden;
-
     &__slider{
         display: flex;
+        justify-content: center;
+        overflow: hidden;
     }
 
     &__card{
         flex-shrink: 0;
-        margin-right: 10px;
+    
+        &:not(:last-child){
+            margin-right: 23px;
+        }
+        
+        &--third {
+            transform: scale(0.8);
+            opacity: 75%;
+            z-index: 2;
+            
+            &-left{
+                transform: scale(0.8) translateX(30px);
+            }
+
+            &-right{
+                transform: scale(0.8) translateX(-30px);
+            }
+        }
+    
+        &--second {
+            transform: scale(0.6);
+            opacity: 50%;
+            z-index: 1;
+
+            &-left{
+                transform: scale(0.6) translateX(150px);
+            }
+
+            &-right{
+                transform: scale(0.6) translateX(-150px);
+            }
+        }
+    
+        &--first {
+            transform: scale(0.4);
+            opacity: 35%;
+            z-index: 0;
+
+            &-left{
+                transform: scale(0.4) translateX(500px);
+            }
+
+            &-right{
+                transform: scale(0.4) translateX(-500px);
+            }
+        }
     }
 }
