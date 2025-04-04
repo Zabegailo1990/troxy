@@ -1,24 +1,17 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.slider-purposes{
-
+.slider-prices{
+    
     @include respond(tablet){
         padding: 0;
     }
 
     &__inner{
-        gap: 20px;
+        gap: 19px;
 
         @include respond(tablet){
+            overflow: visible;
             flex-wrap: wrap;
-        }
-    }
-
-    &__slide{
-        gap: 20px;
-
-        @include respond(tablet){
-            flex-direction: row;
         }
     }
 }

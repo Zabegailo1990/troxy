@@ -22,5 +22,10 @@
     
     &__slide{
         flex-shrink: 0;
+
+        &--double{
+            display: flex;
+            flex-direction: column;
+        }
     }
 }

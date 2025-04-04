@@ -61,9 +61,18 @@
         }
     }
 
-    &__slider{
+    &__slider-prices{
         margin: 0 -24px;
+        
+        @include respond(tablet){
+            max-width: 700px;
+            margin: 0 auto;
+        }
 
+        @include respond(pc){
+            max-width: none;
+            margin: 0;
+        }
     }
 
     &__slider-flags{
@@ -71,12 +80,6 @@
 
         @include respond(tablet){
             display: none;
-        }
-    }
-    
-    &__slider-plans{
-        @include respond(tablet){
-            margin: 0 auto;
         }
     }
     
