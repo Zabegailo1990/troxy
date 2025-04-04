@@ -1,20 +1,18 @@
-<div class="card card--radius--medium @@cardClass card-sale @@size @@class">
+<a class="card card--radius-m card--border-gradient card--bg-blur card-special @@class" href="#">
     <picture class="card__background">
-        <source class="card__img card-sale__img" media="(min-width: 1440px)" srcset="@@bgPc">
-        <source class="card__img card-sale__img" media="(min-width: 780px)" srcset="@@bgTb">
-        <img class="card__img card-sale__img" src="@@bgMb">
+        <source class="card__img" media="(min-width: 1440px)" srcset="@@bgPc">
+        <source class="card__img" media="(min-width: 780px)" srcset="@@bgTb">
+        <img class="card__img" src="@@bgMb">
     </picture>
     <div class="card__inner">
-        <h3 class="title @@colorTitle card-sale__title">@@title</h3>
-        <p class="text @@colorText card-sale__text">@@text</p>
-        @@if(typeof subtitle !== 'undefined' && subtitle){
-            <div class="card-sale__row">
-                <p class="text text--color--dark card-sale__label @@colorLabel">From </p>
-                <h3 class="title @@colorSubtitle card-sale__subtitle"> @@subtitle</h3>
-            </div>
-        }
-        <svg class="icon @@colorIcon card-sale__icon">
+        <h3 class="card__title card__title--fz-m card__title--color-blue">@@title</h3>
+        <p class="card__text">@@text</p>
+        <div class="card__row">
+            <p class="card__label">From</p>
+            <h3 class="card__price">@@subtitle</h3>
+        </div>
+        <svg class="card__icon card__icon--color-blue">
             <use xlink:href="./sprites/icons.svg#icon-arrow"></use>
         </svg>
     </div>    
-</div>
+</a>

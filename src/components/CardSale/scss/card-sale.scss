@@ -1,86 +1,18 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.card-sale{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+.card-special{
     width: 240px;
     height: 360px;
-    padding: 26px 20px 26px 20px;
+    padding: 20px;
 
     @include respond(tablet){
         width: 340px;
         height: 463px;
+        padding: 30px;
     }
 
     @include respond(pc){
         width: 610px;
         height: 337px;
-    }
-
-    &__title,
-    &__text{
-        margin-bottom: 12px;
-
-        @include respond(tablet){
-            width: 326px;
-            margin-bottom: 19px;
-        }
-    }
-
-    &__row{
-        display: flex;
-        align-items: center;
-    }
-
-    &__label{
-        margin-right: 8px;
-
-        &--color-white{
-            color: #fff;
-        }
-    }
-
-    &__title,
-    &__subtitle{
-        width: 200px;
-        font-size: 18px;
-        @include respond(tablet){
-            width: 248px;
-            font-size: 23px;
-        }
-    }
-
-    &__icon{
-        width: 26px;
-        height: 26px;
-        margin-left: auto;
-    }
-
-    &--size--large{
-        width: 300px;
-        height: 420px;
-        
-        @include respond(tablet){
-            width: 620px;
-            height: 377px;
-        }
-        
-        @include respond(pc){
-            width: 610px;
-            height: 377px;
-        }
-
-        .card-sale{
-            &__img{
-                top: 0;
-                right: 0;
-                width: 300px;
-
-                @include respond(tablet){
-                    width: 412px;
-                }
-            }
-        }
     }
 }

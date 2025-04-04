@@ -1,0 +1,74 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.card-extend{
+    padding: 20px;
+
+    @include respond(tablet){
+        padding: 30px;
+    }
+
+    // Модификатор Free
+    &--free{
+        width: 240px;
+        height: 342px;
+
+        @include respond(tablet){
+            width: 320px;
+            height: 400px;
+        }
+    
+        @include respond(pc){
+            width: 400px;
+            height: 500px;
+        }
+    }
+
+    // Модификатор Price 
+    &--price{
+        width: 240px;
+        height: 360px;
+
+        @include respond(tablet){
+            width: 340px;
+            height: 463px;
+        }
+
+        @include respond(pc){
+            width: 610px;
+            height: 337px;
+        }
+        
+        & .card__text{
+            @include respond(pc){
+                max-width: 349px;
+            }
+        }
+    }
+
+    // Модификатор Mix
+    &--mix{
+        width: 240px;
+        height: 420px;
+
+        @include respond(tablet){
+            width: 320px;
+            height: 463px;
+        }
+
+        @include respond(pc){
+            width: 400px;
+            height: 400px;
+        }
+    }
+
+    // Модификатор UDP
+    &--udp{
+        width: 300px;
+        height: 463px;
+
+        @include respond(tablet){
+            width: 400px;
+            height: 400px;
+        }
+    }
+}

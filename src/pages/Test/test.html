@@ -10,10 +10,102 @@
     <div class="test">
         <div class="container">
             <h1 class="test__title">Title</h1>
-            <div class="test__box">
-                Box
-            </div>
+
+            <!-- Переименовать как card-free -->
+            @@include('../../components/CardAdvanced/index.html', {
+                bgMb: "./images/section_advantage_mb-2.png",
+                title: "Proxy checker",
+                text: "Check availability, supported protocols, proxy country and response time",
+            })
+
+            @@include('../../components/CardGoal/index.html', {
+                src: "./images/component_card-goal_bg-1.png",
+                title: "Mix Europe 1 000 IP",
+                text: "The package includes 1000 European IPs",
+                subtitle: "$0.58",
+            })
+
+            @@include('../../components/CardRequest/index.html', {
+                src: "./images/component_card-goal_bg-1.png",
+                title: "2.5 million requests",
+                text: "World mixes, Europe, America, Asia and other variations",
+                price: "$120/month",
+            })
+
+            @@include('../../components/CardSale/index.html', {
+                bgPc: "./images/component_card-sale_deal_pc-1.png",
+                bgTb: "./images/component_card-sale_deal_tb-1.png",
+                bgMb: "./images/component_card-sale_deal_mb-1.png",
+                title: "Unlimited datacenter proxies",
+                text: "For bulk data parsing, SEO and monitoring",
+                subtitle: "$0.58",
+            })
+
+            @@include('../../components/CardPrice/index.html', {
+                bgPc: "./images/component_card-sale_deal_pc-1.png",
+                bgTb: "./images/component_card-sale_deal_tb-1.png",
+                bgMb: "./images/component_card-sale_deal_mb-1.png",
+                title: "Unlimited datacenter proxies",
+                text: "For bulk data parsing, SEO and monitoring",
+                subtitle: "$0.58",
+            })
+
+            @@include('../../components/CardExtend/index.html', {
+                bgPc: "./images/component_card-sale_deal_pc-1.png",
+                bgTb: "./images/component_card-sale_deal_tb-1.png",
+                bgMb: "./images/component_card-sale_deal_mb-1.png",
+                title: "Extend",
+                text: "For bulk data parsing, SEO and monitoring",
+                blur: "true",
+                price: '05.8',
+                theme: 'light',
+            })
+
+            
+            @@include('../../components/CardAffiliate/index.html', {
+                title: "Don't be misled",
+                text: "Promote our services accurately and honestly",
+            })
+
+            @@include('../../components/CardBenefit/index.html', {
+                title: "Unique digital footprint",
+                paragraph_1: 'Digital footprint is a technology that provides natural traffic. Our "digital footprint" technology is based on the actions of real users who create natural traffic through our proxy services. These are ordinary people doing their daily business on the Internet: from watching TV series to shopping in online stores.', 
+                paragraph_2: "This solution is ideal for SEO specialists, Internet marketers, parsers and developers who are looking for the most convenient and profitable option for using proxies.", 
+            })
+
+            @@include('../../components/CardFlag/index.html', {
+                iconName: "au",
+                title: "Australia"
+            })
+
+            <!-- Переименовать в card-mix -->
+
+            <!-- CardRequest новая карточка -->
+
+            <!-- Переименовать как card-special -->
+
+            <!-- Новая карточка card-price -->
+
+            @@include('../../components/CardScript/index.html', {
+                title: "Script for working with Google-Translate-API. Python"
+            })
+
+            @@include('../../components/CardService/index.html', {
+                title: "Booking",
+                iconName: "booking",
+                text: "Brief description of the purpose",
+            })
+
+            @@include('../../components/CardVacancies/index.html')
+            @@include('../../components/CardPlus/index.html', {
+                
+            })
         </div>
     </div>
+    <style>
+        .test{
+            background-color: gray;
+        }
+    </style>
 </body>
 </html>

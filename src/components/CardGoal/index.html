@@ -1,16 +1,14 @@
-<div class="card card--frame--gradient card--radius--medium card--bg--blur card-goal @@theme @@class">
-    <img class="card-goal__img" src="@@src" alt="">
+<a class="card card--border-gradient card--radius-m card--bg-blur card-mix @@class" href="#">
+    <img class="card-mix__img" src="@@src">
     <div class="card__inner">
-        <h3 class="title title--color--blue card-goal__title">@@title</h3>
-        @@if(typeof text !== 'undefined' && text){
-            <p class="text card-goal__text">@@text</p>
-        }
-        <div class="card-goal__row">
-            @@if(typeof label !== 'undefined' && label == 'true'){
-                <span class="text card-goal__label">From </span>
-            }
-            <h3 class="title card-goal__subtitle">@@subtitle</h3>
+        <h3 class="card__title card__title--color-blue card__title--fz-m">@@title</h3>
+        <p class="card__text card__text--color-dark">@@text</p>
+        <div class="card__row">
+            <p class="card__label">From</p>
+            <h3 class="card__price">@@subtitle</h3>
         </div>
+        <svg class="card__icon card__icon--color-blue">
+            <use xlink:href="./sprites/icons.svg#icon-arrow"></use>
+        </svg>
     </div>
-    <img class="card-goal__icon" src="./images/arrow.svg" alt="">
-</div>
+</a>

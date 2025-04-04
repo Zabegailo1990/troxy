@@ -26,4 +26,12 @@
             font-size: 19px;
         }
     }
+
+    &__text{
+        font-size: 12px;
+
+        @include respond(tablet){
+            font-size: 16px;
+        }
+    }
 }

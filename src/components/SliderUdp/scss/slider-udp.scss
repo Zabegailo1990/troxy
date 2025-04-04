@@ -1,0 +1,22 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.slider-udp{
+
+    &__inner{
+        gap: 19px;
+
+        @include respond(pc){
+            flex-wrap: wrap;
+        }
+
+    }
+
+    &__slide{
+        display: flex;
+        gap: 19px;
+
+        @include respond(tablet){
+            flex-direction: column;
+        }
+    }
+}

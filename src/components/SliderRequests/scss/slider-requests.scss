@@ -1,0 +1,16 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.slider-requests{
+
+    &__inner{
+        gap: 10px;
+
+        @include respond(tablet){
+            gap: 20px;
+        }
+
+        @include respond(pc){
+            flex-wrap: wrap;
+        }
+    }
+}

@@ -1,40 +1,17 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
-@use '../../../assets/scss/variables' as *;
-
 
 .card-service{
-    display: flex;
-    flex-direction: column;
     width: 242px;
     height: 170px;
     padding: 28px;
 
-    &__icon{
-        width: 46px;
-        height: 46px;
-        flex-shrink: 0;
-        margin-bottom: auto;
-    }
-
-    &__icon-arrow{
-        width: 26px;
-        height: 26px;
-        margin-left: auto;
-    }
-
     @include respond(tablet){
-        display: flex;
-        flex-direction: column;
-        width: 294px;
+        width: 295px;
         height: 240px;
-        padding: 26px 26px 47px 26px;
+        padding: 26px 26px 30px 26px;
     }
 
-    &__title{
-        margin-bottom: 8px;
-    }
-
-    &--theme--responsive{
+    &--size-m{
         @include respond(tablet){
             width: 340px;
         }
@@ -44,29 +21,23 @@
         }
     }
 
-    &--theme-simple{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding-bottom: 21px;
+    &__icon{
+        fill: #2E7AF5;
+        width: 46px;
+        height: 46px;
+        margin-bottom: auto;
+    }
+    
+    &__title{
+        margin-bottom: 0;
+    }
 
-        .card-service{
-            &__icon,
-            &__text{
-                display: none;
-            }
+    &__text{
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
 
-            &__title{
-                color: $title-color-blue;
-                margin-bottom: 30px;
-            }
-            
-            &__icon{
-                width: 42px;
-                height: 42px;
-                display: block;
-                margin-left: auto;
-            }
-        }
+    &__arrow{
+        margin-top: 27px;
     }
 }

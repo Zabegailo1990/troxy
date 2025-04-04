@@ -2,49 +2,172 @@
 
 .card{
     position: relative;
+    display: block;
     overflow: hidden;
+    transition: all .3s;
 
-    &__img{
-        position: absolute;
-        object-fit: contain;
-    }
-    
     &__background{
         position: absolute;
-        top: 0;
-        left: 0;
+        inset: 0;
         width: 100%;
         height: 100%;
         z-index: 0;
     }
 
+    &__img{
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+    }
+
     &__inner{
         position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         z-index: 1;
     }
 
-    &--radius--small{
+    &__title{
+        margin-bottom: 12px;
+
+        @include respond(tablet){
+            margin-bottom: 19px;
+        }
+
+        // Размеры заголовка
+        &--fz{
+
+            &-s{
+                font-size: 16px;
+    
+                @include respond(tablet){
+                    font-size: 19px;
+                }
+            }
+
+            &-m{
+                font-size: 18px;
+    
+                @include respond(tablet){
+                    font-size: 23px;
+                }
+            }
+        }
+
+        // Цвета заголовка
+        &--color{
+
+            &-dark{
+                color: #313844;
+            }
+
+            &-light{
+                color: #fff;
+            }
+
+            &-blue{
+                color: #2E7AF5;
+            }
+        }
+    }
+
+    &__text{
+        font-size: 12px;
+        margin-bottom: 12px;
+
+        @include respond(tablet){
+            font-size: 16px;
+            margin-bottom: 19px;
+        }
+
+        &--color{
+            
+            &-light{
+                color: #fff;
+            }
+
+            &-dark{
+                color: #313844;
+            }
+        }
+    }
+
+    &__row{
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__label{
+        margin-right: 8px;
+        font-size: 12px;
+
+        @include respond(tablet){
+            font-size: 16px;
+        }
+
+        &--color-light{
+            color: #fff;
+        }
+    }
+
+    &__price{
+        font-size: 18px;
+        line-height: normal;
+    
+        @include respond(tablet){
+            font-size: 23px;
+        }
+
+        &--color{
+
+            &-dark{
+                color: #313844;
+            }
+
+            &-light{
+                color: #fff;
+            }
+        }
+    }
+
+    &__icon{
+        width: 26px;
+        height: 26px;
+        margin-left: auto;
+
+        &--color{
+
+            &-blue{
+                stroke: #2E7AF5;
+            }
+
+            &-light{
+                stroke: #fff;
+            }
+        }
+    }
+
+    // Скругление
+    &--radius-s{
         border-radius: 20px;
     }
 
-    &--radius--medium{
+    &--radius-m{
         border-radius: 30px;
     }
-    
-    &--bg--blur{
-        background: rgba(255, 255, 255, 0.5);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-    }
-    
-    &--frame--gradient{
+
+    // Цвета рамки
+    &--border-gradient{
         &::before{
             content: '';
             position: absolute;
             inset: 0;
             border-radius: inherit;
             padding: 1px;
-            background: linear-gradient(160deg, #FFFFFF, #E7F0FF);
+            background: linear-gradient(160deg, #FFFFFF, #b8d1fc);
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
@@ -52,101 +175,18 @@
         }
     }
 
-    &--frame--blue{
-        border: 1px solid #2E7AF5;
+    &--border-blue{
+        border: 2px solid #2E7AF5;
     }
 
-
-    &--theme--advanced{}
-    &--theme--sale{}
-    &--theme--goal{}
-    &--theme--feature{}
-    &--theme--country{}
-    &--theme--service{}
-    &--theme--benefit{}
-
-    &--size--medium{
-        width: 240px;
-        height: 260px;
-
-        @include respond(tablet){
-            width: 340px;
-            height: 463px;
-        }
-
-        @include respond(pc) {
-            width: 610px;
-            height: 337px;
-        }
+    // Фон
+    &--bg-blur{
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
 
-    &--size--small-rect {
-        width: 240px;
-        height: 360px;
-
-        @include respond(tablet) {
-            width: 340px;
-            height: 463px;
-        }
-
-        @include respond(pc){
-            width: 610px;
-            height: 337px;
-        }
-    }
-
-    &--size--medium-rect {
-        width: 240px;
-        height: 420px;
-
-        @include respond(tablet){
-            width: 320px;
-            height: 463px;
-        }
-
-        @include respond(pc){
-            width: 400px;
-            height: 400px;
-        }
-    }
-
-    &--size--large-square {
-        width: 400px;
-        height: 400px;
-        
-        @include respond(tablet){
-            width: 300px;
-            height: 500px;
-        }
-    }
-      
-    &--size--wide-rect {
-        width: 300px;
-        height: 420px;
-
-        @include respond(tablet) {
-            width: 620px;
-            height: 377px;
-        }
-
-        @include respond(pc) {
-            width: 610px;
-            height: 377px;
-        }
-    }
-
-    &--size--tall-rect {
-        width: 240px;
-        height: 342px;
-
-        @include respond(tablet){
-            width: 320px;
-            height: 400px;
-        }
-
-        @include respond(tablet){
-            width: 400px;
-            height: 500px;
-        }
+    &--bg-light{
+        background-color: #fff;
     }
 }

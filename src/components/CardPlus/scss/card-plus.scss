@@ -1,9 +1,6 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .card-plus{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     width: 240px;
     height: 165px;
     padding: 16px;
@@ -18,36 +15,39 @@
         width: 296px;
     }
 
+    &__inner{
+        height: 100%;
+    }
+
     &__icon{
         width: 64px;
         height: 64px;
-    }
+        margin-bottom: auto;
 
-    &__description{
-        @include respond(tablet){
-            width: 254px;
+        &--right{
+            margin-left: auto;
         }
     }
-
-    &__title{
-        font-size: 16px;
-        margin-bottom: 10px;
-
-        @include respond(tablet){
-            font-size: 19px;
-        }
-    }
-
-    &__description{
-        width: 100%;
+    
+    &__col{
+        width: 150px;
         text-align: right;
+        margin-left: auto;
+
+        &--left{
+            text-align: left;
+        }
     }
 
-    &--theme-affiliate{
+    &__text{
+        margin-left: auto;
+        margin-bottom: 0;
+    }
 
+    &--size-m{
         width: 240px;
         height: 250px;
-        
+
         @include respond(tablet){
             width: 340px;
             height: 225px;
@@ -56,16 +56,5 @@
         @include respond(pc){
             width: 400px;
         }
-
-        .card-plus{
-
-            &__icon{
-                margin-left: auto;
-            }
-
-            &__description{
-                text-align: left;
-            }
-         }
     }
 }

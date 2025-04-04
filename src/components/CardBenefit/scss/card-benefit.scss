@@ -1,9 +1,8 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.benefit-card{
+.card-benefit{
     width: 100%;
     max-width: 713px;
-    min-height: 323px;
     padding: 37px 32px;
 
     @include respond(tablet){
@@ -12,20 +11,5 @@
     
     @include respond(pc){
         padding: 24px 40px 36px 40px;
-    }
-    
-    &__title{
-        margin-bottom: 20px;
-        
-        @include respond(tablet){
-            font-size: 26px;
-        }
-
-    }
-    
-    &__text{
-        &:not(:last-child){
-            margin-bottom: 30px;
-        }
     }
 }

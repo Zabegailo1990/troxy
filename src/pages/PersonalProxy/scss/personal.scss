@@ -60,49 +60,11 @@
         }
     }
     
-    &__slider{
+    &__slider-udp{
         margin: 0 -24px;
     
         @include respond(tablet){
             margin: 0 -40px;
-        }
-        
-        @include respond(pc){
-            overflow: visible;
-            margin: 0;
-            row-gap: 20px;
-            flex-wrap: wrap;
-        }
-    }
-
-    &__stub{
-        @include respond(pc){
-           display: none;
-        }
-    }
-
-    &__inner{
-        column-gap: 19px;
-    }
-    
-    &__slide{
-        display: flex;
-        column-gap: 19px;
-
-        @include respond(tablet){
-            flex-direction: column;
-            column-gap: normal;
-            row-gap: 19px;
-        }
-    }
-
-    &__card{
-        width: 300px;
-        height: 463px;
-
-        @include respond(tablet){
-            width: 400px;
-            height: 400px;
         }
     }
 }

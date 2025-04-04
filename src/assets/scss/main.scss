@@ -31,8 +31,11 @@
 @use '../../components/CardPlus/scss/card-plus.scss';
 @use '../../components/CardFlag/scss/card-flag.scss';
 @use '../../components/CardService/scss/card-service.scss';
+@use '../../components/CardPrice/scss/card-price.scss';
 @use '../../components/CardAdvanced/scss/card-advanced.scss';
 @use '../../components/CardGoal/scss/card-goal.scss';
+@use '../../components/CardRequest/scss/card-request.scss';
+@use '../../components/CardExtend/scss/card-extend.scss';
 @use '../../components/CardSale/scss/card-sale.scss';
 @use '../../components/CardScript/scss/card-script.scss';
 @use '../../components/CardVacancies/scss/card-vacancies.scss';
@@ -41,6 +44,11 @@
 
 @use '../../components/FlagList/scss/flag-list.scss';
 @use '../../components/SliderAdvantages/scss/slider-advantages.scss';
+
+@use '../../components/SliderRequests/scss/slider-requests.scss';
+@use '../../components/SliderUdp/scss/slider-udp.scss';
+@use '../../components/SliderPurposes/scss/slider-purposes.scss';
+
 @use '../../components/SliderPlans/scss/slider-plans.scss';
 @use '../../components/SliderPluses/scss/slider-pluses.scss';
 @use '../../components/SliderGoal/scss/slider-goal.scss';

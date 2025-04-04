@@ -23,8 +23,9 @@
                     item_2: "Financial information",
                 })
                 <h1 class="purposes__title">Proxies for any purpose of your business</h1>
-                @@include("../../components/SliderServices/index.html", { class: "purposes__slider" })
-                @@include("../../sections/ServiceList/index.html", { class: "purposes__service-list" })
+                <div class="purposes__slider">
+                    @@include("../../components/SliderPurposes/index.html")
+                </div>
             </div>
         </div>
         @@include("../../sections/Banner/index.html", {

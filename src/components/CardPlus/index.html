@@ -1,11 +1,13 @@
-<div class="card card--bg--blur card--radius--small card--frame--gradient card-plus @@theme @@class">
-    <svg class="icon icon--size-large card-plus__icon">
-        <use xlink:href="@@icon"></use>
-    </svg>
-    <div class="card-plus__description">
-        @@if(typeof title !== 'undefined' && title){
-            <h4 class="card-plus__title">@@title</h4>
-        }
-        <p class="text card-plus__text">@@text</p>
+<div class="card card--bg-blur card--radius-s card--border-gradient card-plus @@class">
+    <div class="card__inner">
+        <svg class="card-plus__icon">
+            <use xlink:href="./sprites/pluses.svg#icon-plus_@@iconNum"></use>
+        </svg>
+        <div class="card-plus__col @@colClass">
+            @@if(typeof title !== 'undefined' && title){
+                <h4 class="card__title">@@title</h4>
+            }
+            <p class="card__text card-plus__text">@@text</p>
+        </div>
     </div>
 </div>

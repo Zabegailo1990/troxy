@@ -22,18 +22,16 @@
     }
 
     &__slider{
+        max-width: 700px;
         margin: 0 -24px;
 
         @include respond(tablet){
-            display: none;
+            margin: 0 auto;
         }
-    }
-    
-    &__service-list{
-        display: none;
 
-        @include respond(tablet){
-            display: block;
+        @include respond(pc){
+            max-width: none;
+            margin: 0;
         }
     }
 }

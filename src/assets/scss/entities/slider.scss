@@ -1,35 +1,26 @@
 @use '../mixins/mediaQuery' as *;
 
 .slider{
-    display: flex;
     overflow-x: auto;
+    padding: 0 24px;
 
-    &::-webkit-scrollbar {
+    @include respond(tablet){
+        padding: 0 40px;
+    }
+
+    @include respond(pc){
+        padding: 0;
+    }
+
+    &::-webkit-scrollbar{
         display: none;
     }
     
-    &__stub{
-        flex-shrink: 0;
-        width: 24px;
-
-        @include respond(tablet){
-            width: 40px;
-        }
-    }
-
     &__inner{
         display: flex;
     }
     
     &__slide{
         flex-shrink: 0;
-
-        &:not(:last-of-type){
-            margin-right: 10px;
-
-            @include respond(tablet){
-                margin-right: 19px;
-            }
-        }
     }
 }

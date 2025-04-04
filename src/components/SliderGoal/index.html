@@ -1,85 +1,131 @@
 <div class="slider slider-goal @@mode @@class">
     <span class="slider__stub slider-goal__stub"></span>
     <div class="slider__inner slider-goal__inner">
-        @@include("../CardGoal/index.html", {
-            class: "slider-goal__slide",
-            src: "@@src_1",
-            title: "@@title_1",
-            text: "@@text_1",
-            subtitle: "@@subtitle_1",
-            label: "@@label",
+        @@include('../../components/CardExtend/index.html', {
+            class: "card-extend--mix slider-goal__slide",
+            prevClass: "card--bg-blur card--border-gradient",
+            bgPc: "./images/card-extend--mix_proxy-mix_pc-1.png",
+            bgTb: "./images/card-extend--mix_proxy-mix_tb-1.png",
+            bgMb: "./images/card-extend--mix_proxy-mix_mb-1.png",
+            title: "Mix Europe 1 000 IP",
+            text: "The package includes 1000 European IPs",
+            blur: "true",
+            label: "true",
+            price: '$0.58',
+            theme: 'dark',
         })
-        @@include("../CardGoal/index.html", {
-            class: "slider-goal__slide",
-            src: "@@src_2",
-            title: "@@title_2",
-            text: "@@text_2",
-            subtitle: "@@subtitle_2",
-            label: "@@label",
+
+        @@include('../../components/CardExtend/index.html', {
+            class: "card-extend--mix slider-goal__slide",
+            prevClass: "card--bg-blur card--border-gradient",
+            bgPc: "./images/card-extend--mix_proxy-mix_pc-2.png",
+            bgTb: "./images/card-extend--mix_proxy-mix_tb-2.png",
+            bgMb: "./images/card-extend--mix_proxy-mix_mb-2.png",
+            title: "Mix Europe 3 000 IP",
+            text: "The package includes 3000 European IPs",
+            blur: "true",
+            label: "true",
+            price: '$0.59',
+            theme: 'dark',
         })
-        @@include("../CardGoal/index.html", {
-            class: "slider-goal__slide",
-            src: "@@src_3",
-            title: "@@title_3",
-            text: "@@text_3",
-            subtitle: "@@subtitle_3",
-            label: "@@label",
+
+        @@include('../../components/CardExtend/index.html', {
+            class: "card-extend--mix slider-goal__slide",
+            prevClass: "card--bg-blur card--border-gradient",
+            bgPc: "./images/card-extend--mix_proxy-mix_pc-3.png",
+            bgTb: "./images/card-extend--mix_proxy-mix_tb-3.png",
+            bgMb: "./images/card-extend--mix_proxy-mix_mb-3.png",
+            title: "Mix America 1 000 IP",
+            text: "The package includes 1000 American IPs",
+            blur: "true",
+            label: "true",
+            price: '$0.61',
+            theme: 'dark',
         })
-        @@include("../CardGoal/index.html", {
-            class: "slider-goal__slide",
-            label: "@@label",
-            src: "@@src_4",
-            title: "@@title_4",
-            text: "@@text_4",
-            subtitle: "@@subtitle_4",
-            label: "@@label",
+
+        @@include('../../components/CardExtend/index.html', {
+            class: "card-extend--mix slider-goal__slide",
+            prevClass: "card--bg-blur card--border-gradient",
+            bgPc: "./images/card-extend--mix_proxy-mix_pc-4.png",
+            bgTb: "./images/card-extend--mix_proxy-mix_tb-4.png",
+            bgMb: "./images/card-extend--mix_proxy-mix_mb-4.png",
+            title: "Mix America 3 000 IP",
+            text: "The package includes 3000 American IPs",
+            blur: "true",
+            label: "true",
+            price: '$0.58',
+            theme: 'dark',
         })
-        @@include("../CardGoal/index.html", {
-            class: "slider-goal__slide",
-            src: "@@src_5",
-            title: "@@title_5",
-            text: "@@text_5",
-            subtitle: "@@subtitle_5",
-            label: "@@label",
+
+        @@include('../../components/CardExtend/index.html', {
+            class: "card-extend--mix slider-goal__slide",
+            prevClass: "card--bg-blur card--border-gradient",
+            bgPc: "./images/card-extend--mix_proxy-mix_pc-5.png",
+            bgTb: "./images/card-extend--mix_proxy-mix_tb-5.png",
+            bgMb: "./images/card-extend--mix_proxy-mix_mb-5.png",
+            title: "Mix World 5 000 IP",
+            text: "The package includes 5000 IPs of the best world locations",
+            blur: "true",
+            label: "true",
+            price: '05.8',
+            theme: 'dark',
         })
-        @@include("../CardGoal/index.html", {
-            class: "slider-goal__slide",
-            src: "@@src_6",
-            title: "@@title_6",
-            text: "@@text_6",
-            subtitle: "@@subtitle_6",
-            label: "@@label",
+
+        @@include('../../components/CardExtend/index.html', {
+            class: "card-extend--mix slider-goal__slide",
+            prevClass: "card--bg-blur card--border-gradient",
+            bgPc: "./images/card-extend--mix_proxy-mix_pc-6.png",
+            bgTb: "./images/card-extend--mix_proxy-mix_tb-6.png",
+            bgMb: "./images/card-extend--mix_proxy-mix_mb-6.png",
+            title: "Mix World 15 000 IP",
+            text: "The package includes 15000 IPs of the best world locations",
+            blur: "true",
+            label: "true",
+            price: '$0.61',
+            theme: 'dark',
         })
-        @@if(typeof subtitle_7 !== 'undefined' && subtitle_7) {
-            @@include("../CardGoal/index.html", {
-                class: "slider-goal__slide",
-                src: "@@src_7",
-                title: "@@title_7",
-                text: "@@text_7",
-                subtitle: "@@subtitle_7",
-                label: "@@label",
-            })
-        }
-        @@if(typeof subtitle_8 !== 'undefined' && subtitle_8) {
-            @@include("../CardGoal/index.html", {
-                class: "slider-goal__slide",
-                src: "@@src_8",
-                title: "@@title_8",
-                text: "@@text_8",
-                subtitle: "@@subtitle_8",
-                label: "@@label",
-            })
-        }
-        @@if(typeof subtitle_9 !== 'undefined' && subtitle_9) {
-            @@include("../CardGoal/index.html", {
-                class: "slider-goal__slide",
-                src: "@@src_9",
-                title: "@@title_9",
-                text: "@@text_9",
-                subtitle: "@@subtitle_9",
-                label: "@@label",
-            })
-        }
+
+        @@include('../../components/CardExtend/index.html', {
+            class: "card-extend--mix slider-goal__slide",
+            prevClass: "card--bg-blur card--border-gradient",
+            bgPc: "./images/card-extend--mix_proxy-mix_pc-7.png",
+            bgTb: "./images/card-extend--mix_proxy-mix_tb-7.png",
+            bgMb: "./images/card-extend--mix_proxy-mix_mb-7.png",
+            title: "Mix America 25 000 IP",
+            text: "The package includes 25000 American IPs",
+            blur: "true",
+            label: "true",
+            price: '$0.58',
+            theme: 'dark',
+        })
+
+        @@include('../../components/CardExtend/index.html', {
+            class: "card-extend--mix slider-goal__slide",
+            prevClass: "card--bg-blur card--border-gradient",
+            bgPc: "./images/card-extend--mix_proxy-mix_pc-8.png",
+            bgTb: "./images/card-extend--mix_proxy-mix_tb-8.png",
+            bgMb: "./images/card-extend--mix_proxy-mix_mb-8.png",
+            title: "Mix World 50 000 IP",
+            text: "The package includes 50000 IPs of the best world locations",
+            blur: "true",
+            label: "true",
+            price: '$0.59',
+            theme: 'dark',
+        })
+
+        @@include('../../components/CardExtend/index.html', {
+            class: "card-extend--mix slider-goal__slide",
+            prevClass: "card--bg-blur card--border-gradient",
+            bgPc: "./images/card-extend--mix_proxy-mix_pc-9.png",
+            bgTb: "./images/card-extend--mix_proxy-mix_tb-9.png",
+            bgMb: "./images/card-extend--mix_proxy-mix_mb-9.png",
+            title: "Mix World 200 000 IP",
+            text: "The package includes 200000 IPs of the best world locations",
+            blur: "true",
+            label: "true",
+            price: '$0.61',
+            theme: 'dark',
+        })
     </div>
     <span class="slider__stub slider-goal__stub"></span>
 </div>

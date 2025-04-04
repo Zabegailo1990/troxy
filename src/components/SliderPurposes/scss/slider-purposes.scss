@@ -1,0 +1,22 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.slider-purposes{
+    
+    @include respond(tablet){
+        padding: 0;
+    }
+
+    &__inner{
+        gap: 20px;
+
+        @include respond(tablet){
+            flex-wrap: wrap;
+        }
+    }
+
+    &__slide{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
