@@ -3,7 +3,7 @@ const lenis = new Lenis({
     smooth: true, // Включаем сглаживание
     syncTouch: true, // Поддержка тач-скролла
     smoothTouch: false,
-    infinite: false // Отключаем бесконечный скролл
+    infinite: false, // Отключаем бесконечный скролл
 });
 
 // Проверяем, есть ли ScrollTrigger на странице

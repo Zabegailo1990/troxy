@@ -27,19 +27,19 @@
                 <img class="tariffs__animate tariffs__animate--top perspective__first" src="./images/page_tariffs_ani_2.png" alt="">
                 <img class="tariffs__animate tariffs__animate--bottom perspective__second" src="./images/page_tariffs_ani_1.png" alt="">
             </div>
-            <div class="section">
-                <div class="container">
+            <div class="container">
+                <div class="section">
                     <h2 class="title tariffs__subtitle">High-quality proxies from 5 to 200,000+ IPs <span class="title--color--blue">at affordable prices</span></h2>
                     @@include('../../components/SliderPrices/index.html', {
                         class: "tariffs__slider-prices",
                     })
                 </div>
-            </div>
-            <div class="section">
-                <div class="container">
+                <div class="section">
                     <h2 class="title tariffs__subtitle">Best proxy locations <span class="title--color--blue">by country</span></h2>
-                    @@include("../../components/SliderFlags/index.html", { class: "tariffs__slider tariffs__slider-flags" })
-                    @@include("../../components/FlagList/index.html", { class: "tariffs__flag-list" })
+                    @@include("../../components/SliderFlags/index.html", { 
+                        class: "tariffs__slider tariffs__slider-flags" 
+                    })
+                    <!-- @@include("../../components/FlagList/index.html", { class: "tariffs__flag-list" }) -->
                     <button class="button button--bg--blue button--rounded button--color--white tariffs__button">View all locations (195)</button>
                 </div>
             </div>
@@ -49,10 +49,12 @@
                 text: "We will select a high-quality and effective solution for you personally at the best price",
                 button_1: "Test free"
             })
-            <div class="section">
-                <div class="container">
+            <div class="container">
+                <div class="section">
                     <h2 class="title home__subtitle">Maximum simplicity and quality of proxies <span class='title--color--blue'>with a digital footprint at the price of regular ones</span></h2>
-                    @@include("../../components/SliderPluses/index.html", {class: "tariffs__slider"})
+                    @@include("../../components/SliderPluses/index.html", {
+                        class: "tariffs__slider"
+                    })
                 </div>
             </div>
             @@include('../../sections/Banner/index.html', {
@@ -72,6 +74,7 @@
         <script src="./js/gradient.js"></script>
         <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
         <script src="./js/smoothScroll.js"></script>
+        <script src="./js/smoothSlider.js"></script>
         <script src="./vendors/jquery/jquery.min.js"></script>
         <script src="./vendors/slick/slick.min.js"></script>
         <script src="./js/sliderNews.js"></script>

@@ -1,16 +1,12 @@
-.slider-flags{
-    display: flex;
-    overflow: hidden;
+@use '../../../assets/scss/mixins/mediaQuery' as *;
 
-    &__slide{
-        &:not(:last-child){
-            margin-right: 21px;
-        }
+.slider-flags{
+
+    &__inner{
+        gap: 21px;
     }
 
-    &__card{
-        &:not(:last-child){
-            margin-bottom: 14px;
-        }
+    &__slide{
+        gap: 14px;
     }
 }
