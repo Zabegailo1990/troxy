@@ -3,14 +3,14 @@ const mm = gsap.matchMedia();
 const tl = gsap.timeline({
     scrollTrigger: {
         scrub: 1,
-        trigger: ".benefits",
+        trigger: ".s-benefits",
         start: "top top",
         end: "4000",
         pin: true,
     }
 });
 
-const animatedCards = document.querySelectorAll(".benefits__card-benefit:not(:first-child)");
+const animatedCards = document.querySelectorAll(".s-benefits__card-benefit:not(:first-child)");
 
 // Используем matchMedia только для выбора X
 mm.add("(min-width: 1441px)", () => tl.vars.x = "-100vw"); 

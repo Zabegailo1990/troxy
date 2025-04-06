@@ -1,26 +1,6 @@
 @use './variables' as *;
 @use './mixins/mediaQuery' as *;
 
-.background,
-.background img,
-.background source{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-// Gallery
-.gallery{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    column-gap: 20px;
-    row-gap: 20px;
-
-    &__card{
-        flex-shrink: 0;
-    }
-}
 
 // Text
 .text{
@@ -52,42 +32,8 @@
         font-weight: 700;
     }
 }
-.title{
-    font-size: $title-fz-small;
-    line-height: $title-lh-extra-small;
 
-    @include respond(tablet){
-        font-size: $title-fz-medium;
-        line-height: $title-lh-medium;
-    }
-    
-    &--type--main{
-        line-height: $title-lh-small;
-        font-size: $title-fz-medium;
-
-        @include respond(tablet) {
-            font-size: $title-fz-large;
-            line-height: $title-lh-large;
-        }
-    }
-
-    &--type--subtitle{
-        
-    }
-
-    &--color--white{
-        color: #fff;
-    }
-
-    &--color--blue{
-        color: #2E7AF5;
-    }
-
-    &--weight--medium{
-        font-weight: 500;
-    }
-    
-}
+   
 
 // .button{
 //     font-size: $button-fz-small;
@@ -129,5 +75,4 @@
 //         opacity: 80%;
 //     }
 // }
-.link{}
-.img{}
+

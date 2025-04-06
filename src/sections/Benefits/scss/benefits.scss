@@ -1,6 +1,6 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.benefits{
+.s-benefits{
     height: 851px;
 
     @include respond(tablet){
@@ -45,6 +45,7 @@
         
         @include respond(pc){
             width: 713px;
+            margin: 0;
         }
     }
 

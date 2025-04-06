@@ -1,9 +1,9 @@
 <div class="present @@theme">
     @@if(typeof bgNum !== 'undefined' && bgNum){
-        <picture class="background present__background">
-            <source media="(min-width: 1440px)" srcset="./images/section_present-@@bgNum_bg_pc.jpg">
-            <source media="(min-width: 780px)" srcset="./images/section_present-@@bgNum_bg_pc.jpg">
-            <img src="./images/section_present-@@bgNum_bg_pc.jpg">
+        <picture class="present__background">
+            <source class="present__img" media="(min-width: 1440px)" srcset="./images/section_present-@@bgNum_bg_pc.jpg">
+            <source class="present__img" media="(min-width: 780px)" srcset="./images/section_present-@@bgNum_bg_pc.jpg">
+            <img class="present__img" src="./images/section_present-@@bgNum_bg_pc.jpg">
         </picture>  
     }
     <div class="present__inner">
@@ -30,11 +30,11 @@
             }
             <div class="present__group">
                 @@if(typeof flag !== 'undefined' && flag) {
-                <div class="present__frame">
-                    <svg class="icon present__icon">
-                        <use xlink:href="./sprites/flags.svg#icon-flag_@@flag"></use>
-                    </svg>
-                </div>
+                    <div class="present__frame">
+                        <svg class="icon present__icon">
+                            <use xlink:href="./sprites/flags.svg#icon-flag_@@flag"></use>
+                        </svg>
+                    </div>
                 }
                 <h1 class="title title--type--main @@colorTitle title--weight--medium present__title">@@title</h1>
             </div>
