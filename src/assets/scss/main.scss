@@ -3,6 +3,7 @@
 @use './mixins/_mediaQuery';
 @use './_variables.scss';
 @use './entities/container.scss';
+@use './entities/title.scss';
 @use './entities/button.scss';
 @use './entities/icon.scss';
 @use './entities/slider.scss';
@@ -75,6 +76,8 @@
 
 // Секции
 @use '../../sections/Present/scss/present.scss';
+@use '../../sections/Prime/scss/prime.scss';
+@use '../../sections/Benefits/scss/benefits.scss';
 @use '../../sections/Banner/scss/banner.scss';
 @use '../../sections/Locations/scss/locations.scss';
 @use '../../sections/Advantages/scss/advantages.scss';

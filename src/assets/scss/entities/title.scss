@@ -1,4 +1,32 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
 .title{
 
+    &--size-m{
+        font-size: 24px;
+        line-height: 30px;
     
+        @include respond(tablet){
+            font-size: 32px;
+            line-height: 40px;
+        }
+    }
+
+    &--size-l{
+        font-size: 32px;
+        line-height: 35px;
+
+        @include respond(tablet){
+            font-size: 52px;
+            line-height: 64px;
+        }
+    }
+
+    &--color-blue{
+        color: #2E7AF5;
+    }
+
+    &--pos-center{
+        text-align: center;
+    }
 }

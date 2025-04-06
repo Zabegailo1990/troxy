@@ -1,0 +1,121 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.benefits{
+    height: 851px;
+
+    @include respond(tablet){
+        height: 859px;
+    }
+
+    @include respond(pc){
+        height: 780px;
+    }
+
+    &__inner{
+        height: inherit;
+
+        @include respond(pc) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__title{
+        margin-bottom: 36px;
+
+        @include respond(tablet){
+            margin-bottom: 65px;
+        }
+        
+        @include respond(pc){
+            margin-bottom: 0;
+            max-width: 400px;
+            text-align: left;
+        }
+    }
+
+    &__cards{
+        position: relative;
+        width: 327px;
+        margin: 0 auto;
+
+        @include respond(tablet){
+            width: 700px;
+        }
+        
+        @include respond(pc){
+            width: 713px;
+        }
+    }
+
+    &__card-benefit{
+        flex-shrink: 0;
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        transform: translateX(-50%);
+
+        @include respond(pc){
+            left: auto;
+            right: 0;
+            transform: translateX(0);
+        }
+
+
+        &:first-child{
+            top: 0;
+
+            @include respond(pc){
+                right: 0;
+            }
+        }
+
+        &:nth-child(2) {
+            top: 51px;
+
+            @include respond(tablet){
+                top: 43px;
+            }
+
+            @include respond(pc){
+                right: 31px;
+            }
+        }
+
+        &:nth-child(3) {
+            top: 51px * 2;
+
+            @include respond(tablet){
+                top: 43px * 2;
+            }
+
+            @include respond(pc){
+                right: 31px * 2;
+            }
+        }
+
+        &:nth-child(4) {
+            top: 51px * 3;
+
+            @include respond(tablet){
+                top: 43px * 3;
+            }
+
+            @include respond(pc){
+                right: 31px * 3;
+            }
+        }
+
+        &:nth-child(5) {
+            top: 51px * 4;
+
+            @include respond(tablet){
+                top: 43px * 4;
+            }
+
+            @include respond(pc){
+                right: 31px * 4;
+            }
+        }
+    }
+}

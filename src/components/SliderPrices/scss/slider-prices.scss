@@ -6,6 +6,12 @@
         padding: 0;
     }
 
+    &__spacer{
+        @include respond(tablet){
+            display: none;
+        }
+    }
+
     &__inner{
         gap: 20px;
 

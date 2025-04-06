@@ -2,25 +2,16 @@
 
 .slider{
     display: flex;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    touch-action: pan-x;
     overflow-x: auto;
+    touch-action: pan-x; /* запрет вертикального свайпа */
 
-    &::before,
-    &::after{
-        content: '';
-        min-width: 24px;
-        height: 100%;
-        
+    &__spacer{
+        flex-shrink: 0;
+        width: 24px;
+
         @include respond(tablet){
-            min-width: 40px;
+            width: 40px;
         }
-    }
-
-
-    @include respond(pc){
-        padding: 0;
     }
 
     &::-webkit-scrollbar{

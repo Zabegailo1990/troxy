@@ -3,13 +3,38 @@
 .card-benefit{
     width: 100%;
     max-width: 713px;
+    min-height: 369px;
     padding: 37px 32px;
 
     @include respond(tablet){
-        padding: 26px 30px 34px 30px;
+        min-height: 323px;
+        padding: 28px 30px;
     }
     
     @include respond(pc){
-        padding: 24px 40px 36px 40px;
+        min-height: 369px;
+    }
+
+    &__title{
+        margin-bottom: 20px;
+
+        @include respond(tablet){
+            margin-bottom: 25px;
+        }
+    }
+
+    &__text{
+
+        &:not(:last-child){
+            margin-bottom: 27px;
+
+            @include respond(tablet){
+                margin-bottom: 34px;
+            }
+        }
+
+        &:last-child{
+            margin-bottom: 0;
+        }
     }
 }

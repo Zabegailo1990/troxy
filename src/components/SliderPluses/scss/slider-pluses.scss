@@ -2,41 +2,33 @@
 
 .slider-pluses{
 
-    @include respond(tablet){
-        overflow: visible;
-    }
+    &__spacer{
 
-    &__stub{
         @include respond(tablet){
             display: none;
         }
     }
-    
+
     &__inner{
         gap: 10px;
-        
+
         @include respond(tablet){
-            max-width: 699px;
-            justify-content: space-between;
-            gap: 12px;
             flex-wrap: wrap;
-            margin: 0 auto;
+            gap: 12px;
         }
 
         @include respond(pc){
-            gap: 19px;
-            max-width: none;
+            column-gap: 18px;
+            row-gap: 22px;
         }
     }
-    
-    &__slide{
-        display: flex;
-        flex-direction: column;
-        row-gap: 10px;
 
-        @include respond(pc){
-            gap: 22px;
-            max-width: none;
+    &__slide{
+        gap: 10px;
+
+        @include respond(tablet){
+            flex-direction: row;
+            gap: 19px;
         }
     }
 }
