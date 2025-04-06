@@ -9,7 +9,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        row-gap: 12px;
         width: 100%;
         height: 100%;
     }
@@ -18,31 +17,49 @@
         width: 90px;
         height: 66px;
         border-radius: 12px;
+        margin-bottom: 12px;
         overflow: hidden;
-
-        &--size-s{
-            width: 64px;
-            height: 47px;
-
-            @include respond(tablet){
-                width: 90px;
-                height: 66px;
-            }
-        }
     }
     
     &__icon{
         width: inherit;
         height: inherit;
     }
-    
-    &--size-s{
-        width: 155px;
-        height: 104px;
 
-        @include respond(tablet){
-            width: 218px;
-            height: 147px;
+    &__title{
+        line-height: 30px;
+        font-weight: 400;
+        font-size: 21px;
+    }
+    
+    // Маленькая тема
+    &--size-s{
+
+        @include respond(mobile){
+            width: 155px;
+            height: 104px;
+        }
+
+        & .card-flag__frame{
+            @include respond(mobile){
+                width: 64px;
+                height: 47px;
+                margin-bottom: 8px;
+            }
+        }
+
+        & .card-flad__title{
+            @include respond(mobile){
+                font-size: 15px;
+                line-height: 21px;
+            }
+        }
+
+        & .card-flag__icon{
+            @include respond(mobile){
+                width: 64px;
+                height: 47px;
+            }
         }
     }
 }

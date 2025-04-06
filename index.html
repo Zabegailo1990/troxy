@@ -37,12 +37,14 @@
             button_1: "Choose solution",
             button_2: "Test free"
         })
-        <div class="home__locations section">
+        <div class="section section--indent-m">
             <div class="container">
-                <h2 class="title home__subtitle home__subtitle--space-small">All popular locations</h2>
-                <p class="text home__text">Didn't find the proxy type or location you need? We will select and provide a personal solution for your purposes upon request</p>
+                <h2 class="title title--size-m title--pos-center home__subtitle home__subtitle--space-small">All popular locations</h2>
+                <p class="text text--size-m home__text">Didn't find the proxy type or location you need? We will select and provide a personal solution for your purposes upon request</p>
                 <button class="button--rounded button--bg--blue button--color--white home__button home__button--space">All locations</button>
-                @@include('./src/components/SliderFlags/index.html', { class: "home__slider home__slider--tablet-off" })
+                @@include('./src/components/SliderFlags/index.html', { 
+                    class: "home__slider home__slider--tablet-off" 
+                })
                 @@include('./src/components/Marquee/index.html', { class: "home__marquee" })
             </div>
         </div>
@@ -50,7 +52,9 @@
             <div class="container">
                 <div class="home__row">
                     <h2 class="title home__subtitle home__subtitle--left">Proxies for <span class="title--color--blue">any purpose of your business</span></h2>
-                    @@include('./src/components/SliderServices/index.html', { class: "home__slider home__slider-services home__slider--tablet-off"})
+                    @@include('./src/components/SliderServices/index.html', { 
+                        class: "home__slider home__slider--tablet-off"
+                    })
                     <button class="button button--rounded button--bg--blue button--color--white home__button home__button--tablet-off">All purposes</button>
                     <div class="home__purpose">
                         <div class="home__group">
@@ -121,10 +125,12 @@
             button_1: "Choose solution",
             button_2: "Test free"
         })
-        <div class="container">
-            <div class="section home__dashboard">
-                <h2 class="title home__subtitle home__subtitle--short">Get a modern and convenient service <span class="title--color--blue">for comfortable work with proxy</span></h2>
-                @@include('./src/components/SliderHome/index.html', {class: "home__slider-home"})
+        <div class="section section--indent-m">
+            <div class="container">
+                <h2 class="title title--size-m title--pos-center home__subtitle home__subtitle--short">Get a modern and convenient service <span class="title--color-blue">for comfortable work with proxy</span></h2>
+                @@include('./src/components/SliderHome/index.html', {
+                    class: "home__slider"
+                })
             </div>
         </div>
         @@include('./src/sections/Advantages/index.html')

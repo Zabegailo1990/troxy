@@ -1,3 +1,50 @@
+@use '../mixins/mediaQuery' as *;
+
 .text{
+
+    &--size-xs{
+        line-height: 16px;
+        font-size: 11px;
+
+        @include respond(tablet){
+            line-height: 25;
+            font-size: 15px;
+        }
+    }
     
+    &--size-s{
+        line-height: normal;
+        font-size: 16px;
+    }
+
+    &--size-m{
+        line-height: 18px;
+        font-size: 12px;
+
+        @include respond(tablet){
+            line-height: 23px;
+            font-size: 16px;
+        }
+    }
+
+    &--size-l{
+        line-height: normal;
+        font-size: 14px;
+
+        @include respond(tablet){
+            font-size: 16px;
+        }
+    }
+
+    &--color-light{
+        color: #fff;
+    }
+
+    &--weight-m{
+        font-weight: 500;
+    }
+
+    &--weight-l{
+        font-weight: 600;
+    }
 }

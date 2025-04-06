@@ -1,19 +1,22 @@
 <div class="banner">
-    <picture class="background banner__background">
-        <source media="(min-width: 1440px)" srcset="./images/section_banner-@@bgNum_bg_pc.jpg">
-        <source media="(min-width: 780px)" srcset="./images/section_banner-@@bgNum_bg_pc.jpg">
-        <img src="./images/section_banner-@@bgNum_bg_pc.jpg">
+    <picture class="banner__background">
+        <source class="banner__img" media="(min-width: 1440px)" srcset="./images/section_banner-@@bgNum_bg_pc.jpg">
+        <source class="banner__img" media="(min-width: 780px)" srcset="./images/section_banner-@@bgNum_bg_pc.jpg">
+        <img class="banner__img" src="./images/section_banner-@@bgNum_bg_pc.jpg">
     </picture>
     <div class="container">
         <div class="banner__inner">
-            <h2 class="title title--color--white banner__title">@@title</h2>
-            <p class="text text--color--white banner__text">@@text</p>
-            <div class="banner__row">
-                <button class="button button--rounded button--bg--blue button--color--white banner__button">@@button_1</button>
-                @@if(typeof button_2 !== 'undefined' && button_2){
+            <h2 class="title title--size-m title--color-light banner__title">@@title</h2>
+            <p class="text text--size-m text--color-light banner__text">@@text</p>
+            @@if(typeof button_2 !== 'undefined' && button_2){
+                <div class="banner__row">
+                    <button class="button button--rounded button--bg--blue button--color--white banner__button">@@button_1</button>
                     <button class="button button--rounded button--bg--white banner__button">@@button_2</button>
-                }
-            </div>
+                </div>
+            }
+            @@if(typeof button_2 == 'undefined'){
+                <button class="button button--rounded button--bg--blue button--color--white banner__button">@@button_1</button>
+            }
         </div>
     </div>
 </div>

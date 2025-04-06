@@ -7,6 +7,26 @@
         padding: 30px;
     }
 
+    &__title{
+        margin-bottom: 12px;
+
+        @include respond(tablet){
+            margin-bottom: 19px;
+        }
+    }
+
+    &__text{
+        margin-bottom: 12px;
+
+        @include respond(tablet){
+            margin-bottom: 19px;
+        }
+    }
+
+    &__label{
+        margin-right: 8px;
+    }
+
     // Модификатор Free
     &--free{
         width: 240px;
@@ -38,7 +58,7 @@
             height: 337px;
         }
         
-        & .card__text{
+        & .card-extend__text{
             @include respond(pc){
                 max-width: 349px;
             }

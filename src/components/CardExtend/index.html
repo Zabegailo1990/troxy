@@ -9,18 +9,18 @@
     <div class="card__inner">
         
         @@if(theme == 'dark'){
-            <h3 class="card__title card__title--fz-m card__title--color-blue">@@title</h3>
+            <h3 class="title--size-s title--color-blue card-extend__title">@@title</h3>
             @@if(typeof text !== 'undefined' && text){
-                <p class="card__text card__text--color-dark">@@text</p>
+                <p class="text text--size-m">@@text</p>
             }
             @@if(typeof label !== 'undefined' && label == 'true'){
                 <div class="card__row">
-                    <p class="card__label card__label--color-dark">From</p>
-                    <h3 class="card__price card__price--color-dark">@@price</h3>
+                    <p class="text text--size-m card-extend__label">From</p>
+                    <h3 class="title title--size-s title--color-dark">@@price</h3>
                 </div>
             }
             @@if(typeof label == 'undefined' && typeof price !== 'undefined'){
-                <h3 class="card__price card__price--color-dark">@@price</h3>
+                <h3 class="title title--size-s title--color-dark card__price">@@price</h3>
             }
             <svg class="card__icon card__icon--color-blue">
                 <use xlink:href="./sprites/icons.svg#icon-arrow"></use>
@@ -28,18 +28,18 @@
         }
 
         @@if(theme == 'light'){
-            <h3 class="card__title card__title--fz-m card__title--color-light">@@title</h3>
+            <h3 class="title--size-s title--color-light card-extend__title">@@title</h3>
             @@if(typeof text !== 'undefined' && text){
-                <p class="card__text card__text--color-light">@@text</p>
+                <p class="text text--size-m text--color-light card-extend__text">@@text</p>
             }
             @@if(typeof label !== 'undefined' && label == 'true'){
                 <div class="card__row">
-                    <p class="card__label card__label--color-light">From</p>
-                    <h3 class="card__price card__price--color-light">@@price</h3>
+                    <p class="text text--size-m text--color-light card-extend__label">From</p>
+                    <h3 class="title title--size-s title--color-light">@@price</h3>
                 </div>
             }
             @@if(typeof label == 'undefined' && typeof price !== 'undefined'){
-                <h3 class="card__price card__price--color-light">@@price</h3>
+                <h3 class="title title--size-s title--color-light">@@price</h3>
             }
             <svg class="card__icon card__icon--color-light">
                 <use xlink:href="./sprites/icons.svg#icon-arrow"></use>

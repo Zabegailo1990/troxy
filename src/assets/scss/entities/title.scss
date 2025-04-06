@@ -2,8 +2,29 @@
 
 .title{
 
+    &--size-xs{
+        line-height: normal;
+        font-weight: 600;
+        font-size: 16px;
+
+        @include respond(tablet){
+            font-size: 19px;
+        }
+    }
+
+    &--size-s{
+        line-height: normal;
+        font-weight: 600;
+        font-size: 18px;
+
+        @include respond(tablet){
+            font-size: 23px;
+        }
+    }
+
     &--size-m{
         font-size: 24px;
+        font-weight: 600;
         line-height: 30px;
     
         @include respond(tablet){
@@ -14,12 +35,17 @@
 
     &--size-l{
         font-size: 32px;
+        font-weight: 500;
         line-height: 35px;
 
         @include respond(tablet){
             font-size: 52px;
             line-height: 64px;
         }
+    }
+
+    &--color-dark{
+        color: #313844;
     }
 
     &--color-blue{
