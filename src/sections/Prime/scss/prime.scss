@@ -15,5 +15,9 @@
 
     &__slider-pluses{
         margin: 0 -24px;
+
+        @include respond(tablet){
+            margin: 0;
+        }
     }
 }
