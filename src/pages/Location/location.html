@@ -21,9 +21,9 @@
             <img class="location__animate location__animate--top perspective__first" src="./images/page_location_ani_2.png" alt="">
             <img class="location__animate location__animate--bottom perspective__second" src="./images/page_location_ani_1.png" alt="">
         </div>
-        <div class="section">
+        <div class="section section--indent-m">
             <div class="container">
-                <h2 class="title location__subtitle">Select the location <span class="title--color--blue">you need</span></h2>
+                <h2 class="title title--size-m title--pos-center location__subtitle">Select the location <span class="title--color-blue">you need</span></h2>
                 @@include("../../components/Tabs/index.html", {
                     class: "location__tabs",
                     tab_1: "Europe",
@@ -35,7 +35,6 @@
                 })
                 @@include("../../components/FlagList/index.html", {
                     class: "location__flag-list",
-                    classCard: "card-flag--small",
                 })
             </div>
         </div>

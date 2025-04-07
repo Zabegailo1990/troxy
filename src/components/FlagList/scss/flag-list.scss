@@ -4,6 +4,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 14px 17px;
+    min-width: 327px;
+    max-width: 327px;
 
     @include respond(547px){
         max-width: 499px;

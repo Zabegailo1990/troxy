@@ -21,9 +21,9 @@
             <img class="proxy-mix__animate proxy-mix__animate--top perspective__first" src="./images/page_proxy-mix_ani_2.png" alt="">
             <img class="proxy-mix__animate proxy-mix__animate--bottom perspective__second" src="./images/page_proxy-mix_ani_1.png" alt="">
         </div>
-        <div class="section">
+        <div class="section section--indent-m">
             <div class="container">
-                <h2 class="title proxy-mix__subtitle">Ready-made solutions <span class="title--color--blue">for your goals</span></h2>
+                <h2 class="title title--size-m title--pos-center proxy-mix__title">Ready-made solutions <span class="title--color-blue">for your goals</span></h2>
                 @@include("../../components/SliderGoal/index.html", {
                     class: "proxy-mix__slider",
         
@@ -81,12 +81,7 @@
             button_1: "Test free"
         })
         @@include('../../sections/Advantages/index.html')
-        <div class="section">
-            <div class="container">
-                <h2 class="title proxy-mix__subtitle">Maximum simplicity and quality of proxies <span class='title--color--blue'>with a digital footprint at the price of regular ones</span></h2>
-                @@include("../../components/SliderPluses/index.html", {class: "tariffs__slider"})
-            </div>
-        </div>
+        @@include('../../sections/Prime/index.html')
         @@include('../../sections/Simple/index.html')
         @@include('../../sections/Faq/index.html')
         @@include('../../sections/SliderNews/index.html')
