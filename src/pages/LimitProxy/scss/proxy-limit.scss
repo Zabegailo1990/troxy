@@ -51,6 +51,14 @@
         }
     }
 
+    &__title{
+        margin-bottom: 36px;
+
+        @include respond(tablet){
+            margin-bottom: 65px;    
+        }
+    }
+
     &__slider{
         margin: 0 -24px;
 

@@ -1,0 +1,22 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.c-slider-purposes{
+
+    @include respond(pc){
+        overflow: visible;
+    }
+
+    &__spacer{
+        @include respond(pc){
+            display: none;
+        }
+    }
+
+    &__inner{
+        gap: 19px;
+
+        @include respond(pc){
+            flex-wrap: wrap;
+        }
+    }
+}

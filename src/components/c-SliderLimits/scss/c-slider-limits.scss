@@ -1,0 +1,40 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.c-slider-limits{
+
+    @include respond(tablet){
+        overflow: visible;
+    }
+
+    &__spacer{
+
+        @include respond(tablet){
+            display: none;
+        }
+    }
+    
+    &__inner{
+        gap: 19px;
+
+        @include respond(tablet){
+            margin: 0 auto;
+        }
+
+        @include respond(pc){
+            flex-wrap: wrap;
+        }
+    }
+
+    &__slide{
+        display: flex;
+        gap: 19px;
+
+        @include respond(tablet){
+            flex-direction: column;
+        }
+
+        @include respond(pc){
+            flex-direction: row;
+        }
+    }
+}

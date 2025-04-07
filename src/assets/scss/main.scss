@@ -26,6 +26,7 @@
 @use '../../components/c-Panel/scss/c-panel.scss';
 
 @use '../../components/c-Features/scss/c-features.scss';
+@use '../../components/c-ListServices/scss/c-list-services.scss';
 @use '../../components/Tabs/scss/tabs.scss';
 @use '../../components/Pagination/scss/pagination.scss';
 @use '../../components/Input/scss/field.scss';
@@ -50,7 +51,6 @@
 
 @use '../../components/SliderRequests/scss/slider-requests.scss';
 @use '../../components/SliderUdp/scss/slider-udp.scss';
-@use '../../components/SliderPurposes/scss/slider-purposes.scss';
 
 @use '../../components/SliderPrices/scss/slider-prices.scss';
 @use '../../components/SliderPluses/scss/slider-pluses.scss';
@@ -58,6 +58,8 @@
 @use '../../components/SliderFlags/scss/slider-flags.scss';
 @use '../../components/SliderServices/scss/slider-services.scss';
 @use '../../components/SliderDeals/scss/slider-deals.scss';
+@use '../../components/c-SliderPurposes/scss/c-slider-purposes.scss';
+@use '../../components/c-SliderLimits/scss/c-slider-limits.scss';
 @use '../../components/ProxyChecker/scss/proxy-checker.scss';
 @use '../../components/ProxyList/scss/proxy-list.scss';
 @use '../../components/ProxyFilters/scss/proxy-filters.scss';

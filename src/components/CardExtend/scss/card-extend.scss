@@ -1,7 +1,7 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .card-extend{
-    padding: 20px;
+    padding: 26px;
 
     @include respond(tablet){
         padding: 30px;
@@ -89,6 +89,28 @@
         @include respond(tablet){
             width: 400px;
             height: 400px;
+        }
+    }
+
+    &--special{
+        width: 300px;
+        height: 420px;
+
+        @include respond(tablet){
+            width: 620px;
+            height: 377px;
+
+            & .card-extend__title{
+                max-width: 320px;
+            }
+
+            & .card-extend__text{
+                max-width: 349px;
+            }
+        }
+
+        @include respond(pc){
+            width: 610px;
         }
     }
 }

@@ -21,27 +21,12 @@
             <img class="proxy-limit__animate proxy-limit__animate--top perspective__first" src="./images/page_proxy-limit_ani_2.png" alt="">
             <img class="proxy-limit__animate proxy-limit__animate--bottom perspective__second" src="./images/page_proxy-limit_ani_1.png" alt="">
         </div>
-        <div class="section">
+        <div class="section section--indent-m">
             <div class="container">
-                <h1 class="title section__title">Special rates for proxies <span class="title--color--blue">for Google</span></h1>
-                @@include('../../components/SliderDeals/index.html', { 
+                <h1 class="title tittle--size-m title--pos-center proxy-limit__title">Special rates for proxies <span class="title--color-blue">for Google</span></h1>
+                @@include('../../components/c-SliderLimits/index.html', { 
                     class: "proxy-limit__slider",
-                    
-                    bgPc_1: "component_card-sale_limit_1_pc.png",
-                    bgTb_1: "component_card-sale_limit_1_tb.png",
-                    bgMb_1: "component_card-sale_limit_1_mb.png",
-                    title_1: "Unlimited datacenter proxies",
-                    text_1: "For bulk data parsing, SEO and monitoring",
-                    subtitle_1: "$0.58",
-
-                    bgPc_2: "component_card-sale_limit_2_pc.png",
-                    bgTb_2: "component_card-sale_limit_2_tb.png",
-                    bgMb_2: "component_card-sale_limit_2_mb.png",
-                    title_2: "Limit proxies",
-                    text_2: "For accurate data collection without unnecessary overhead",
-                    subtitle_2: "$0.62",
                 })
-
             </div>
         </div>
         @@include('../../sections/Banner/index.html', {
@@ -50,12 +35,7 @@
             text: "We will select a high-quality and effective solution for you personally at the best price",
             button_1: "Test free"
         })
-        <div class="section">
-            <div class="container">
-                <h2 class="title proxy-mix__subtitle">Maximum simplicity and quality of proxies <span class='title--color--blue'>with a digital footprint at the price of regular ones</span></h2>
-                @@include("../../components/SliderPluses/index.html", {class: "tariffs__slider"})
-            </div>
-        </div>
+        @@include('../../sections/Prime/index.html')
         @@include('../../sections/Banner/index.html', {
             bgNum: "2",
             title: "Test our proxies to ensure their quality",
