@@ -35,28 +35,28 @@
     // Маленькая тема
     &--size-s{
 
-        @include respond(mobile){
+        @include respond(tablet, max){
             width: 155px;
             height: 104px;
         }
 
         & .card-flag__frame{
-            @include respond(mobile){
+            @include respond(tablet, max){
                 width: 64px;
                 height: 47px;
                 margin-bottom: 8px;
             }
         }
 
-        & .card-flad__title{
-            @include respond(mobile){
+        & .card-flag__title{
+            @include respond(tablet, max){
                 font-size: 15px;
                 line-height: 21px;
             }
         }
 
         & .card-flag__icon{
-            @include respond(mobile){
+            @include respond(tablet, max){
                 width: 64px;
                 height: 47px;
             }

@@ -1,8 +1,16 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.advantages{
+.s-comfort{
+    min-height: 685px;
+
+    @include respond(tablet){
+        min-height: none;
+    }
+
 
     &__title{
+        max-width: 697px;
+        margin: 0 auto;
         margin-bottom: 36px;
 
         @include respond(tablet){
@@ -14,11 +22,7 @@
         margin: 0 -24px;
 
         @include respond(tablet){
-            margin: 0 -40px;
-        }
-        
-        @include respond(pc){
-            margin: 0 auto;
+            margin: 0;
         }
     }
 }

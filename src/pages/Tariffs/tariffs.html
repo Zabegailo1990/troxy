@@ -17,31 +17,27 @@
                     themeLogo: "logo--theme-dark",
                     themeNav: "navigation--theme--dark",
                     themeAuthbar: "authbar--theme--dark",
-                    tariffs: "#",
-                    countries: "by-country.html",
-                    information: "",
-                    goals: "",
-                    services: "",
-                    api: "",
                 })
                 <img class="tariffs__animate tariffs__animate--top perspective__first" src="./images/page_tariffs_ani_2.png" alt="">
                 <img class="tariffs__animate tariffs__animate--bottom perspective__second" src="./images/page_tariffs_ani_1.png" alt="">
             </div>
-            <div class="container">
-                <div class="section">
-                    <h2 class="title tariffs__subtitle">High-quality proxies from 5 to 200,000+ IPs <span class="title--color--blue">at affordable prices</span></h2>
+            <div class="section section--indent-m">
+                <div class="container">
+                    <h2 class="title title--size-m title--pos-center tariffs__subtitle">High-quality proxies from 5 to 200,000+ IPs <span class="title--color-blue">at affordable prices</span></h2>
                     @@include('../../components/SliderPrices/index.html', {
                         class: "tariffs__slider-prices",
                     })
                 </div>
-                <div class="section">
-                    <h2 class="title tariffs__subtitle">Best proxy locations <span class="title--color--blue">by country</span></h2>
-                    @@include("../../components/SliderFlags/index.html", { 
+            </div>
+            <div class="section section--indent-m">
+                <div class="container">
+                    <h2 class="title title--size-m title--pos-center tariffs__subtitle">Best proxy locations <span class="title--color-blue">by country</span></h2>
+                    <!-- @@include("../../components/SliderFlags/index.html", { 
                         class: "tariffs__slider tariffs__slider-flags" 
-                    })
-                    <!-- @@include("../../components/FlagList/index.html", { class: "tariffs__flag-list" }) -->
-                    <button class="button button--bg--blue button--rounded button--color--white tariffs__button">View all locations (195)</button>
+                    }) -->
+                    @@include("../../components/FlagList/index.html", { class: "tariffs__flag-list" })
                 </div>
+                <button class="button button--bg--blue button--rounded button--color--white tariffs__button">View all locations (195)</button>
             </div>
             @@include('../../sections/Banner/index.html', {
                 bgNum: "1",
@@ -49,14 +45,7 @@
                 text: "We will select a high-quality and effective solution for you personally at the best price",
                 button_1: "Test free"
             })
-            <div class="container">
-                <div class="section">
-                    <h2 class="title home__subtitle">Maximum simplicity and quality of proxies <span class='title--color--blue'>with a digital footprint at the price of regular ones</span></h2>
-                    @@include("../../components/SliderPluses/index.html", {
-                        class: "tariffs__slider"
-                    })
-                </div>
-            </div>
+            @@include('../../sections/Prime/index.html')
             @@include('../../sections/Banner/index.html', {
                 bgNum: "2",
                 title: "Create a personal tariff from 1000 to 200,000 IPs and more",

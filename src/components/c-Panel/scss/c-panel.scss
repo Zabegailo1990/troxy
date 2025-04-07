@@ -1,12 +1,35 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
 .c-panel{
+    width: 327px;
+    height: 240px;
     padding: 32px;
+
+    @include respond(tablet){
+        width: 340px;
+        height: 315px;
+        padding: 34px;
+    }
+
+    @include respond(pc){
+        width: 442px;
+        height: 327px;
+    }
 
     &__title{
         margin-bottom: 12px;
+
+        @include respond(tablet){
+            margin-bottom: 24px;
+        }
     }
 
     &__text{
         margin-bottom: 12px;
+
+        @include respond(tablet){
+            margin-bottom: 24px;
+        }
     }
 
     &__row{
@@ -23,6 +46,11 @@
         height: 46px;
         border: 2px solid #17263F;
         border-radius: 50%;
+        transition: all .3s;
+
+        &.slick-disabled{
+            opacity: 0.5;
+        }
     }
 
     &__icon{

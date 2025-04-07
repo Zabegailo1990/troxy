@@ -3,12 +3,9 @@
 .flag-list{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 14px 17px;
     margin: 0 auto;
-
-    &__card{
-        align-content: flex-start;
-    }
 
     @include respond(tablet){
         max-width: 698px;
@@ -16,5 +13,10 @@
 
     @include respond(tablet){
         max-width: 1158px;
+    }
+
+    &__card{
+        &:last-child{
+        }
     }
 }
