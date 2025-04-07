@@ -21,9 +21,9 @@
             <img class="personal__animate personal__animate--top perspective__first" src="./images/page_personal_ani_2.png" alt="">
             <img class="personal__animate personal__animate--bottom perspective__second" src="./images/page_personal_ani_1.png" alt="">
         </div>
-        <div class="section">
+        <div class="section section--indent-m">
             <div class="container">
-                <h2 class="title personal__subtitle">Ready-made solutions for <span class="title--color--blue">your goals</span></h2>
+                <h2 class="title title--size-m personal__title">Ready-made solutions for <span class="title--color-blue">your goals</span></h2>
                 @@include('../../components/SliderUdp/index.html', {
                     class: "personal__slider-udp",
                 })
@@ -36,14 +36,7 @@
             button_1: "Test free"
         })
         @@include('../../sections/Advantages/index.html')
-        <div class="section">
-            <div class="container">
-                <h2 class="title personal__subtitle">Maximum simplicity and quality of proxies <span class='title--color--blue'>with a digital footprint at the price of regular ones</span></h2>
-                @@include("../../components/SliderPluses/index.html", {
-                    class: "tariffs__slider"
-                })
-            </div>
-        </div>
+        @@include('../../sections/Prime/index.html')
         @@include('../../sections/Simple/index.html')
         @@include('../../sections/Faq/index.html')
         @@include('../../sections/SliderNews/index.html')

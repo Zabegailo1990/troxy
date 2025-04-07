@@ -2,6 +2,12 @@
 
 .slider-requests{
 
+    &__spacer{
+        @include respond(pc){
+            display: none;
+        }
+    }
+
     &__inner{
         gap: 10px;
 

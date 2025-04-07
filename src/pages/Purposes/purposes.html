@@ -15,17 +15,20 @@
             themeNav: "navigation--theme--dark",
             themeAuthbar: "authbar--theme--dark",
         })
-        <div class="section">
+        <div class="section section--indent-s">
             <div class="container">
                 @@include('../../components/Breadcrumbs/index.html', { 
                     class: 'purposes__breadcrumbs',
                     item_1: "Main",
                     item_2: "Financial information",
                 })
-                <h1 class="purposes__title">Proxies for any purpose of your business</h1>
-                <div class="purposes__slider">
-                    @@include("../../components/SliderPurposes/index.html")
-                </div>
+                <h1 class="title title--size-l purposes__title">Proxies for any purpose of your business</h1>
+                @@include('../../components/SliderServices/index.html', {
+                    class: "purposes__slider",
+                })
+                @@include("../../components/SliderPurposes/index.html", {
+                    class: "purposes__list",
+                })
             </div>
         </div>
         @@include("../../sections/Banner/index.html", {

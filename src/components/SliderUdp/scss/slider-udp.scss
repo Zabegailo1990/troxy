@@ -2,17 +2,23 @@
 
 .slider-udp{
 
+    &__spacer{
+        @include respond(pc){
+            display: none;
+        }
+    }
+
     &__inner{
         gap: 19px;
 
         @include respond(pc){
+            overflow: visible;
             flex-wrap: wrap;
         }
 
     }
 
     &__slide{
-        display: flex;
         gap: 19px;
 
         @include respond(tablet){

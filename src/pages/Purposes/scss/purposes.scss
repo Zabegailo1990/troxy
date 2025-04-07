@@ -10,28 +10,27 @@
     }
 
     &__title{
-        font-weight: 500;
-        text-align: left;
-        font-size: 32px;
         margin-bottom: 36px;
         
         @include respond(tablet){
-            font-size: 52px;
             margin-bottom: 65px;
         }
     }
 
     &__slider{
-        max-width: 700px;
         margin: 0 -24px;
 
         @include respond(tablet){
-            margin: 0 auto;
+            display: none;
         }
+    }
 
-        @include respond(pc){
-            max-width: none;
-            margin: 0;
+    &__list{
+        display: none;
+        
+        @include respond(tablet){
+            display: block;
+            margin: 0 auto;
         }
     }
 }

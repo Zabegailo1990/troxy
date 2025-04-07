@@ -1,24 +1,20 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.slider-purposes{
+.list-services{
+    min-width: 700px;
+    max-width: 700px;
 
-    @include respond(tablet){
-        padding: 0;
+    @include respond(1140px){
+        max-width: 1060px;
+    }
+
+    @include respond(pc){
+        max-width: 1240px;
     }
 
     &__inner{
+        display: flex;
+        flex-wrap: wrap;
         gap: 20px;
-
-        @include respond(tablet){
-            flex-wrap: wrap;
-        }
-    }
-
-    &__slide{
-        gap: 20px;
-
-        @include respond(tablet){
-            flex-direction: row;
-        }
     }
 }
