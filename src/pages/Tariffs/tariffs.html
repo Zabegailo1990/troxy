@@ -25,17 +25,19 @@
                 <div class="container">
                     <h2 class="title title--size-m title--pos-center tariffs__subtitle">High-quality proxies from 5 to 200,000+ IPs <span class="title--color-blue">at affordable prices</span></h2>
                     @@include('../../components/SliderPrices/index.html', {
-                        class: "tariffs__slider-prices",
+                        class: "tariffs__slider tariffs__slider-prices",
                     })
                 </div>
             </div>
             <div class="section section--indent-m">
                 <div class="container">
                     <h2 class="title title--size-m title--pos-center tariffs__subtitle">Best proxy locations <span class="title--color-blue">by country</span></h2>
-                    <!-- @@include("../../components/SliderFlags/index.html", { 
+                    @@include("../../components/SliderFlags/index.html", { 
                         class: "tariffs__slider tariffs__slider-flags" 
-                    }) -->
-                    @@include("../../components/FlagList/index.html", { class: "tariffs__flag-list" })
+                    })
+                    @@include("../../components/FlagList/index.html", { 
+                        class: "tariffs__flag-list" 
+                    })
                 </div>
                 <button class="button button--bg--blue button--rounded button--color--white tariffs__button">View all locations (195)</button>
             </div>

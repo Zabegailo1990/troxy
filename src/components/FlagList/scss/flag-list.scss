@@ -3,20 +3,36 @@
 .flag-list{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 14px 17px;
-    margin: 0 auto;
+
+    @include respond(547px){
+        max-width: 499px;
+    }
+
+    @include respond(719px){
+        max-width: 671px;
+    }
 
     @include respond(tablet){
+        column-gap: 22px;
         max-width: 698px;
     }
 
-    @include respond(tablet){
-        max-width: 1158px;
+    @include respond(1018px){
+        max-width: 938px;
     }
 
-    &__card{
-        &:last-child{
+    @include respond(1258px){
+        max-width: 1178px;
+    }
+
+    &__inner{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px 17px;
+
+        @include respond(tablet){
+            column-gap: 22px;
         }
     }
 }

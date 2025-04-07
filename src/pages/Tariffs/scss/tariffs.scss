@@ -61,45 +61,44 @@
         }
     }
 
-    &__slider-prices{
+    &__slider{
         margin: 0 -24px;
-        
-        @include respond(tablet){
-            max-width: 700px;
-            margin: 0 auto;
-        }
 
-        @include respond(pc){
-            max-width: none;
+        @include respond(tablet){
             margin: 0;
         }
     }
 
-    &__slider{
-        margin: 0 -24px;
-        
+    &__slider-prices{
+
         @include respond(tablet){
-            margin: 0 -40px;
+            margin: 0 auto;
+        }
+
+        @include respond(pc){
+            margin: 0;
         }
     }
 
     &__slider-flags{
-        margin-bottom: 34px;
-
-        // @include respond(tablet){
-        //     display: none;
-        // }
+        @include respond(tablet){
+            display: none;
+        }
     }
-    
-    // &__flag-list{
-    //     display: none;
 
-        
-    //     @include respond(tablet){
-    //         display: flex;
-    //         margin-bottom: 65px;
-    //     }
-    // }
+    &__flag-list{
+        display: none;
+
+        @include respond(tablet){
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 65px;
+        }
+
+        @include respond(pc){
+            margin-bottom: 51px;
+        }
+    }
 
     &__button{
         margin: 0 auto;

@@ -3,7 +3,12 @@
 .slider-prices{
     
     @include respond(tablet){
+        max-width: 700px;
         padding: 0;
+    }
+
+    @include respond(pc){
+        max-width: none;
     }
 
     &__spacer{

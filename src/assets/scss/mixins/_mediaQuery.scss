@@ -1,4 +1,5 @@
 @use 'sass:map';
+@use 'sass:meta';
 
 $breakpoints: (
   mobile: 375px,
@@ -6,20 +7,39 @@ $breakpoints: (
   pc: 1440px
 );
 
-@mixin respond($breakpoint, $direction: 'min') {
-  $screen: map.get($breakpoints, $breakpoint);
-  
-  @if $screen {
+@mixin respond($value, $direction: 'min') {
+  // Если передано число (например, 600px)
+  @if meta.type-of($value) == 'number' {
     @if $direction == 'max' {
-      @media (max-width: ($screen - 1)) {
+      @media (max-width: ($value - 1)) {
         @content;
       }
     } @else {
-      @media (min-width: $screen) {
+      @media (min-width: $value) {
         @content;
       }
     }
-  } @else {
-    @error "Breakpoint '#{$breakpoint}' not found in $breakpoints map";
+  }
+  // Если передано имя брейкпоинта (например, 'tablet')
+  @else if meta.type-of($value) == 'string' {
+    $screen: map.get($breakpoints, $value);
+    
+    @if $screen {
+      @if $direction == 'max' {
+        @media (max-width: ($screen - 1)) {
+          @content;
+        }
+      } @else {
+        @media (min-width: $screen) {
+          @content;
+        }
+      }
+    } @else {
+      @error "Breakpoint '#{$value}' not found in $breakpoints map. Available breakpoints: #{map.keys($breakpoints)}";
+    }
+  }
+  // Если передано что-то не то
+  @else {
+    @error "Expected a number or breakpoint name, got #{meta.type-of($value)}";
   }
 }
