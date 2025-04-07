@@ -1,0 +1,36 @@
+.c-panel{
+    padding: 32px;
+
+    &__title{
+        margin-bottom: 12px;
+    }
+
+    &__text{
+        margin-bottom: 12px;
+    }
+
+    &__row{
+        display: flex;
+        gap: 6px;
+    }
+
+    &__button{
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 46px;
+        height: 46px;
+        border: 2px solid #17263F;
+        border-radius: 50%;
+    }
+
+    &__icon{
+        width: 18px;
+        height: 18px;
+
+        &--prev{
+            transform: rotate(180deg);
+        }
+    }
+}

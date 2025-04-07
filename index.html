@@ -45,76 +45,22 @@
                 @@include('./src/components/SliderFlags/index.html', { 
                     class: "home__slider home__slider--tablet-off" 
                 })
-                @@include('./src/components/Marquee/index.html', { class: "home__marquee" })
+                @@include('./src/components/Marquee/index.html', { 
+                    class: "home__marquee" 
+                })
             </div>
         </div>
-        <div class="section hhome">
+        <div class="section section--indent-m">
             <div class="container">
                 <div class="home__row">
-                    <h2 class="title home__subtitle home__subtitle--left">Proxies for <span class="title--color--blue">any purpose of your business</span></h2>
+                    <h2 class="title title--size-m title--pos-center home__subtitle home__subtitle--left">Proxies for <span class="title--color-blue">any purpose of your business</span></h2>
                     @@include('./src/components/SliderServices/index.html', { 
-                        class: "home__slider home__slider--tablet-off"
+                        class: "home__slider home__slider--sevices home__slider--tablet-off"
                     })
                     <button class="button button--rounded button--bg--blue button--color--white home__button home__button--tablet-off">All purposes</button>
-                    <div class="home__purpose">
-                        <div class="home__group">
-                            @@include('./src/components/CardService/index.html', {
-                                class: "home__card-service",
-                                iconName: "google",
-                                title: "Google",
-                                text: "Brief description of the purpose",
-                            })
-                            @@include('./src/components/CardService/index.html', {
-                                class: "home__card-service",
-                                iconName: "ebay",
-                                title: "Amazon",
-                                text: "Brief description of the purpose",
-                            })
-                        </div>
-                        <div class="home__group">
-                            @@include('./src/components/CardService/index.html', {
-                                class: "home__card-service",
-                                iconName: "amazon",
-                                title: "Instagram",
-                                text: "Brief description of the purpose",
-                            })
-                            @@include('./src/components/CardService/index.html', {
-                                class: "home__card-service",
-                                iconName: "booking",
-                                title: "Facebook",
-                                text: "Brief description of the purpose",
-                            })
-                        </div>
-                        <div class="home__group">
-                            @@include('./src/components/CardService/index.html', {
-                                class: "home__card-service",
-                                iconName: "facebook",
-                                title: "YouTube",
-                                text: "Brief description of the purpose",
-                            })
-                            @@include('./src/components/CardService/index.html', {
-                                class: "home__card-service",
-                                iconName: "instagram",
-                                title: "Twitter",
-                                text: "Brief description of the purpose",
-                            })
-                        </div>
-                        <div class="home__group">
-                            @@include('./src/components/CardService/index.html', {
-                                class: "home__card-service",
-                                iconName: "linkedin",
-                                title: "Linkedin",
-                                text: "Brief description of the purpose",
-                            })
-                            @@include('./src/components/CardService/index.html', {
-                                class: "home__card-service",
-                                prevClass: "card--border-blue",
-                                title: "All features",
-                                classTitle: "card__title--color-blue",
-                                arrow: "true",
-                            })
-                        </div>
-                    </div>
+                    @@include('./src/components/c-Features/index.html', {
+                        class: 'home__features',
+                    })
                 </div>
             </div>
         </div>
@@ -134,9 +80,7 @@
             </div>
         </div>
         @@include('./src/sections/Advantages/index.html')
-        <div class="section">
-            @@include('./src/sections/Supplier/index.html')
-        </div>
+        @@include('./src/sections/Supplier/index.html')
         <div class="section">
             @@include('./src/sections/Faq/index.html')
         </div>

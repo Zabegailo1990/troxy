@@ -66,6 +66,12 @@
                 margin-bottom: 30px;
             }
         }
+
+        &--left{
+            text-align: left;
+            margin-right: 50px;
+            margin-bottom: 0;
+        }
     }
 
     &__text{
@@ -92,10 +98,6 @@
             }
         }
     }
-
-    &__slider-pluses{
-        margin: 0 -24px;
-    }
     
     &__slider{
         margin: 0 -24px;
@@ -108,6 +110,10 @@
             @include respond(tablet){
                 display: none;
             }
+        }
+
+        &--services{
+            margin-bottom: 48px;
         }
     }
     
@@ -123,40 +129,22 @@
             margin: 0;
         }
     }
-    
-    &__slider-services{
-        margin-bottom: 48px;
+
+    &__row{
+        @include respond(pc){
+            display: flex;
+        }
     }
     
-    &__purpose{
+    &__features{
         display: none;
 
         @include respond(tablet){
             display: flex;
-            justify-content: center;
-            row-gap: 10px;
+            margin: 0 auto;
         }
-    }
 
-    &__group{
-        display: flex;
-        flex-direction: column;
-        row-gap: 21px;
-
-        &:not(:first-child){
-            margin-left: -160px;
-        }
         @include respond(pc){
-            &:not(:first-child){
-                margin-left: -120px;
-            }
-        }
-    }
-
-    &__slider-home{
-        margin: 0 -24px;
-
-        @include respond(tablet){
             margin: 0;
         }
     }

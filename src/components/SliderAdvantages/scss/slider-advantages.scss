@@ -2,30 +2,17 @@
 
 .slider-advantages{
 
-    &__stub{
+    &__spacer{
         @include respond(pc){
             display: none;
         } 
     }
     
     &__inner{
-        margin: 0 auto;
+        gap: 14px;
 
-    }
-
-    @include respond(pc){
-        justify-content: space-between; 
-    }
-
-    &__slide{
-        flex-shrink: 0;
-
-        &:not(:last-child){
-            margin-right: 14px;
-
-            @include respond(tablet){
-                margin-right: 20px;
-            }
-        }
+        @include respond(pc){
+            gap: 20px;
+        } 
     }
 }

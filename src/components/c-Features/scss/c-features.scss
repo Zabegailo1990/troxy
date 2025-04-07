@@ -1,0 +1,84 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.c-features {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 21px;
+    max-width: 700px;
+    transition: all 0.7s;
+
+    @include respond(pc){
+        max-width: 820px;
+    }
+
+    &__card {
+        position: relative;
+        flex-shrink: 0;
+        transform: translateX(0); // Исходное положение
+        transition: opacity 0.3s ease;
+
+        &:not(:first-child) {
+            margin-left: -160px;
+
+            @include respond(pc){
+                margin-left: -120px;
+            }
+        }
+
+        &:nth-child(5) {
+            margin-left: 0;
+        }
+
+        // Затемнение всех карточек, кроме текущей
+        .c-features:hover & {
+            filter: grayscale(60%);
+        }
+
+        // Анимация при наведении (выдвигается влево)
+        .c-features:hover &:hover {
+            opacity: 1;
+            filter: grayscale(0);
+            animation: slide-in 0.3s ease forwards;
+        }
+
+        // Анимация при уходе курсора (возвращается обратно)
+        &:not(:hover) {
+            animation: slide-out 0.3s ease forwards;
+        }
+
+        // Исключение для 4-й и последней карточки
+        &:nth-child(4),
+        &:last-child {
+            animation: none !important;
+            transform: none !important;
+        }
+    }
+}
+
+
+@keyframes slide-in {
+    0% { 
+        transform: translateX(0); 
+    }
+    50% { 
+        transform: translateX(-160px);
+    }
+    100% { 
+        transform: translateX(0); 
+        z-index: 1;
+    }
+}
+
+
+@keyframes slide-out {
+    0% { 
+        transform: translateX(0);
+     }
+    50% { 
+        transform: translateX(-160px);
+    }
+    100% { 
+        transform: translateX(0);
+        z-index: 0;
+     }
+}

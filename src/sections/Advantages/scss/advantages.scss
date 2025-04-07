@@ -1,17 +1,8 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .advantages{
-    position: relative;
-
-    &__background{
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 0;
-    }
 
     &__title{
-        text-align: center;
         margin-bottom: 36px;
 
         @include respond(tablet){
