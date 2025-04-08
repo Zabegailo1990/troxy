@@ -44,6 +44,10 @@
 
     &__proxy-checker{
         margin-bottom: 18px;
+
+        @include respond(tablet){
+            margin-bottom: 32px;
+        }
     }
 
 
