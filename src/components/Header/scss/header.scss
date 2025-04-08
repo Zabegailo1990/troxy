@@ -52,6 +52,22 @@
         }
     }
 
+    &__button{
+        display: flex;
+        align-items: center;
+        margin-left: 39px;
+
+        @include respond(pc){
+            display: none;
+        }
+    }
+
+    &__icon{
+        width: 28px;
+        height: 28px;
+        stroke: #17263F;
+    }
+
     &--bg--white{
         background-color: #fff;
     }
