@@ -2,9 +2,18 @@
 
 .card-vacancies{
     padding: 32px 32px 36px 32px;
+    transition: background-color .3s;
 
     @include respond(tablet){
         padding: 40px;
+    }
+
+    &--active{
+        background-color: #fff;
+    }
+
+    &__top{
+        cursor: pointer;
     }
 
     &__description{
@@ -35,6 +44,19 @@
 
     &__icon{
         margin-left: auto;
+        width: 26px;
+        height: 26px;
+        stroke: #2E7AF5;
+        transition: transform .3s;
+
+        &--active{
+            transform: rotate(-90deg);
+        }
+    }
+
+    &__bottom{
+        transition: max-height 0.5s ease, padding 0.3s ease;
+        overflow: hidden;
     }
 
     &__content{
@@ -67,4 +89,5 @@
         list-style-type: disc;
         padding-left: 24px;
     }
+
 }

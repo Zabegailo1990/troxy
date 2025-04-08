@@ -15,14 +15,14 @@
             themeNav: "navigation--theme--dark",
             themeAuthbar: "authbar--theme--dark",
         })
-        <div class="section">
+        <div class="section section--indent-s">
             <div class="container">
                 @@include('../../components/Breadcrumbs/index.html', { 
                     class: 'vacancies__breadcrumbs',
                     item_1: "Main",
                     item_2: "Vacancies",
                 })
-                <h1 class="title vacancies__title">Join our team</h1>
+                <h1 class="title title--size-l vacancies__title">Join our team</h1>
                 @@include("../../components/Tabs/index.html", {
                     class: "vacancies__tabs",
                     tab_1: "All",
@@ -80,5 +80,7 @@
     <script src="./js/gradient.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script src="./js/smoothScroll.js"></script>
+    <script src="./vendors/jquery/jquery.min.js"></script>
+    <script src="./js/cardVacancies.js"></script>
 </body>
 </html>

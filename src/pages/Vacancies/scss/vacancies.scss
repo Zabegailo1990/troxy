@@ -11,13 +11,9 @@
     }
 
     &__title{
-        font-size: 32px;
-        font-weight: 500;
         margin-bottom: 24px;
 
         @include respond(tablet){
-            font-size: 52px;
-            line-height: 64px;
             margin-bottom: 42px;
         }
     }
@@ -37,10 +33,6 @@
             @include respond(pc){
                 margin-bottom: 46px;
             }
-        }
-
-        &--active{
-            background-color: #fff;
         }
     }
 

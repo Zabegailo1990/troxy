@@ -1,7 +1,6 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .card-news{
-    display: block;
     width: 242px;
     
     @include respond(tablet){
@@ -14,9 +13,9 @@
     
     &__frame{
         width: inherit;
-        overflow: hidden;
         border-radius: 20px;
         margin-bottom: 12px;
+        overflow: hidden;
 
         @include respond(tablet){
             margin-bottom: 16px;
@@ -37,13 +36,7 @@
         }
     }
 
-    &__title{
-        font-size: 18px;
 
-        @include respond(tablet){
-            font-size: 23px;
-        }
-    }
 
     &--theme--large{
         width: 326px;
