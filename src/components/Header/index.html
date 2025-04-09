@@ -6,7 +6,7 @@
                 theme: "@@theme", 
             })
 
-            @@if(typeof navigation === 'undefined' || navigation !== 'false') {
+            @@if(typeof navigation == 'undefined' || navigation !== 'false') {
                 @@include('../Navigation/index.html', { 
                     class: "header__navigation",
                     theme: "@@theme",
