@@ -7,45 +7,32 @@
         </picture>  
     }
     <div class="present__inner">
-        @@include('../../components/Promo/index.html')
-        @@include('../../components/Header/index.html', { 
-            class: "present__header",
-        })
         <div class="present__content">
-            @@if(typeof rating !== 'undefined' && rating) {
-            <div class="present__row present__rating">
-                <img class="present__trustpilot" src="@@rating" alt="">
-                <img class="present__trustpilot" src="@@rating" alt="">
-                <img class="present__trustpilot" src="@@rating" alt="">
-            </div>
-            }
             <div class="present__group">
                 @@if(typeof flag !== 'undefined' && flag) {
-                    <div class="present__frame">
-                        <svg class="icon present__icon">
-                            <use xlink:href="./sprites/flags.svg#icon-flag_@@flag"></use>
-                        </svg>
-                    </div>
+                    <svg class="icon present__icon">
+                        <use xlink:href="./sprites/flags.svg#icon-flag_@@flag"></use>
+                    </svg>
                 }
-                <h1 class="title title--size-l @@colorTitle present__title">@@title</h1>
+                <h1 class="title title--size-l title--color-light title--pos-center present__title">@@title</h1>
             </div>
-            <p class="text @@colorText present__text">@@text</p>
-            <div class="present__row present__buttons">
+            <p class="text text--size-m text--color-light present__text">@@text</p>
+            <div class="present__row">
                 <button class="button button--size-l button--rounded button--color-light button--active-blue present__button">Choose tariff</button>
                 <button class="button button--size-l button--rounded button--active-light present__button">Sign up</button>
             </div>
             <ul class="present__list">
                 <li class="present__item">
-                    <p class="text @@colorText present__statistic">99,99% uptime</p>
+                    <p class="text text--color-light present__statistic">99,99% uptime</p>
                 </li>
                 <li class="present__item">
-                    <p class="text @@colorText present__statistic">&lt;0.2s avg speed</p>
+                    <p class="text text--color-light @@colorText present__statistic">&lt;0.2s avg speed</p>
                 </li>
                 <li class="present__item">
-                    <p class="text @@colorText present__statistic">195+ locations</p>
+                    <p class="text text--color-light @@colorText present__statistic">195+ locations</p>
                 </li>
                 <li class="present__item">
-                    <p class="text @@colorText present__statistic">25 000+ clients</p>
+                    <p class="text text--color-light @@colorText present__statistic">25 000+ clients</p>
                 </li>
             </ul>
         </div>

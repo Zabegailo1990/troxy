@@ -28,10 +28,6 @@
         z-index: 2;
     }
 
-    &__promo{
-        margin-bottom: 50px;
-    }
-
     &__content{
         display: flex;
         flex-direction: column;
@@ -59,7 +55,7 @@
         }
     }
 
-    &__frame{
+    &__icon{
         width: 58px;
         height: 41px;
         border-radius: 8px;
@@ -72,13 +68,7 @@
         }
     }
 
-    &__icon{
-        width: inherit;
-        height: inherit;
-    }
-
     &__title{
-        text-align: center;
         max-width: 1027px;
     }
     
@@ -100,28 +90,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-    
-    &__rating{
-        display: none;
 
-        @include respond(tablet){
-            display: flex;
-            margin-bottom: 37px;
-        }
-
-        &--hidden{
-            display: none;
-        }
-    }
-
-    &__trustpilot{
-        &:not(:last-child){
-            margin-right: 25px;
-        }
-    }
-    
-    &__buttons{
         @include respond(tablet){
             margin-bottom: 91px;
         }

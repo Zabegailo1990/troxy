@@ -9,18 +9,20 @@
 <body class="body">
     @@include('./src/components/Gradient/index.html')
     @@include("./src/components/c-MenuMobile/index.html", {
-        class: "body__menu-mobile body__menu-mobile--active",
+        class: "body__menu-mobile",
     })
     <div class="home">
+        @@include('./src/components/Promo/index.html', {
+            class: "home__promo",
+        })
+        @@include('./src/components/Header/index.html', {
+            class: "home__header",
+        })
         <div class="home__present perspective">
             @@include('./src/sections/Present/index.html', {
                 bgNum: "1",
-                colorButtonNav: "button--color--white",
-                colorTitle: "title--color-light",
-                colorText: "text--color--white",
                 title: "Effective proxies for business with <br>a unique digital footprint from $0.058",
                 text: "Get a convenient and economical proxy service",
-                rating: "images/present_section_trustpilot.svg",
             })
             <img class="home__animate home__animate--top perspective__first" src="images/page_home_ani_2.png" alt="">
             <img class="home__animate home__animate--bottom perspective__second" src="images/page_home_ani_1.png" alt="">
@@ -99,6 +101,19 @@
     <script src="./js/sliderNews.js"></script>
     <script src="./js/cardQuestion.js"></script>
     <script src="./js/menuMobile.js"></script>
+
+    <script>
+        gsap.to(".header", {
+            top: 0,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".promo",
+                start: "top top",
+                end: "+=50",
+                scrub: true,
+            }
+        });
+    </script>
 
 </body>
 </html>
