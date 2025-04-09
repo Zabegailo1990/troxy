@@ -46,14 +46,6 @@
             display: block;
             flex-shrink: 0;
         }
-
-        &--bg-dark{
-            background-color: #17263F;
-        }
-
-        &--space-non{
-            margin-bottom: 0;
-        }
     }
     
     &__authbar{
@@ -70,13 +62,15 @@
         }
         
         &--pc{
-            &--hidden{
+
+            &-hidden{
                 @include respond(pc){
                     display: none;
                 }
             }
-            &--visible{
+            &-visible{
                 display: none;
+                
                 @include respond(pc){
                     display: flex;
                 }
@@ -131,11 +125,28 @@
         }
     }
 
+    &__item{
+        
+    }
+
     &__title{
+        color: #fff;
+        opacity: 0.5;
         margin-bottom: 12px;
 
         @include respond(tablet){
             margin-bottom: 14px;
+        }
+    }
+
+    &__link{
+        font-size: 12px;
+        line-height: 18px;
+        color: #fff;
+
+        @include respond(tablet){
+            font-size: 14px;
+            line-height: 24px;
         }
     }
 

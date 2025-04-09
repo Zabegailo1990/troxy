@@ -1,22 +1,45 @@
 <div class="navigation @@class">
     <ul class="navigation__list">
-        <li class="navigation__item">
-            <a class="button @@colorButtonNav navigation__link" href="tariffs.html">Tariffs</a>
-        </li>
-        <li class="navigation__item">
-            <a class="button @@colorButtonNav navigation__link" href="location.html">Countries</a>
-        </li>
-        <li class="navigation__item">
-            <a class="button @@colorButtonNav navigation__link" href="#">Information</a>
-        </li>
-        <li class="navigation__item">
-            <a class="button @@colorButtonNav navigation__link" href="proxy-mix.html">Goals</a>
-        </li>
-        <li class="navigation__item">
-            <a class="button @@colorButtonNav navigation__link" href="#">Services</a>
-        </li>
-        <li class="navigation__item">
-            <a class="button @@colorButtonNav navigation__link" href="#">API</a>
-        </li>
+        @@if(typeof theme !== 'undefined' && theme == 'light'){
+            <li class="navigation__item">
+                <a class="navigation__link navigation__link--color-light" href="#">Tariffs</a>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__link navigation__link--color-light" href="#">Countries</a>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__link navigation__link--color-light" href="#">Information</a>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__link navigation__link--color-light" href="#">Goals</a>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__link navigation__link--color-light" href="#">Services</a>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__link navigation__link--color-light" href="#">API</a>
+            </li>
+        }
+
+        @@if(typeof theme == 'undefined' || theme !== 'light'){
+            <li class="navigation__item">
+                <a class="navigation__link" href="#">Tariffs</a>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__link" href="#">Countries</a>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__link" href="#">Information</a>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__link" href="#">Goals</a>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__link" href="#">Services</a>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__link" href="#">API</a>
+            </li>
+        }
     </ul>
 </div>

@@ -1,0 +1,93 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.c-menu-mobile{
+    display: flex;
+    flex-direction: column;
+    background-color: #2E7AF5;
+    height: 100vh;
+    overflow-y: auto;
+    
+    &__promo{
+        width: 100%;
+    }
+
+    &__container{
+        min-height: 100vh;
+    }
+    
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 100vh;
+        padding-bottom: 66px;
+
+        @include respond(tablet){
+            padding-bottom: 93px;
+        }
+    }
+
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 90px;
+        width: 100%;
+    }
+
+    &__row{
+        display: flex;
+        align-items: center;
+    }
+
+    &__button{
+        display: none;
+
+        @include respond(tablet){
+            display: block;
+            margin-right: 29px;
+        }
+    }
+
+    &__icon{
+        stroke: #fff;
+        width: 24px;
+        height: 24px;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__item{
+
+        &:not(:last-child){
+            margin-bottom: 20px;
+
+            @include respond(tablet){
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    &__authbar{
+        margin: 0 auto;
+    }
+
+    &__footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        min-height: 88px;
+        background-color: #fff;
+    }
+
+    &__text{
+        font-size: 14px;
+        line-height: 24px;
+    }
+}

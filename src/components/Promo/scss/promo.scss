@@ -6,12 +6,13 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    min-height: 51px;
+    min-height: 50px;
     background: linear-gradient(to right, rgba(114, 172, 247, 1), rgba(205, 60, 198, 1));
     padding: 0 20px;
 
     &__button{
         display: none;
+        
         @include respond(tablet){
             display: block;
             margin-left: 18px;

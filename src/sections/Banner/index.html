@@ -10,12 +10,12 @@
             <p class="text text--size-m text--color-light banner__text">@@text</p>
             @@if(typeof button_2 !== 'undefined' && button_2){
                 <div class="banner__row">
-                    <button class="button button--rounded button--bg--blue button--color--white banner__button">@@button_1</button>
-                    <button class="button button--rounded button--bg--white banner__button">@@button_2</button>
+                    <button class="button button--size-l button--rounded button--color-light button--active-blue banner__button">@@button_1</button>
+                    <button class="button button--size-l button--rounded button--active-light banner__button">@@button_2</button>
                 </div>
             }
             @@if(typeof button_2 == 'undefined'){
-                <button class="button button--rounded button--bg--blue button--color--white banner__button">@@button_1</button>
+                <button class="button button--size-l button--rounded button--color-light button--active-blue banner__button">@@button_1</button>
             }
         </div>
     </div>

@@ -5,22 +5,17 @@
 
     &__signature{
         fill: #fff;
+
+        &--color-dark{
+            fill: #17263F;
+        }
     }
 
     &__fingerprint{
-        fill: #fff
-    }
+        fill: #fff;
 
-    &--theme-dark{
-        .logo{
-            &__signature{
-                fill: #17263F;
-            }
-
-            &__fingerprint{
-                fill: #2E7AF5;
-            }
+        &--color-blue{
+            fill: #2E7AF5;
         }
-
     }
 }

@@ -66,6 +66,10 @@
         width: 28px;
         height: 28px;
         stroke: #17263F;
+
+        &--color-light{
+            stroke: #fff;
+        }
     }
 
     &--bg--white{

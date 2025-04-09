@@ -1,5 +1,21 @@
-<div class="authbar @@theme @@class">
-    <button class="button button--color--white button--rounded authbar__button authbar__button--signup">Sign up</button>
-    <button class="button button--color--white button--rounded authbar__button authbar__button--signin">Sign in</button>
-    <button class="button button--color--white button--rounded authbar__button authbar__button--lang">ENG</button>
+<div class="authbar @@class">
+
+    @@if(typeof theme == 'undefined'){
+        <button class="button button--fz-m button--size-l button--rounded button--hover-blue authbar__button authbar__button--signup">Sign up</button>
+        <button class="button button--fz-m button--size-l button--rounded button--active-blue authbar__button authbar__button--signin">Sign in</button>
+        <button class="button button--fz-m button--size-l button--rounded button--hover-blue authbar__button authbar__button--lang">ENG</button>
+    }
+    
+    @@if(typeof theme !== 'undefined' && theme == 'light'){
+        <button class="button button--fz-m button--color-light button--size-l button--rounded button--hover-blue authbar__button authbar__button--signup">Sign up</button>
+        <button class="button button--fz-m button--color-light button--size-l button--rounded button--active-blue authbar__button authbar__button--signin">Sign in</button>
+        <button class="button button--fz-m button--color-light button--size-l button--rounded button--hover-blue authbar__button authbar__button--lang">ENG</button>
+    }
+
+    @@if(typeof theme !== 'undefined' && theme == 'footer'){
+        <button class="button button--fz-m button--color-light button--size-l button--rounded button--active-light authbar__button authbar__button--signup">Sign up</button>
+        <button class="button button--fz-m button--color-light button--size-l button--rounded button--hover-light authbar__button authbar__button--signin">Sign in</button>
+        <button class="button button--fz-m button--color-light button--size-l button--rounded button--hover-light authbar__button authbar__button--lang">ENG</button>
+    }
+
 </div>

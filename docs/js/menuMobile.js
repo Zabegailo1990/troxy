@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".header__button").on("click",function(){$(".body__menu-mobile").addClass("body__menu-mobile--active"),$(".body").addClass("body--blocking")}),$(".c-menu-mobile").on("click","button",function(){$(".body__menu-mobile").removeClass("body__menu-mobile--active"),$(".body").removeClass("body--blocking")})});

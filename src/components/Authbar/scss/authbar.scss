@@ -1,58 +1,53 @@
-@use '../../../assets/scss/variables' as *;
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .authbar{
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: 6px;
+    width: fit-content;
+    gap: 4px;
+
+    @include respond(tablet){
+        gap: 6px;
+    }
 
     &__button{
         flex-shrink: 0;
     }
 
-    &--theme--default{
-        .authbar__button--signin{
-            background: $button-bg-blue;
-        }
-    }
+    // Aдаптируемый
+    &--theme-responsive{
 
-
-    &--theme--light{
-        .authbar__button--signup{
-            color: $button-color-dark;
-            background: $button-bg-white;
-        }
-    }
-
-
-    &--theme--dark{
-        .authbar__button--signup,
-        .authbar__button--lang{
-            color: $button-color-dark;
-        }
-        .authbar__button--signin{
-            background: $button-bg-blue;
-        }
-    }
-
-    
-    &--responsive{
-        .authbar__button--signin,
-        .authbar__button--signup{
+        .authbar__button{
             display: none;
+
+            @include respond(tablet){
+                &--lang{
+                    display: block;
+                }
+            }
+
             @include respond(pc){
-                display: flex;
+                display: block;
             }
         }
     }
 
+    // Тема страницы API
+    &--theme-api{
 
-    &--theme--api{
-        flex-direction: row-reverse;
-        
-        .authbar__button--signup{
+        .authbar__button--signup,
+        .authbar__button--signin{
             display: none;
+        }
+    }
+
+    &--theme-menu{
+
+        @include respond(tablet){
+            .authbar__button--lang{
+                display: none;
+            }
         }
     }
 }

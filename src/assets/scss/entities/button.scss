@@ -1,103 +1,95 @@
 @use '../mixins/mediaQuery' as *;
 
-$button-fz-small: 14px; 
-$button-fz-large: 16px; 
-$button-color-white: #fff;
-$button-color-dark: #17263F;
-$button-color-blue: #2E7AF5;
-$button-bg-blue: linear-gradient(90deg, rgba(46, 122, 245, 1) 0%, rgba(103, 161, 255, 1) 100%);
-$button-bg-white: #fff;
-
 .button{
-    font-size: $button-fz-small;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 600;
-    display: block;
-    width: fit-content;
+    line-height: normal;
+    overflow: hidden;
     cursor: pointer;
-    @include respond(tablet) {
-        font-size: $button-fz-large;
+    transition: all .3s;
+
+    &--fz-m{
+        font-size: 14px;
+
+        @include respond(tablet){
+            font-size: 16px;
+        }
     }
 
-    &--color--dark{
-        color: $button-color-dark;
+    &--fz-l{
+        font-size: 16px;
     }
 
-    &--color--white{
-        color: $button-color-white;
+    &--size-s{
+        padding: 9px 18px;
+    }
+
+    &--size-m{
+        
+    }
+
+    &--size-l{
+        min-height: 42px;
+        padding: 0 32px;
+        
+        @include respond(tablet){
+            min-height: 54px;
+            padding: 0 34px;
+        }
+    }
+
+    &--color-light{
+        color: #fff;
     }
 
     &--color-gray{
         color: #617597;
-    } 
-
-    &--color-blue{
-        color: #2E7AF5;
-    }
-
-    &--bg--white{
-        background-color: $button-bg-white;
-    }
-
-    &--bg--blue{
-        background: $button-bg-blue;
-    }
-
-    &--theme-square{
-        width: 32px;
-        height: 32px;
-    }
-
-    &--theme-square-large{
-        width: 42px;
-        height: 42px;
-        
-        @include respond(tablet){
-            width: 54px;
-            height: 54px;
-        }
     }
 
     &--rounded{
-        padding: 12px 32px;
         border-radius: 40px;
-        @include respond(tablet){
-            padding: 17px 34px;
+    }
+
+    &--bg-fog{
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    
+    &--hover-blue{
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, #2E7AF5 0%, #67A1FF 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: -1;
+        }
+        
+        &:hover::before{
+            opacity: 1;
         }
     }
 
-    &--radius-large{
-        border-radius: 32px;
-    }
-
-    &--radius-small{
-        border-radius: 8px;
-    }
-
-    &--indent-medium{
-        padding: 15px 32px;
-    }
-
-    &--promo{
-        font-size: $button-fz-small;
-        padding: 9px 18px;
-        opacity: 80%;
-    }
-
-    &--transparent{
-        opacity: 50%;
+    &--hover-light{
+        &:hover{
+            background-color: #fff;
+            color: #17263F;
+        }
     }
 
     &--inactive{
-        opacity: 30%;
+        opacity: 0.5;
     }
 
-    &--active-tab{
+    &--active-blue{
+        background: linear-gradient(90deg, #2E7AF5 0%, #67A1FF 100%);
+    }
+
+    &--active-light{
         background-color: #fff;
         color: #17263F;
-    }
-    
-
-    &--border-gray{
-        border: 1px solid #CED3DC;
     }
 }

@@ -3,39 +3,43 @@
         <div class="header__inner">
             @@include('../Logo/index.html', { 
                 class: "header__logo",
-                theme: "@@themeLogo" 
+                theme: "@@theme", 
             })
 
-            @@if(typeof navigation === 'undefined' || navigation !== 'off') {
+            @@if(typeof navigation === 'undefined' || navigation !== 'false') {
                 @@include('../Navigation/index.html', { 
                     class: "header__navigation",
-                    colorButtonNav: "@@colorButtonNav",
-                    tariffs: "@@tariffs",
-                    countries: "@@countries",
-                    information: "@@information",
-                    goals: "@@goals",
-                    services: "@@services",
-                    api: "@@api"
+                    theme: "@@theme",
                 })
             }
 
             <div class="header__row">
-                @@if(typeof search !== 'undefined' && search === 'on'){
+                @@if(typeof search !== 'undefined' && search === 'true'){
                     @@include('../Input/index.html', {
                         class: "field--theme-gray header__search",
                     })
                 }
                 
                 @@include('../Authbar/index.html', { 
-                    class: "authbar--theme--default header__authbar",
-                    theme: "authbar--responsive @@themeAuthbar"  
+                    class: "authbar--theme-responsive header__authbar",
+                    theme: "light",  
                 })
 
-                <button class="header__button">
-                    <svg class="header__icon">
-                        <use xlink:href="./sprites/icons.svg#icon-grid"></use>
-                    </svg>
-                </button>
+                @@if(typeof theme !== 'undefined' && theme == 'light'){
+                    <button class="header__button">
+                        <svg class="header__icon header__icon--color-light">
+                            <use xlink:href="./sprites/icons.svg#icon-grid"></use>
+                        </svg>
+                    </button>
+                }
+                
+                @@if(typeof theme == 'undefined' || theme !== 'light'){
+                    <button class="header__button">
+                        <svg class="header__icon">
+                            <use xlink:href="./sprites/icons.svg#icon-grid"></use>
+                        </svg>
+                    </button>
+                }
             </div>
         </div>
     </div>

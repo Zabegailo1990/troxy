@@ -1,0 +1,49 @@
+<div class="c-menu-mobile @@class" data-lenis-prevent>
+    @@include('../Promo/index.html', {
+        class: "c-menu-mobile__promo",
+    })
+    <div class="container c-menu-mobile__container">
+        <div class="c-menu-mobile__inner">
+            <div class="c-menu-mobile__header">
+                @@include('../Logo/index.html', {
+                    theme: 'light',
+                })
+                <div class="c-menu-mobile__row">
+                    <button class="button button--rounded button--size-l button--color-light button--hover-light c-menu-mobile__button">ENG</button>
+                    <button class="button">
+                        <svg class="c-menu-mobile__icon">
+                            <use xlink:href="./sprites/icons.svg#icon-close"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <ul class="c-menu-mobile__list">
+                <li class="c-menu-mobile__item">
+                    <a href="" class="title title--color-light title--size-l c-menu-mobile__link">Tariffs</a>
+                </li>
+                <li class="c-menu-mobile__item">
+                    <a href="" class="title title--color-light title--size-l c-menu-mobile__link">Countries</a>
+                </li>
+                <li class="c-menu-mobile__item">
+                    <a href="" class="title title--color-light title--size-l c-menu-mobile__link">Information</a>
+                </li>
+                <li class="c-menu-mobile__item">
+                    <a href="" class="title title--color-light title--size-l c-menu-mobile__link">Goals</a>
+                </li>
+                <li class="c-menu-mobile__item">
+                    <a href="" class="title title--color-light title--size-l c-menu-mobile__link">Services</a>
+                </li>
+                <li class="c-menu-mobile__item">
+                    <a href="" class="title title--color-light title--size-l c-menu-mobile__link">API</a>
+                </li>
+            </ul>
+            @@include('../Authbar/index.html', {
+                class: "authbar--theme-menu c-menu-mobile__authbar",
+                theme: "footer",
+            })
+        </div>
+    </div>
+    <div class="c-menu-mobile__footer">
+        <p class="c-menu-mobile__text">© 2024 Troxy, All Rights Reserved</p>
+    </div>
+</div>

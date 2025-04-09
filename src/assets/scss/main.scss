@@ -2,6 +2,7 @@
 @use './_fonts.scss';
 @use './mixins/_mediaQuery';
 @use './_variables.scss';
+@use './entities/body.scss';
 @use './entities/container.scss';
 @use './entities/title.scss';
 @use './entities/text.scss';
@@ -28,6 +29,7 @@
 
 @use '../../components/c-Features/scss/c-features.scss';
 @use '../../components/c-ListServices/scss/c-list-services.scss';
+@use '../../components/c-MenuMobile/scss/c-menu-mobile.scss';
 @use '../../components/Tabs/scss/tabs.scss';
 @use '../../components/Pagination/scss/pagination.scss';
 @use '../../components/Input/scss/field.scss';
