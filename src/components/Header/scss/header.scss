@@ -5,7 +5,7 @@
     align-items: center;
     height: 90px;
 
-    &--bg-white{
+    &--bg-light{
         background-color: #fff;
     }
     
@@ -45,10 +45,11 @@
 
     &__search{
         display: none;
-        width: 358px;
-
-        @include respond(tablet){
+        
+        @include respond(pc){
             display: block;
+            width: 358px;
+            margin-right: 35px;
         }
     }
 
@@ -71,9 +72,4 @@
             stroke: #fff;
         }
     }
-
-    &--bg--white{
-        background-color: #fff;
-    }
-    
 }

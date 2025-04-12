@@ -1,35 +1,15 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.api{
-
+.p-api{
+    
     &__header{
-        margin-bottom: 40px;
+        position: fixed;
+        width: 100%;
+        z-index: 10;
     }
-
-    &__name{
-        margin-bottom: 12px;
-
-        @include respond(tablet){
-            margin-bottom: 8px;
-        }
-    }
-
-    &__title{
-        font-size: 32px;
-        line-height: 35px;
-        border-bottom: 1px solid #CED3DC;
-        padding-bottom: 24px;
-        margin-bottom: 18px;
-
-        @include respond(tablet){
-            font-size: 52px;
-            line-height: 64px;
-            padding-bottom: 13px;
-            margin-bottom: 42px;
-        }
-    }
-
+    
     &__inner{
+        padding-top: 109px;
         @include respond(pc){
             display: flex;
             align-items: flex-start;
@@ -38,11 +18,11 @@
 
     &__menu-api{
         display: none;
-        flex-shrink: 0;
-        margin-right: 29px;
-
+        
         @include respond(pc){
             display: block;
+            flex-shrink: 0;
+            margin-right: 29px;
         }
     }
 
@@ -50,9 +30,37 @@
         padding-top: 18px;
     }
 
-    &__frame{
-        @include respond(pc){
-            max-width: 327px;
+    &__ancor{
+        margin-bottom: 12px;
+
+        @include respond(tablet){
+            margin-bottom: 8px;
+        }
+
+        &--size-s{
+            @include respond(pc){
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__title{
+        border-bottom: 1px solid #CED3DC;
+        padding-bottom: 24px;
+        margin-bottom: 18px;
+
+        @include respond(tablet){
+            padding-bottom: 13px;
+            margin-bottom: 42px;
+        }
+
+        &--size-s{
+            @include respond(pc){
+                font-size: 32px;
+                line-height: 35px;
+                padding-bottom: 24px;
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -64,89 +72,121 @@
                 margin-bottom: 28px;
             }
         }
+
+        &--pc-visible{
+            display: none;
+
+            @include respond(pc){
+                display: block;
+            }
+        }
     }
 
     &__subtitle{
-        font-size: 24px;
-        margin-bottom: 24px;
 
-        @include respond(tablet){
-            font-size: 32px;
-            margin-bottom: 28px;
-        }
+        &--size-s{
+            margin-bottom: 16px;
 
-        @include respond(pc){
-            font-size: 24px;
-            margin-bottom: 24px;
-        }
+            @include respond(tablet){
+                margin-bottom: 28px;
+            }
 
-        &--size-large{
             @include respond(pc){
-                font-size: 32px;
+                font-size: 18px;
+            }
+        }
+        
+        &--size-m{
+            margin-bottom: 24px;
+
+            @include respond(tablet){
+                margin-bottom: 28px;
+            }
+
+            @include respond(pc){
+                font-size: 24px;
             }
         }
     }
 
     &__text{
+
+        &--size-s{
+            @include respond(pc){
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+    }
+
+    &__frame{
         @include respond(pc){
-            font-size: 12px;
-            line-height: 18px;
+            max-width: 327px;
         }
     }
 
     &__table-api{
-        @include respond(tablet){
+        @include respond(pc){
             width: 376px;
         }
     }
 
-    &__group-title{
-        font-size: 18px;
-        margin-bottom: 16px;
-
-        @include respond(tablet){
-            font-size: 23px;
-            margin-bottom: 28px;
-        }
-
-        @include respond(pc){
-            font-size: 18px;
-            margin-bottom: 18px;
-        }
-    }
-
     &__tag{
-        font-size: 12px;
-        padding: 2px 9px;
         border-radius: 6px;
         border: 1px solid rgba(0, 0, 0, 0.04);
         background: rgba(0, 0, 0, 0.03);
 
-        &--size-large{
+        &--size-s{
+            font-size: 12px;
+            padding: 1px 14px;
+
+            @include respond(tablet){
+                font-size: 14px;
+                padding: 1px 10px;
+            }
+
+            @include respond(pc){
+                font-size: 12px;
+                padding: 1px 9px;
+            }
+        }
+
+        &--size-l{
             font-size: 16px;
-            font-weight: 700;
+            font-weight: 600;
+            padding: 1px 12px;
+
+            @include respond(tablet){
+                font-size: 18px;
+                padding: 1px 8px;
+            }
+
+            @include respond(pc){
+                font-size: 16px;
+                padding: 1px 12px;
+            }
         }
     }
 
-    &__tabs,
     &__code,
-    &__url{
+    &__url,
+    &__tabs{
         @include respond(pc){
             width: 648px;
         }
     }
 
-    &__gap{
-        margin-bottom: 24px;
+    &__url{
+        margin: 28px 0;
     }
 
     &__menu-page{
         display: none;
-        margin-left: 24px;
-        flex-shrink: 0;
-
+        
         @include respond(pc){
             display: block;
+            margin-left: 24px;
+            flex-shrink: 0;
         }
     }
     

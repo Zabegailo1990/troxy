@@ -1,24 +1,20 @@
-html{
-    overflow-x: hidden;
-}
-
 .body{
     position: relative;
     background-color: #F8F8F8;
     font-family: 'Funnel Display';
     color: #313844;
-    overflow: hidden;
 
-    &--blocking{
-        overflow: hidden;
+    &__header{
+        position: fixed;
+        width: 100%;
+        z-index: 10;
     }
 
     &__menu-mobile{
-        position: absolute;
+        position: fixed;
         width: 100%;
-        top: 0;
         right: -100%;
-        z-index: 10;
+        z-index: 100;
         transition: all .5s;
 
         &--active{

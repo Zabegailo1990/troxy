@@ -1,7 +1,13 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.by-country{
+.p-by-country{
     overflow: hidden;
+
+    &__header{
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+    }
 
     &__present{
         position: relative;

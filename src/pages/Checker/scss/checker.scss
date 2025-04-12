@@ -1,14 +1,12 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 // checker
-.checker{
+.p-checker{
 
-    &__header{
-        margin-bottom: 40px;
-
-        @include respond(tablet){
-            margin-bottom: 80px;
-        }
+   padding-top: 130px;
+   
+   @include respond(tablet){
+       padding-top: 150px;
     }
 
     &__breadcrumbs{
@@ -20,11 +18,9 @@
     }
     
     &__title{
-        font-size: 32px;
         margin-bottom: 30px;
     
         @include respond(tablet){
-            font-size: 52px;
             margin-bottom: 28px;
         }
         
@@ -34,11 +30,15 @@
         margin-bottom: 43px;
     }
 
-    &__container{
+    &__inner{
         margin-bottom: 29px;
 
         @include respond(tablet){
             margin-bottom: 38px;
+        }
+
+        @include respond(pc){
+            margin-bottom: 140px;
         }
     }
 

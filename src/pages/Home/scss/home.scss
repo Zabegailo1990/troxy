@@ -84,9 +84,11 @@
         }
 
         &--left{
-            text-align: left;
-            margin-right: 50px;
-            margin-bottom: 0;
+            @include respond(pc){
+                text-align: left;
+                margin-right: 50px;
+                margin-bottom: 0;
+            }
         }
     }
 

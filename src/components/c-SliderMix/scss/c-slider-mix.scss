@@ -1,6 +1,6 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.slider-goal{
+.c-slider-mix{
 
     &__spacer{
         @include respond(pc){

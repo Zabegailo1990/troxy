@@ -33,15 +33,29 @@
         }
     }
 
-    // Тема страницы API
+    //Тема страницы API
     &--theme-api{
+        flex-direction: row-reverse;
 
-        .authbar__button--signup,
-        .authbar__button--signin{
+        .authbar__button,
+        .authbar__button{
             display: none;
+        }
+
+        @include respond(tablet){
+            .authbar__button--lang{
+                display: block;
+            }
+        }
+
+        @include respond(pc){
+            .authbar__button--signin{
+                display: block;
+            }
         }
     }
 
+    // Тема мобильного меню
     &--theme-menu{
 
         @include respond(tablet){

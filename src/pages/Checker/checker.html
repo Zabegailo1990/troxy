@@ -6,26 +6,35 @@
     <link rel="stylesheet" href="./css/main.css">
     <title>Document</title>
 </head>
-<body>
-    <div class="checker">
-        @@include('../../components/Promo/index.html')
-        @@include('../../components/Header/index.html', {
-            class: "header--bg-white checker__header",
-            themeAuthbar: "authbar--theme--dark",
-            themeLogo: "logo--theme-dark",
-        })
-        <div class="container checker__container">
-            @@include('../../components/Breadcrumbs/index.html', { 
-                class: 'checker__breadcrumbs',
-                item_1: "Main",
-                item_2: "Checker",
-            })
-            <h1 class="checker__title">Proxy checker</h1>
-            <p class="text checker__text">Check availability, supported protocols, proxy country and response time with our free proxy checking service.</p>
-            @@include('../../components/ProxyChecker/index.html', { class: 'checker__proxy-checker' })
-            <div class="checker__row">
-                @@include('../../components/ProxyFilters/index.html', { class: "checker__proxy-filters" })
-                @@include('../../components/ProxyList/index.html', { class: "checker__proxy-list"})
+<body class="body">
+    @@include('../../components/c-MenuMobile/index.html', {
+        class: "body__menu-mobile",
+    })
+    @@include('../../components/Promo/index.html')
+    @@include('../../components/Header/index.html', {
+        class: "header--bg-light body__header",
+    })
+    <div class="p-checker">
+        <div class="container">
+            <div class="p-checker__inner">
+                @@include('../../components/Breadcrumbs/index.html', { 
+                    class: 'p-checker__breadcrumbs',
+                    item_1: "Main",
+                    item_2: "Checker",
+                })
+                <h1 class="title title--size-l p-checker__title">Proxy checker</h1>
+                <p class="text text--size-m p-checker__text">Check availability, supported protocols, proxy country and response time with our free proxy checking service.</p>
+                @@include('../../components/ProxyChecker/index.html', { 
+                    class: 'p-checker__proxy-checker',
+                })
+                <div class="p-checker__row">
+                    @@include('../../components/ProxyFilters/index.html', { 
+                        class: "p-checker__proxy-filters", 
+                    })
+                    @@include('../../components/ProxyList/index.html', { 
+                        class: "p-checker__proxy-list",
+                    })
+                </div>
             </div>
         </div>
         @@include('../../sections/Banner/index.html', {
@@ -35,14 +44,28 @@
             button_1: "Choose solution",
             button_2: "Test free",
         })
-        <div class="section">
-            @@include('../../sections/Faq/index.html')
-        </div>
+        @@include('../../sections/Faq/index.html')
         @@include('../../sections/Footer/index.html')
     </div>
 
+    
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script src="./js/smoothScroll.js"></script>
+    
     <script src="./vendors/jquery/jquery.min.js"></script>
+    <script src="./vendors/slick/slick.min.js"></script>
+    
+    <!-- <script src="./js/marquee.js"></script> -->
+    <script src="./js/header.js"></script>
+    <script src="./js/benefitCards.js"></script>
+    <script src="./js/perspective.js"></script>
+    <script src="./js/sliderHome.js"></script>
+    <script src="./js/sliderNews.js"></script>
     <script src="./js/cardQuestion.js"></script>
+    <script src="./js/menuMobile.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

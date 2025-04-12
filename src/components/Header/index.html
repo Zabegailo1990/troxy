@@ -21,8 +21,8 @@
                 }
                 
                 @@include('../Authbar/index.html', { 
-                    class: "authbar--theme-responsive header__authbar",
-                    theme: "light",  
+                    class: "authbar--theme-responsive @@classAuthbar header__authbar",
+                    theme: "@@theme",  
                 })
 
                 @@if(typeof theme !== 'undefined' && theme == 'light'){

@@ -1,7 +1,8 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.purposes-inside{
+.p-purposes-inside{
     overflow: hidden;
+    padding-top: 90px;
 
     &__present{
         position: relative;

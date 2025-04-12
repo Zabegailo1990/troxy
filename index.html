@@ -11,6 +11,9 @@
     @@include("./src/components/c-MenuMobile/index.html", {
         class: "body__menu-mobile",
     })
+    @@include("./src/components/c-MenuMobile/index.html", {
+        class: "body__menu-mobile",
+    })
     <div class="home">
         @@include('./src/components/Promo/index.html', {
             class: "home__promo",
@@ -35,13 +38,13 @@
             title: "Does your business need a customized solution?",
             text: "We will select a high-quality and effective solution for you personally at the best price",
             button_1: "Choose solution",
-            button_2: "Test free"
+            button_2: "Test free",
         })
-        <div class="section section--indent-m">
+        <div class="section section--indent-m home__section-marquee">
             <div class="container">
                 <h2 class="title title--size-m title--pos-center home__subtitle home__subtitle--space-small">All popular locations</h2>
                 <p class="text text--size-m home__text">Didn't find the proxy type or location you need? We will select and provide a personal solution for your purposes upon request</p>
-                <button class="button--rounded button--bg--blue button--color--white home__button home__button--space">All locations</button>
+                <button class="button button--size-l button--rounded button--bg-blue button--fz-m button--color-light home__button home__button--space">All locations</button>
                 @@include('./src/components/SliderFlags/index.html', { 
                     class: "home__slider home__slider--tablet-off" 
                 })
@@ -55,9 +58,9 @@
                 <div class="home__row">
                     <h2 class="title title--size-m title--pos-center home__subtitle home__subtitle--left">Proxies for <span class="title--color-blue">any purpose of your business</span></h2>
                     @@include('./src/components/SliderServices/index.html', { 
-                        class: "home__slider home__slider--sevices home__slider--tablet-off"
+                        class: "home__slider home__slider--services home__slider--tablet-off"
                     })
-                    <button class="button button--rounded button--bg--blue button--color--white home__button home__button--tablet-off">All purposes</button>
+                    <button class="button button--size-l button--rounded button--bg-blue button--color-light button--fz-m home__button home__button--tablet-off">All purposes</button>
                     @@include('./src/components/c-Features/index.html', {
                         class: 'home__features',
                     })
@@ -100,21 +103,9 @@
     <script src="./js/perspective.js"></script>
     <script src="./js/sliderHome.js"></script>
     <script src="./js/sliderNews.js"></script>
+    <script src="./js/header.js"></script>
     <script src="./js/cardQuestion.js"></script>
     <script src="./js/menuMobile.js"></script>
-
-    <script>
-        gsap.to(".header", {
-            top: 0,
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".promo",
-                start: "top top",
-                end: "+=50",
-                scrub: true,
-            }
-        });
-    </script>
 
 </body>
 </html>

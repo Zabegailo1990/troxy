@@ -4,56 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
-    <title>About</title>
+    <title>p-About</title>
 </head>
-<body>
-    <div class="about">
-        @@include('../../components/Gradient/index.html')
-        @@include("../../components/Header/index.html", {
-            class: "header--bg--white",
-            themeLogo: "logo--theme-dark",
-            themeNav: "navigation--theme--dark",
-            themeAuthbar: "authbar--theme--dark",
+<body class="body">
+    @@include('../../components/Gradient/index.html')
+    @@include('../../components/c-MenuMobile/index.html', {
+        class: "body__menu-mobile",
+    })
+    <div class="p-about">
+        @@include("../../components/Promo/index.html", {
+            class: "p-about__promo",
         })
-        <div class="section">
+        @@include("../../components/Header/index.html", {
+            class: "header--bg-light p-about__header",
+        })
+        <div class="section section--indent-s">
             <div class="container">
                 @@include('../../components/Breadcrumbs/index.html', { 
-                    class: 'about__breadcrumbs',
+                    class: 'p-about__breadcrumbs',
                     item_1: "Main",
                     item_2: "About",
                 })
-                <h1 class="about__title">About Us</h1>
+                <h1 class="tittle title--size-l p-about__title">About Us</h1>
             </div>
             @@include("../../sections/Supplier/index.html", { 
-                class: "about__supplier",
+                class: "p-about__supplier",
                 titleMode: "supplier__title--left"
             })
             <div class="container">
-                <div class="about__player">
-                    <video class="about__video" poster="./images/poster.jpg">
-                        <source src="" type="">
-                    </video>
-                    <div class="about__label">
-                        <button class="about__play">
-                            <img class="about__img" src="./images/play.svg" alt="">
-                        </button>
-                        <h4 class="title title--color--white about__tagline">Create the best with Troxy</h4>
-                        <p class="text text--color--white about__text-tagline">Use our proxy packages or order a custom quantity based on your needs</p>
-                    </div>
+                @@include('../../components/c-Player/index.html', {
+                    class: 'p-about__player',
+                })
+                <div class="p-about__group">
+                    <h2 class="title title--size-m p-about__subtitle">Strong reputation and digital footprint</h2>
+                    <p class="text text--size-m p-about__text">Each of our IP addresses is equipped with a digital footprint that mimics the behavior of real users online. This means that thousands of people use our IPs for everyday tasks - from browsing websites to online shopping. This digital footprint reduces the number of captchas and reduces the likelihood of blocking, creating a smooth proxy experience for you.</p>
                 </div>
-                <div class="about__group">
-                    <h2 class="title about__subtitle">Strong reputation and digital footprint</h2>
-                    <p class="text about__text">Each of our IP addresses is equipped with a digital footprint that mimics the behavior of real users online. This means that thousands of people use our IPs for everyday tasks - from browsing websites to online shopping. This digital footprint reduces the number of captchas and reduces the likelihood of blocking, creating a smooth proxy experience for you.</p>
+                <div class="p-about__group">
+                    <h2 class="title title--size-m p-about__subtitle">Fair and transparent conditions</h2>
+                    <p class="text text--size-m p-about__text">At Troxy.org you pay only for proxies, no hidden fees or unnecessary extra charges. We take an honest approach, providing transparent conditions for customers.</p>
                 </div>
-                <div class="about__group">
-                    <h2 class="title about__subtitle">Fair and transparent conditions</h2>
-                    <p class="text about__text">At Troxy.org you pay only for proxies, no hidden fees or unnecessary extra charges. We take an honest approach, providing transparent conditions for customers.</p>
-                </div>
-                <div class="about__group">
-                    <h2 class="title about__subtitle">Reliable and high performance</h2>
-                    <p class="text about__text">Our proxies provide a stable and fast connection with 99.99% uptime. This allows you to work with large volumes of data, minimizing delays and ensuring uninterrupted operation for the most demanding taskswith a digital footprint at the price of regular ones."</p>
-                    <p class="text about__text">Troxy.org is a combination of simplicity, reliability and cost-effectiveness. Our proxies offer the benefits of residential IPs at the price of regular ones, providing high quality without compromise. If you are looking for a solution to reduce blocking and captchas, Troxy is your perfect choice.</p>
-                    <p class="text about__text">Our promise: "Ultimate simplicity and quality of proxies with a digital footprint at the price of regular ones."</p>
+                <div class="p-about__group">
+                    <h2 class="title title--size-m p-about__subtitle">Reliable and high performance</h2>
+                    <p class="text text--size-m p-about__text">Our proxies provide a stable and fast connection with 99.99% uptime. This allows you to work with large volumes of data, minimizing delays and ensuring uninterrupted operation for the most demanding taskswith a digital footprint at the price of regular ones."</p>
+                    <p class="text text--size-m p-about__text">Troxy.org is a combination of simplicity, reliability and cost-effectiveness. Our proxies offer the benefits of residential IPs at the price of regular ones, providing high quality without compromise. If you are looking for a solution to reduce blocking and captchas, Troxy is your perfect choice.</p>
+                    <p class="text text--size-m p-about__text">Our promise: "Ultimate simplicity and quality of proxies with a digital footprint at the price of regular ones."</p>
                 </div>
             </div>
         </div>
@@ -61,8 +55,14 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="./js/gradient.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="./vendors/jquery/jquery.min.js"></script>
+
+    <script src="./js/gradient.js"></script>
     <script src="./js/smoothScroll.js"></script>
+    <script src="./js/menuMobile.js"></script>
+    <script src="./js/header.js"></script>
 </body>
 </html>

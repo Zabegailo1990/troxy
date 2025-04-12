@@ -1,6 +1,6 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.location{
+.p-location{
     overflow: hidden;
 
     &__present{
@@ -61,7 +61,7 @@
         }
     }
     
-    &__tabs{
+    &__filters{
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 28px;

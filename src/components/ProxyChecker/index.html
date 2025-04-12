@@ -1,12 +1,12 @@
-<div class="proxy-checker @@class">
-    <div class="proxy-checker__checklist proxy-checker__checklist--hidden">
-        <label for="checklist" class="proxy-checker__label">Insert list of proxy here:</label>
-        <textarea class="proxy-checker__textarea" id="checklist" placeholder="Supported string formats type//user:password@ip:port or"></textarea>
+<div class="c-proxy-checker @@class">
+    <div class="c-proxy-checker__checklist c-proxy-checker__checklist--hidden">
+        <label for="checklist" class="c-proxy-checker__label">Insert list of proxy here:</label>
+        <textarea class="c-proxy-checker__textarea" id="checklist" placeholder="Supported string formats type//user:password@ip:port or"></textarea>
     </div>
-    <div class="proxy-checker__fields">
-        <div class="proxy-checker__item proxy-checker__item--select">
-            <div class="proxy-checker__label">Type</div>
-            <div class="select select--border proxy-checker__select">
+    <div class="c-proxy-checker__fields">
+        <div class="c-proxy-checker__item c-proxy-checker__item--select">
+            <div class="c-proxy-checker__label">Type</div>
+            <div class="select select--border c-proxy-checker__select">
                 <div class="select__front">
                     <div class="select__name">HTTPS</div>
                     <svg class="icon select__icon">
@@ -21,26 +21,26 @@
                 </ul>
             </div>
         </div>
-        <div class="proxy-checker__item proxy-checker__item--ip">
-            <label for="ip" class="proxy-checker__label">IP</label>
-            <input id="ip" type="text" class="proxy-checker__input proxy-checker__input--ip" placeholder="127.0.0.1">
+        <div class="c-proxy-checker__item c-proxy-checker__item--ip">
+            <label for="ip" class="c-proxy-checker__label">IP</label>
+            <input id="ip" type="text" class="c-proxy-checker__input c-proxy-checker__input--ip" placeholder="127.0.0.1">
         </div>
-        <div class="proxy-checker__item proxy-checker__item--port">
-            <label for="port" class="proxy-checker__label">Port</label>
-            <input id="port" type="text" class="proxy-checker__input proxy-checker__input--port" placeholder="22">
+        <div class="c-proxy-checker__item c-proxy-checker__item--port">
+            <label for="port" class="c-proxy-checker__label">Port</label>
+            <input id="port" type="text" class="c-proxy-checker__input c-proxy-checker__input--port" placeholder="22">
         </div>
-        <div class="proxy-checker__item proxy-checker__item--user">
-            <label for="user" class="proxy-checker__label">User</label>
-            <input id="user" type="text" class="proxy-checker__input proxy-checker__input--user" placeholder="<empty>">
+        <div class="c-proxy-checker__item c-proxy-checker__item--user">
+            <label for="user" class="c-proxy-checker__label">User</label>
+            <input id="user" type="text" class="c-proxy-checker__input c-proxy-checker__input--user" placeholder="<empty>">
         </div>
-        <div class="proxy-checker__item proxy-checker__item--password">
-            <label for="password" class="proxy-checker__label">Password</label>
-            <input id="password" type="text" class="proxy-checker__input proxy-checker__input--pass" placeholder="<empty>">
+        <div class="c-proxy-checker__item c-proxy-checker__item--password">
+            <label for="password" class="c-proxy-checker__label">Password</label>
+            <input id="password" type="text" class="c-proxy-checker__input c-proxy-checker__input--pass" placeholder="<empty>">
         </div>
     </div>
-    <div class="proxy-checker__control">
-        <button class="button button--rounded button--border-gray proxy-checker__button proxy-checker__button--plain">Plain text</button>
-        <button class="button button--rounded button--border-gray proxy-checker__button proxy-checker__button--add">Add to queue</button>
-        <button class="button button--bg--blue button--rounded button--color--white proxy-checker__button proxy-checker__button--check">Check proxy</button>
+    <div class="c-proxy-checker__control">
+        <button class="button button--size-l button--rounded button--border-gray button--hover-blue c-proxy-checker__button c-proxy-checker__button--plain">Plain text</button>
+        <button class="button button--size-l button--rounded button--border-gray button--hover-blue c-proxy-checker__button c-proxy-checker__button--add">Add to queue</button>
+        <button class="button button--size-l button--rounded button--bg--blue button--color-light button--bg-blue c-proxy-checker__button c-proxy-checker__button--check">Check proxy</button>
     </div>
 </div>

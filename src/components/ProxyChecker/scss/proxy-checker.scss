@@ -1,6 +1,6 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.proxy-checker{
+.c-proxy-checker{
     background-color: #fff;
     border-radius: 20px;
     border: 1px solid #CED3DC;
@@ -130,6 +130,7 @@
 
     &__label{
         font-size: 12px;
+        display: block;
         margin-bottom: 4px;
 
         @include respond(tablet){
@@ -179,10 +180,6 @@
     }
 
     &__button{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 42px;
         flex-grow: 1;
         padding: 0;
 

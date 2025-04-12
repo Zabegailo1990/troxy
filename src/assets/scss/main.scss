@@ -13,7 +13,6 @@
 @use './entities/slider.scss';
 @use './entities/section.scss';
 @use './entities/select.scss';
-@use './_entities.scss';
 
 @use '../../vendors/slick/slick.css';
 @use '../../vendors/swiper/swiper-bundle.css';
@@ -26,13 +25,15 @@
 @use '../../components/Header/scss/header.scss';
 @use '../../components/Question/scss/question.scss';
 @use '../../components/c-Panel/scss/c-panel.scss';
+@use '../../components/c-Info/scss/c-info.scss';
 
 @use '../../components/c-Features/scss/c-features.scss';
 @use '../../components/c-ListServices/scss/c-list-services.scss';
 @use '../../components/c-MenuMobile/scss/c-menu-mobile.scss';
-@use '../../components/Tabs/scss/tabs.scss';
+@use '../../components/c-Filters/scss/c-filters.scss';
 @use '../../components/Pagination/scss/pagination.scss';
 @use '../../components/Input/scss/field.scss';
+@use '../../components/c-Player/scss/c-player.scss';
 
 @use '../../components/CardBenefit/scss/card-benefit.scss';
 @use '../../components/CardPlus/scss/card-plus.scss';
@@ -57,7 +58,7 @@
 
 @use '../../components/SliderPrices/scss/slider-prices.scss';
 @use '../../components/SliderPluses/scss/slider-pluses.scss';
-@use '../../components/SliderGoal/scss/slider-goal.scss';
+@use '../../components/c-SliderMix/scss/c-slider-mix.scss';
 @use '../../components/SliderFlags/scss/slider-flags.scss';
 @use '../../components/SliderServices/scss/slider-services.scss';
 @use '../../components/SliderDeals/scss/slider-deals.scss';

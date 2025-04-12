@@ -50,5 +50,10 @@
         <symbol id="icon-close" viewBox="0 0 28 28" fill="none">
             <path d="M26.0034 26.2929L14.0035 14.293M14.0035 14.293L2.00342 2.29297M14.0035 14.293L26.0035 2.29297M14.0035 14.293L2.00342 26.293" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
         </symbol>
+
+        <symbol id="icon-play" viewBox="0 0 27 32">
+            <path fill="#fff" style="fill: var(--color1, #fff)" d="M0.092 29.16v-26.203c0-2.204 2.429-3.544 4.293-2.368l20.521 12.944c1.73 1.091 1.744 3.609 0.026 4.719l-20.521 13.26c-1.863 1.204-4.319-0.134-4.319-2.351z"></path>
+        </symbol>
+
     </defs>
 </svg>

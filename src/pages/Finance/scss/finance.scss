@@ -1,6 +1,11 @@
 @use "../../../assets/scss/mixins/mediaQuery" as *;
 
-.finance{
+.p-finance{
+    padding-top: 130px;
+
+    @include respond(tablet){
+        padding-top: 170px;
+    }
 
     &__breadcrumbs{
         margin-bottom: 14px;
@@ -33,11 +38,9 @@
     }
 
     &__subtitle{
-        font-size: 19px;
         margin-bottom: 14px;
 
         @include respond(tablet){
-            font-size: 23px;
             margin-bottom: 18px;
         }
         

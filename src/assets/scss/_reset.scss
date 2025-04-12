@@ -1,5 +1,14 @@
 /*! reset.scss | Meyer Reset v2.0 | License: public domain */
 
+html{
+  overflow-x: hidden;
+}
+
+body{
+  font-family: 'Funnel Display';
+  overflow-x: hidden;
+}
+
 /* Box sizing reset */
 *,
 *::before,

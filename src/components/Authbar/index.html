@@ -1,6 +1,6 @@
 <div class="authbar @@class">
 
-    @@if(typeof theme == 'undefined'){
+    @@if(typeof theme !== 'undefined' && theme !== 'light' && theme !== 'footer'){
         <button class="button button--fz-m button--size-l button--rounded button--hover-blue authbar__button authbar__button--signup">Sign up</button>
         <button class="button button--fz-m button--size-l button--rounded button--active-blue authbar__button authbar__button--signin">Sign in</button>
         <button class="button button--fz-m button--size-l button--rounded button--hover-blue authbar__button authbar__button--lang">ENG</button>

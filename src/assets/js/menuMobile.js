@@ -1,14 +1,14 @@
 $(document).ready(function () {
-    // Открытие меню
-    $('.header__button').on('click', function () {
-      $('.body__menu-mobile').addClass('body__menu-mobile--active');
-      $('.body').addClass('body--blocking');
-    });
-  
-    // Закрытие меню по кнопке внутри .c-menu-mobile
-    $('.c-menu-mobile').on('click', 'button', function () {
-      $('.body__menu-mobile').removeClass('body__menu-mobile--active');
-      $('.body').removeClass('body--blocking');
-    });
+  // Открытие меню (блокируем скролл)
+  $('.header__button').on('click', function () {
+    $('.body__menu-mobile').addClass('body__menu-mobile--active');
+    $('html, body').attr('style', 'overflow: hidden');
   });
+
+  // Закрытие меню (возвращаем скролл)
+  $('.c-menu-mobile').on('click', '.c-menu-mobile__close', function () {
+    $('.body__menu-mobile').removeClass('body__menu-mobile--active');
+    $('html, body').removeAttr('style'); // Удаляем атрибут style
+  });
+});
   

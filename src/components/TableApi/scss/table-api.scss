@@ -16,6 +16,7 @@
     }
 
     @include respond(pc){
+        font-size: 12px;
         min-width: 376px;
     }
 

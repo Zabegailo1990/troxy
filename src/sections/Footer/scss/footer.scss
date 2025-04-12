@@ -51,13 +51,19 @@
     &__authbar{
         position: relative;
         z-index: 1;
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 36px;
 
         @include respond(tablet){
+            margin-left: 0;
+            margin-right: 0;
             margin-bottom: 0;
         }
 
         @include respond(pc){
+            margin-left: auto;
+            margin-right: auto;
             margin-bottom: 40px;
         }
         
@@ -123,10 +129,6 @@
                 display: none;
             }
         }
-    }
-
-    &__item{
-        
     }
 
     &__title{

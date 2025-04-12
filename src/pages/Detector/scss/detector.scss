@@ -1,6 +1,11 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.detector{
+.p-detector{
+    padding-top: 120px;
+
+    @include respond(tablet){
+        padding-top: 170px;
+    }
 
     &__breadcrumbs{
         margin-bottom: 14px;
@@ -23,104 +28,6 @@
     }
 
     &__subtitle{
-
-        &--main{
-            margin-bottom: 36px;
-        }
-
-        &--info{
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-    }
-
-    &__info{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        height: 561px;
-        border-radius: 30px;
-        overflow: hidden;
-        padding: 31px 26px;
-        
-        @include respond(tablet){
-            height: 310px;
-            padding: 20px 20px 20px 46px;
-        }
-
-        @include respond(tablet){
-            height: 408px;
-            padding: 28px 31px 28px 64px;
-        }
-    }
-
-    &__background{
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 0;
-    }
-
-    &__inner{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 100%;
-        z-index: 1;
-
-        @include respond(tablet){
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-    }
-    
-    &__list{
-        margin-bottom: 55px;
-
-        @include respond(tablet){
-            margin-bottom: 0;
-        }
-    }
-
-    &__item{
-        display: flex;
-        justify-content: center;
-    }
-
-    &__label,
-    &__text{
-        width: 90px;
-
-        @include respond(tablet){
-            width: 102px;
-        }
-    }
-
-
-    &__frame{
-        width: 275px;
-        height: 285px;
-        border-radius: 20px;
-        overflow: hidden;
-        
-        @include respond(tablet){
-            width: 260px;
-            height: 270px;
-        }
-        
-        @include respond(pc){
-            width: 683px;
-            height: 351px;
-        }
-    }
-
-    &__img{
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
+        margin-bottom: 36px;
     }
 }
