@@ -1,6 +1,11 @@
 @use "../../../assets/scss/mixins/mediaQuery" as *;
 
-.news-inside{
+.p-news-inside{
+    padding-top: 130px;
+
+    @include respond(tablet){
+        padding-top: 170px;
+    }
 
     &__breadcrumbs{
         margin-bottom: 14px;
@@ -11,14 +16,9 @@
     }
     
     &__title{
-        font-weight: 500;
-        line-height: 35px;
-        font-size: 32px;
         margin-bottom: 14px;
 
         @include respond(tablet){
-            font-size: 52px;
-            line-height: 64px;
             margin-bottom: 20px;
         }
     }

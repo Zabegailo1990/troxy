@@ -6,15 +6,16 @@
     <link rel="stylesheet" href="./css/main.css">
     <title>News Page</title>
 </head>
-<body>
+<body class="body">
+    @@include('../../components/Gradient/index.html')
+    @@include('../../components/c-MenuMobile/index.html', {
+        class: 'body__menu-mobile',
+    })
+    @@include('../../components/Promo/index.html')
+    @@include('../../components/Header/index.html', {
+        class: 'header--bg-light body__header',
+    })
     <div class="news-page">
-        @@include('../../components/Gradient/index.html')
-        @@include("../../components/Header/index.html", {
-            class: "header--bg--white",
-            themeLogo: "logo--theme-dark",
-            themeNav: "navigation--theme--dark",
-            themeAuthbar: "authbar--theme--dark",
-        })
         <div class="container">
             <div class="section section--indent-s">
                 @@include('../../components/Breadcrumbs/index.html', { 
@@ -23,83 +24,24 @@
                     item_2: "News and articles",
                 })
                 <h1 class="title title--size-l news-page__title">Proxy news and useful articles</h1>
-                <div class="news-page__inner">
-                    <div class="news-page__cards">
-                        @@include("../../components/CardNews/index.html", {
-                            theme: "card-news--theme--large",
-                            class: "news-page__card",
-                            src: "./images/component_card-news_1.jpg",
-                            date: "12.08.2024",
-                            title: "Proxy vs VPN: Understanding the Differences",
-                        })
-                        @@include("../../components/CardNews/index.html", {
-                            theme: "card-news--theme--large",
-                            class: "news-page__card",
-                            src: "./images/component_card-news_2.jpg",
-                            date: "12.08.2024",
-                            title: "Web Scraping With Proxies - Quick Introduction",
-                        })
-                        @@include("../../components/CardNews/index.html", {
-                            theme: "card-news--theme--large",
-                            class: "news-page__card",
-                            src: "./images/component_card-news_3.jpg",
-                            date: "12.08.2024",
-                            title: "Setting Up a Proxy in the OctoBrowser",
-                        })
-                        @@include("../../components/CardNews/index.html", {
-                            theme: "card-news--theme--large",
-                            class: "news-page__card",
-                            src: "./images/component_card-news_1.jpg",
-                            date: "12.08.2024",
-                            title: "Proxy vs VPN: Understanding the Differences",
-                        })
-                        @@include("../../components/CardNews/index.html", {
-                            theme: "card-news--theme--large",
-                            class: "news-page__card",
-                            src: "./images/component_card-news_2.jpg",
-                            date: "12.08.2024",
-                            title: "Setting Up a Proxy in the OctoBrowser",
-                        })
-                        @@include("../../components/CardNews/index.html", {
-                            theme: "card-news--theme--large",
-                            class: "news-page__card",
-                            src: "./images/component_card-news_3.jpg",
-                            date: "12.08.2024",
-                            title: "Proxy vs VPN: Understanding the Differences",
-                        })
-                        @@include("../../components/CardNews/index.html", {
-                            theme: "card-news--theme--large",
-                            class: "news-page__card",
-                            src: "./images/component_card-news_2.jpg",
-                            date: "12.08.2024",
-                            title: "Web Scraping With Proxies - Quick Introduction",
-                        })
-                        @@include("../../components/CardNews/index.html", {
-                            theme: "card-news--theme--large",
-                            class: "news-page__card",
-                            src: "./images/component_card-news_1.jpg",
-                            date: "12.08.2024",
-                            title: "Proxy vs VPN: Understanding the Differences",
-                        })
-                        @@include("../../components/CardNews/index.html", {
-                            theme: "card-news--theme--large",
-                            class: "news-page__card",
-                            src: "./images/component_card-news_1.jpg",
-                            date: "12.08.2024",
-                            title: "Proxy vs VPN: Understanding the Differences",
-                        })
-                    </div>
-                </div>
-                @@include('../../components/Pagination/index.html', { class: "news-page__pagination"})
+                @@include('../../components/c-ListArticles/index.html')
+                @@include('../../components/Pagination/index.html', { 
+                    class: "news-page__pagination"
+                })
             </div>
         </div>
         @@include("../../sections/Simple/index.html")
         @@include("../../sections/Footer/index.html")
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="./js/gradient.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="./js/gradient.js"></script>
     <script src="./js/smoothScroll.js"></script>
+    <script src="./vendors/jquery/jquery.min.js"></script>
+    <script src="./vendors/slick/slick.min.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/menuMobile.js"></script>
 </body>
 </html>

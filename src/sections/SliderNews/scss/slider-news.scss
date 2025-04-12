@@ -55,22 +55,21 @@
             margin: 0;
         }
     }
-    
-    &__card{
-        height: 283px;
 
-        &:not(:last-child){
-            margin-right: 20px;
-        }
+}
+
+
+.articles{
+
+    &__slider{
+        margin: 0 -24px;
 
         @include respond(tablet){
-            height: 350px;
-            width: 320px;
+            margin: 0 -40px;
         }
 
         @include respond(pc){
-            height: 350px;
-            width: 400px;
+            margin: 0;
         }
     }
 }

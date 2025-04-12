@@ -1,0 +1,23 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.c-slider-articles{
+
+    &__spacer{
+        @include respond(pc){
+            display: none;
+        }
+    }
+    
+    &__inner{
+        gap: 20px;    
+    }
+        
+    &__slide{
+
+        @include respond(pc){
+            &:not(:last-child){
+                margin-right: 20px;
+            }
+        }
+    }
+}

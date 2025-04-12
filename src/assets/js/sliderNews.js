@@ -8,19 +8,19 @@ $(document).ready(function(){
     $(window).on('resize', function() {
         if (window.innerWidth >= 1440) {
             // Если слайдер еще не инициализирован - инициализируем
-            if (!$('.slider-news__slider').hasClass('slick-initialized')) {
+            if (!$('.c-slider-articles__inner').hasClass('slick-initialized')) {
                 initSlickSlider();
             }
         } else {
             // Если слайдер инициализирован - уничтожаем его
-            if ($('.slider-news__slider').hasClass('slick-initialized')) {
-                $('.slider-news__slider').slick('unslick');
+            if ($('.c-slider-articles__inner').hasClass('slick-initialized')) {
+                $('.c-slider-articles__inner').slick('unslick');
             }
         }
     });
 
     function initSlickSlider() {
-        $('.slider-news__slider').slick({
+        $('.c-slider-articles__inner').slick({
             slidesToShow: 3,
             slidesToScroll: 1,
             prevArrow: $('.slider-news__button--prev'),

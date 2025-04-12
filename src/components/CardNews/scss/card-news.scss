@@ -1,7 +1,8 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .card-news{
-    width: 242px;
+    display: block;
+    min-width: 242px;
     
     @include respond(tablet){
         width: 320px;
@@ -18,6 +19,7 @@
         overflow: hidden;
 
         @include respond(tablet){
+            height: 200px;
             margin-bottom: 16px;
         }
     }
@@ -26,6 +28,10 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+    &__content{
+        padding: 0 6px;
     }
 
     &__date{

@@ -8,7 +8,6 @@
 @use './entities/text.scss';
 @use './entities/button.scss';
 @use './entities/icon.scss';
-@use './entities/date.scss';
 @use './entities/card.scss';
 @use './entities/slider.scss';
 @use './entities/section.scss';
@@ -59,6 +58,7 @@
 @use '../../components/SliderPrices/scss/slider-prices.scss';
 @use '../../components/SliderPluses/scss/slider-pluses.scss';
 @use '../../components/c-SliderMix/scss/c-slider-mix.scss';
+@use '../../components/c-SliderArticles/scss/c-slider-articles.scss';
 @use '../../components/SliderFlags/scss/slider-flags.scss';
 @use '../../components/SliderServices/scss/slider-services.scss';
 @use '../../components/SliderDeals/scss/slider-deals.scss';

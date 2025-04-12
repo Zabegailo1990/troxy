@@ -3,7 +3,6 @@
 .slider{
     display: flex;
     overflow-x: auto;
-    touch-action: pan-x; /* запрет вертикального свайпа */
 
     &__spacer{
         flex-shrink: 0;
