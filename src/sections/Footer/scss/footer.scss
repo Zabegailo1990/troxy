@@ -120,8 +120,8 @@
     }
     
     &__list {
-        &:not(:last-child){
-            margin-bottom: 40px;
+        &:not(:first-child){
+            margin-top: 40px;
         }
 
         &--tablet-hidden{
