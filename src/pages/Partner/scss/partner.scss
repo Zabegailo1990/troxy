@@ -1,6 +1,6 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.partner{
+.p-partner{
     overflow: hidden;
 
     &__present{
@@ -10,6 +10,7 @@
     &__animate{
         position: absolute;
         transition: all .3s;
+        z-index: -1;
 
         &--top{
             display: none;
@@ -50,38 +51,15 @@
     }
 
     &__title{
-        text-align: center;
-    }
-
-    &__cards{
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-        max-width: 698px;
-        margin: 0 auto;
-
-        @include respond(tablet){
-            flex-direction: row;
-            flex-wrap: wrap;
-            column-gap: 18px;
-        }
-
-        @include respond(pc){
-            max-width: 100%;
-        }
-    }
-    
-    &__card{
-        flex-shrink: 0;
-    }
-    
-    &__subtitle{
-        text-align: center;
         margin-bottom: 36px;
         
-        @include respond(pc){
+        @include respond(tablet){
             margin-bottom: 65px;
         }
+    }
+
+    &__list{
+        margin: 0 auto;
     }
     
     &__slider{
@@ -91,25 +69,5 @@
             margin: 0 -40px;  
         }
 
-        @include respond(pc){
-            overflow: visible;
-            margin: 0; 
-        }
-    }
-
-    &__stub{
-        @include respond(pc){
-           display: none;
-        }
-    }
-
-    &__inner{
-        column-gap: 20px;
-    }
-
-    &__slide{
-        display: flex;
-        flex-direction: column;
-        row-gap: 20px;
     }
 }

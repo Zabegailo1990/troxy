@@ -1,0 +1,23 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.c-slider-features{
+
+    &__spacer{
+        @include respond(pc){
+            display: none;
+        }
+    }
+
+    &__inner{
+        gap: 20px;
+
+        @include respond(pc){
+            overflow: visible;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__slide{
+        gap: 20px;
+    }
+}

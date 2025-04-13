@@ -22,41 +22,50 @@
     &__icon{
         width: 64px;
         height: 64px;
+        flex-shrink: 0;
         margin-bottom: auto;
-
-        &--right{
-            margin-left: auto;
-        }
     }
     
     &__col{
-        width: 150px;
+        max-width: 150px;
         text-align: right;
         margin-left: auto;
+    }
 
-        &--left{
-            text-align: left;
-        }
+    &__title{
+        margin-bottom: 11px;
     }
 
     &__text{
-        font-size: 16px;
-        line-height: 23px;
         margin-left: auto;
         margin-bottom: 0;
     }
 
-    &--size-m{
+    // Тема на странице p-Partner
+    &--theme-affiliate{
         width: 240px;
         height: 250px;
-
+        padding: 24px 24px 30px 24px;
+        
         @include respond(tablet){
             width: 340px;
             height: 225px;
+            padding: 28px 28px 36px 28px;
         }
-        
+
         @include respond(pc){
             width: 400px;
+        }
+
+        .card-plus__icon{
+            margin-left: auto;
+        }
+
+
+        .card-plus__col{
+            text-align: left;
+            margin-left: 0;
+            max-width: 253px;
         }
     }
 }

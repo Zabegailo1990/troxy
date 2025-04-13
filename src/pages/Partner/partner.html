@@ -6,79 +6,30 @@
     <link rel="stylesheet" href="./css/main.css">
     <title>Partner</title>
 </head>
-<body>
-    <div class="partner">
-        @@include('../../components/Gradient/index.html')
-        <div class="partner__present perspective">
+<body class="body">
+    @@include('../../components/Gradient/index.html')
+    @@include('../../components/c-MenuMobile/index.html', {
+        class: 'body__menu-mobile',
+    })
+    @@include('../../components/Promo/index.html')
+    @@include('../../components/Header/index.html', {
+        class: 'header--bg-light body__header',
+    })
+    <div class="p-partner">
+        <div class="p-partner__present perspective">
             @@include('../../sections/Present/index.html', {
-                title: "Sell ​​proxies and earn with our affiliate program",
+                title: "Sell proxies and earn with our affiliate program",
                 text: "Limit proxies can be useful in a variety of areas such as internet marketing, data analysis, website testing and other areas where it is necessary to control access to proxy servers.",
-                theme: "present--theme-dark",
-                themeLogo: "logo--theme-dark",
-                themeNav: "navigation--theme--dark",
-                themeAuthbar: "authbar--theme--dark",
             })
-            <img class="partner__animate partner__animate--top perspective__first" src="./images/page_partner_ani_2.png" alt="">
-            <img class="partner__animate partner__animate--bottom perspective__second" src="./images/page_partner_ani_1.png" alt="">
+            <img class="p-partner__animate p-partner__animate--top perspective__first" src="./images/page_partner_ani_2.png" alt="">
+            <img class="p-partner__animate p-partner__animate--bottom perspective__second" src="./images/page_partner_ani_1.png" alt="">
         </div>
-        <div class="section">
+        <div class="section section--indent-m">
             <div class="container">
-                <h2 class="title partner__subtitle">Features of the <span class='title--color--blue'>affiliate program</span></h2>
-                <div class="slider partner__slider">
-                    <span class="slider__stub partner__stub"></span>
-                    <div class="slider__inner partner__inner">
-                        <div class="partner__slide">
-                            @@include("../../components/CardPlus/index.html", {
-                                theme: "card-plus--theme-affiliate",
-                                class: "",
-                                icon: "/sprites/affiliates.svg#icon-card-plus_affiliate_1",
-                                title: "Lifetime commission",
-                                text: "Earn 10% on all payments made by clients you refer",
-                            })
-                            @@include("../../components/CardPlus/index.html", {
-                                theme: "card-plus--theme-affiliate",
-                                class: "",
-                                icon: "/sprites/affiliates.svg#icon-card-plus_affiliate_2",
-                                title: "Simple method",
-                                text: "Attract clients using your referral link",
-                            })
-                        </div>
-                        <div class="partner__slide">
-                            @@include("../../components/CardPlus/index.html", {
-                                theme: "card-plus--theme-affiliate",
-                                class: "",
-                                icon: "/sprites/affiliates.svg#icon-card-plus_affiliate_3",
-                                title: "Fast crediting",
-                                text: "Commissions are credited 30 days after the client's payment",
-                            })
-                            @@include("../../components/CardPlus/index.html", {
-                                theme: "card-plus--theme-affiliate",
-                                class: "",
-                                icon: "/sprites/affiliates.svg#icon-card-plus_affiliate_4",
-                                title: "Use as you wish",
-                                text: "You can withdraw from $100 via USDT TRC20 or pay for a proxy inside the TROXY platform",
-                            })
-                            
-                        </div>
-                        <div class="partner__slide">
-                            @@include("../../components/CardPlus/index.html", {
-                                theme: "card-plus--theme-affiliate",
-                                class: "",
-                                icon: "/sprites/affiliates.svg#icon-card-plus_affiliate_5",
-                                title: "Constant income",
-                                text: "Users registered through your link remain linked to you for commission purposes",
-                            })
-                            @@include("../../components/CardPlus/index.html", {
-                                theme: "card-plus--theme-affiliate",
-                                class: "",
-                                icon: "/sprites/affiliates.svg#icon-card-plus_affiliate_6",
-                                title: "Unlimited income",
-                                text: "There are no limits on your income, we will pay as much as you can earn",
-                            })
-                        </div>
-                    </div>
-                    <span class="slider__stub partner__stub"></span>
-                </div>
+                <h2 class="title title--size-m title--pos-center p-partner__title">Features of the <span class="title--color-blue">affiliate program</span></h2>
+                @@include('../../components/c-SliderFeatures/index.html', {
+                    class: "p-partner__slider",
+                })
             </div>
         </div>
         @@include("../../sections/Banner/index.html", {
@@ -87,78 +38,27 @@
             text: "Fill in all the fields of the form and send the application if you want to become our partner",
             button_1: "Become a partner",
         })
-        <div class="section">
+        <div class="section section--indent-m">
             <div class="container">
-                <h2 class="title section__title partner__title">Rules and recommendations <span class="title--color--blue">of the program</span></h2>
-                <div class="partner__cards">
-                    @@include("../../components/CardAffiliate/index.html", {
-                        class: "partner__card",
-                        title: "Don't be misled",
-                        text: "Promote our services accurately and honestly",
-                    })
-                    @@include("../../components/CardAffiliate/index.html", {
-                        class: "partner__card",
-                        title: "Work without spam",
-                        text: "Comply with anti-spam laws and respect opt-out requests",
-                    })
-                    @@include("../../components/CardAffiliate/index.html", {
-                        class: "partner__card",
-                        title: "No incentive registrations",
-                        text: "Promote our services accurately and honestly",
-                    })
-                    @@include("../../components/CardAffiliate/index.html", {
-                        class: "partner__card",
-                        title: "Clear disclosure of information",
-                        text: "Be transparent about your partnerships",
-                    })
-                    @@include("../../components/CardAffiliate/index.html", {
-                        class: "partner__card",
-                        title: "Don't be misled",
-                        text: "Use only authorized incentives for registration",
-                    })
-                    @@include("../../components/CardAffiliate/index.html", {
-                        class: "partner__card",
-                        title: "Respect for intellectual property",
-                        text: "Avoid violating any intellectual property rights",
-                    })
-                    @@include("../../components/CardAffiliate/index.html", {
-                        class: "partner__card",
-                        title: "Work legally",
-                        text: "Do not engage in or promote illegal activities",
-                    })
-                    @@include("../../components/CardAffiliate/index.html", {
-                        class: "partner__card",
-                        title: "Compliance with the rules",
-                        text: "Follow third party platform guidelines",
-                    })
-                    @@include("../../components/CardAffiliate/index.html", {
-                        class: "partner__card",
-                        title: "One Account Policy",
-                        text: "Creating multiple accounts for self-transition is prohibited",
-                    })
-                    @@include("../../components/CardAffiliate/index.html", {
-                        class: "partner__card",
-                        title: "Responsible Marketing",
-                        text: "Please ensure that promotions do not harm our brand or violate any laws.",
-                    })
-                    @@include("../../components/CardAffiliate/index.html", {
-                        class: "partner__card",
-                        title: "Regular updates",
-                        text: "Stay informed and update promotions as needed",
-                    })
-                </div>
+                <h2 class="title title--size-m title--pos-center p-partner__title">Rules and recommendations <span class="title--color-blue">of the program</span></h2>
+                @@include('../../components/c-ListPrograms/index.html', {
+                    class: 'p-partner__list',
+                })
             </div>
         </div>
         @@include('../../sections/SliderNews/index.html')
         @@include("../../sections/Footer/index.html")
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="./js/gradient.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="./js/gradient.js"></script>
     <script src="./js/smoothScroll.js"></script>
     <script src="./vendors/jquery/jquery.min.js"></script>
     <script src="./vendors/slick/slick.min.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/menuMobile.js"></script>
     <script src="./js/sliderNews.js"></script>
     <script src="./js/perspective.js"></script>
 </body>

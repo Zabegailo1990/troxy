@@ -3,13 +3,14 @@
 .card-affiliate{
     display: flex;
     align-items: center;
+    width: 327px;
 
     @include respond(tablet){
         width: 340px;
     }
     
     @include respond(pc){
-        width: 611px;
+        width: 610px;
     }
     
     &__icon{
@@ -20,13 +21,5 @@
 
     &__title{
         margin-bottom: 7px;
-    }
-
-    &__text{
-        font-size: 12px;
-
-        @include respond(tablet){
-            font-size: 16px;
-        }
     }
 }
