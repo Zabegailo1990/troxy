@@ -1,6 +1,11 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
-.purposes{
-    
+.p-purposes{
+    padding-top: 130px;
+
+    @include respond(tablet){
+        padding-top: 170px;
+    }
+
     &__breadcrumbs{
         margin-bottom: 14px;
 
