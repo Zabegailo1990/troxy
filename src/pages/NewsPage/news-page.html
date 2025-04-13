@@ -17,14 +17,16 @@
     })
     <div class="news-page">
         <div class="container">
-            <div class="section section--indent-s">
+            <div class="section">
                 @@include('../../components/Breadcrumbs/index.html', { 
                     class: 'news-page__breadcrumbs',
                     item_1: "Main",
                     item_2: "News and articles",
                 })
                 <h1 class="title title--size-l news-page__title">Proxy news and useful articles</h1>
-                @@include('../../components/c-ListArticles/index.html')
+                @@include('../../components/c-ListArticles/index.html', {
+                    class: 'news-page__list',
+                })
                 @@include('../../components/Pagination/index.html', { 
                     class: "news-page__pagination"
                 })

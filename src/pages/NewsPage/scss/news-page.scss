@@ -1,6 +1,11 @@
 @use "../../../assets/scss/mixins/mediaQuery" as *;
 
 .news-page{
+    padding-top: 130px;
+
+    @include respond(tablet){
+        padding-top: 170px;
+    }
 
     &__breadcrumbs{
         margin-bottom: 14px;
@@ -17,32 +22,17 @@
             margin-bottom: 65px;
         }
     }
-
-    &__inner{
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 35px;
-
-        @include respond(tablet){
-            margin-bottom: 52px;
-        }
-    }
-
-    &__cards{
-        display: flex;
-        flex-direction: column;
-        column-gap: 20px;
+    
+    &__list{
         margin: 0 auto;
+        margin-bottom: 25px;
 
         @include respond(tablet){
-            max-width: 698px;
-            flex-direction: row;
-            flex-wrap: wrap;
-            row-gap: 20px;
+            margin-bottom: 54px;
         }
 
         @include respond(pc){
-            max-width: none;
+            margin-bottom: 65px;
         }
     }
 

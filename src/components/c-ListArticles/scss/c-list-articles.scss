@@ -1,0 +1,29 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.c-list-articles{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 22px;
+    row-gap: 28px;
+    max-width: 320px;
+
+    @include respond(710px){
+        row-gap: 44px;
+        max-width: 662px;
+    }
+
+    @include respond(tablet){
+        max-width: 700px;
+    }
+
+    @include respond(1141px){
+        max-width: 1061px;
+    }
+
+    @include respond(pc){
+        column-gap: 20px;
+        row-gap: 44px;
+        max-width: none;
+    }
+
+}

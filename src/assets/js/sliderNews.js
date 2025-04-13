@@ -27,6 +27,8 @@ $(document).ready(function(){
             nextArrow: $('.slider-news__button--next'),
             infinite: false,
             variableWidth: true,
+            swipe: true,
+            touchMove: true,
             responsive: [
                 {
                     breakpoint: 1440,

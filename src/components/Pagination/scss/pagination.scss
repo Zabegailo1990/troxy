@@ -5,26 +5,36 @@
     width: fit-content;
     align-items: center;
 
-    &__button{
-        margin-right: 18px;
-
-        @include respond(tablet){
-            margin-right: 14px;
-        }
-    }
-
     &__inner{
-        display: none;
-
-        @include respond(tablet){
-            display: flex;
-            margin-right: 14px;
-        }
+        display: flex;
+        column-gap: 4px;
     }
-    
-    &__page{
-        &:not(:last-child){
-            margin-right: 3px;
+
+    &__button{
+
+        &--prev{
+            margin-right: 18px;
+
+            @include respond(tablet){
+                margin-right: 14px;
+            }
+        }
+
+        &--next{
+            @include respond(tablet){
+                margin-left: 14px;
+            }
+        }
+
+        &--page{
+            display: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+
+            @include respond(tablet){
+                display: block;
+            }
         }
     }
 }
