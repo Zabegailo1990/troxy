@@ -1,6 +1,6 @@
 @use "../../../assets/scss/mixins/mediaQuery" as *;
 
-.news-page{
+.p-news-page{
     padding-top: 130px;
 
     @include respond(tablet){

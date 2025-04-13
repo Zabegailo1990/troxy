@@ -15,20 +15,20 @@
     @@include('../../components/Header/index.html', {
         class: 'header--bg-light body__header',
     })
-    <div class="news-page">
+    <div class="p-news-page">
         <div class="container">
             <div class="section">
                 @@include('../../components/Breadcrumbs/index.html', { 
-                    class: 'news-page__breadcrumbs',
+                    class: 'p-news-page__breadcrumbs',
                     item_1: "Main",
                     item_2: "News and articles",
                 })
-                <h1 class="title title--size-l news-page__title">Proxy news and useful articles</h1>
+                <h1 class="title title--size-l p-news-page__title">Proxy news and useful articles</h1>
                 @@include('../../components/c-ListArticles/index.html', {
-                    class: 'news-page__list',
+                    class: 'p-news-page__list',
                 })
                 @@include('../../components/Pagination/index.html', { 
-                    class: "news-page__pagination"
+                    class: "p-news-page__pagination"
                 })
             </div>
         </div>
