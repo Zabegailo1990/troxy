@@ -6,48 +6,27 @@
     <link rel="stylesheet" href="./css/main.css">
     <title>Scripts</title>
 </head>
-<body>
-    <div class="scripts">
-        @@include("../../components/Header/index.html", {
-            class: "header--bg--white",
-            themeLogo: "logo--theme-dark",
-            themeNav: "navigation--theme--dark",
-            themeAuthbar: "authbar--theme--dark",
-        })
+<body class="body">
+    @@include('../../components/c-MenuMobile/index.html', {
+        class: 'body__menu-mobile',
+    })
+    @@include('../../components/Promo/index.html')
+    @@include('../../components/Header/index.html', {
+        class: 'header--bg-light body__header',
+    })
+    <div class="p-scripts">
         <div class="section">
             <div class="container">
                 @@include('../../components/Breadcrumbs/index.html', { 
-                    class: 'scripts__breadcrumbs',
+                    class: 'p-scripts__breadcrumbs',
                     item_1: "Main",
                     item_2: "Scripts",
                 })
-                <div class="scripts__inner">
-                    <h1 class="title scripts__title">Scripts</h1>
-                    <div class="scripts__cards">
-                        @@include("../../components/CardScript/index.html", { title: "Script for working with Google-Translate-API. Python" })
-                        @@include("../../components/CardScript/index.html", { title: "Proxy scraper. Python" })
-                        @@include("../../components/CardScript/index.html", { title: "PHP Proxy Scraper" })
-                        @@include("../../components/CardScript/index.html", { title: "Script for collecting forum database. Python" })
-                        @@include("../../components/CardScript/index.html", { title: "3proxy install script for Ubuntu PHP" })
-                        @@include("../../components/CardScript/index.html", { title: "3proxy install script for Ubuntu. Python" })
-                        @@include("../../components/CardScript/index.html", { title: "Script for working with Google-Translate-API. Python" })
-                        @@include("../../components/CardScript/index.html", { title: "Proxy scraper. Python" })
-                        @@include("../../components/CardScript/index.html", { title: "PHP Proxy Scraper" })
-                        @@include("../../components/CardScript/index.html", { title: "Script for collecting forum database. Python" })
-                        @@include("../../components/CardScript/index.html", { title: "3proxy install script for Ubuntu PHP" })
-                        @@include("../../components/CardScript/index.html", { title: "3proxy install script for Ubuntu. Python" })
-                        @@include("../../components/CardScript/index.html", { title: "Script for working with Google-Translate-API. Python" })
-                        @@include("../../components/CardScript/index.html", { title: "Proxy scraper. Python" })
-                        @@include("../../components/CardScript/index.html", { title: "PHP Proxy Scraper" })
-                        @@include("../../components/CardScript/index.html", { title: "Script for working with Google-Translate-API. Python" })
-                        @@include("../../components/CardScript/index.html", { title: "Proxy scraper. Python" })
-                        @@include("../../components/CardScript/index.html", { title: "PHP Proxy Scraper" })
-                        @@include("../../components/CardScript/index.html", { title: "Script for collecting forum database. Python" })
-                        @@include("../../components/CardScript/index.html", { title: "3proxy install script for Ubuntu PHP" })
-                        @@include("../../components/CardScript/index.html", { title: "3proxy install script for Ubuntu. Python" })
-                    </div>
-                </div>
-                @@include("../../components/Pagination/index.html", { class: "scripts__pagination" })
+                <h1 class="title title--size-l p-scripts__title">Scripts</h1>
+                @@include('../../components/c-ListScripts/index.html', {
+                    class: 'p-scripts__list',
+                    })
+                @@include("../../components/Pagination/index.html", { class: "p-scripts__pagination" })
             </div>
         </div>
         @@include("../../sections/Banner/index.html", {
@@ -59,5 +38,14 @@
         })
         @@include("../../sections/Footer/index.html")
     </div>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="./js/smoothScroll.js"></script>
+    <script src="./vendors/jquery/jquery.min.js"></script>
+    <script src="./vendors/slick/slick.min.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/menuMobile.js"></script>
 </body>
 </html>

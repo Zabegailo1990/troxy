@@ -1,0 +1,16 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.c-list-scripts{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 327px;
+
+    @include respond(tablet){
+        max-width: 700px;
+        gap: 21px;
+    }
+    @include respond(pc){
+        max-width: none;
+    }
+}

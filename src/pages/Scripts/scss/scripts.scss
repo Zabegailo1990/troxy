@@ -1,13 +1,15 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.scripts{
+.p-scripts{
+    padding-top: 130px;
+
+    @include respond(tablet){
+        padding-top: 170px;
+    }
 
     &__breadcrumbs{
         margin-bottom: 14px;
 
-        @include respond(tablet){
-            margin-bottom: 21px;
-        }
     }
 
     &__inner{
@@ -32,18 +34,16 @@
         }
     }
 
-    &__cards{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        row-gap: 12px;
-        margin: 0 0 24px 0;
+    &__list{
+        margin: 0 auto;
+        margin-bottom: 28px;
 
         @include respond(tablet){
-            flex-direction: row;align-items: normal;
-            flex-wrap: wrap;
-            gap: 21px;
             margin-bottom: 65px;
+        }
+
+        @include respond(pc){
+            margin-bottom: 70px;
         }
     }
 
