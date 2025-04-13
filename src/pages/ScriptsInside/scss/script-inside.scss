@@ -1,6 +1,11 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.script-inside{
+.p-script-inside{
+    padding-top: 130px;
+
+    @include respond(tablet){
+        padding-top: 170px;
+    }
 
     &__breadcrumbs{
         margin-bottom: 14px;
@@ -24,6 +29,10 @@
         @include respond(tablet){
             margin-bottom: 31px;
         }
+
+        @include respond(pc){
+            margin-bottom: 41px;
+        }
     }
 
     &__text{
@@ -37,11 +46,15 @@
     }
 
     &__group {
-        margin-bottom: 42px;
 
-        @include respond(tablet){
-            margin-bottom: 28px;
-        }        
+        &:not(:last-child){
+            margin-bottom: 42px;
+            
+            @include respond(tablet){
+                margin-bottom: 28px;
+            }        
+        }
+
     }
 
     &__img{
