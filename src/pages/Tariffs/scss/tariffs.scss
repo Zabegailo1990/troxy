@@ -1,6 +1,6 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.tariffs{
+.p-tariffs{
     overflow: hidden;
 
     &__present{
@@ -81,6 +81,8 @@
     }
 
     &__slider-flags{
+        margin-bottom: 34px;
+        
         @include respond(tablet){
             display: none;
         }

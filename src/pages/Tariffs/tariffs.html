@@ -15,34 +15,34 @@
         @@include('../../components/Header/index.html', {
             class: "header--bg-light body__header",
         })
-        <div class="tariffs">
-            <div class="tariffs__present perspective">
+        <div class="p-tariffs">
+            <div class="p-tariffs__present perspective">
                 @@include('../../sections/Present/index.html', {
                     title: "Proxy tariffs",
                     text: "Use our proxy packages or order a custom quantity based on your needs",
                 })
-                <img class="tariffs__animate tariffs__animate--top perspective__first" src="./images/page_tariffs_ani_2.png" alt="">
-                <img class="tariffs__animate tariffs__animate--bottom perspective__second" src="./images/page_tariffs_ani_1.png" alt="">
+                <img class="p-tariffs__animate p-tariffs__animate--top perspective__first" src="./images/page_tariffs_ani_2.png" alt="">
+                <img class="p-tariffs__animate p-tariffs__animate--bottom perspective__second" src="./images/page_tariffs_ani_1.png" alt="">
             </div>
             <div class="section section--indent-m">
                 <div class="container">
-                    <h2 class="title title--size-m title--pos-center tariffs__subtitle">High-quality proxies from 5 to 200,000+ IPs <span class="title--color-blue">at affordable prices</span></h2>
+                    <h2 class="title title--size-m title--pos-center p-tariffs__subtitle">High-quality proxies from 5 to 200,000+ IPs <span class="title--color-blue">at affordable prices</span></h2>
                     @@include('../../components/SliderPrices/index.html', {
-                        class: "tariffs__slider tariffs__slider-prices",
+                        class: "p-tariffs__slider p-tariffs__slider-prices",
                     })
                 </div>
             </div>
             <div class="section section--indent-m">
                 <div class="container">
-                    <h2 class="title title--size-m title--pos-center tariffs__subtitle">Best proxy locations <span class="title--color-blue">by country</span></h2>
+                    <h2 class="title title--size-m title--pos-center p-tariffs__subtitle">Best proxy locations <span class="title--color-blue">by country</span></h2>
                     @@include("../../components/SliderFlags/index.html", { 
-                        class: "tariffs__slider tariffs__slider-flags" 
+                        class: "p-tariffs__slider p-tariffs__slider-flags" 
                     })
                     @@include("../../components/FlagList/index.html", { 
-                        class: "tariffs__flag-list" 
+                        class: "p-tariffs__flag-list" 
                     })
                 </div>
-                <button class="button button--bg--blue button--rounded button--color--white tariffs__button">View all locations (195)</button>
+                <button class="button button--fz-m button--size-l button--bg-blue button--rounded button--color-light p-tariffs__button">View all locations (195)</button>
             </div>
             @@include('../../sections/Banner/index.html', {
                 bgNum: "1",
@@ -77,5 +77,6 @@
         <script src="./js/perspective.js"></script>
         <script src="./js/cardQuestion.js"></script>
         <script src="./js/header.js"></script>
+        <script src="./js/menuMobile.js"></script>
     </body>
 </html>
