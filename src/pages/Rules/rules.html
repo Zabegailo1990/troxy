@@ -6,74 +6,83 @@
     <link rel="stylesheet" href="./css/main.css">
     <title>Rules</title>
 </head>
-<body>
-    <div class="rules">
-        @@include("../../components/Header/index.html", {
-            class: "header--bg--white",
-            themeLogo: "logo--theme-dark",
-            themeNav: "navigation--theme--dark",
-            themeAuthbar: "authbar--theme--dark",
-        })
+<body class="body">
+    @@include('../../components/c-MenuMobile/index.html', {
+        class: 'body__menu-mobile',
+    })
+    @@include('../../components/Promo/index.html')
+    @@include('../../components/Header/index.html', {
+        class: 'header--bg-light body__header',
+    })
+    <div class="p-rules">
         <div class="section">
             <div class="container">
                 @@include('../../components/Breadcrumbs/index.html', { 
-                    class: 'rules__breadcrumbs',
+                    class: 'p-rules__breadcrumbs',
                     item_1: "Main",
                     item_2: "Rules",
                 })
-                <h1 class="terms__title">Rules</h1>
-                <p class="text">Users of the “Troxy” services are hereby bound by the following stipulations and obligations:</p>
-                <ol class="rules__list">
-                    <li class="rules__item">
-                        <p class="text">Users shall abstain from engaging in activities that contravene or breach any applicable laws or regulations.</p>
+                <h1 class="title title--size-l p-rules__title">Rules</h1>
+                <p class="text text--size-m">Users of the “Troxy” services are hereby bound by the following stipulations and obligations:</p>
+                <ol class="p-rules__list">
+                    <li class="p-rules__item">
+                        <p class="text text--size-m">Users shall abstain from engaging in activities that contravene or breach any applicable laws or regulations.</p>
                     </li>
-                    <li class="rules__item">
-                        <p class="text">Any actions or communications that could be construed as threatening, harassing, or constituting a violation of others’ privacy rights are strictly prohibited. The unauthorized interception, monitoring, or modification of communications is likewise forbidden.</p>
+                    <li class="p-rules__item">
+                        <p class="text text--size-m">Any actions or communications that could be construed as threatening, harassing, or constituting a violation of others’ privacy rights are strictly prohibited. The unauthorized interception, monitoring, or modification of communications is likewise forbidden.</p>
                     </li>
-                    <li class="rules__item">
-                        <p class="text">Users are barred from engaging in activities that might inflict harm on others, whether through the utilization of malicious software such as viruses, spyware, malware, worms, Trojan horses, time bombs, or other harmful codes or instructions.</p>
+                    <li class="p-rules__item">
+                        <p class="text text--size-m">Users are barred from engaging in activities that might inflict harm on others, whether through the utilization of malicious software such as viruses, spyware, malware, worms, Trojan horses, time bombs, or other harmful codes or instructions.</p>
                     </li>
-                    <li class="rules__item">
-                        <p class="text">Any act that serves to deceive, defraud, or attempts to commit identity theft is expressly forbidden.</p>
+                    <li class="p-rules__item">
+                        <p class="text text--size-m">Any act that serves to deceive, defraud, or attempts to commit identity theft is expressly forbidden.</p>
                     </li>
-                    <li class="rules__item">
-                        <p class="text">Illegal or illicit gambling activities, or their promotion, are strictly proscribed.</p>
+                    <li class="p-rules__item">
+                        <p class="text text--size-m">Illegal or illicit gambling activities, or their promotion, are strictly proscribed.</p>
                     </li>
-                    <li class="rules__item">
-                        <p class="text">Actions or communications intended to degrade, intimidate, incite violence against, or encourage prejudicial actions against individuals or groups based on age, gender, race, ethnicity, national origin, religion, sexual orientation, disability, geographic location, or other protected category are not tolerated.</p>
+                    <li class="p-rules__item">
+                        <p class="text text--size-m">Actions or communications intended to degrade, intimidate, incite violence against, or encourage prejudicial actions against individuals or groups based on age, gender, race, ethnicity, national origin, religion, sexual orientation, disability, geographic location, or other protected category are not tolerated.</p>
                     </li>
-                    <li class="rules__item">
-                        <p class="text">Any form of exploitation or harm towards children is unequivocally banned.</p>
+                    <li class="p-rules__item">
+                        <p class="text text--size-m">Any form of exploitation or harm towards children is unequivocally banned.</p>
                     </li>
-                    <li class="rules__item">
-                        <p class="text">Users must refrain from advertising, selling, or purchasing illegal or controlled goods or services.</p>
+                    <li class="p-rules__item">
+                        <p class="text text--size-m">Users must refrain from advertising, selling, or purchasing illegal or controlled goods or services.</p>
                     </li>
-                    <li class="rules__item">
-                        <p class="text">Transmitting, displaying, or providing access to explicit content depicting sexuality or violence is not permitted.</p>
+                    <li class="p-rules__item">
+                        <p class="text text--size-m">Transmitting, displaying, or providing access to explicit content depicting sexuality or violence is not permitted.</p>
                     </li>
-                    <li class="rules__item">
-                        <p class="text">Unauthorized collection or harvesting of personally identifiable information, inclusive but not limited to account names and email addresses, is strictly forbidden.</p>
+                    <li class="p-rules__item">
+                        <p class="text text--size-m">Unauthorized collection or harvesting of personally identifiable information, inclusive but not limited to account names and email addresses, is strictly forbidden.</p>
                     </li>
-                    <li class="rules__item">
-                        <p class="text">Any form of activity that disrupts or interferes with “FINEPROXY” services, products, or the servers and networks connected thereto, is prohibited.</p>
+                    <li class="p-rules__item">
+                        <p class="text text--size-m">Any form of activity that disrupts or interferes with “FINEPROXY” services, products, or the servers and networks connected thereto, is prohibited.</p>
                     </li>
-                    <li class="rules__item">
-                        <p class="text">Users must respect and not violate the copyright, trademark, patent, or other intellectual property rights of others.</p>
+                    <li class="p-rules__item">
+                        <p class="text text--size-m">Users must respect and not violate the copyright, trademark, patent, or other intellectual property rights of others.</p>
                     </li>
-                    <li class="rules__item">
-                        <p class="text">Infringements upon any individual’s rights to privacy or publicity are strictly proscribed.</p>
+                    <li class="p-rules__item">
+                        <p class="text text--size-m">Infringements upon any individual’s rights to privacy or publicity are strictly proscribed.</p>
                     </li>
-                    <li class="rules__item">
-                        <p class="text">To safeguard user access, registration with temporary email services or non-existent email addresses is strongly discouraged. Users are urged to register using a stable email address, to which they have permanent access.</p>
+                    <li class="p-rules__item">
+                        <p class="text text--size-m">To safeguard user access, registration with temporary email services or non-existent email addresses is strongly discouraged. Users are urged to register using a stable email address, to which they have permanent access.</p>
                     </li>
-                    <li class="rules__item">
-                        <p class="text">No “FINEPROXY” service may be employed in violation of the Terms of Use, Conditions of Use, or applicable license. Additionally, no “FINEPROXY” product or service may be sold, resold, or duplicated without the express written consent of “FINEPROXY”.</p>
+                    <li class="p-rules__item">
+                        <p class="text text--size-m">No “FINEPROXY” service may be employed in violation of the Terms of Use, Conditions of Use, or applicable license. Additionally, no “FINEPROXY” product or service may be sold, resold, or duplicated without the express written consent of “FINEPROXY”.</p>
                     </li>
                 </ol>
-                <p class="text">These examples are not exhaustive, and we reserve the right to update these provisions as necessary. “FINEPROXY” retains the right to remove any content or suspend any user account it deems in breach of these conditions.</p>
+                <p class="text text--size-m">These examples are not exhaustive, and we reserve the right to update these provisions as necessary. “FINEPROXY” retains the right to remove any content or suspend any user account it deems in breach of these conditions.</p>
             </div>
         </div>
         @@include("../../sections/Footer/index.html")
     </div>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="./js/smoothScroll.js"></script>
+    <script src="./vendors/jquery/jquery.min.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/menuMobile.js"></script>
 </body>
 </html>
