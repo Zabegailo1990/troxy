@@ -5,7 +5,11 @@
     flex-wrap: wrap;
     row-gap: 18px;
     column-gap: 18px;
-    max-width: 672px;
+    max-width: 327px;
+
+    @include respond(720px){
+        max-width: 672px;
+    }
 
     @include respond(tablet){
         max-width: 700px;
