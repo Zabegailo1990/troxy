@@ -2,8 +2,6 @@
 
 .present{
     position: relative;
-    height: 100vh;
-    overflow: hidden;
 
     &__background{
         position: absolute;
@@ -70,6 +68,14 @@
 
     &__title{
         max-width: 1027px;
+
+        &--space-down{
+            margin-bottom: 28px;
+
+            @include respond(tablet){
+                margin-bottom: 32px;
+            }
+        }
     }
     
     &__text{
@@ -100,13 +106,6 @@
         &:not(:last-child){
             margin-right: 8px;
         }
-    }
-
-    &__lock{
-        position: absolute;
-        bottom: -132px;
-        right: -127px;
-        z-index: 1;
     }
 
     &__list{

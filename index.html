@@ -11,22 +11,29 @@
     @@include("./src/components/c-MenuMobile/index.html", {
         class: "body__menu-mobile",
     })
-    @@include("./src/components/c-MenuMobile/index.html", {
-        class: "body__menu-mobile",
+    @@include('./src/components/Promo/index.html')
+    @@include('./src/components/Header/index.html', {
+        class: "body__header",
+        theme: "light",
     })
     <div class="home">
-        @@include('./src/components/Promo/index.html', {
-            class: "home__promo",
-        })
-        @@include('./src/components/Header/index.html', {
-            theme: "light",
-            class: "home__header",
-        })
         <div class="home__present perspective">
+            <picture class="home__background">
+                <source class="home__img" media="(min-width: 1440px)" srcset="./images/section_present-1_bg_pc.jpg">
+                <source class="home__img" media="(min-width: 780px)" srcset="./images/section_present-1_bg_pc.jpg">
+                <img class="home__img" src="./images/section_present-1_bg_pc.jpg">
+            </picture>
+            <div class="home__rating">
+                <img class="home__trustpilot" src="./images/present_section_trustpilot.svg">
+                <img class="home__trustpilot" src="./images/present_section_trustpilot.svg">
+                <img class="home__trustpilot" src="./images/present_section_trustpilot.svg">
+            </div>
             @@include('./src/sections/Present/index.html', {
-                bgNum: "1",
                 title: "Effective proxies for business with <br>a unique digital footprint from $0.058",
                 text: "Get a convenient and economical proxy service",
+                background: 'true',
+                rating: 'true',
+                theme: 'light',
             })
             <img class="home__animate home__animate--top perspective__first" src="images/page_home_ani_2.png" alt="">
             <img class="home__animate home__animate--bottom perspective__second" src="images/page_home_ani_1.png" alt="">
