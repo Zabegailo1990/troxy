@@ -1,6 +1,11 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.vacancies{
+.p-vacancies{
+    padding-top: 130px;
+
+    @include respond(tablet){
+        padding-top: 170px;
+    }
 
     &__breadcrumbs{
         margin-bottom: 14px;
@@ -18,21 +23,21 @@
         }
     }
     
-    &__tabs{
+    &__filters{
         margin-bottom: 24px;
+    }
+
+    &__list{
+        margin-bottom: 24px;
+    
+        @include respond(pc){
+            margin-bottom: 46px;
+        }
     }
 
     &__card{
         &:not(:last-child){
             margin-bottom: 14px;
-        }
-        
-        &:last-child{
-            margin-bottom: 24px;
-
-            @include respond(pc){
-                margin-bottom: 46px;
-            }
         }
     }
 
