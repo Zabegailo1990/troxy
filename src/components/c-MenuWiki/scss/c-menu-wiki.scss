@@ -1,0 +1,18 @@
+.c-menu-wiki{
+    &__list{
+        width: 399px;
+        padding: 32px;
+        border-radius: 20px;
+        background-color: #fff;
+    }
+
+    &__sublist{
+        padding-left: 25px;
+    }
+
+    &__link{
+        text-decoration: underline;
+        color: #2E7AF5;
+        font-weight: 500;
+    }
+}

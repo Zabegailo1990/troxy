@@ -6,14 +6,15 @@
     <link rel="stylesheet" href="./css/main.css">
     <title>Wiki inside</title>
 </head>
-<body>
+<body class="body">
+    @@include('../../components/c-MenuMobile/index.html', {
+        class: 'body__menu-mobile',
+    })
+    @@include('../../components/Promo/index.html')
+    @@include('../../components/Header/index.html', {
+        class: 'header--bg-light body__header',
+    })
     <div class="wiki-inside">
-        @@include("../../components/Header/index.html", {
-            class: "header--bg--white",
-            themeLogo: "logo--theme-dark",
-            themeNav: "navigation--theme--dark",
-            themeAuthbar: "authbar--theme--dark",
-        })
         <div class="section">
             <div class="container">
                 @@include('../../components/Breadcrumbs/index.html', { 
@@ -22,105 +23,80 @@
                     item_2: "WiKi",
                     item_3: "400 - Bad Request",
                 })
-                <h1 class="wiki-inside__title">400 - Bad Request</h1>
-                <p class="text text--color--gray wiki-inside__date">12.08.2024</p>
+                <h1 class="title title--size-l wiki-inside__title">400 - Bad Request</h1>
+                <p class="text text--size-m text--color-gray wiki-inside__date">12.08.2024</p>
                 <div class="wiki-inside__inner">
                     <div class="wiki-inside__content">
                         <div class="wiki-inside__group">
-                            <p class="text">"400 - Bad Request" is a common, yet confusing, HTTP status code that users encounter when browsing the web. It means that the server was unable to understand or process the request due to incorrect syntax. While this error may seem scary, understanding its origin and how to resolve it can ease the frustration and ensure a smooth web browsing experience.</p>
+                            <p class="text text--size-m">"400 - Bad Request" is a common, yet confusing, HTTP status code that users encounter when browsing the web. It means that the server was unable to understand or process the request due to incorrect syntax. While this error may seem scary, understanding its origin and how to resolve it can ease the frustration and ensure a smooth web browsing experience.</p>
                         </div>
                         <div class="wiki-inside__group">
-                            <h2 class="title wiki-inside__subtitle">Understanding HTTP Status Codes</h2>
-                            <p class="text wiki-inside__text">HTTP (Hypertext Transfer Protocol) status codes returned by a web server indicate the result of the requested operation. They are divided into five classes, each identified by its first digit:
-                                <ul>
-                                    <li>
-                                        <p class="text">1xx - Informational</p>
+                            <h2 class="title title--size-m wiki-inside__subtitle">Understanding HTTP Status Codes</h2>
+                            <p class="text text--size-m wiki-inside__text">HTTP (Hypertext Transfer Protocol) status codes returned by a web server indicate the result of the requested operation. They are divided into five classes, each identified by its first digit:
+                                <ul class="wiki-inside__list">
+                                    <li class="wiki-inside__item">
+                                        <p class="text text--size-m">1xx - Informational</p>
                                     </li>
-                                    <li>
-                                        <p class="text">2xx - Success</p>
+                                    <li class="wiki-inside__item">
+                                        <p class="text text--size-m">2xx - Success</p>
                                     </li>
-                                    <li>
-                                        <p class="text">3xx - Redirect</p>
+                                    <li class="wiki-inside__item">
+                                        <p class="text text--size-m">3xx - Redirect</p>
                                     </li>
-                                    <li>
-                                        <p class="text">4xx - Client Errors</p>
+                                    <li class="wiki-inside__item">
+                                        <p class="text text--size-m">4xx - Client Errors</p>
                                     </li>
-                                    <li>
-                                        <p class="text">5xx - Server Errors</p>
+                                    <li class="wiki-inside__item">
+                                        <p class="text text--size-m">5xx - Server Errors</p>
                                     </li>
                                 </ul>
-                            <p class="text wiki-inside__text">Error 400 Bad Request falls into the 4xx category, signaling that the client has made an error.</p>
+                            <p class="text text--size-m wiki-inside__text">Error 400 Bad Request falls into the 4xx category, signaling that the client has made an error.</p>
                         </div>
                         <div class="wiki-inside__group">
-                            <h2 class="title wiki-inside__subtitle">What causes 400 - Bad Request error?</h2>
-                            <p class="text wiki-inside__text">This error typically occurs when the server is unable to interpret the request due to invalid syntax. Common causes include:</p>
-                            <ul>
-                                <li>
-                                    <p class="text">Invalid URL: URLs containing invalid or special characters can result in a 400 error.</p>
+                            <h2 class="title title--size-m wiki-inside__subtitle">What causes 400 - Bad Request error?</h2>
+                            <p class="text text--size-m wiki-inside__text">This error typically occurs when the server is unable to interpret the request due to invalid syntax. Common causes include:</p>
+                            <ul class="wiki-inside__list">
+                                <li class="wiki-inside__item">
+                                    <p class="text text--size-m">Invalid URL: URLs containing invalid or special characters can result in a 400 error.</p>
                                 </li>
-                                <li>
-                                    <p class="text">Invalid or expired cookies: If a site's cookies are corrupted or expired, a 400 error can occur.</p>
+                                <li class="wiki-inside__item">
+                                    <p class="text text--size-m">Invalid or expired cookies: If a site's cookies are corrupted or expired, a 400 error can occur.</p>
                                 </li>
-                                <li>
-                                    <p class="text">Large headers: HTTP headers that exceed the server's limit can also cause this error.</p>
+                                <li class="wiki-inside__item">
+                                    <p class="text text--size-m">Large headers: HTTP headers that exceed the server's limit can also cause this error.</p>
                                 </li>
-                                <li>
-                                    <p class="text">Failed DNS lookup: Failure to resolve DNS can result in a 400 error.</p>
+                                <li class="wiki-inside__item">
+                                    <p class="text text--size-m">Failed DNS lookup: Failure to resolve DNS can result in a 400 error.</p>
                                 </li>
                             </ul>
                         </div>
                     </div>
-    
-    
-    
                     <div class="wiki-inside__aside">
-                        <ul class="wiki-inside__list">
-                            <li class="wiki-inside__item">
-                                <a href="" class="wiki-inside__link">1. Understanding HTTP Status Codes</a>
-                            </li>
-                            <li class="wiki-inside__item">
-                                <a href="" class="wiki-inside__link">2. What Causes 400 - Bad Request Error?</a>
-                            </li>
-                            <li class="wiki-inside__item">
-                                <a href="" class="wiki-inside__link">3. Consequences of 400 - Bad Request Error</a>
-                            </li>
-                            <li class="wiki-inside__item">
-                                <a href="" class="wiki-inside__link">4. Table: Common Causes and Solutions for 400 - Bad Request Error</a>
-                            </li>
-                            <li class="wiki-inside__item">
-                                <a href="" class="wiki-inside__link">5. How to Fix 400 - Bad Request Error</a>
-                                <ul class="wiki-inside__sublist">
-                                    <li class="wiki-inside__item">
-                                        <a href="" class="wiki-inside__link">5.1 1. Check and Correct URLs</a>
-                                    </li>
-                                    <li class="wiki-inside__item">
-                                        <a href="" class="wiki-inside__link">5.2 2. Clear Cookies</a>
-                                    </li>
-                                    <li class="wiki-inside__item">
-                                        <a href="" class="wiki-inside__link"> 5.3 3. Reduce Header Size</a>
-                                    </li>
-                                    <li class="wiki-inside__item">
-                                        <a href="" class="wiki-inside__link">5.4.4. Flush DNS Cache</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="wiki-inside__item">
-                                <a href="" class="wiki-inside__link">6. List: Steps to Prevent 400 - Bad Request Error</a>
-                            </li>
-                        </ul>
-                        <div class="wiki-inside__banner">
-                            <img class="wiki-inside__background" src="./images/page_wiki-inside_aside_banner.jpg">
-                            <div class="wiki-inside__column">
-                                <h3 class="wiki-inside__tagline">Test our proxies to ensure their quality</h3>
-                                <p class="text text--color--white wiki-inside__text--banner">Go to the convenient configurator and buy proxies in a few clicks</p>
-                                <button class="button--rounded button--bg--blue button--color--white">Test free</button>
-                            </div>
-                        </div>
+                        @@include('../../components/c-MenuWiki/index.html', {
+                            class: "wiki-inside__menu",
+                        })
+                        @@include('../../components/c-BannerWiki/index.html')
                     </div>
                 </div>
             </div>
         </div>
+        @@include('../../sections/Banner/index.html', {
+            class: "wiki-inside__banner",
+            bgNum: "1",
+            title: "Test our proxies to ensure their quality",
+            text: "We will select a high-quality and effective solution for you personally at the best price",
+            button_1: "Test free"
+        })
         @@include("../../sections/Footer/index.html")
     </div>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="./js/smoothScroll.js"></script>
+    <script src="./vendors/jquery/jquery.min.js"></script>
+    <script src="./vendors/slick/slick.min.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/menuMobile.js"></script>
 </body>
 </html>
