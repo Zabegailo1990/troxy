@@ -14,23 +14,23 @@
     @@include('../../components/Header/index.html', {
         class: 'header--bg-light body__header',
     })
-    <div class="wiki">
+    <div class="p-wiki">
         <div class="section">
             <div class="container">
                 @@include('../../components/Breadcrumbs/index.html', { 
-                    class: 'wiki__breadcrumbs',
+                    class: 'p-wiki__breadcrumbs',
                     item_1: "Main",
                     item_2: "WiKi proxy",
                 })
-                <h1 class="title title--size-l wiki__title">WiKi proxy</h1>
+                <h1 class="title title--size-l p-wiki__title">WiKi proxy</h1>
                 @@include("../../components/Input/index.html", { 
-                    class: 'wiki__search', 
+                    class: 'p-wiki__search', 
                 })
                 @@include("../../components/c-Keyboard/index.html", { 
-                    class: 'wiki__keyboard', 
+                    class: 'p-wiki__keyboard', 
                 })
                 @@include("../../components/c-ListToc/index.html", {
-                    class: 'wiki__list',
+                    class: 'p-wiki__list',
                 })
             </div>
         </div>
