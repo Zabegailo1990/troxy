@@ -1,6 +1,6 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.wiki{
+.p-wiki{
     padding-top: 130px;
 
     @include respond(tablet){
@@ -41,8 +41,7 @@
         margin-bottom: 42px;
 
         @include respond(tablet){
-            margin-right: 0;
-            margin-left: 0;
+           
         }
     }
 
