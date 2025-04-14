@@ -1,0 +1,21 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.c-list-toc{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 44px;
+    column-gap: 20px;
+    max-width: 339px;
+
+    @include respond(746px){
+        max-width: 698px;
+    }
+
+    @include respond(1137px){
+        max-width: 1057px;
+    }
+
+    @include respond(pc){
+        max-width: none;
+    }
+}

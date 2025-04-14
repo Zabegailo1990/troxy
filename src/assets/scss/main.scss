@@ -13,8 +13,8 @@
 @use './entities/section.scss';
 @use './entities/select.scss';
 
+// Вендоры
 @use '../../vendors/slick/slick.css';
-@use '../../vendors/swiper/swiper-bundle.css';
 
 // Компоненты
 @use '../../components/Promo/scss/promo.scss';
@@ -22,14 +22,17 @@
 @use '../../components/Navigation/scss/navigation.scss';
 @use '../../components/Authbar/scss/authbar.scss';
 @use '../../components/Header/scss/header.scss';
+@use '../../components/c-Toc/scss/c-toc.scss';
 @use '../../components/Question/scss/question.scss';
 @use '../../components/c-Panel/scss/c-panel.scss';
 @use '../../components/c-Info/scss/c-info.scss';
+@use '../../components/c-Keyboard/scss/c-keyboard.scss';
 
 @use '../../components/c-Features/scss/c-features.scss';
 @use '../../components/c-ListServices/scss/c-list-services.scss';
 @use '../../components/c-MenuMobile/scss/c-menu-mobile.scss';
 @use '../../components/c-Filters/scss/c-filters.scss';
+@use '../../components/c-ListToc/scss/c-list-toc.scss';
 @use '../../components/Pagination/scss/pagination.scss';
 @use '../../components/Input/scss/field.scss';
 @use '../../components/c-Player/scss/c-player.scss';

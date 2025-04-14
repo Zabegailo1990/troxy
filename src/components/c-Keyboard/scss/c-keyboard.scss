@@ -1,0 +1,31 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.c-keyboard{
+    padding: 0 24px;
+
+    @include respond(tablet){
+        overflow: visible;
+        padding: 0;
+    }
+    
+    &__inner{
+        gap: 10px;
+        
+        @include respond(tablet){
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+    }
+    
+    &__button{
+        min-width: 42px;
+        min-height: 42px;
+        border-radius: 10px;
+        
+        @include respond(tablet){
+            min-width: 54px;
+            min-height: 54px;            
+        }
+    }
+}
