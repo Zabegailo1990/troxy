@@ -20,6 +20,7 @@
 
         &::placeholder{
             font-size: 12px;
+            color: #CED3DC;
 
             @include respond(tablet){
                 font-size: 16px;
@@ -32,11 +33,12 @@
         top: 50%;
         left: 13px;
         transform: translateY(-50%);
-        width: 18px;
-        height: 18px;
+        width: 24px;
+        height: 24px;
+        fill: #1f2f4b;
     }
 
-    &--theme-gray{
+    &--bg-gray{
         background-color: #F8F8F8;
     }
 }

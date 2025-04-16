@@ -11,13 +11,13 @@
     @@include('../../components/c-MenuMobile/index.html', {
         class: 'body__menu-mobile',
     })
-    @@include('../../components/Promo/index.html')
     @@include('../../components/Header/index.html', {
-        class: 'header--bg-light body__header',
+        class: 'header--bg-blur body__header',
     })
     <div class="p-proxy-limit">
-        <div class="p-proxy-limit__present perspective">
+        <div class="p-proxy-limit__intro perspective">
             @@include('../../sections/Present/index.html', {
+                class: "p-proxy-limit__present",
                 title: "Limit proxies",
                 text: "Limit proxies can be useful in a variety of areas such as internet marketing, data analysis, website testing and other areas where it is necessary to control access to proxy servers.",
             })

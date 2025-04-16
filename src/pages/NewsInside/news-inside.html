@@ -11,11 +11,14 @@
     @@include('../../components/c-MenuMobile/index.html', {
         class: "body__menu-mobile",
     })
-    @@include('../../components/Promo/index.html')
     @@include("../../components/Header/index.html", {
-        class: "header--bg-light body__header",
+        class: "header--bg-blur body__header",
     })
     <div class="p-news-inside">
+        @@include('../../components/Promo/index.html')
+        @@include("../../components/Header/index.html", {
+            class: "header__page header--bg-light p-news-inside__header",
+        })
         <div class="container">
             <div class="section">
                 @@include('../../components/Breadcrumbs/index.html', { 

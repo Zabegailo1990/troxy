@@ -11,24 +11,24 @@
     @@include('../../components/c-MenuMobile/index.html', {
         class: 'body__menu-mobile',
     })
-    @@include('../../components/Promo/index.html')
     @@include('../../components/Header/index.html', {
-        class: 'header--bg-light body__header',
+        class: 'header--bg-blur body__header',
     })
-    <div class="proxy-mix">
-        <div class="proxy-mix__present perspective">
+    <div class="p-proxy-mix">
+        <div class="p-proxy-mix__intro perspective">
             @@include('../../sections/Present/index.html', {
+                class: "p-proxy-mix__present",
                 title: "Mix proxies",
                 text: "Large mixed proxy packages with the best locations and unique digital footprint for any purpose of your business",
             })
-            <img class="proxy-mix__animate proxy-mix__animate--top perspective__first" src="./images/page_proxy-mix_ani_2.png" alt="">
-            <img class="proxy-mix__animate proxy-mix__animate--bottom perspective__second" src="./images/page_proxy-mix_ani_1.png" alt="">
+            <img class="p-proxy-mix__animate p-proxy-mix__animate--top perspective__first" src="./images/page_proxy-mix_ani_2.png" alt="">
+            <img class="p-proxy-mix__animate p-proxy-mix__animate--bottom perspective__second" src="./images/page_proxy-mix_ani_1.png" alt="">
         </div>
         <div class="section section--indent-m">
             <div class="container">
-                <h2 class="title title--size-m title--pos-center proxy-mix__title">Ready-made solutions <span class="title--color-blue">for your goals</span></h2>
+                <h2 class="title title--size-m title--pos-center p-proxy-mix__title">Ready-made solutions <span class="title--color-blue">for your goals</span></h2>
                 @@include("../../components/c-SliderMix/index.html", {
-                    class: "proxy-mix__slider",
+                    class: "p-proxy-mix__slider",
                 })
             </div>
         </div>

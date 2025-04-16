@@ -11,13 +11,13 @@
     @@include('../../components/c-MenuMobile/index.html', {
         class: 'body__menu-mobile',
     })
-    @@include('../../components/Promo/index.html')
     @@include('../../components/Header/index.html', {
-        class: 'header--bg-light body__header',
+        class: 'header--bg-blur body__header',
     })
     <div class="p-proxy-rotating">
-        <div class="p-proxy-rotating__present perspective">
+        <div class="p-proxy-rotating__intro perspective">
             @@include('../../sections/Present/index.html', {
+                class: "p-proxy-rotating__present",
                 title: "Unlimited Rotating Proxy Servers",
                 text: "Unlimited rotating proxies with pay-per-result system with unlimited bandwidth, number of streams, bindings and IP access"
             })

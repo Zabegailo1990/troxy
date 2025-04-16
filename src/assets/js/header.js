@@ -1,12 +1,14 @@
 gsap.registerPlugin(ScrollTrigger);
 
+const triggerElement = document.querySelector(".present__header") || document.querySelector(".header__page");
+
 gsap.to(".body__header", {
     top: 0,
     ease: "none",
     scrollTrigger: {
-        trigger: ".present__header",
+        trigger: triggerElement,
         start: "top top",
-        end: "+=90",
+        end: "bottom top",
         scrub: true,
     }
 });

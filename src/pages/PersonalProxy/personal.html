@@ -11,14 +11,14 @@
     @@include('../../components/c-MenuMobile/index.html', {
         class: 'body__menu-mobile',
     })
-    @@include('../../components/Promo/index.html')
     @@include('../../components/Header/index.html', {
-        class: 'header--bg-light body__header',
+        class: 'header--bg-blur body__header',
     })
     <div class="p-personal">
         @@include('../../components/Gradient/index.html')
-        <div class="p-personal__present perspective">
+        <div class="p-personal__intro perspective">
             @@include('../../sections/Present/index.html', {
+                class: "p-personal__present",
                 title: "Personal proxies",
                 text: "Enjoy security and speed with a UDP connection that's ideal for PC gaming, video streaming, and file sharing."
             })

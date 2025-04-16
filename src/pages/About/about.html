@@ -11,12 +11,15 @@
     @@include('../../components/c-MenuMobile/index.html', {
         class: "body__menu-mobile",
     })
+    @@include("../../components/Header/index.html", {
+        class: "header--bg-blur body__header",
+    })
     <div class="p-about">
         @@include("../../components/Promo/index.html", {
             class: "p-about__promo",
         })
         @@include("../../components/Header/index.html", {
-            class: "header--bg-light p-about__header",
+            class: "header--bg-light header__page",
         })
         <div class="section section--indent-s">
             <div class="container">

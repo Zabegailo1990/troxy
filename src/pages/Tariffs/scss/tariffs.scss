@@ -3,12 +3,15 @@
 .p-tariffs{
     overflow: hidden;
 
+    &__intro{
+        position: relative;
+        height: 100vh;
+    }
+
     &__present{
         position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: calc(100vh - 50px);
+        height: inherit;
+        z-index: 1;
     }
 
     &__animate{

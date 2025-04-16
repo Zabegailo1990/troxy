@@ -2,14 +2,23 @@
 
 .p-purposes-inside{
     overflow: hidden;
-    padding-top: 90px;
+    
+    &__header{
+        margin-bottom: 90px;
+    }
 
-    &__present{
+    &__intro{
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: calc(100vh - 50px);
+        height: 100vh;
+    }
+
+    &__present{
+        position: relative;
+        height: 100%;
+        z-index: 1;
     }
 
     &__animate{

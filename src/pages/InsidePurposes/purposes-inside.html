@@ -11,13 +11,13 @@
     @@include('../../components/c-MenuMobile/index.html', {
         class: 'body__menu-mobile',
     })
-    @@include('../../components/Promo/index.html')
     @@include('../../components/Header/index.html', {
-        class: 'header--bg-light body__header',
+        class: 'header--bg-blur body__header',
     })
     <div class="p-purposes-inside">
-        <div class="p-purposes-inside__present perspective">
+        <div class="p-purposes-inside__intro perspective">
             @@include('../../sections/Present/index.html', {
+                class: 'p-purposes-inside__present',
                 title: "Proxy for purpose",
                 text: "Use quality proxies with a digital footprint when working with #### services, for advertising, market research, SEO, WEB development or bypassing GEO restrictions",
             })

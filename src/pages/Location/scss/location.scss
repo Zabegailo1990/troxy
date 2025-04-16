@@ -3,12 +3,18 @@
 .p-location{
     overflow: hidden;
 
-    &__present{
+    &__intro{
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
         height: calc(100vh - 50px);
+    }
+
+    &__present{
+        position: relative;
+        height: 100%;
+        z-index: 1;
     }
 
     &__animate{

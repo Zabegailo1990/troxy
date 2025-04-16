@@ -4,6 +4,7 @@
 
     @include respond(pc){
         overflow: visible;
+        padding: 0;
     }
 
     &__inner{

@@ -10,10 +10,14 @@
     @@include('../../components/c-MenuMobile/index.html', {
         class: 'body__menu-mobile',
     })
+    @@include('../../components/Header/index.html', {
+        class: "header--bg-blur body__header",
+        navigation: 'false',
+        search: 'true',
+    })
     <div class="p-api">
         @@include('../../components/Header/index.html', {
-            class: "header--bg-light header--theme-api p-api__header",
-            classAuthbar: 'authbar--theme-api',
+            class: "header--bg-light header__page p-api__header",
             navigation: 'false',
             search: 'true',
         })

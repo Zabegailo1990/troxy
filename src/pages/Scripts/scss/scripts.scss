@@ -1,15 +1,17 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .p-scripts{
-    padding-top: 130px;
+    
+    &__header{
+        margin-bottom: 40px;
+    
+        @include respond(tablet){
+            margin-bottom: 80px;
+        }
 
-    @include respond(tablet){
-        padding-top: 170px;
-    }
-
-    &__breadcrumbs{
-        margin-bottom: 14px;
-
+        @include respond(tablet){
+            margin-bottom: 100px;
+        }
     }
 
     &__inner{

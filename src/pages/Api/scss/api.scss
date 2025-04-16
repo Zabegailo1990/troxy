@@ -3,13 +3,14 @@
 .p-api{
     
     &__header{
-        position: fixed;
-        width: 100%;
-        z-index: 10;
+        margin-bottom: 40px;
+
+        @include respond(tablet){
+            margin-bottom: 20px;
+        }
     }
     
     &__inner{
-        padding-top: 109px;
         @include respond(pc){
             display: flex;
             align-items: flex-start;

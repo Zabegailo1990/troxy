@@ -10,70 +10,73 @@
     @@include('../../components/c-MenuMobile/index.html', {
         class: 'body__menu-mobile',
     })
-    @@include('../../components/Promo/index.html')
     @@include('../../components/Header/index.html', {
-        class: 'header--bg-light body__header',
+        class: 'header--bg-blur body__header',
     })
-    <div class="wiki-inside">
+    <div class="p-wiki-inside">
+        @@include('../../components/Promo/index.html')
+        @@include('../../components/Header/index.html', {
+            class: 'header__page header--bg-light p-wiki-inside__header',
+        })
         <div class="section">
             <div class="container">
                 @@include('../../components/Breadcrumbs/index.html', { 
-                    class: 'wiki-inside__breadcrumbs',
+                    class: 'p-wiki-inside__breadcrumbs',
                     item_1: "Main",
                     item_2: "WiKi",
                     item_3: "400 - Bad Request",
                 })
-                <h1 class="title title--size-l wiki-inside__title">400 - Bad Request</h1>
-                <p class="text text--size-m text--color-gray wiki-inside__date">12.08.2024</p>
-                <div class="wiki-inside__inner">
-                    <div class="wiki-inside__content">
-                        <div class="wiki-inside__group">
+                <h1 class="title title--size-l p-wiki-inside__title">400 - Bad Request</h1>
+                <p class="text text--size-m text--color-gray p-wiki-inside__date">12.08.2024</p>
+                <div class="p-wiki-inside__inner">
+                    <div class="p-wiki-inside__content">
+                        <div class="p-wiki-inside__group">
                             <p class="text text--size-m">"400 - Bad Request" is a common, yet confusing, HTTP status code that users encounter when browsing the web. It means that the server was unable to understand or process the request due to incorrect syntax. While this error may seem scary, understanding its origin and how to resolve it can ease the frustration and ensure a smooth web browsing experience.</p>
                         </div>
-                        <div class="wiki-inside__group">
-                            <h2 class="title title--size-m wiki-inside__subtitle">Understanding HTTP Status Codes</h2>
-                            <p class="text text--size-m wiki-inside__text">HTTP (Hypertext Transfer Protocol) status codes returned by a web server indicate the result of the requested operation. They are divided into five classes, each identified by its first digit:
-                                <ul class="wiki-inside__list">
-                                    <li class="wiki-inside__item">
+                        <div class="p-wiki-inside__group">
+                            <h2 class="title title--size-m p-wiki-inside__subtitle">Understanding HTTP Status Codes</h2>
+                            <p class="text text--size-m p-wiki-inside__text">HTTP (Hypertext Transfer Protocol) status codes returned by a web server indicate the result of the requested operation. They are divided into five classes, each identified by its first digit:
+                                <ul class="p-wiki-inside__list">
+                                    <li class="p-wiki-inside__item">
                                         <p class="text text--size-m">1xx - Informational</p>
                                     </li>
-                                    <li class="wiki-inside__item">
+                                    <li class="p-wiki-inside__item">
                                         <p class="text text--size-m">2xx - Success</p>
                                     </li>
-                                    <li class="wiki-inside__item">
+                                    <li class="p-wiki-inside__item">
                                         <p class="text text--size-m">3xx - Redirect</p>
                                     </li>
-                                    <li class="wiki-inside__item">
+                                    <li class="p-wiki-inside__item">
                                         <p class="text text--size-m">4xx - Client Errors</p>
                                     </li>
-                                    <li class="wiki-inside__item">
+                                    <li class="p-wiki-inside__item">
                                         <p class="text text--size-m">5xx - Server Errors</p>
                                     </li>
                                 </ul>
-                            <p class="text text--size-m wiki-inside__text">Error 400 Bad Request falls into the 4xx category, signaling that the client has made an error.</p>
+                            <p class="text text--size-m p-wiki-inside__text">Error 400 Bad Request falls into the 4xx category, signaling that the client has made an error.</p>
                         </div>
-                        <div class="wiki-inside__group">
-                            <h2 class="title title--size-m wiki-inside__subtitle">What causes 400 - Bad Request error?</h2>
-                            <p class="text text--size-m wiki-inside__text">This error typically occurs when the server is unable to interpret the request due to invalid syntax. Common causes include:</p>
-                            <ul class="wiki-inside__list">
-                                <li class="wiki-inside__item">
+                        <div class="p-wiki-inside__group">
+                            <h2 class="title title--size-m p-wiki-inside__subtitle">What causes 400 - Bad Request error?</h2>
+                            <p class="text text--size-m p-wiki-inside__text">This error typically occurs when the server is unable to interpret the request due to invalid syntax. Common causes include:</p>
+                            <ul class="p-wiki-inside__list">
+                                <li class="p-wiki-inside__item">
                                     <p class="text text--size-m">Invalid URL: URLs containing invalid or special characters can result in a 400 error.</p>
                                 </li>
-                                <li class="wiki-inside__item">
+                                <li class="p-wiki-inside__item">
                                     <p class="text text--size-m">Invalid or expired cookies: If a site's cookies are corrupted or expired, a 400 error can occur.</p>
                                 </li>
-                                <li class="wiki-inside__item">
+                                <li class="p-wiki-inside__item">
                                     <p class="text text--size-m">Large headers: HTTP headers that exceed the server's limit can also cause this error.</p>
                                 </li>
-                                <li class="wiki-inside__item">
+                                <li class="p-wiki-inside__item">
                                     <p class="text text--size-m">Failed DNS lookup: Failure to resolve DNS can result in a 400 error.</p>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="wiki-inside__aside">
+                    <div class="p-wiki-inside__aside">
                         @@include('../../components/c-MenuWiki/index.html', {
-                            class: "wiki-inside__menu",
+                            class: "p-wiki-inside__menu",
                         })
                         @@include('../../components/c-BannerWiki/index.html')
                     </div>
@@ -81,7 +84,7 @@
             </div>
         </div>
         @@include('../../sections/Banner/index.html', {
-            class: "wiki-inside__banner",
+            class: "p-wiki-inside__banner",
             bgNum: "1",
             title: "Test our proxies to ensure their quality",
             text: "We will select a high-quality and effective solution for you personally at the best price",
