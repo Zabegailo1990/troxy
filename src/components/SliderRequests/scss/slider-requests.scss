@@ -2,10 +2,8 @@
 
 .slider-requests{
 
-    &__spacer{
-        @include respond(pc){
-            display: none;
-        }
+    @include respond(pc){
+       padding: 0;
     }
 
     &__inner{

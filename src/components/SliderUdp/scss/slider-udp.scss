@@ -2,10 +2,8 @@
 
 .slider-udp{
 
-    &__spacer{
-        @include respond(pc){
-            display: none;
-        }
+    @include respond(pc){
+        padding: 0;
     }
 
     &__inner{
@@ -15,7 +13,6 @@
             overflow: visible;
             flex-wrap: wrap;
         }
-
     }
 
     &__slide{

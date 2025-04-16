@@ -2,17 +2,14 @@
 
 .c-slider-features{
 
-    &__spacer{
-        @include respond(pc){
-            display: none;
-        }
+    @include respond(pc){
+        overflow: visible;
     }
 
     &__inner{
         gap: 20px;
 
         @include respond(pc){
-            overflow: visible;
             flex-wrap: wrap;
         }
     }

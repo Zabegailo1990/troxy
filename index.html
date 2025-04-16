@@ -11,29 +11,21 @@
     @@include("./src/components/c-MenuMobile/index.html", {
         class: "body__menu-mobile",
     })
-    @@include('./src/components/Promo/index.html')
     @@include('./src/components/Header/index.html', {
-        class: "body__header",
-        theme: "light",
+        class: "header--bg-blur body__header",
     })
     <div class="home">
-        <div class="home__present perspective">
+        <div class="home__intro perspective">
             <picture class="home__background">
                 <source class="home__img" media="(min-width: 1440px)" srcset="./images/section_present-1_bg_pc.jpg">
                 <source class="home__img" media="(min-width: 780px)" srcset="./images/section_present-1_bg_pc.jpg">
                 <img class="home__img" src="./images/section_present-1_bg_pc.jpg">
             </picture>
-            <div class="home__rating">
-                <img class="home__trustpilot" src="./images/present_section_trustpilot.svg">
-                <img class="home__trustpilot" src="./images/present_section_trustpilot.svg">
-                <img class="home__trustpilot" src="./images/present_section_trustpilot.svg">
-            </div>
             @@include('./src/sections/Present/index.html', {
+                class: 'home__present present--theme-light',
                 title: "Effective proxies for business with <br>a unique digital footprint from $0.058",
                 text: "Get a convenient and economical proxy service",
-                background: 'true',
                 rating: 'true',
-                theme: 'light',
             })
             <img class="home__animate home__animate--top perspective__first" src="images/page_home_ani_2.png" alt="">
             <img class="home__animate home__animate--bottom perspective__second" src="images/page_home_ani_1.png" alt="">
@@ -84,9 +76,7 @@
         @@include('./src/sections/s-Comfort/index.html')
         @@include('./src/sections/Advantages/index.html')
         @@include('./src/sections/Supplier/index.html')
-        <div class="section">
-            @@include('./src/sections/Faq/index.html')
-        </div>
+        @@include('./src/sections/Faq/index.html')
         @@include('./src/sections/SliderNews/index.html')
         @@include('./src/sections/Footer/index.html', {
             bgPc: "./images/section_footer_bg_pc.jpg",
@@ -102,17 +92,17 @@
     
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script src="./js/smoothScroll.js"></script>
+    <!-- <script src="./js/marquee.js"></script> -->
     
     <script src="./vendors/jquery/jquery.min.js"></script>
     <script src="./vendors/slick/slick.min.js"></script>
     
-    <script src="./js/benefitCards.js"></script>
+    <!-- <script src="./js/benefitCards.js"></script> -->
     <script src="./js/perspective.js"></script>
     <script src="./js/sliderHome.js"></script>
     <script src="./js/sliderNews.js"></script>
     <script src="./js/header.js"></script>
     <script src="./js/cardQuestion.js"></script>
     <script src="./js/menuMobile.js"></script>
-
 </body>
 </html>

@@ -3,14 +3,14 @@
 .slider{
     display: flex;
     overflow-x: auto;
+    padding: 0 24px;
 
-    &__spacer{
-        flex-shrink: 0;
-        width: 24px;
+    @include respond(tablet){
+        padding: 0 40px;
+    }
 
-        @include respond(tablet){
-            width: 40px;
-        }
+    @include respond(pc){
+        padding: 0;
     }
 
     &::-webkit-scrollbar{

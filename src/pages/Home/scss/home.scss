@@ -2,12 +2,10 @@
 
 .home{
 
-    &__present{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    &__intro{
         position: relative;
-        height: calc(100vh - 50px);
+        display: flex;
+        height: 100vh;
         overflow: hidden;
     }
 
@@ -24,23 +22,10 @@
         object-fit: cover;
     }
 
-    &__rating{
+    &__present{
         position: relative;
-        display: flex;
-        gap: 29px;
+        height: 100%;
         z-index: 1;
-        margin: 0 auto;
-        margin-bottom: 38px;
-    }
-
-    &__trustpilot{
-        width: 64px;
-        height: 49px;
-
-        @include respond(pc){
-            width: 63px;
-            height: 50px;
-        }
     }
 
     &__animate{
@@ -151,6 +136,11 @@
         &--services{
             margin-bottom: 48px;
         }
+    }
+
+    &__section-marquee{
+        height: 100vh;
+        overflow: hidden;
     }
     
     &__marquee{

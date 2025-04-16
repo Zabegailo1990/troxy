@@ -11,11 +11,11 @@
     @@include('../../components/c-MenuMobile/index.html', {
         class: 'body__menu-mobile',
     })
+    @@include('../../components/Promo/index.html')
+    @@include('../../components/Header/index.html', {
+        class: 'header--bg-light body__header',
+    })
     <div class="p-by-country">
-        @@include('../../components/Promo/index.html')
-        @@include('../../components/Header/index.html', {
-            class: "header--bg-light p-by-country__header",
-        })
         <div class="p-by-country__present perspective">
             @@include('../../sections/Present/index.html', {
                 title: "Proxy in USA",

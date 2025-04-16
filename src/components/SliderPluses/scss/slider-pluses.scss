@@ -2,13 +2,10 @@
 
 .slider-pluses{
 
-    &__spacer{
-
-        @include respond(tablet){
-            display: none;
-        }
+    @include respond(tablet){
+        padding: 0;
     }
-
+    
     &__inner{
         gap: 10px;
 

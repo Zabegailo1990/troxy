@@ -1,63 +1,52 @@
-<div class="present">
-    <div class="present__inner">
-        <div class="present__content">
-
-            @@if(typeof theme !== 'undefined' && theme == 'light'){
-                <h1 class="title title--size-l title--color-light title--pos-center present__title present__title--space-down">@@title</h1>
-                <p class="text text--size-m text--color-light present__text">@@text</p>
-                <div class="present__row">
-                    <button class="button button--fz-m button--size-l button--rounded button--color-light button--active-blue present__button">Choose tariff</button>
-                    <button class="button button--fz-m button--size-l button--rounded button--active-light present__button">Sign up</button>
+<div class="present @@class">
+    @@include('../../components/Promo/index.html')
+    @@include('../../components/Header/index.html', {
+        class: "present__header",
+        theme: 'light',
+    })
+    <div class="container present__container">
+        <div class="present__inner">
+    
+            @@if(typeof rating !== 'undefined' && rating == 'true'){
+                <div class="present__rating">
+                    <img class="present__img" src="./images/present_section_trustpilot.svg">
+                    <img class="present__img" src="./images/present_section_trustpilot.svg">
+                    <img class="present__img" src="./images/present_section_trustpilot.svg">
                 </div>
-                <ul class="present__list">
-                    <li class="present__item">
-                        <p class="text text--size-m text--color-light present__statistic">99,99% uptime</p>
-                    </li>
-                    <li class="present__item">
-                        <p class="text text--size-m text--color-light present__statistic">&lt;0.2s avg speed</p>
-                    </li>
-                    <li class="present__item">
-                        <p class="text text--size-m text--color-light present__statistic">195+ locations</p>
-                    </li>
-                    <li class="present__item">
-                        <p class="text text--size-m text--color-light present__statistic">25 000+ clients</p>
-                    </li>
-                </ul>
             }
-            
-            @@if(typeof theme == 'undefined'){
-
-                @@if(typeof flag !== 'undefined' && flag) {
-                    <div class="present__group">
-                        <svg class="icon present__icon">
-                            <use xlink:href="./sprites/flags.svg#icon-flag_@@flag"></use>
-                        </svg>
-                        <h1 class="title title--size-l title--pos-center present__title">@@title</h1>
-                    </div>
-                }
-                @@if(typeof flag == 'undefined'){
-                    <h1 class="title title--size-l title--pos-center present__title present__title--space-down">@@title</h1>
-                }
-                <p class="text text--size-m present__text">@@text</p>
-                <div class="present__row">
-                    <button class="button button--fz-m button--size-l button--rounded button--color-light button--active-blue present__button">Choose tariff</button>
-                    <button class="button button--fz-m button--size-l button--rounded button--active-light present__button">Sign up</button>
+    
+            @@if(typeof flag !== 'undefined' && flag) {
+                <div class="present__group">
+                    <svg class="present__icon">
+                        <use xlink:href="./sprites/flags.svg#icon-flag_@@flag"></use>
+                    </svg>
+                    <h1 class="title title--size-l title--pos-center present__title">@@title</h1>
                 </div>
-                <ul class="present__list">
-                    <li class="present__item">
-                        <p class="text text--size-m present__statistic">99,99% uptime</p>
-                    </li>
-                    <li class="present__item">
-                        <p class="text text--size-m present__statistic">&lt;0.2s avg speed</p>
-                    </li>
-                    <li class="present__item">
-                        <p class="text text--size-m present__statistic">195+ locations</p>
-                    </li>
-                    <li class="present__item">
-                        <p class="text text--size-m present__statistic">25 000+ clients</p>
-                    </li>
-                </ul>
             }
+    
+            @@if(typeof flag == 'undefined'){
+                <h1 class="title title--size-l title--pos-center present__title present__title--space">@@title</h1>
+            }
+    
+            <p class="text text--size-m present__text">@@text</p>
+            <div class="present__row">
+                <button class="button button--fz-m button--size-l button--rounded button--color-light button--active-blue present__button">Choose tariff</button>
+                <button class="button button--fz-m button--size-l button--rounded button--active-light present__button">Sign up</button>
+            </div>
+            <ul class="present__list">
+                <li class="present__item">
+                    <p class="text text--size-m present__statistic">99,99% uptime</p>
+                </li>
+                <li class="present__item">
+                    <p class="text text--size-m present__statistic">&lt;0.2s avg speed</p>
+                </li>
+                <li class="present__item">
+                    <p class="text text--size-m present__statistic">195+ locations</p>
+                </li>
+                <li class="present__item">
+                    <p class="text text--size-m present__statistic">25 000+ clients</p>
+                </li>
+            </ul>
         </div>
     </div>
 </div>

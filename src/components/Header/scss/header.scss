@@ -8,7 +8,13 @@
     &--bg-light{
         background-color: #fff;
     }
-    
+
+    &--bg-blur{
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+        
     &__inner{
         display: flex;
         align-items: center;

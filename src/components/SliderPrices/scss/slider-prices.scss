@@ -11,12 +11,6 @@
         max-width: none;
     }
 
-    &__spacer{
-        @include respond(tablet){
-            display: none;
-        }
-    }
-
     &__inner{
         gap: 20px;
 

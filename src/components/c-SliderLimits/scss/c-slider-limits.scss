@@ -1,16 +1,10 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
 .c-slider-limits{
-
+    
     @include respond(tablet){
         overflow: visible;
-    }
-
-    &__spacer{
-
-        @include respond(tablet){
-            display: none;
-        }
+        padding: 0;
     }
     
     &__inner{

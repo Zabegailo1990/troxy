@@ -1,57 +1,72 @@
 .marquee{
-    &__slider{
-        display: flex;
-        justify-content: center;
-        overflow: hidden;
+    display: flex;
+    justify-content: center;
+    height: 147px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    &__inner{
+        width: 100%;
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        // display: flex;
+        // justify-content: center;
     }
 
     &__card{
+        position: absolute;
+        top: 0;
+        left: 0;
         flex-shrink: 0;
     
         &:not(:last-child){
             margin-right: 23px;
         }
-        
-        &--third {
-            transform: scale(0.8);
-            opacity: 75%;
-            z-index: 2;
-            
-            &-left{
-                transform: scale(0.8) translateX(30px);
-            }
-
-            &-right{
-                transform: scale(0.8) translateX(-30px);
-            }
-        }
-    
-        &--second {
-            transform: scale(0.6);
-            opacity: 50%;
-            z-index: 1;
-
-            &-left{
-                transform: scale(0.6) translateX(150px);
-            }
-
-            &-right{
-                transform: scale(0.6) translateX(-150px);
-            }
-        }
-    
-        &--first {
-            transform: scale(0.4);
-            opacity: 35%;
-            z-index: 0;
-
-            &-left{
-                transform: scale(0.4) translateX(500px);
-            }
-
-            &-right{
-                transform: scale(0.4) translateX(-500px);
-            }
-        }
     }
 }
+
+
+ // &--third {
+        //     transform: scale(0.8);
+        //     opacity: 75%;
+        //     z-index: 2;
+            
+        //     &-left{
+        //         transform: scale(0.8) translateX(30px);
+        //     }
+
+        //     &-right{
+        //         transform: scale(0.8) translateX(-30px);
+        //     }
+        // }
+    
+        // &--second {
+        //     transform: scale(0.6);
+        //     opacity: 50%;
+        //     z-index: 1;
+
+        //     &-left{
+        //         transform: scale(0.6) translateX(150px);
+        //     }
+
+        //     &-right{
+        //         transform: scale(0.6) translateX(-150px);
+        //     }
+        // }
+    
+        // &--first {
+        //     transform: scale(0.4);
+        //     opacity: 35%;
+        //     z-index: 0;
+
+        //     &-left{
+        //         transform: scale(0.4) translateX(500px);
+        //     }
+
+        //     &-right{
+        //         transform: scale(0.4) translateX(-500px);
+        //     }
+        // }
