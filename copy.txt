@@ -4,7 +4,7 @@
 })
 @@include('../../components/Promo/index.html')
 @@include('../../components/c-Header/index.html', {
-    class: 'header--bg-light body__header',
+    class: 'c-header--bg-light body__header',
 })
 
 

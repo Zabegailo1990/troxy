@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // Открытие меню (блокируем скролл)
-  $('.header__button').on('click', function () {
+  $('.c-header__button').on('click', function () {
     $('.body__menu-mobile').addClass('body__menu-mobile--active');
     $('html, body').attr('style', 'overflow: hidden');
   });
