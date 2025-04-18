@@ -1,6 +1,6 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.card-flag{
+.c-card-flag{
     width: 218px;
     height: 147px;
     
@@ -41,7 +41,7 @@
             height: 104px;
         }
 
-        & .card-flag__frame{
+        & .c-card-flag__frame{
             @include respond(tablet, max){
                 width: 64px;
                 height: 47px;
@@ -49,14 +49,14 @@
             }
         }
 
-        & .card-flag__title{
+        & .c-card-flag__title{
             @include respond(tablet, max){
                 font-size: 15px;
                 line-height: 21px;
             }
         }
 
-        & .card-flag__icon{
+        & .c-card-flag__icon{
             @include respond(tablet, max){
                 width: 64px;
                 height: 47px;
