@@ -1,4 +1,4 @@
-.menu-page{
+.c-menu-page{
     width: 230px;
 
     &__title{
@@ -20,7 +20,6 @@
         &:not(:last-child){
             margin-bottom: 6px;
         }
-
     }
 
     &__link{

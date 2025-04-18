@@ -30,41 +30,6 @@ $(document).ready(function () {
     });
 });
 
-$(document).ready(function() {
-    $('.menu-page__link').click(function(e) {
-        // Проверяем, находится ли кликнутый элемент в .menu-page__sublist
-        if ($(this).closest('.menu-page__sublist').length) {
-            // Удаляем активный класс у всех ссылок внутри sublist
-            $(this).closest('.menu-page__sublist').find('.menu-page__link').removeClass('menu-page__link--active');
-            
-            // Добавляем активный класс только к кликнутой ссылке
-            $(this).addClass('menu-page__link--active');
-            
-            e.stopPropagation();
-            return;
-        }
-        
-        e.preventDefault();
-        
-        let $currentSublist = $(this).closest('.menu-page__item').find('.menu-page__sublist');
-        
-        // Закрываем все открытые sublist, кроме текущего
-        $('.menu-page__sublist').not($currentSublist).slideUp(200);
-        
-        // Удаляем активный класс у всех ссылок
-        $('.menu-page__link').removeClass('menu-page__link--active');
-        
-        // Добавляем активный класс к текущей ссылке
-        $(this).addClass('menu-page__link--active');
-        
-        // Добавляем активный класс к родительской ссылке, если это элемент внутри sublist
-        $(this).closest('.menu-page__sublist').prev('.menu-page__row').find('.menu-page__link').addClass('menu-page__link--active');
-        
-        // Переключаем отображение текущего sublist
-        $currentSublist.slideToggle(200);
-    });
-});
-
 
 
 $(document).ready(function () {
