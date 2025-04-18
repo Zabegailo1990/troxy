@@ -44,7 +44,7 @@
             <div class="container">
                 <h2 class="title title--size-m title--pos-center home__subtitle home__subtitle--space-small">All popular locations</h2>
                 <p class="text text--size-m home__text">Didn't find the proxy type or location you need? We will select and provide a personal solution for your purposes upon request</p>
-                <button class="button button--size-l button--rounded button--bg-blue button--fz-m button--color-light home__button home__button--space">All locations</button>
+                <button class="button button--size-l button--rounded button--bg-blue button--fz-m button--color-light button--hover-bg-blue home__button home__button--space">All locations</button>
                 @@include('./src/components/SliderFlags/index.html', { 
                     class: "home__slider home__slider--tablet-off" 
                 })
@@ -60,7 +60,7 @@
                     @@include('./src/components/SliderServices/index.html', { 
                         class: "home__slider home__slider--services home__slider--tablet-off"
                     })
-                    <button class="button button--size-l button--rounded button--bg-blue button--color-light button--fz-m home__button home__button--tablet-off">All purposes</button>
+                    <button class="button button--size-l button--rounded button--bg-blue button--color-light button--fz-m button--hover-bg-blue home__button home__button--tablet-off">All purposes</button>
                     @@include('./src/components/c-Features/index.html', {
                         class: 'home__features',
                     })
@@ -93,10 +93,10 @@
     
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script src="./js/smoothScroll.js"></script>
-    <!-- <script src="./js/marquee.js"></script> -->
     
     <script src="./vendors/jquery/jquery.min.js"></script>
     <script src="./vendors/slick/slick.min.js"></script>
+    <script src="./js/marquee.js"></script>
     
     <!-- <script src="./js/benefitCards.js"></script> -->
     <script src="./js/perspective.js"></script>

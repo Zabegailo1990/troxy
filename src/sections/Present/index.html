@@ -29,10 +29,16 @@
             }
     
             <p class="text text--size-m present__text">@@text</p>
-            <div class="present__row">
-                <button class="button button--fz-m button--size-l button--rounded button--color-light button--active-blue present__button">Choose tariff</button>
-                <button class="button button--fz-m button--size-l button--rounded button--active-light present__button">Sign up</button>
-            </div>
+
+            @@if(typeof button_2 !== 'undefined' && button_2){
+                <div class="present__row">
+                    <button class="button button--fz-m button--size-l button--rounded button--color-light button--bg-blue button--hover-bg-blue present__button">@@button_1</button>
+                    <button class="button button--fz-m button--size-l button--rounded button--bg-light button--hover-bg-gray present__button">@@button_2</button>
+                </div>
+            }
+            @@if(typeof button_2 == 'undefined'){
+                <button class="button button--fz-m button--size-l button--rounded button--color-light button--bg-blue button--hover-bg-blue present__button present__button--space">@@button_1</button>
+            }
             <ul class="present__list">
                 <li class="present__item">
                     <p class="text text--size-m present__statistic">99,99% uptime</p>

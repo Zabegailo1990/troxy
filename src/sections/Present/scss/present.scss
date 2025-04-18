@@ -106,6 +106,12 @@
         &:not(:last-child){
             margin-right: 8px;
         }
+
+        &--space{
+            @include respond(tablet){
+                margin-bottom: 91px;
+            }
+        }
     }
 
     &__list{

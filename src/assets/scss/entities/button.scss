@@ -54,11 +54,15 @@
         color: #2E7AF5;
     }
 
+    &--transparent{
+        opacity: 0.5;
+    }
+
     &--rounded{
         border-radius: 40px;
     }
 
-    &--bg-fog{
+    &--bg-transparent{
         background-color: rgba(255, 255, 255, 0.8);
     }
 
@@ -73,8 +77,25 @@
     &--border-gray{
         border: 1px solid #CED3DC;
     }
+
     
-    &--hover-blue{
+    &--hover-font-blue{
+        &:hover{
+            color: #95BEFF;
+            fill: #95BEFF;
+            stroke: #95BEFF;
+        }
+    }
+    
+    &--hover-font-gray{
+        &:hover{
+            color: #617597;
+            fill: #617597;
+            stroke: #617597;
+        }
+    }
+
+    &--hover-bg-blue{
         position: relative;
         z-index: 0;
         
@@ -82,14 +103,13 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(90deg, #2E7AF5 0%, #67A1FF 100%);
+            background: #66A0FF;
             opacity: 0;
             transition: opacity 0.4s ease;
             z-index: -1;
         }
         
         &:hover{
-            color: #fff;
             border: none;
 
             &::before{
@@ -98,24 +118,25 @@
         }
     }
 
-    &--hover-light{
+    &--hover-bg-bright-blue{
         &:hover{
-            background-color: #fff;
-            color: #313844;
+            background-color: #ECF1FF;
+        }
+    }
+
+    &--hover-bg-gray{
+        &:hover{
+            background-color: #F7F7F7;
+        }
+    }
+
+    &--hover-bg-transparent{
+        &:hover{
+            background-color: rgba(255, 255, 255, 0.2);
         }
     }
 
     &--inactive{
-        opacity: 0.5;
-    }
-
-    &--active-blue{
-        color: #fff;
-        background: linear-gradient(90deg, #2E7AF5 0%, #67A1FF 100%);
-    }
-
-    &--active-light{
-        background-color: #fff;
-        color: #17263F;
+        background: #D2E3FF;
     }
 }

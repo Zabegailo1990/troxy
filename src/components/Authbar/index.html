@@ -1,21 +1,27 @@
 <div class="authbar @@class">
 
-    @@if(typeof theme !== 'undefined' && theme !== 'light' && theme !== 'footer'){
-        <button class="button button--fz-m button--size-l button--rounded button--hover-blue authbar__button authbar__button--signup">Sign up</button>
-        <button class="button button--fz-m button--size-l button--rounded button--active-blue authbar__button authbar__button--signin">Sign in</button>
-        <button class="button button--fz-m button--size-l button--rounded button--hover-blue authbar__button authbar__button--lang">ENG</button>
+    @@if(typeof theme !== 'undefined' && theme !== 'light' && theme !== 'footer' && theme !== 'menu'){
+        <button class="button button--fz-m button--size-l button--rounded button--hover-font-gray authbar__button authbar__button--signup">Sign up</button>
+        <button class="button button--fz-m button--size-l button--rounded button--color-light button--hover-bg-blue button--bg-blue authbar__button authbar__button--signin">Sign in</button>
+        <button class="button button--fz-m button--size-l button--rounded button--hover-font-gray authbar__button authbar__button--lang">ENG</button>
     }
     
     @@if(typeof theme !== 'undefined' && theme == 'light'){
-        <button class="button button--fz-m button--color-light button--size-l button--rounded button--hover-blue authbar__button authbar__button--signup">Sign up</button>
-        <button class="button button--fz-m button--color-light button--size-l button--rounded button--active-blue authbar__button authbar__button--signin">Sign in</button>
-        <button class="button button--fz-m button--color-light button--size-l button--rounded button--hover-blue authbar__button authbar__button--lang">ENG</button>
+        <button class="button button--fz-m button--color-light button--size-l button--rounded button--hover-font-blue authbar__button authbar__button--signup">Sign up</button>
+        <button class="button button--fz-m button--color-light button--size-l button--rounded button--bg-blue button--hover-bg-blue authbar__button authbar__button--signin">Sign in</button>
+        <button class="button button--fz-m button--color-light button--size-l button--rounded button--hover-font-blue authbar__button authbar__button--lang">ENG</button>
     }
 
     @@if(typeof theme !== 'undefined' && theme == 'footer'){
-        <button class="button button--fz-m button--color-light button--size-l button--rounded button--active-light authbar__button authbar__button--signup">Sign up</button>
-        <button class="button button--fz-m button--color-light button--size-l button--rounded button--hover-light authbar__button authbar__button--signin">Sign in</button>
-        <button class="button button--fz-m button--color-light button--size-l button--rounded button--hover-light authbar__button authbar__button--lang">ENG</button>
+        <button class="button button--fz-m button--size-l button--rounded button--bg-light button--hover-gray authbar__button authbar__button--signup">Sign up</button>
+        <button class="button button--fz-m button--color-light button--size-l button--rounded button--hover-font-gray authbar__button authbar__button--signin">Sign in</button>
+        <button class="button button--fz-m button--color-light button--size-l button--rounded button--hover-font-gray authbar__button authbar__button--lang">ENG</button>
+    }
+
+    @@if(typeof theme !== 'undefined' && theme == 'menu'){
+        <button class="button button--fz-m button--size-l button--rounded button--bg-light button--hover-bg-gray authbar__button authbar__button--signup">Sign up</button>
+        <button class="button button--fz-m button--color-light button--size-l button--rounded button--hover-font-blue authbar__button authbar__button--signin">Sign in</button>
+        <button class="button button--fz-m button--color-light button--size-l button--rounded button--hover-font-blue authbar__button authbar__button--lang">ENG</button>
     }
 
 </div>
