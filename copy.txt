@@ -2,7 +2,7 @@
 @@include('../../components/c-MenuMobile/index.html', {
     class: 'body__menu-mobile',
 })
-@@include('../../components/Promo/index.html')
+@@include('../../components/c-Promo/index.html')
 @@include('../../components/c-Header/index.html', {
     class: 'c-header--bg-light body__header',
 })

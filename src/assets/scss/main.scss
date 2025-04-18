@@ -16,7 +16,7 @@
 @use '../../vendors/slick/slick.css';
 
 // Компоненты
-@use '../../components/Promo/scss/promo.scss';
+@use '../../components/c-Promo/scss/c-promo.scss';
 @use '../../components/c-Logo/scss/c-logo.scss';
 @use '../../components/c-Navigation/scss/c-navigation.scss';
 @use '../../components/c-Authbar/scss/c-authbar.scss';
@@ -68,7 +68,7 @@
 @use '../../components/c-SliderPurposes/scss/c-slider-purposes.scss';
 @use '../../components/c-SliderLimits/scss/c-slider-limits.scss';
 @use '../../components/c-ListArticles/scss/c-list-articles.scss';
-@use '../../components/ProxyChecker/scss/proxy-checker.scss';
+@use '../../components/c-ProxyChecker/scss/c-proxy-checker.scss';
 @use '../../components/ProxyList/scss/proxy-list.scss';
 @use '../../components/ProxyFilters/scss/proxy-filters.scss';
 @use '../../components/c-Code/scss/c-code.scss';
