@@ -1,41 +1,41 @@
-<header class="header @@class">
+<header class="c-header @@class">
     <div class="container">
-        <div class="header__inner">
+        <div class="c-header__inner">
             @@include('../Logo/index.html', { 
-                class: "header__logo",
+                class: "c-header__logo",
                 theme: "@@theme", 
             })
 
             @@if(typeof navigation == 'undefined' || navigation !== 'false') {
                 @@include('../Navigation/index.html', { 
-                    class: "header__navigation",
+                    class: "c-header__navigation",
                     theme: "@@theme",
                 })
             }
 
-            <div class="header__row">
+            <div class="c-header__row">
                 @@if(typeof search !== 'undefined' && search === 'true'){
                     @@include('../Input/index.html', {
-                        class: "field--bg-gray header__search",
+                        class: "field--bg-gray c-header__search",
                     })
                 }
                 
                 @@include('../c-Authbar/index.html', { 
-                    class: "c-authbar--theme-responsive header__authbar",
+                    class: "c-authbar--theme-responsive c-header__authbar",
                     theme: "@@theme",  
                 })
 
                 @@if(typeof theme !== 'undefined' && theme == 'light'){
-                    <button class="header__button">
-                        <svg class="header__icon header__icon--color-light">
+                    <button class="c-header__button">
+                        <svg class="c-header__icon c-header__icon--color-light">
                             <use xlink:href="./sprites/icons.svg#icon-grid"></use>
                         </svg>
                     </button>
                 }
                 
                 @@if(typeof theme == 'undefined' || theme !== 'light'){
-                    <button class="button header__button">
-                        <svg class="header__icon">
+                    <button class="button c-header__button">
+                        <svg class="c-header__icon">
                             <use xlink:href="./sprites/icons.svg#icon-grid"></use>
                         </svg>
                     </button>
