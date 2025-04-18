@@ -1,0 +1,29 @@
+<div class="c-menu-mobile-api @@class" data-lenis-prevent>
+    <div class="container c-menu-mobile-api__container">
+        <div class="c-menu-mobile-api__inner">
+            <div class="c-menu-mobile-api__header">
+                @@include('../Logo/index.html', {
+                    theme: 'dark',
+                })
+                <div class="c-menu-mobile-api__row">
+                    <button class="button button--rounded button--size-l button--hover-font-gray c-menu-mobile-api__button">ENG</button>
+                    <button class="button c-menu-mobile-api__close">
+                        <svg class="c-menu-mobile-api__icon">
+                            <use xlink:href="./sprites/icons.svg#icon-close"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            @@include('../Input/index.html', {
+                class: "field--bg-gray c-menu-mobile-api__search",
+            })
+            @@include('../MenuApi/index.html', {
+                class: "c-menu-mobile-api__menu",
+            })
+            @@include('../Authbar/index.html', {
+                class: "authbar--theme-menu c-menu-mobile-api__authbar",
+                theme: "api",
+            })
+        </div>
+    </div>
+</div>

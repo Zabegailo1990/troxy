@@ -5,6 +5,19 @@
     padding: 12px;
     overflow-y: auto;
 
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #D9D9D9;
+        border-radius: 3px;
+    }
+
 
     &__title{
         display: flex;

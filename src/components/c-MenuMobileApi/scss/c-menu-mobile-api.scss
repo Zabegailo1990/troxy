@@ -1,0 +1,84 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.c-menu-mobile-api{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: 100vh;
+    overflow-y: auto;
+
+    &__container{
+        min-height: 100vh;
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        padding-bottom: 66px;
+
+        @include respond(tablet){
+            padding-bottom: 93px;
+        }
+    }
+
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 90px;
+        width: 100%;
+        margin-bottom: 10px;
+
+        @include respond(tablet){
+            margin-bottom: 18px;
+        }
+    }
+
+    &__row{
+        display: flex;
+        align-items: center;
+    }
+
+    &__button{
+        display: none;
+
+        @include respond(tablet){
+            display: block;
+            margin-right: 29px;
+        }
+    }
+
+    &__icon{
+        stroke: #17263F;
+        width: 24px;
+        height: 24px;
+    }
+
+    &__search,
+    &__menu{
+        width: 100%;
+    }
+
+    &__search{
+        margin-bottom: 6px;
+
+        @include respond(tablet){
+            margin-bottom: 18px;
+        }
+    }
+    
+    &__menu{
+        max-height: 411px;
+        margin-bottom: 10px;
+
+        @include respond(tablet){
+            max-height: 759px;
+            margin-bottom: 22px;
+        }
+    }
+
+    &__authbar{
+        margin: 0 auto;
+    }
+}
