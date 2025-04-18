@@ -66,34 +66,6 @@ $(document).ready(function() {
 });
 
 
-$(document).ready(function() {
-    $('.menu-api__link').click(function(e) {
-        if ($(this).closest('.menu-api__sublist').length) {
-            e.stopPropagation();
-            return;
-        }
-        
-        e.preventDefault();
-        
-        let $currentSublist = $(this).closest('.menu-api__item').find('.menu-api__sublist');
-        let $currentIcon = $(this).closest('.menu-api__row').find('.menu-api__icon');
-
-        let isActive = $currentIcon.hasClass('menu-api__icon--active');
-
-        // Закрываем все открытые sublist, кроме текущего
-        $('.menu-api__sublist').not($currentSublist).slideUp(200);
-        $('.menu-api__icon').removeClass('menu-api__icon--active');
-
-        // Если иконка уже активна, просто убираем класс и не открываем sublist
-        if (isActive) {
-            $currentSublist.slideUp(200);
-        } else {
-            $currentIcon.addClass('menu-api__icon--active');
-            $currentSublist.slideToggle(200);
-        }
-    });
-});
-
 
 $(document).ready(function () {
     let $underline = $('.tabs-api__underline');
