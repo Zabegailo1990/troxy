@@ -1,0 +1,13 @@
+<div class="card card--bg-blur card--radius-s card--border-gradient c-card-plus @@class">
+    <div class="card__inner">
+        <svg class="c-card-plus__icon">
+            <use xlink:href="@@icon"></use>
+        </svg>
+        <div class="c-card-plus__col">
+            @@if(typeof title !== 'undefined' && title){
+                <h4 class="title title--size-xs c-card-plus__title">@@title</h4>
+            }
+            <p class="text text--size-m c-card-plus__text">@@text</p>
+        </div>
+    </div>
+</div>

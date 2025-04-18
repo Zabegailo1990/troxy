@@ -1,6 +1,6 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.card-plus{
+.c-card-plus{
     width: 240px;
     height: 165px;
     padding: 16px;
@@ -57,12 +57,12 @@
             width: 400px;
         }
 
-        .card-plus__icon{
+        .c-card-plus__icon{
             margin-left: auto;
         }
 
 
-        .card-plus__col{
+        .c-card-plus__col{
             text-align: left;
             margin-left: 0;
             max-width: 253px;
