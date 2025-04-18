@@ -1,6 +1,6 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.slider-advantages{
+.c-slider-advantages{
 
     @include respond(pc){
         padding: 0;
