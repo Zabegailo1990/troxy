@@ -1,6 +1,6 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.card-news{
+.c-card-news{
     display: block;
     min-width: 242px;
     
@@ -55,7 +55,7 @@
             width: 400px;
         }
         
-        .card-news__frame{
+        .c-card-news__frame{
             height: 186px;
 
             @include respond(tablet){
