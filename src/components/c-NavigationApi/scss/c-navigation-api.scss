@@ -1,21 +1,12 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.navigation-api{
+.c-navigation-api{
     display: flex;
     justify-content: space-between;
 
     &__row{
         display: flex;
         align-items: center;
-    }
-
-    &__link{
-        font-size: 12px;
-        font-weight: 700;
-
-        @include respond(tablet){
-            font-size: 16px;
-        }
     }
     
     &__icon{
