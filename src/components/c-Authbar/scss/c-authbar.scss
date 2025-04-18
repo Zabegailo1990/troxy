@@ -18,7 +18,7 @@
     // Aдаптируемый
     &--theme-responsive{
 
-        .authbar__button{
+        .c-authbar__button{
             display: none;
 
             @include respond(tablet){
@@ -37,19 +37,19 @@
     &--theme-api{
         flex-direction: row-reverse;
 
-        .authbar__button,
-        .authbar__button{
+        .c-authbar__button,
+        .c-authbar__button{
             display: none;
         }
 
         @include respond(tablet){
-            .authbar__button--lang{
+            .c-authbar__button--lang{
                 display: block;
             }
         }
 
         @include respond(pc){
-            .authbar__button--signin{
+            .c-authbar__button--signin{
                 display: block;
             }
         }
@@ -59,7 +59,7 @@
     &--theme-menu{
 
         @include respond(tablet){
-            .authbar__button--lang{
+            .c-authbar__button--lang{
                 display: none;
             }
         }
