@@ -1,0 +1,32 @@
+<div class="c-authbar @@class">
+
+    @@if(typeof theme !== 'undefined' && theme !== 'light' && theme !== 'footer' && theme !== 'menu' && theme !== 'api'){
+        <button class="button button--fz-m button--size-l button--rounded button--hover-font-gray c-authbar__button c-authbar__button--signup">Sign up</button>
+        <button class="button button--fz-m button--size-l button--rounded button--color-light button--hover-bg-blue button--bg-blue c-authbar__button c-authbar__button--signin">Sign in</button>
+        <button class="button button--fz-m button--size-l button--rounded button--hover-font-gray c-authbar__button c-authbar__button--lang">ENG</button>
+    }
+    
+    @@if(typeof theme !== 'undefined' && theme == 'light'){
+        <button class="button button--fz-m button--color-light button--size-l button--rounded button--hover-font-blue c-authbar__button c-authbar__button--signup">Sign up</button>
+        <button class="button button--fz-m button--color-light button--size-l button--rounded button--bg-blue button--hover-bg-blue c-authbar__button c-authbar__button--signin">Sign in</button>
+        <button class="button button--fz-m button--color-light button--size-l button--rounded button--hover-font-blue c-authbar__button c-authbar__button--lang">ENG</button>
+    }
+
+    @@if(typeof theme !== 'undefined' && theme == 'footer'){
+        <button class="button button--fz-m button--size-l button--rounded button--bg-light button--hover-gray c-authbar__button c-authbar__button--signup">Sign up</button>
+        <button class="button button--fz-m button--color-light button--size-l button--rounded button--hover-font-gray c-authbar__button c-authbar__button--signin">Sign in</button>
+        <button class="button button--fz-m button--color-light button--size-l button--rounded button--hover-font-gray c-authbar__button c-authbar__button--lang">ENG</button>
+    }
+
+    @@if(typeof theme !== 'undefined' && theme == 'menu'){
+        <button class="button button--fz-m button--size-l button--rounded button--bg-light button--hover-bg-gray c-authbar__button c-authbar__button--signup">Sign up</button>
+        <button class="button button--fz-m button--color-light button--size-l button--rounded button--hover-font-blue c-authbar__button c-authbar__button--signin">Sign in</button>
+        <button class="button button--fz-m button--color-light button--size-l button--rounded button--hover-font-blue c-authbar__button c-authbar__button--lang">ENG</button>
+    }
+
+    @@if(typeof theme !== 'undefined' && theme == 'api'){
+        <button class="button button--fz-m button--size-l button--color-light button--rounded button--bg-blue button--hover-bg-blue c-authbar__button c-authbar__button--signup">Sign up</button>
+        <button class="button button--fz-m button--size-l button--rounded button--hover-font-gray c-authbar__button c-authbar__button--signin">Sign in</button>
+        <button class="button button--fz-m button--size-l button--rounded button--hover-font-gray c-authbar__button c-authbar__button--lang">ENG</button>
+    }
+</div>

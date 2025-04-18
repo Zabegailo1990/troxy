@@ -4,7 +4,7 @@ const tl = gsap.timeline({
     scrollTrigger: {
         scrub: 1,
         trigger: ".s-benefits",
-        start: "top top",
+        start: "top 90",
         end: "4000",
         pin: true,
     }

@@ -1,0 +1,36 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.c-card-benefit{
+    width: 100%;
+    max-width: 713px;
+    min-height: 369px;
+    padding: 37px 32px;
+
+    @include respond(tablet){
+        min-height: 323px;
+        padding: 28px 30px;
+    }
+
+    &__title{
+        margin-bottom: 20px;
+
+        @include respond(tablet){
+            margin-bottom: 25px;
+        }
+    }
+
+    &__text{
+
+        &:not(:last-child){
+            margin-bottom: 27px;
+
+            @include respond(tablet){
+                margin-bottom: 34px;
+            }
+        }
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
