@@ -1,4 +1,4 @@
-<a class="card card--radius-m @@prevClass card-extend @@class" href="#">
+<a class="card card--radius-m @@prevClass c-card-extend @@class" href="#">
     <picture class="card__background">
         @@if(typeof bgPc !== 'undefined' && bgPc){
             <source class="card__img" media="(min-width: 1440px)" srcset="@@bgPc">
@@ -9,13 +9,13 @@
     <div class="card__inner">
         
         @@if(theme == 'dark'){
-            <h3 class="title--size-s title--color-blue card-extend__title">@@title</h3>
+            <h3 class="title--size-s title--color-blue c-card-extend__title">@@title</h3>
             @@if(typeof text !== 'undefined' && text){
-                <p class="text text--size-m card-extend__text">@@text</p>
+                <p class="text text--size-m c-card-extend__text">@@text</p>
             }
             @@if(typeof label !== 'undefined' && label == 'true'){
                 <div class="card__row">
-                    <p class="text text--size-m card-extend__label">From</p>
+                    <p class="text text--size-m c-card-extend__label">From</p>
                     <h3 class="title title--size-s title--color-dark">@@price</h3>
                 </div>
             }
@@ -28,13 +28,13 @@
         }
 
         @@if(theme == 'light'){
-            <h3 class="title--size-s title--color-light card-extend__title">@@title</h3>
+            <h3 class="title--size-s title--color-light c-card-extend__title">@@title</h3>
             @@if(typeof text !== 'undefined' && text){
-                <p class="text text--size-m card-extend__text text--color-light card-extend__text">@@text</p>
+                <p class="text text--size-m c-card-extend__text text--color-light c-card-extend__text">@@text</p>
             }
             @@if(typeof label !== 'undefined' && label == 'true'){
                 <div class="card__row">
-                    <p class="text text--size-m text--color-light card-extend__label">From</p>
+                    <p class="text text--size-m text--color-light c-card-extend__label">From</p>
                     <h3 class="title title--size-s title--color-light">@@price</h3>
                 </div>
             }

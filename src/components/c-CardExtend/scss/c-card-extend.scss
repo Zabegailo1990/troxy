@@ -1,6 +1,6 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.card-extend{
+.c-card-extend{
     padding: 26px;
 
     @include respond(tablet){
@@ -58,7 +58,7 @@
             height: 337px;
         }
         
-        & .card-extend__text{
+        & .c-card-extend__text{
             @include respond(pc){
                 max-width: 349px;
             }
@@ -100,11 +100,11 @@
             width: 620px;
             height: 377px;
 
-            & .card-extend__title{
+            & .c-card-extend__title{
                 max-width: 320px;
             }
 
-            & .card-extend__text{
+            & .c-card-extend__text{
                 max-width: 349px;
             }
         }
