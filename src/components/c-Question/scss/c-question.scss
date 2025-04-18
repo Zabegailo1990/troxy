@@ -1,6 +1,6 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.question{
+.c-question{
     background-color: #fff;
     overflow: hidden;
     border-radius: 20px;
@@ -11,6 +11,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 24px;
+        cursor: pointer;
 
         @include respond(tablet){
             padding: 28px;
@@ -31,6 +32,7 @@
     }
 
     &__icon{
+        display: block;
         flex-shrink: 0;
         width: 12px;
         height: 18px;

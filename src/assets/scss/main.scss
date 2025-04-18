@@ -6,7 +6,6 @@
 @use './entities/title.scss';
 @use './entities/text.scss';
 @use './entities/button.scss';
-@use './entities/icon.scss';
 @use './entities/card.scss';
 @use './entities/slider.scss';
 @use './entities/section.scss';
@@ -22,7 +21,7 @@
 @use '../../components/c-Authbar/scss/c-authbar.scss';
 @use '../../components/c-Header/scss/c-header.scss';
 @use '../../components/c-Toc/scss/c-toc.scss';
-@use '../../components/Question/scss/question.scss';
+@use '../../components/c-Question/scss/c-question.scss';
 @use '../../components/c-Panel/scss/c-panel.scss';
 @use '../../components/c-Info/scss/c-info.scss';
 @use '../../components/c-Keyboard/scss/c-keyboard.scss';
