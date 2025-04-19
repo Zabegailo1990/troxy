@@ -1,3 +1,6 @@
+@use './margin-padding.css';
+@use './fontStyles.css';
+@use './grid.css';
 @use './_reset.scss';
 @use './_fonts.scss';
 @use './mixins/_mediaQuery';
@@ -99,7 +102,7 @@
 
 
 // Страницы
-@use '../../pages/p-Home/scss/p-home.scss';
+@use '../../../p-home.scss';
 @use '../../pages/p-Tariffs/scss/p-tariffs.scss';
 @use '../../pages/p-ProxyLimit/scss/p-proxy-limit.scss';
 @use '../../pages/p-ByCountry/scss/p-by-country.scss';

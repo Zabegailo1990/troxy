@@ -1,6 +1,6 @@
-@use "../../../assets/scss/mixins/mediaQuery" as *;
+@use "./src/assets/scss/mixins/mediaQuery" as *;
 
-.home{
+.p-home{
 
     &__intro{
         position: relative;

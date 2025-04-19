@@ -14,15 +14,15 @@
     @@include('./src/components/c-Header/index.html', {
         class: "c-header--bg-blur body__header",
     })
-    <div class="home">
-        <div class="home__intro perspective">
-            <picture class="home__background">
-                <source class="home__img" media="(min-width: 1440px)" srcset="./images/section_present_bg_pc.jpg">
-                <source class="home__img" media="(min-width: 780px)" srcset="./images/section_present_bg_pc.jpg">
-                <img class="home__img" src="./images/section_present_bg_pc.jpg">
+    <div class="p-home">
+        <div class="p-home__intro perspective">
+            <picture class="p-home__background">
+                <source class="p-home__img" media="(min-width: 1440px)" srcset="./images/section_present_bg_pc.jpg">
+                <source class="p-home__img" media="(min-width: 780px)" srcset="./images/section_present_bg_pc.jpg">
+                <img class="p-home__img" src="./images/section_present_bg_pc.jpg">
             </picture>
             @@include('./src/sections/s-Present/index.html', {
-                class: 'home__present s-present--theme-light',
+                class: 'p-home__present s-present--theme-light',
                 title: "Effective proxies for business with <br>a unique digital footprint from $0.058",
                 text: "Get a convenient and economical proxy service",
                 button_1: "Choose tariff",
@@ -30,8 +30,8 @@
                 rating: 'true',
                 themeHeader: 'light',
             })
-            <img class="home__animate home__animate--top perspective__first" src="images/page_home_ani_2.png" alt="">
-            <img class="home__animate home__animate--bottom perspective__second" src="images/page_home_ani_1.png" alt="">
+            <img class="p-home__animate p-home__animate--top perspective__first" src="images/page_home_ani_2.png" alt="">
+            <img class="p-home__animate p-home__animate--bottom perspective__second" src="images/page_home_ani_1.png" alt="">
         </div>
         @@include("./src/sections/s-Benefits/index.html")
         @@include("./src/sections/s-Prime/index.html")
@@ -42,29 +42,29 @@
             button_1: "Choose solution",
             button_2: "Test free",
         })
-        <div class="section section--indent-m home__section-marquee">
+        <div class="section section--indent-m p-home__section-marquee">
             <div class="container">
-                <h2 class="title title--size-m title--pos-center home__subtitle home__subtitle--space-small">All popular locations</h2>
-                <p class="text text--size-m home__text">Didn't find the proxy type or location you need? We will select and provide a personal solution for your purposes upon request</p>
-                <button class="button button--size-l button--rounded button--bg-blue button--fz-m button--color-light button--hover-bg-blue home__button home__button--space">All locations</button>
+                <h2 class="title title--size-m title--pos-center p-home__subtitle p-home__subtitle--space-small">All popular locations</h2>
+                <p class="text text--size-m p-home__text">Didn't find the proxy type or location you need? We will select and provide a personal solution for your purposes upon request</p>
+                <button class="button button--size-l button--rounded button--bg-blue button--fz-m button--color-light button--hover-bg-blue p-home__button p-home__button--space">All locations</button>
                 @@include('./src/components/c-SliderFlags/index.html', { 
-                    class: "home__slider home__slider--tablet-off" 
+                    class: "p-home__slider p-home__slider--tablet-off" 
                 })
                 @@include('./src/components/c-Marquee/index.html', { 
-                    class: "home__marquee" 
+                    class: "p-home__marquee" 
                 })
             </div>
         </div>
         <div class="section section--indent-m">
             <div class="container">
-                <div class="home__row">
-                    <h2 class="title title--size-m title--pos-center home__subtitle home__subtitle--left">Proxies for <span class="title--color-blue">any purpose of your business</span></h2>
+                <div class="p-home__row">
+                    <h2 class="title title--size-m title--pos-center p-home__subtitle p-home__subtitle--left">Proxies for <span class="title--color-blue">any purpose of your business</span></h2>
                     @@include('./src/components/c-SliderServices/index.html', { 
-                        class: "home__slider home__slider--services home__slider--tablet-off"
+                        class: "p-home__slider p-home__slider--services p-home__slider--tablet-off"
                     })
-                    <button class="button button--size-l button--rounded button--bg-blue button--color-light button--fz-m button--hover-bg-blue home__button home__button--tablet-off">All purposes</button>
+                    <button class="button button--size-l button--rounded button--bg-blue button--color-light button--fz-m button--hover-bg-blue p-home__button p-home__button--tablet-off">All purposes</button>
                     @@include('./src/components/c-Features/index.html', {
-                        class: 'home__features',
+                        class: 'p-home__features',
                     })
                 </div>
             </div>
