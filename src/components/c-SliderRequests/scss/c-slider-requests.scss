@@ -1,6 +1,6 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.slider-requests{
+.c-slider-requests{
 
     @include respond(pc){
        padding: 0;
