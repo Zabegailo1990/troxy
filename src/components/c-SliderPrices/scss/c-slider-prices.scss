@@ -1,6 +1,6 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.slider-prices{
+.c-slider-prices{
     
     @include respond(tablet){
         max-width: 700px;
