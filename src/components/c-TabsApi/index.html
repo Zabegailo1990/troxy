@@ -1,0 +1,23 @@
+<div class="c-tabs-api @@class">
+    <div class="c-tabs-api__row">
+        <div class="c-tabs-api__tab c-tabs-api__tab--active">Python</div>
+        <div class="c-tabs-api__tab">Javascript</div>
+        <div class="c-tabs-api__tab">cURL</div>
+        <span class="c-tabs-api__underline"></span>
+    </div>
+    <div class="c-tabs-api__content">
+        @@include('../c-Code/index.html', { 
+            class: "c-tabs-api__item",
+        })
+        
+        @@include('../c-Code/index.html', { 
+            class: "c-tabs-api__item",
+            style: 'style="display: none;"'
+        })
+
+        @@include('../Url/index.html', { 
+            class: "c-tabs-api__item",
+            style: 'style="display: none;"'
+        })
+    </div>
+</div>
