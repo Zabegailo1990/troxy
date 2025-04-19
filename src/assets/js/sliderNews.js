@@ -23,8 +23,8 @@ $(document).ready(function(){
         $('.c-slider-articles__inner').slick({
             slidesToShow: 3,
             slidesToScroll: 1,
-            prevArrow: $('.slider-news__button--prev'),
-            nextArrow: $('.slider-news__button--next'),
+            prevArrow: $('.s-slider-news__button--prev'),
+            nextArrow: $('.s-slider-news__button--next'),
             infinite: false,
             variableWidth: true,
             swipe: true,
