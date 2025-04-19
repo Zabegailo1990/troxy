@@ -1,6 +1,6 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.slider-udp{
+.c-slider-udp{
 
     @include respond(pc){
         padding: 0;
