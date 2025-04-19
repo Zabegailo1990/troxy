@@ -1,6 +1,6 @@
 @use '../../../assets/scss/mixins/mediaQuery' as *;
 
-.slider-pluses{
+.c-slider-pluses{
 
     @include respond(tablet){
         padding: 0;
