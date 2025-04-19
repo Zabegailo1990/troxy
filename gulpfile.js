@@ -60,27 +60,8 @@ function main() {
             basepath: '@file',
             indent: true,
         }))
-        // Удаляет пустой тег с @@empty
-        // .pipe(replace(/<(\w+)[^>]*\s@@empty\s*[^>]*>[\s\S]*?<\/\1>/g, ''))
-        //Если тег не пустой — удаляет только сам маркер
-        // .pipe(replace(/\s+@@empty/g, ''))
-        // Удаляем одиночные теги с @@ в атрибутах
-        // .pipe(replace(/<[^>]+\s+[a-zA-Z-]+="@@[^"]*"[^>]*\/?>/g, ''))
-        // Удаляем парные теги, если внутри есть @@
-        // .pipe(replace(/<(\w+)[^>]*>\s*[^<>]*@@[^<>]*\s*<\/\1>/g, ''))
-        // Удаляем @@ внутри class, оставляя сам класс
         .pipe(replace(/\s+@@[a-zA-Z0-9-_]+/g, ''))
-        // Удаляем полностью пустые теги (кроме <script>, <use>, <span>)
-        // .pipe(replace(/<(?!script\b|use\b|span\b|td\b|td\b|canvas\b|textarea\b)(\w+)[^>]*>\s*<\/\1>/g, ''))
-        // Удаляем родительский тег, если внутри него только пустые теги (кроме одиночных)
-        // .pipe(replace(/<(\w+)[^>]*>\s*(?:<(?!img|td|span|use|br|hr|meta|link|input|source|area|col|embed|param|track|wbr)[\w-]+[^>]*>\s*<\/[\w-]+>\s*)+<\/\1>/g, ''))
-        // Удаляем теги img с @@ в src
-        // .pipe(replace(/<img[^>]+src="@@[^"]*"[^>]*>/g, ''))
-        // Удаляем пустые строки
-        .pipe(replace(/^\s*[\r\n]/gm, ''))
-
-        // .pipe(replace(/<div[^>]*>\s*(<(?!img|span|td|use|br|hr|meta|link|input|source|area|col|embed|param|track|wbr)[\w-]+[^>]*>\s*<\/[\w-]+>\s*)*<\/div>/g, ''))
-        
+        .pipe(replace(/^\s*[\r\n]/gm, ''))        
         .pipe(gulp.dest(paths.html.dest));
 };
 
@@ -93,30 +74,8 @@ function pages() {
             basepath: '@file',
             indent: true,
         }))
-
-        // Удаляет пустой тег с @@empty
-        // .pipe(replace(/<(\w+)[^>]*\s@@empty\s*[^>]*>[\s\S]*?<\/\1>/g, ''))
-        //Если тег не пустой — удаляет только сам маркер
-        // .pipe(replace(/\s+@@empty/g, ''))
-        // Удаляем одиночные теги с @@ в атрибутах
-        // .pipe(replace(/<[^>]+\s+[a-zA-Z-]+="@@[^"]*"[^>]*\/?>/g, ''))
-        // Удаляем парные теги, если внутри есть @@
-        // .pipe(replace(/<(\w+)[^>]*>\s*[^<>]*@@[^<>]*\s*<\/\1>/g, ''))
-        // Удаляем @@ внутри class, оставляя сам класс
         .pipe(replace(/\s+@@[a-zA-Z0-9-_]+/g, ''))
-        // Удаляем полностью пустые теги (кроме <script>, <use>, <span>)
-        // .pipe(replace(/<(?!script\b|use\b|span\b|td\b|td\b|canvas\b|textarea\b)(\w+)[^>]*>\s*<\/\1>/g, ''))
-        // Удаляем родительский тег, если внутри него только пустые теги (кроме одиночных)
-        // .pipe(replace(/<(\w+)[^>]*>\s*(?:<(?!img|td|canvas|span|use|br|hr|meta|link|input|source|area|col|embed|param|track|wbr)[\w-]+[^>]*>\s*<\/[\w-]+>\s*)+<\/\1>/g, ''))
-        // Удаляем теги img с @@ в src
-        // .pipe(replace(/<img[^>]+src="@@[^"]*"[^>]*>/g, ''))
-        // Удаляем пустые строки
         .pipe(replace(/^\s*[\r\n]/gm, '')) 
-
-        // .pipe(replace(/<div[^>]*>\s*(<(?!img|span|td|use|br|hr|meta|link|input|source|area|col|embed|param|track|wbr)[\w-]+[^>]*>\s*<\/[\w-]+>\s*)*<\/div>/g, ''))
-
-
-
         .pipe(flatten())
         .pipe(gulp.dest(paths.pages.dest));
 };
