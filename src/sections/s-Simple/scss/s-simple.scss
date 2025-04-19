@@ -1,0 +1,22 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.s-simple{
+
+    &__title{
+        margin-bottom: 36px;
+
+        @include respond(tablet){
+            margin-bottom: 65px;
+        }
+    }
+    
+    &__text{
+        &:not(:last-child){
+            margin-bottom: 26px;
+
+            @include respond(tablet){
+                margin-bottom: 34px;
+            }
+        }
+    }
+}

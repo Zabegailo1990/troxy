@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
-const triggerElement = document.querySelector(".present__header") || document.querySelector(".header__page");
+const triggerElement = document.querySelector(".s-present__header") || document.querySelector(".header__page");
 
 gsap.to(".body__header", {
     top: 0,

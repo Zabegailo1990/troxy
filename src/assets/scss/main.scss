@@ -31,11 +31,9 @@
 @use '../../components/c-MenuApi/scss/c-menu-api.scss';
 @use '../../components/c-BannerWiki/scss/c-banner-wiki.scss';
 @use '../../components/c-MenuWiki/scss/c-menu-wiki.scss';
-@use '../../components/c-ListServices/scss/c-list-services.scss';
 @use '../../components/c-MenuMobile/scss/c-menu-mobile.scss';
 @use '../../components/c-MenuMobileApi/scss/c-menu-mobile-api.scss';
 @use '../../components/c-Filters/scss/c-filters.scss';
-@use '../../components/c-ListToc/scss/c-list-toc.scss';
 @use '../../components/c-Pagination/scss/c-pagination.scss';
 @use '../../components/c-Player/scss/c-player.scss';
 
@@ -49,15 +47,17 @@
 @use '../../components/c-CardAffiliate/scss/c-card-affiliate.scss';
 @use '../../components/c-CardNews/scss/c-card-news.scss';
 
+@use '../../components/c-ListToc/scss/c-list-toc.scss';
+@use '../../components/c-ListServices/scss/c-list-services.scss';
 @use '../../components/c-ListFlags/scss/c-list-flags.scss';
-@use '../../components/c-SliderAdvantages/scss/c-slider-advantages.scss';
-
-@use '../../components/c-SliderRequests/scss/c-slider-requests.scss';
-@use '../../components/c-SliderUdp/scss/c-slider-udp.scss';
-
-@use '../../components/c-SliderPrices/scss/c-slider-prices.scss';
 @use '../../components/c-ListPrograms/scss/c-list-programs.scss';
 @use '../../components/c-ListScripts/scss/c-list-scripts.scss';
+@use '../../components/c-ListArticles/scss/c-list-articles.scss';
+
+@use '../../components/c-SliderAdvantages/scss/c-slider-advantages.scss';
+@use '../../components/c-SliderRequests/scss/c-slider-requests.scss';
+@use '../../components/c-SliderUdp/scss/c-slider-udp.scss';
+@use '../../components/c-SliderPrices/scss/c-slider-prices.scss';
 @use '../../components/c-SliderPluses/scss/c-slider-pluses.scss';
 @use '../../components/c-SliderMix/scss/c-slider-mix.scss';
 @use '../../components/c-SliderFeatures/scss/c-slider-features.scss';
@@ -66,9 +66,12 @@
 @use '../../components/c-SliderServices/scss/c-slider-services.scss';
 @use '../../components/c-SliderPurposes/scss/c-slider-purposes.scss';
 @use '../../components/c-SliderLimits/scss/c-slider-limits.scss';
-@use '../../components/c-ListArticles/scss/c-list-articles.scss';
-@use '../../components/c-ProxyChecker/scss/c-proxy-checker.scss';
+@use '../../components/c-SliderHome/scss/c-slider-home.scss';
+
 @use '../../components/c-ProxyList/scss/c-proxy-list.scss';
+
+
+@use '../../components/c-ProxyChecker/scss/c-proxy-checker.scss';
 @use '../../components/c-ProxyFilters/scss/c-proxy-filters.scss';
 @use '../../components/c-Code/scss/c-code.scss';
 @use '../../components/c-MenuPage/scss/c-menu-page.scss';
@@ -77,7 +80,6 @@
 @use '../../components/c-Url/scss/c-url.scss';
 @use '../../components/c-NotifyApi/scss/c-notify-api.scss';
 @use '../../components/c-NavigationApi/scss/c-navigation-api.scss';
-@use '../../components/c-SliderHome/scss/c-slider-home.scss';
 @use '../../components/c-Gradient/scss/c-gradient.scss';
 @use '../../components/c-Marquee/scss/c-marquee.scss';
 @use '../../components/c-Breadcrumbs/scss/c-breadcrumbs.scss';
@@ -85,22 +87,18 @@
 
 
 // Секции
-@use '../../sections/Present/scss/present.scss';
-@use '../../sections/Prime/scss/prime.scss';
-@use '../../sections/Benefits/scss/benefits.scss';
-@use '../../sections/Banner/scss/banner.scss';
-@use '../../sections/Locations/scss/locations.scss';
-@use '../../sections/Advantages/scss/advantages.scss';
-@use '../../sections/Faq/scss/faq.scss';
-@use '../../sections/Supplier/scss/supplier.scss';
-@use '../../sections/SliderNews/scss/slider-news.scss';
-@use '../../sections/Footer/scss/footer.scss';
-@use '../../sections/Simple/scss/simple.scss';
-@use '../../sections/Countries/scss/countries.scss';
-@use '../../sections/ProxyPlans/scss/proxy-plans.scss';
-@use '../../sections/Goal/scss/goal.scss';
+@use '../../sections/s-Present/scss/s-present.scss';
+@use '../../sections/s-Prime/scss/s-prime.scss';
+@use '../../sections/s-Benefits/scss/s-benefits.scss';
+@use '../../sections/s-Banner/scss/s-banner.scss';
+@use '../../sections/s-Advantages/scss/s-advantages.scss';
+@use '../../sections/s-Faq/scss/s-faq.scss';
+@use '../../sections/s-Supplier/scss/s-supplier.scss';
+@use '../../sections/s-SliderNews/scss/s-slider-news.scss';
+@use '../../sections/s-Footer/scss/s-footer.scss';
+@use '../../sections/s-Simple/scss/s-simple.scss';
 @use '../../sections/s-Comfort/scss/s-comfort.scss';
-@use '../../sections/FooterApi/scss/footer-api.scss';
+@use '../../sections/s-FooterApi/scss/s-footer-api.scss';
 
 
 // Страницы

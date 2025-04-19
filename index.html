@@ -21,8 +21,8 @@
                 <source class="home__img" media="(min-width: 780px)" srcset="./images/section_present-1_bg_pc.jpg">
                 <img class="home__img" src="./images/section_present-1_bg_pc.jpg">
             </picture>
-            @@include('./src/sections/Present/index.html', {
-                class: 'home__present present--theme-light',
+            @@include('./src/sections/s-Present/index.html', {
+                class: 'home__present s-present--theme-light',
                 title: "Effective proxies for business with <br>a unique digital footprint from $0.058",
                 text: "Get a convenient and economical proxy service",
                 button_1: "Choose tariff",
@@ -33,9 +33,9 @@
             <img class="home__animate home__animate--top perspective__first" src="images/page_home_ani_2.png" alt="">
             <img class="home__animate home__animate--bottom perspective__second" src="images/page_home_ani_1.png" alt="">
         </div>
-        @@include("./src/sections/Benefits/index.html")
-        @@include("./src/sections/Prime/index.html")
-        @@include('./src/sections/Banner/index.html', {
+        @@include("./src/sections/s-Benefits/index.html")
+        @@include("./src/sections/s-Prime/index.html")
+        @@include('./src/sections/s-Banner/index.html', {
             bgNum: "1",
             title: "Does your business need a customized solution?",
             text: "We will select a high-quality and effective solution for you personally at the best price",
@@ -69,7 +69,7 @@
                 </div>
             </div>
         </div>
-        @@include('./src/sections/Banner/index.html', {
+        @@include('./src/sections/s-Banner/index.html', {
             bgNum: "2",
             title: "Does your business need a customized solution?",
             text: "We will select a high-quality and effective solution for you personally at the best price",
@@ -77,13 +77,13 @@
             button_2: "Test free"
         })
         @@include('./src/sections/s-Comfort/index.html')
-        @@include('./src/sections/Advantages/index.html')
+        @@include('./src/sections/s-Advantages/index.html')
         <div class="section section--indent-m">
-            @@include('./src/sections/Supplier/index.html')
+            @@include('./src/sections/s-Supplier/index.html')
         </div>
-        @@include('./src/sections/Faq/index.html')
-        @@include('./src/sections/SliderNews/index.html')
-        @@include('./src/sections/Footer/index.html', {
+        @@include('./src/sections/s-Faq/index.html')
+        @@include('./src/sections/s-SliderNews/index.html')
+        @@include('./src/sections/s-Footer/index.html', {
             bgPc: "./images/section_footer_bg_pc.jpg",
             bgTb: "./images/section_footer_bg_tb.jpg",
             bgMb: "./images/section_footer_bg_mb.jpg"

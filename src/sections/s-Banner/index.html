@@ -1,0 +1,22 @@
+<div class="s-banner @@class">
+    <picture class="s-banner__background">
+        <source class="s-banner__img" media="(min-width: 1440px)" srcset="./images/section_banner-@@bgNum_bg_pc.jpg">
+        <source class="s-banner__img" media="(min-width: 780px)" srcset="./images/section_banner-@@bgNum_bg_pc.jpg">
+        <img class="s-banner__img" src="./images/section_banner-@@bgNum_bg_pc.jpg">
+    </picture>
+    <div class="container">
+        <div class="s-banner__inner">
+            <h2 class="title title--size-m title--color-light s-banner__title">@@title</h2>
+            <p class="text text--size-m text--color-light s-banner__text">@@text</p>
+            @@if(typeof button_2 !== 'undefined' && button_2){
+                <div class="s-banner__row">
+                    <button class="button button--size-l button--fz-m button--rounded button--color-light button--bg-blue button--hover-bg-blue s-banner__button">@@button_1</button>
+                    <button class="button button--size-l button--fz-m button--rounded button--bg-light button--hover-bg-gray s-banner__button">@@button_2</button>
+                </div>
+            }
+            @@if(typeof button_2 == 'undefined'){
+                <button class="button button--fz-m button--size-l button--rounded button--color-light button--bg-blue button--hover-bg-blue s-banner__button">@@button_1</button>
+            }
+        </div>
+    </div>
+</div>

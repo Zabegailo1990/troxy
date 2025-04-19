@@ -1,0 +1,58 @@
+<div class="s-present @@class">
+    @@include('../../components/c-Promo/index.html')
+    @@include('../../components/c-Header/index.html', {
+        class: "s-present__header",
+        theme: '@@themeHeader',
+    })
+    <div class="container s-present__container">
+        <div class="s-present__inner">
+    
+            @@if(typeof rating !== 'undefined' && rating == 'true'){
+                <div class="s-present__rating">
+                    <img class="s-present__img" src="./images/present_section_trustpilot.svg">
+                    <img class="s-present__img" src="./images/present_section_trustpilot.svg">
+                    <img class="s-present__img" src="./images/present_section_trustpilot.svg">
+                </div>
+            }
+    
+            @@if(typeof flag !== 'undefined' && flag) {
+                <div class="s-present__group">
+                    <svg class="s-present__icon">
+                        <use xlink:href="./sprites/flags.svg#icon-flag_@@flag"></use>
+                    </svg>
+                    <h1 class="title title--size-l title--pos-center s-present__title">@@title</h1>
+                </div>
+            }
+    
+            @@if(typeof flag == 'undefined'){
+                <h1 class="title title--size-l title--pos-center s-present__title s-present__title--space">@@title</h1>
+            }
+    
+            <p class="text text--size-m s-present__text">@@text</p>
+
+            @@if(typeof button_2 !== 'undefined' && button_2){
+                <div class="s-present__row">
+                    <button class="button button--fz-m button--size-l button--rounded button--color-light button--bg-blue button--hover-bg-blue s-present__button">@@button_1</button>
+                    <button class="button button--fz-m button--size-l button--rounded button--bg-light button--hover-bg-gray s-present__button">@@button_2</button>
+                </div>
+            }
+            @@if(typeof button_2 == 'undefined'){
+                <button class="button button--fz-m button--size-l button--rounded button--color-light button--bg-blue button--hover-bg-blue s-present__button s-present__button--space">@@button_1</button>
+            }
+            <ul class="s-present__list">
+                <li class="s-present__item">
+                    <p class="text text--size-m s-present__statistic">99,99% uptime</p>
+                </li>
+                <li class="s-present__item">
+                    <p class="text text--size-m s-present__statistic">&lt;0.2s avg speed</p>
+                </li>
+                <li class="s-present__item">
+                    <p class="text text--size-m s-present__statistic">195+ locations</p>
+                </li>
+                <li class="s-present__item">
+                    <p class="text text--size-m s-present__statistic">25 000+ clients</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
