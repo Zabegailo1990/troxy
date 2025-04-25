@@ -1,0 +1,38 @@
+.modal{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    display: none;
+
+    &--active{
+        display: block;
+    }
+
+    &__overlay{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: inherit;
+        height: inherit;
+        background-color: rgba(23, 38, 63, 0.5);
+        padding: 0 24px;
+    }
+
+    &__inner{
+        position: relative;
+    }
+
+    &__button{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 10;
+    }
+
+    &__icon{
+        width: 18px;
+        height: 18px;
+        stroke: #2E7AF5;
+    }
+}

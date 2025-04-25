@@ -5,6 +5,7 @@
 @use './_fonts.scss';
 @use './mixins/_mediaQuery';
 @use './entities/body.scss';
+@use './entities/checkbox.scss';
 @use './entities/container.scss';
 @use './entities/title.scss';
 @use './entities/text.scss';
@@ -13,12 +14,18 @@
 @use './entities/slider.scss';
 @use './entities/section.scss';
 @use './entities/select.scss';
+@use './entities/modal.scss';
 
 // Вендоры
 @use '../../vendors/slick/slick.css';
 
 // Компоненты
 
+
+
+@use '../../components/c-Gradient/scss/c-gradient.scss';
+@use '../../components/c-ModalInfo/scss/c-modal-info.scss';
+@use '../../components/c-FormInfo/scss/c-form-info.scss';
 @use '../../components/c-CardBenefit/scss/c-card-benefit.scss';
 @use '../../components/c-CardPlus/scss/c-card-plus.scss';
 @use '../../components/c-CardFlag/scss/c-card-flag.scss';
@@ -50,7 +57,6 @@
 @use '../../components/c-SliderLimits/scss/c-slider-limits.scss';
 @use '../../components/c-SliderHome/scss/c-slider-home.scss';
 
-@use '../../components/c-Gradient/scss/c-gradient.scss';
 @use '../../components/c-Logo/scss/c-logo.scss';
 @use '../../components/c-Search/scss/c-search.scss';
 @use '../../components/c-Navigation/scss/c-navigation.scss';

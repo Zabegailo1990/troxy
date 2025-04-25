@@ -55,5 +55,9 @@
             <path fill="#fff" style="fill: var(--color1, #fff)" d="M0.092 29.16v-26.203c0-2.204 2.429-3.544 4.293-2.368l20.521 12.944c1.73 1.091 1.744 3.609 0.026 4.719l-20.521 13.26c-1.863 1.204-4.319-0.134-4.319-2.351z"></path>
         </symbol>
 
+        <symbol id="icon-checkbox" viewBox="0 0 12 9" fill="none">
+            <path d="M11.3327 1L3.99935 8.33333L0.666016 5" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+
     </defs>
 </svg>

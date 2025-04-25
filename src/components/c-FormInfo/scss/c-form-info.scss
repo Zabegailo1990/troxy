@@ -1,0 +1,128 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.c-form-info{
+    position: relative;
+    background-color: #F8F8F8;
+    width: 327px;
+    padding: 20px 20px 39px 20px;
+    border-radius: 20px;
+
+    @include respond(tablet){
+        width: 546px;
+        padding: 54px 60px 54px 60px;
+    }
+
+    @include respond(pc){
+        width: 1030px;
+    }
+
+    &__icon{
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        stroke: #2E7AF5;
+        right: 20px;
+        top: 20px;
+    }
+
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        height: 100%;
+        z-index: 1;
+    }
+
+    &__col{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &--pc-visible{
+            display: none;
+
+            @include respond(pc){
+                display: block;
+            }
+        }
+    }
+
+    &__title{
+        margin-bottom: 8px;
+    }
+
+    &__text{
+        margin-bottom: 22px;
+    }
+
+    &__fields{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 22px;
+
+        @include respond(tablet){
+            gap: 14px;
+        }
+    }
+    
+    &__row{
+        display: flex;
+        gap: 14px;
+    }
+    
+    &__field{
+        font-size: 12px;
+        width: 100%;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.6);
+        padding: 0 14px;
+        border: 1px solid transparent;
+        transition: all .3s;
+
+        @include respond(tablet){
+            font-size: 16px;
+        }
+
+        &::placeholder{
+            color: #617597;
+    
+            @include respond(tablet){
+                font-size: 16px;
+            }
+        }
+
+        &--active{
+            border-color:#2E7AF5;
+        }
+    }
+    
+    &__input{
+        height: 34px;
+
+        @include respond(tablet){
+            height: 39px;
+        }
+        
+    }
+    
+    &__textarea{
+        height: 109px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        resize: none;
+    }
+    
+    &__checkbox{
+        margin-bottom: 22px;
+
+        @include respond(tablet){
+            margin-bottom: 23px;
+        }
+    }
+
+    &__frame{
+        width: 424px;
+        height: 485px;
+    }
+}
