@@ -15,6 +15,66 @@
         flex-shrink: 0;
     }
 
+    &__select{
+        position: relative;
+    }
+
+    &__selected{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 0 32px;
+
+        &--color-light{
+            color: #fff;
+        }
+        
+        @include respond(tablet){
+            min-height: 54px;
+            padding: 0 34px;
+        }
+    }
+
+    &__options{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -10px); // X: центрируем, Y: поднимаем вверх
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-radius: 5px;
+        padding: 7px 15px;
+
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+
+        &--active {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, 0); // X: остаётся центрированным, Y: нормальное положение
+        }
+
+        &--bg-light{
+            background-color: #fff;
+        }
+    }
+
+    &__value{
+        font-size: 16px;
+        font-weight: 600;
+
+        &:not(:last-child){
+            margin-bottom: 4px;
+        }
+
+        &--color-blue{
+            color: #2E7AF5;
+        }
+    }
+
     // Aдаптируемый
     &--theme-responsive{
 

@@ -9,7 +9,16 @@
     @@if(typeof theme !== 'undefined' && theme == 'light'){
         <button class="button button--fz-m button--color-light button--size-l button--rounded button--hover-font-blue c-authbar__button c-authbar__button--signup">Sign up</button>
         <button class="button button--fz-m button--color-light button--size-l button--rounded button--bg-blue button--hover-bg-blue c-authbar__button c-authbar__button--signin">Sign in</button>
-        <button class="button button--fz-m button--color-light button--size-l button--rounded button--hover-font-blue c-authbar__button c-authbar__button--lang">ENG</button>
+        <div class="c-authbar__select">
+            <div class="c-authbar__selected c-authbar__selected--color-light">ENG</div>
+            <ul class="c-authbar__options c-authbar__options--bg-light">
+                <li class="c-authbar__value c-authbar__value--color-blue c-authbar--selected">ENG</li>
+                <li class="c-authbar__value c-authbar__value--color-blue">DE</li>
+                <li class="c-authbar__value c-authbar__value--color-blue">ISP</li>
+                <li class="c-authbar__value c-authbar__value--color-blue">JP</li>
+                <li class="c-authbar__value c-authbar__value--color-blue">RUS</li>
+            </ul>
+        </div>
     }
 
     @@if(typeof theme !== 'undefined' && theme == 'footer'){
