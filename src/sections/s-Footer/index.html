@@ -223,10 +223,16 @@
                 </div>
             </div>
         </div>
-        @@include("../../components/c-Authbar/index.html", { 
-            class: "s-footer__authbar s-footer__authbar--pc-visible",
-            theme: 'footer', 
-        })
+        <div class="s-footer__authbar s-footer__authbar--pc-visible">
+            @@include("../../components/c-Authbar/index.html", { 
+                class: "c-authbar--select-hidden ",
+                theme: 'footer', 
+            })
+            @@include("../../components/c-SelectLang/index.html", {
+                class: "c-select-lang--show-up",
+                theme: 'footer',
+            })
+        </div>
     </div>
     <div class="s-footer__bottom">
         <p class="text text--footer text--color-light">© 2024 Troxy, All Rights Reserved</p>

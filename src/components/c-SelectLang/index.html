@@ -1,10 +1,34 @@
-<div class="c-select-lang__select">
-    <div class="c-select-lang__selected c-select-lang__selected--color-light">ENG</div>
-    <ul class="c-select-lang__options c-select-lang__options--bg-light">
-        <li class="c-select-lang__value c-select-lang__value--color-blue c-select-lang--selected">ENG</li>
-        <li class="c-select-lang__value c-select-lang__value--color-blue">DE</li>
-        <li class="c-select-lang__value c-select-lang__value--color-blue">ISP</li>
-        <li class="c-select-lang__value c-select-lang__value--color-blue">JP</li>
-        <li class="c-select-lang__value c-select-lang__value--color-blue">RUS</li>
-    </ul>
+<div class="c-select-lang @@class js-select">
+    @@if(typeof theme == 'undefined'){
+        <div class="c-select-lang__selected c-select-lang__selected--hover-gray js-select__selected">ENG</div>
+        <ul class="c-select-lang__options c-select-lang__options--bg-gray js-select__options">
+            <li class="c-select-lang__value c-select-lang__value--hover-gray js-select__value">ENG</li>
+            <li class="c-select-lang__value c-select-lang__value--hover-gray js-select__value">DE</li>
+            <li class="c-select-lang__value c-select-lang__value--hover-gray js-select__value">ISP</li>
+            <li class="c-select-lang__value c-select-lang__value--hover-gray js-select__value">JP</li>
+            <li class="c-select-lang__value c-select-lang__value--hover-gray js-select__value">RUS</li>
+        </ul>
+    }
+
+    @@if(typeof theme !== 'undefined' && theme == 'light'){
+        <div class="c-select-lang__selected c-select-lang__selected--color-light c-select-lang__selected--hover-blue js-select__selected">ENG</div>
+        <ul class="c-select-lang__options c-select-lang__options--bg-light js-select__options">
+            <li class="c-select-lang__value c-select-lang__value--color-blue c-select-lang__value--hover-blue js-select__value">ENG</li>
+            <li class="c-select-lang__value c-select-lang__value--color-blue c-select-lang__value--hover-blue js-select__value">DE</li>
+            <li class="c-select-lang__value c-select-lang__value--color-blue c-select-lang__value--hover-blue js-select__value">ISP</li>
+            <li class="c-select-lang__value c-select-lang__value--color-blue c-select-lang__value--hover-blue js-select__value">JP</li>
+            <li class="c-select-lang__value c-select-lang__value--color-blue c-select-lang__value--hover-blue js-select__value">RUS</li>
+        </ul>
+    }
+
+    @@if(typeof theme !== 'undefined' && theme == 'footer'){
+        <div class="c-select-lang__selected c-select-lang__selected--color-light c-select-lang__selected--hover-gray js-select__selected">ENG</div>
+        <ul class="c-select-lang__options c-select-lang__options--bg-light js-select__options">
+            <li class="c-select-lang__value c-select-lang__value--hover-gray js-select__value">ENG</li>
+            <li class="c-select-lang__value c-select-lang__value--hover-gray js-select__value">DE</li>
+            <li class="c-select-lang__value c-select-lang__value--hover-gray js-select__value">ISP</li>
+            <li class="c-select-lang__value c-select-lang__value--hover-gray js-select__value">JP</li>
+            <li class="c-select-lang__value c-select-lang__value--hover-gray js-select__value">RUS</li>
+        </ul>
+    }
 </div>

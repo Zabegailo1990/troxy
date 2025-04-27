@@ -6,7 +6,9 @@
                     theme: 'dark',
                 })
                 <div class="c-menu-mobile-api__row">
-                    <button class="button button--rounded button--size-l button--hover-font-gray c-menu-mobile-api__button">ENG</button>
+                    @@include("../c-SelectLang/index.html", {
+                        class: "c-select-lang--show-down c-menu-mobile-api__select",
+                    })
                     <button class="button c-menu-mobile-api__close">
                         <svg class="c-menu-mobile-api__icon">
                             <use xlink:href="./sprites/icons.svg#icon-close"></use>

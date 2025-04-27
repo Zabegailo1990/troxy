@@ -1,0 +1,114 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.c-select-lang{
+    position: relative;
+
+    &__selected{
+        font-size: 16px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        cursor: pointer;
+        padding: 0 32px;
+        transition: all .3s;
+    
+        @include respond(tablet){
+            min-height: 54px;
+            padding: 0 34px;
+        }
+
+        &--color-light{
+            color: #fff;
+        }
+
+        &--hover-blue{
+            &:hover{
+                color: #95BEFF;
+            }
+        }
+
+        &--hover-gray{
+            &:hover{
+                color: #617597;
+            }
+        }
+    }
+    
+    &__options{
+        position: absolute;
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-radius: 5px;
+        padding: 7px 15px;
+        z-index: 10;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    
+        &--bg-light{
+            background-color: #fff;
+        }
+
+        &--bg-gray{
+            background-color: #F7F7F7;
+        }
+    }
+    
+    &__value{
+        font-size: 16px;
+        font-weight: 600;
+        transition: all .3s;
+        cursor: pointer;
+    
+        &:not(:last-child){
+            margin-bottom: 4px;
+        }
+    
+        &--color-blue{
+            color: #2E7AF5;
+        }
+
+        &--hover-gray{
+            &:hover{
+                color: #617597;
+            }
+        }
+
+        &--hover-blue{
+            &:hover{
+                color: #95BEFF;
+            }
+        }
+    }
+
+    // Эффекты появления
+    &--show-down {
+        .c-select-lang__options {
+            transform: translate(-50%, -10px);
+            visibility: visible;
+        }
+
+        .js-select__options--active {
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+    }
+
+    &--show-up{
+        .c-select-lang__options {
+            top: 0;
+            transform: translate(-50%, -90%);
+            visibility: visible;
+        }
+
+        .js-select__options--active {
+            opacity: 1;
+            transform: translate(-50%, -100%);
+        }
+    }
+}

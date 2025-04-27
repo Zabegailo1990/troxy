@@ -41,7 +41,7 @@
         align-items: center;
     }
 
-    &__button{
+    &__select{
         display: none;
 
         @include respond(tablet){
