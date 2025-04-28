@@ -1,6 +1,6 @@
-@use './margin-padding.css';
-@use './fontStyles.css';
-@use './grid.css';
+@use './margin-padding.scss';
+@use './fontStyles.scss';
+@use './grid.scss';
 @use './_reset.scss';
 @use './_fonts.scss';
 @use './mixins/_mediaQuery';

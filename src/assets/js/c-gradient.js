@@ -1,22 +1,20 @@
-
 /*
 *   Stripe WebGl Gradient Animation
 *   ScrollObserver functionality to disable animation when not scrolled into view has been disabled and 
 *   commented out for now.
 */
 
-
 //Converting colors to proper format
 function normalizeColor(hexCode) {
     return [(hexCode >> 16 & 255) / 255, (hexCode >> 8 & 255) / 255, (255 & hexCode) / 255]
-  } ["SCREEN", "LINEAR_LIGHT"].reduce((hexCode, t, n) => Object.assign(hexCode, {
+} ["SCREEN", "LINEAR_LIGHT"].reduce((hexCode, t, n) => Object.assign(hexCode, {
     [t]: n
-  }), {});
-  
-  //Essential functionality of WebGl
-  //t = width
-  //n = height
-  class MiniGl {
+}), {});
+
+//Essential functionality of WebGl
+//t = width
+//n = height
+class MiniGl {
     constructor(canvas, width, height, debug = false) {
         const _miniGl = this,
             debug_output = -1 !== document.location.search.toLowerCase().indexOf("debug=webgl");
@@ -263,29 +261,35 @@ function normalizeColor(hexCode) {
     render() {
         this.gl.clearColor(0, 0, 0, 0), this.gl.clearDepth(1), this.meshes.forEach(e => e.draw())
     }
-  }
-  
-  
-  
-  //Sets initial properties
-  function e(object, propertyName, val) {
+}
+
+//Sets initial properties
+function e(object, propertyName, val) {
     return propertyName in object ? Object.defineProperty(object, propertyName, {
         value: val,
         enumerable: !0,
         configurable: !0,
         writable: !0
     }) : object[propertyName] = val, object
-  }
-  
-  //c-Gradient object
-  class Gradient {
+}
+
+//c-Gradient object
+class Gradient {
     constructor(...t) {
-        e(this, "el", void 0), e(this, "cssVarRetries", 0), e(this, "maxCssVarRetries", 200), e(this, "angle", 0), e(this, "isLoadedClass", !1), e(this, "isScrolling", !1), /*e(this, "isStatic", o.disableAmbientAnimations()),*/ e(this, "scrollingTimeout", void 0), e(this, "scrollingRefreshDelay", 200), e(this, "isIntersecting", !1), e(this, "shaderFiles", void 0), e(this, "vertexShader", void 0), e(this, "sectionColors", void 0), e(this, "computedCanvasStyle", void 0), e(this, "conf", void 0), e(this, "uniforms", void 0), e(this, "t", 1253106), e(this, "last", 0), e(this, "width", void 0), e(this, "minWidth", 1111), e(this, "height", 600), e(this, "xSegCount", void 0), e(this, "ySegCount", void 0), e(this, "mesh", void 0), e(this, "material", void 0), e(this, "geometry", void 0), e(this, "minigl", void 0), e(this, "scrollObserver", void 0), e(this, "amp", 320), e(this, "seed", 5), e(this, "freqX", 14e-5), e(this, "freqY", 29e-5), e(this, "freqDelta", 1e-5), e(this, "activeColors", [1, 1, 1, 1]), e(this, "isMetaKey", !1), e(this, "isGradientLegendVisible", !1), e(this, "isMouseDown", !1), e(this, "handleScroll", () => {
+        e(this, "el", void 0), e(this, "cssVarRetries", 0), e(this, "maxCssVarRetries", 200), e(this, "angle", 0), e(this, "isLoadedClass", !1), e(this, "isScrolling", !1), e(this, "scrollingTimeout", void 0), e(this, "scrollingRefreshDelay", 200), e(this, "isIntersecting", !1), e(this, "shaderFiles", void 0), e(this, "vertexShader", void 0), e(this, "sectionColors", void 0), e(this, "computedCanvasStyle", void 0), e(this, "conf", void 0), e(this, "uniforms", void 0), e(this, "t", 1253106), e(this, "last", 0), e(this, "width", void 0), e(this, "minWidth", 1111), e(this, "height", 600), e(this, "xSegCount", void 0), e(this, "ySegCount", void 0), e(this, "mesh", void 0), e(this, "material", void 0), e(this, "geometry", void 0), e(this, "minigl", void 0), e(this, "scrollObserver", void 0), e(this, "amp", 320), e(this, "seed", 5), e(this, "freqX", 14e-5), e(this, "freqY", 29e-5), e(this, "freqDelta", 1e-5), e(this, "activeColors", [1, 1, 1, 1]), e(this, "isMetaKey", !1), e(this, "isGradientLegendVisible", !1), e(this, "isMouseDown", !1), e(this, "handleScroll", () => {
             clearTimeout(this.scrollingTimeout), this.scrollingTimeout = setTimeout(this.handleScrollEnd, this.scrollingRefreshDelay), this.isGradientLegendVisible && this.hideGradientLegend(), this.conf.playing && (this.isScrolling = !0, this.pause())
         }), e(this, "handleScrollEnd", () => {
             this.isScrolling = !1, this.isIntersecting && this.play()
         }), e(this, "resize", () => {
-            this.width = window.innerWidth, this.minigl.setSize(this.width, this.height), this.minigl.setOrthographicCamera(), this.xSegCount = Math.ceil(this.width * this.conf.density[0]), this.ySegCount = Math.ceil(this.height * this.conf.density[1]), this.mesh.geometry.setTopology(this.xSegCount, this.ySegCount), this.mesh.geometry.setSize(this.width, this.height), this.mesh.material.uniforms.u_shadow_power.value = this.width < 600 ? 5 : 6
+            this.width = this.el.clientWidth, 
+            this.height = this.el.clientHeight,
+            this.minigl.setSize(this.width, this.height), 
+            this.minigl.setOrthographicCamera(), 
+            this.xSegCount = Math.ceil(this.width * this.conf.density[0]), 
+            this.ySegCount = Math.ceil(this.height * this.conf.density[1]), 
+            this.mesh.geometry.setTopology(this.xSegCount, this.ySegCount), 
+            this.mesh.geometry.setSize(this.width, this.height), 
+            this.mesh.material.uniforms.u_shadow_power.value = this.width < 600 ? 5 : 6
         }), e(this, "handleMouseDown", e => {
             this.isGradientLegendVisible && (this.isMetaKey = e.metaKey, this.isMouseDown = !0, !1 === this.conf.playing && requestAnimationFrame(this.animate))
         }), e(this, "handleMouseUp", () => {
@@ -297,22 +301,20 @@ function normalizeColor(hexCode) {
                     this.isMetaKey && (e = -160), this.t += e
                 }
                 this.mesh.material.uniforms.u_time.value = this.t, this.minigl.render()
-  
             }
-            if (0 !== this.last && this.isStatic) return this.minigl.render(), void this.disconnect();
-            (/*this.isIntersecting && */this.conf.playing || this.isMouseDown) && requestAnimationFrame(this.animate)
+            (this.conf.playing || this.isMouseDown) && requestAnimationFrame(this.animate)
         }), e(this, "addIsLoadedClass", () => {
-            /*this.isIntersecting && */!this.isLoadedClass && (this.isLoadedClass = !0, this.el.classList.add("isLoaded"), setTimeout(() => {
-                this.el.parentElement.classList.add("isLoaded")
+            !this.isLoadedClass && (this.isLoadedClass = !0, this.el.classList.add("isLoaded"), setTimeout(() => {
+                this.el.parentElement && this.el.parentElement.classList.add("isLoaded")
             }, 3e3))
         }), e(this, "pause", () => {
             this.conf.playing = false
         }), e(this, "play", () => {
             requestAnimationFrame(this.animate), this.conf.playing = true
-        }), e(this,"initGradient", (selector) => {
-          this.el = document.querySelector(selector);
-          this.connect();
-          return this;
+        }), e(this, "initGradient", (selector) => {
+            this.el = typeof selector === 'string' ? document.querySelector(selector) : selector;
+            this.connect();
+            return this;
         })
     }
     async connect() {
@@ -330,23 +332,10 @@ function normalizeColor(hexCode) {
             rotation: 0,
             playing: true
         }, 
-        document.querySelectorAll("canvas").length < 1 ? console.log("DID NOT LOAD HERO STRIPE CANVAS") : (
-          
-          this.minigl = new MiniGl(this.el, null, null, !0), 
-          requestAnimationFrame(() => {
-              this.el && (this.computedCanvasStyle = getComputedStyle(this.el), this.waitForCssVars())
-          })
-          /*
-          this.scrollObserver = await s.create(.1, !1),
-          this.scrollObserver.observe(this.el),
-          this.scrollObserver.onSeparate(() => {
-              window.removeEventListener("scroll", this.handleScroll), window.removeEventListener("mousedown", this.handleMouseDown), window.removeEventListener("mouseup", this.handleMouseUp), window.removeEventListener("keydown", this.handleKeyDown), this.isIntersecting = !1, this.conf.playing && this.pause()
-          }), 
-          this.scrollObserver.onIntersect(() => {
-              window.addEventListener("scroll", this.handleScroll), window.addEventListener("mousedown", this.handleMouseDown), window.addEventListener("mouseup", this.handleMouseUp), window.addEventListener("keydown", this.handleKeyDown), this.isIntersecting = !0, this.addIsLoadedClass(), this.play()
-          })*/
-  
-        )
+        this.minigl = new MiniGl(this.el, null, null, !0), 
+        requestAnimationFrame(() => {
+            this.el && (this.computedCanvasStyle = getComputedStyle(this.el), this.waitForCssVars())
+        })
     }
     disconnect() {
         this.scrollObserver && (window.removeEventListener("scroll", this.handleScroll), window.removeEventListener("mousedown", this.handleMouseDown), window.removeEventListener("mouseup", this.handleMouseUp), window.removeEventListener("keydown", this.handleKeyDown), this.scrollObserver.disconnect()), window.removeEventListener("resize", this.resize)
@@ -471,10 +460,6 @@ function normalizeColor(hexCode) {
     init() {
         this.initGradientColors(), this.initMesh(), this.resize(), requestAnimationFrame(this.animate), window.addEventListener("resize", this.resize)
     }
-    /*
-    * Waiting for the css variables to become available, usually on page load before we can continue.
-    * Using default colors assigned below if no variables have been found after maxCssVarRetries
-    */
     waitForCssVars() {
         if (this.computedCanvasStyle && -1 !== this.computedCanvasStyle.getPropertyValue("--gradient-color-1").indexOf("#")) this.init(), this.addIsLoadedClass();
         else {
@@ -484,13 +469,9 @@ function normalizeColor(hexCode) {
             requestAnimationFrame(() => this.waitForCssVars())
         }
     }
-    /*
-    * Initializes the four section colors by retrieving them from css variables.
-    */
     initGradientColors() {
         this.sectionColors = ["--gradient-color-1", "--gradient-color-2", "--gradient-color-3", "--gradient-color-4"].map(cssPropertyName => {
             let hex = this.computedCanvasStyle.getPropertyValue(cssPropertyName).trim();
-            //Check if shorthand hex value was used and double the length so the conversion in normalizeColor will work.
             if (4 === hex.length) {
                 const hexTemp = hex.substr(1).split("").map(hexTemp => hexTemp + hexTemp).join("");
                 hex = `#${hexTemp}`
@@ -498,23 +479,32 @@ function normalizeColor(hexCode) {
             return hex && `0x${hex.substr(1)}`
         }).filter(Boolean).map(normalizeColor)
     }
-  }
-  
-  
-  
-  
-  /*
-  *Finally initializing the Gradient class, assigning a canvas to it and calling Gradient.connect() which initializes everything,
-  * Use Gradient.pause() and Gradient.play() for controls.
-  *
-  * Here are some default property values you can change anytime:
-  * Amplitude:    Gradient.amp = 0
-  * Colors:       Gradient.sectionColors (if you change colors, use normalizeColor(#hexValue)) before you assign it.
-  *
-  *
-  * Useful functions
-  * Gradient.toggleColor(index)
-  * Gradient.updateFrequency(freq)
-  */
-  var gradient = new Gradient();
-      gradient.initGradient(".c-gradient__canvas");
+}
+
+// Initialize all gradients on the page
+function initAllGradients() {
+    const gradientElements = document.querySelectorAll('.c-gradient__canvas');
+    const gradients = [];
+    
+    gradientElements.forEach((element, index) => {
+        // Create a new Gradient instance for each canvas
+        const gradient = new Gradient();
+        
+        // Initialize with the element directly (not a selector)
+        gradient.initGradient(element);
+        
+        // Store the gradient instance
+        gradients.push(gradient);
+        
+        // Add unique ID to the element for potential individual control
+        element.dataset.gradientId = index;
+    });
+    
+    return gradients;
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize all gradients on the page
+    window.gradients = initAllGradients();
+});

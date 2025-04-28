@@ -1,4 +1,7 @@
 <div class="c-form-info">
+    @@include('../c-Gradient/index.html', {
+        class: "c-form-info__gradient",
+    })
     <div class="c-form-info__inner">
         <div class="c-form-info__col">
             <h2 class="title title--size-m c-form-info__title">Get in touch</h2>
@@ -22,7 +25,12 @@
                 <p class="text text--size-m checkbox__label">I agree to the <a class="text--color-blue">Terms of Service</a> and <a class="text--color-blue">Privacy Policy</a></p>
             </label>
             <button class="button button--size-l button--fz-m button--color-light button--rounded button--bg-blue button--hover-bg-blue c-form-info__button">Send</button>
-            <!-- <button class="button button--size-l button--color-light button--rounded button--bg-blue c-form-info__button">Close</button> -->
+        </div>
+        <div class="c-form-info__col" style="display: none;">
+            <img src="./images/Check.svg" alt="" class="c-form-info__success">
+            <h2 class="title title--size-m c-form-info__title">Get in touch</h2>
+            <p class="text text--size-m c-form-info__text">We will answer you in 24 hours</p>
+            <button class="button button--size-l button--color-light button--rounded button--bg-blue c-form-info__button">Close</button>
         </div>
         <div class="c-form-info__col c-form-info__col--pc-visible">
             <div class="c-form-info__frame">
