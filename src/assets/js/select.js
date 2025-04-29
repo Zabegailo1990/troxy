@@ -1,31 +1,33 @@
-$(document).ready(function () {
-    // Открытие списка при клике на .select__front
-    $("body").on("click", ".c-proxy-checker__select .select__front, .c-proxy-list__select .select__front", function (e) {
-        e.stopPropagation(); // Останавливаем всплытие
-        $(".select__options").removeClass("select__options--active"); // Закрываем другие списки
-        $(this).siblings(".select__options").toggleClass("select__options--active"); // Открываем текущий список
-    });
+$(function () {
+    const select = '.js-select';
 
-    // Выбор элемента из списка
-    $("body").on("click", ".c-proxy-checker__select .select__value, .c-proxy-list__select .select__value", function (e) {
-        e.stopPropagation(); // Останавливаем всплытие
+    $('body').on('click', `${select} .js-select__selected`, function (e) {
+        e.stopPropagation();
+        const parent = $(this).closest(select);
 
-        let $select = $(this).closest(".c-proxy-checker__select, .c-proxy-list__select"); 
-        let $name = $select.find(".select__name"); 
+        const icon = parent.find('.js-select__icon');
+        if (icon.length) {
+            icon.addClass('js-select__icon--active');
+        }
         
-        // Обновляем текст в блоке
-        $name.text($(this).text());
-
-        // Убираем старый selected и добавляем к текущему
-        $select.find(".select__value").removeClass("select__value--selected"); 
-        $(this).addClass("select__value--selected"); 
-
-        // Закрываем список
-        $select.find(".select__options").removeClass("select__options--active"); 
+        $('.js-select__options').removeClass('js-select__options--active');
+        
+        parent.find('.js-select__options').toggleClass('js-select__options--active');
     });
 
-    // Закрытие списка при клике вне него
-    $(document).on("click", function () {
-        $(".select__options").removeClass("select__options--active");
+    $('body').on('click', `${select} .js-select__value`, function (e) {
+        e.stopPropagation();
+        const parent = $(this).closest(select);
+        const text = $(this).text();
+
+        parent.find('.js-select__selected').text(text);
+        $(this).addClass('js-select__value--selected').siblings().removeClass('js-select__value--selected');
+        parent.find('.js-select__options').removeClass('js-select__options--active');
+        $('.js-select__icon').removeClass('js-select__icon--active');
+    });
+
+    $('body').on('click', function () {
+        $('.js-select__options').removeClass('js-select__options--active');
+        $('.js-select__icon').removeClass('js-select__icon--active');
     });
 });

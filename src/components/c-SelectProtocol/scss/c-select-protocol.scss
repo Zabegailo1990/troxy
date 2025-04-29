@@ -1,0 +1,90 @@
+@use '../../../assets/scss/mixins/mediaQuery' as *;
+
+.c-select-protocol{
+    position: relative;
+
+    &__row{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0 10px;
+        height: 45px;
+        border: 1px solid #CED3DC;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    &__selected{
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        line-height: 18px;
+        padding-left: 10px;
+
+        @include respond(tablet){
+            font-size: 16px;
+            line-height: 23px;
+        }
+    }
+
+    &__icon{
+        width: 12px;
+        height: 12px;
+        transition: all .3s;
+
+        &.js-select__icon--active{
+            transform: rotate(-180deg);
+        }
+    }
+
+    &__options{
+        position: absolute;
+        top: -21px;
+        right: 0;
+        display: flex;
+        width: 120px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-radius: 5px;
+        padding: 6px 0;
+        z-index: 10;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        border: 1px solid #CED3DC;
+        background-color: #F8F8F8;
+        border-radius: 10px;
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+
+        @include respond(tablet){
+            width: 183px;
+        }
+
+        &.js-select__options--active{
+            opacity: 1;
+            transform: translate(-10px, 0);
+            visibility: visible;
+            pointer-events: auto;
+        }
+    }
+
+    &__value{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 28px;
+        font-size: 16px;
+        line-height: 23px;
+        width: 100%;
+        padding: 0 18px;
+        cursor: pointer;
+
+        &.js-select__value--selected{
+            background: rgba(144, 186, 255, 0.5);
+        }
+    }
+}

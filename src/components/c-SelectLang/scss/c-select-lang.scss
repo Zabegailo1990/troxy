@@ -48,6 +48,8 @@
         z-index: 10;
         opacity: 0;
         visibility: hidden;
+        pointer-events: none;
+        
         transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
     
         &--bg-light{
@@ -58,7 +60,7 @@
             background-color: #F7F7F7;
         }
     }
-    
+
     &__value{
         font-size: 16px;
         font-weight: 600;
@@ -96,6 +98,7 @@
         .js-select__options--active {
             opacity: 1;
             transform: translate(-50%, 0);
+            pointer-events: auto;
         }
     }
 
@@ -109,6 +112,7 @@
         .js-select__options--active {
             opacity: 1;
             transform: translate(-50%, -100%);
+            pointer-events: auto;
         }
     }
 }

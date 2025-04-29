@@ -6,21 +6,10 @@
             <div class="c-proxy-list__available">Available 1 out of 2</div>
         </div>
         <div class="c-proxy-list__row">
-            <div class="select c-proxy-list__select c-proxy-list__select--hidden">
-                <div class="select__front">
-                    <div class="select__name select__name--fz-small">Filters</div>
-                    <svg class="icon select__icon">
-                        <use xlink:href="./sprites/icons.svg#icon-chevron-down"></use>
-                    </svg>
-                </div>
-                <ul class="select__options">
-                    <li class="select__value">HTTP</li>
-                    <li class="select__value select__value--selected">HTTPS</li>
-                    <li class="select__value">SOCKS4</li>
-                    <li class="select__value">SOCKS5</li>
-                </ul>
-            </div>
-            <button class="c-proxy-list__button">
+            @@include("../c-SelectFilters/index.html", {
+                class: "c-proxy-list__select",
+            })
+            <button class="button c-proxy-list__button">
                 <svg class="icon c-proxy-list__icon">
                     <use xlink:href="./sprites/icons.svg#icon-download"></use>
                 </svg>

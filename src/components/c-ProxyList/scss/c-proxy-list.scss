@@ -51,18 +51,11 @@
     }
 
     &__select{
-        position: relative;
-        height: auto;
-        min-width: 72px;
-        margin-right: 8px;
-        z-index: 1;
-
-        &--hidden{
-            display: none;
-
-            @include respond(tablet){
-                display: block;
-            }
+        display: none;
+        margin-right: 26px;
+        
+        @include respond(tablet){
+            display: block;
         }
     }
 

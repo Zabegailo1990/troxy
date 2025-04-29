@@ -6,20 +6,9 @@
     <div class="c-proxy-checker__fields">
         <div class="c-proxy-checker__item c-proxy-checker__item--select">
             <div class="c-proxy-checker__label">Type</div>
-            <div class="select select--border c-proxy-checker__select">
-                <div class="select__front">
-                    <div class="select__name">HTTPS</div>
-                    <svg class="icon select__icon">
-                        <use xlink:href="./sprites/icons.svg#icon-chevron-down"></use>
-                    </svg>
-                </div>
-                <ul class="select__options">
-                    <li class="select__value">HTTP</li>
-                    <li class="select__value select__value--selected">HTTPS</li>
-                    <li class="select__value">SOCKS4</li>
-                    <li class="select__value">SOCKS5</li>
-                </ul>
-            </div>
+            @@include("../c-SelectProtocol/index.html", {
+                class: "c-proxy-checker__select",
+            })
         </div>
         <div class="c-proxy-checker__item c-proxy-checker__item--ip">
             <label for="ip" class="c-proxy-checker__label">IP</label>

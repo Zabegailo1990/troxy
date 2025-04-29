@@ -1,21 +1,26 @@
 $(document).ready(function() {
-    // Открываем модалку сразу
-    $('.modal').addClass('modal--active');
+  // Открываем модалку
+  openModal();
 
-  
-    // Функция закрытия
-    function closeModal() {
-      $('.modal').removeClass('modal--active');
-    }
-  
-    // Клик по кнопке
-    $('.modal__button').on('click', closeModal);
-  
-    // Клик по overlay, но не по inner
-    $('.modal__overlay').on('click', function(e) {
+  // Закрытие по кнопке
+  $('body').on('click', '.modal__button', closeModal);
+
+  // Закрытие по overlay
+  $('body').on('click', '.modal__overlay', function(e) {
       if ($(e.target).is('.modal__overlay')) {
-        closeModal();
+          closeModal();
       }
-    });
   });
+
+  function openModal() {
+      $('.modal').addClass('modal--active');
+      $('body').addClass('body--no-scroll');
+  }
+
+  function closeModal() {
+      $('.modal').removeClass('modal--active');
+      $('body').removeClass('body--no-scroll');
+  }
+});
+
   

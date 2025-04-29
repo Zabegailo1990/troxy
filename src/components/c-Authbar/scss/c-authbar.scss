@@ -26,16 +26,16 @@
     // Aдаптируемый
     &--theme-responsive{
 
-        .c-authbar__button{
+        .c-authbar__button,
+        .c-authbar__select{
             display: none;
 
-            @include respond(tablet){
-                &--lang{
-                    display: block;
-                }
-            }
-
             @include respond(pc){
+                display: block;
+            }
+        }
+        .c-authbar__select{
+            @include respond(tablet){
                 display: block;
             }
         }

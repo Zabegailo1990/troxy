@@ -1,1 +1,1 @@
-$(document).ready(function(){function a(){$(".modal").removeClass("modal--active")}$(".modal").addClass("modal--active"),$(".modal__button").on("click",a),$(".modal__overlay").on("click",function(o){$(o.target).is(".modal__overlay")&&a()})});
+$(document).ready(function(){function a(){$(".modal").removeClass("modal--active"),$("body").removeClass("body--no-scroll")}$(".modal").addClass("modal--active"),$("body").addClass("body--no-scroll"),$("body").on("click",".modal__button",a),$("body").on("click",".modal__overlay",function(o){$(o.target).is(".modal__overlay")&&a()})});
