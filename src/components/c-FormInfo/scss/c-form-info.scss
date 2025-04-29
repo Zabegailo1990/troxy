@@ -139,6 +139,8 @@
     &__frame{
         width: 424px;
         height: 485px;
+        overflow: hidden;
+        border-radius: 16px;
     }
 
     &__success{
