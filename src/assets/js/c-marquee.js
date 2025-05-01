@@ -30,9 +30,9 @@ if (isTablet) {
 
     function updateSlideEffects() {
         slides.forEach(slide => {
-            const isActive = slide.classList.contains('swiper-slide-active');
+            const currentSlide = slide.classList.contains('swiper-slide-active');
                 gsap.to(slide, {
-                opacity: isActive ? 1 : 0.6,
+                opacity: currentSlide ? 1 : 0.6,
                 duration: 0.3
             });
         });
