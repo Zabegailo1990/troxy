@@ -47,7 +47,7 @@ const totalSlides = document.querySelectorAll('.c-marquee__inner .swiper-slide')
 gsap.to({}, {
   scrollTrigger: {
     trigger: ".p-home__section-marquee",
-    start: "top top",
+    start: "top 90",
     end: "+=8000",
     scrub: 2,
     pin: true,
