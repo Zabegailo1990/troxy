@@ -27,7 +27,7 @@ const swiper = new Swiper('.c-marquee', {
 });
 
 function updateSlideOpacity() {
-  const slides = document.querySelectorAll('.c-marquee__inner .swiper-slide');
+  const slides = gsap.utils.toArray('.c-marquee__inner .swiper-slide');
   
   slides.forEach(slide => {
     // Проверяем, является ли слайд активным
