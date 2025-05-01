@@ -1,4 +1,4 @@
-const slides = gsap.utils.toArray('.c-marquee__inner .swiper-slide');
+const slides = gsap.utils.toArray('.c-marquee__card');
 const totalSlides = slides.length; 
 
 const swiper = new Swiper('.c-marquee', {
@@ -30,17 +30,11 @@ const swiper = new Swiper('.c-marquee', {
 
 function updateSlideOpacity() {
     slides.forEach(slide => {
-        if (slide.classList.contains('swiper-slide-active')) {
-            gsap.to(slide, { 
-                opacity: 1, 
-                duration: 0.3 
-            });
-        } else {
-            gsap.to(slide, { 
-                opacity: 0.6, 
-                duration: 0.3 
-            }); 
-        }
+        const currentSlide = slide.classList.contains('swiper-slide-active');
+        gsap.to(slide, { 
+            opacity: currentSlide ? 1 : 0.6,
+            duration: 0.3,
+        });
     });
 }
 
