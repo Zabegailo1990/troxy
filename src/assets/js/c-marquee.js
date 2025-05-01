@@ -9,8 +9,8 @@ const swiper = new Swiper('.c-marquee', {
     rotate: 0,
     stretch: -30,
     depth: 100,
-    modifier: 2.01,
-    scale: 0.96,
+    modifier: 1.3,
+    scale: 0.95,
     slideShadows: false,
   },
   on: {
