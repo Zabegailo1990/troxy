@@ -9,6 +9,7 @@ if (isTablet) {
         effect: 'coverflow',
         slidesPerView: 'auto',
         centeredSlides: true,
+        allowTouchMove: false,
         loop: true,
         speed: 400,
         coverflowEffect: {
