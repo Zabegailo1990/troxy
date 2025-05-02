@@ -1,44 +1,27 @@
-$(document).ready(function(){
-    // Проверяем ширину экрана при загрузке
-    if (window.innerWidth >= 1440) {
-        initSlickSlider();
-    }
-
-    // Также проверяем при изменении размера окна
-    $(window).on('resize', function() {
-        if (window.innerWidth >= 1440) {
-            // Если слайдер еще не инициализирован - инициализируем
-            if (!$('.c-slider-articles__inner').hasClass('slick-initialized')) {
-                initSlickSlider();
-            }
-        } else {
-            // Если слайдер инициализирован - уничтожаем его
-            if ($('.c-slider-articles__inner').hasClass('slick-initialized')) {
-                $('.c-slider-articles__inner').slick('unslick');
-            }
+const sliderArticle = new Swiper('.c-slider-articles', {
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    navigation: {
+        nextEl: '.c-slider-articles__button--next',
+        prevEl: '.c-slider-articles__button--prev',
+    },
+    loop: false,
+    allowTouchMove: true,
+    breakpoints: {
+        375: {
+            freeMode: true,
+            slidesOffsetBefore: 24,
+            slidesOffsetAfter: 24,
+        },
+        780: {
+            slidesOffsetBefore: 40,
+            slidesOffsetAfter: 40,
+        },
+        1440: {
+            freeMode: false,
+            slidesPerView: 3,
+            slidesOffsetBefore: 0,
+            slidesOffsetAfter: 0,
         }
-    });
-
-    function initSlickSlider() {
-        $('.c-slider-articles__inner').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            prevArrow: $('.s-slider-news__button--prev'),
-            nextArrow: $('.s-slider-news__button--next'),
-            infinite: false,
-            variableWidth: true,
-            swipe: true,
-            touchMove: true,
-            responsive: [
-                {
-                    breakpoint: 1440,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1,
-                        infinite: false,
-                    }
-                }
-            ]
-        });
     }
 });

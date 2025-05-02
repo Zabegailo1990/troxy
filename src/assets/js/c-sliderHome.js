@@ -1,9 +1,11 @@
-$(document).ready(function(){
-    $('.c-slider-home__carousel').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        prevArrow: $('.c-panel__button--prev'),
-        nextArrow: $('.c-panel__button--next'),
-        infinite: false,
-    });
+const sliderHome = new Swiper('.c-slider-home', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: false,
+    allowTouchMove: true,
+    // autoHeight: true,
+    navigation: {
+        nextEl: '.c-panel__button--next',
+        prevEl: '.c-panel__button--prev',
+    },
 });

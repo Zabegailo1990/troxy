@@ -18,11 +18,34 @@
         }
     }
 
+    &__inner{
+        position: relative;
+    }
+
     &__slider{
         margin: 0 -24px;
 
         @include respond(tablet){
             margin: 0;
+        }
+    }
+
+    &__panel{
+        position: absolute;
+        top: 149px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+
+        @include respond(tablet){
+            top: 50%;
+            left: auto;
+            right: 30px;
+            transform: translateY(-50%);
+        }
+
+        @include respond(pc){
+            right: 71px;
         }
     }
 }

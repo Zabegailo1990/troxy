@@ -1,37 +1,52 @@
-<div class="slider c-slider-articles @@class">
-    <div class="slider__inner c-slider-articles__inner">
+<div class="swiper c-slider-articles @@class">
+    <div class="c-slider-articles__row">
+        <h2 class="title title--size-m">News and useful articles</h2>
+        <div class="c-slider-articles__control">
+            <button class="c-slider-articles__button c-slider-articles__button--prev">
+                <svg class="c-slider-articles__icon c-slider-articles__icon--prev">
+                    <use xlink:href="./sprites/icons.svg#icon-chevron-right"></use>
+                </svg>
+            </button>
+            <button class="c-slider-articles__button c-slider-articles__button--next">
+                <svg class="c-slider-articles__icon c-slider-articles__icon--next">
+                    <use xlink:href="./sprites/icons.svg#icon-chevron-right"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="c-slider-articles__inner swiper-wrapper">
         @@include('../c-CardNews/index.html', {
-            class: "c-slider-articles__slide",
+            class: "c-slider-articles__slide swiper-slide",
             src: "./images/component_card-news_1.jpg",
             date: "12.08.2024",
             title: "Proxy vs VPN: Understanding the Differences",
         })
         @@include('../c-CardNews/index.html', {
-            class: "c-slider-articles__slide",
+            class: "c-slider-articles__slide swiper-slide",
             src: "./images/component_card-news_2.jpg",
             date: "12.08.2024",
             title: "Web Scraping With Proxies - Quick Introduction",
         })
         @@include('../c-CardNews/index.html', {
-            class: "c-slider-articles__slide",
+            class: "c-slider-articles__slide swiper-slide",
             src: "./images/component_card-news_3.jpg",
             date: "12.08.2024",
             title: "Setting Up a Proxy in the OctoBrowser",
         })
         @@include('../c-CardNews/index.html', {
-            class: "c-slider-articles__slide",
+            class: "c-slider-articles__slide swiper-slide",
             src: "./images/component_card-news_1.jpg",
             date: "12.08.2024",
             title: "Proxy vs VPN: Understanding the Differences",
         })
         @@include('../c-CardNews/index.html', {
-            class: "c-slider-articles__slide",
+            class: "c-slider-articles__slide swiper-slide",
             src: "./images/component_card-news_2.jpg",
             date: "12.08.2024",
             title: "Web Scraping With Proxies - Quick Introduction",
         })
         @@include('../c-CardNews/index.html', {
-            class: "c-slider-articles__slide",
+            class: "c-slider-articles__slide swiper-slide",
             src: "./images/component_card-news_3.jpg",
             date: "12.08.2024",
             title: "Setting Up a Proxy in the OctoBrowser",

@@ -296,7 +296,7 @@ class Gradient {
             this.isMouseDown = !1
         }), e(this, "animate", e => {
             if (!this.shouldSkipFrame(e) || this.isMouseDown) {
-                if (this.t += Math.min(e - this.last, 1e3 / 15), this.last = e, this.isMouseDown) {
+                if (this.t += Math.min(e - this.last, 1e3 / 15) * 2, this.last = e, this.isMouseDown) {
                     let e = 160;
                     this.isMetaKey && (e = -160), this.t += e
                 }
@@ -362,7 +362,7 @@ class Gradient {
                         type: "vec2"
                     }),
                     noiseSpeed: new this.minigl.Uniform({
-                        value: 5e-6
+                        value: 5e-6 * 0.8
                     })
                 },
                 type: "struct"
@@ -386,7 +386,7 @@ class Gradient {
                         value: this.amp
                     }),
                     noiseSpeed: new this.minigl.Uniform({
-                        value: 10
+                        value: 10 * 0.8
                     }),
                     noiseFlow: new this.minigl.Uniform({
                         value: 3

@@ -11,55 +11,6 @@
             justify-content: space-between;
         }
     }
-    
-
-    &__control{
-        display: none;
-
-        @include respond(pc){
-            display: flex;
-        }
-    }
-
-    &__button{
-        transition: all .3s;
-
-        &.slick-disabled{
-            opacity: 0.5;
-        }
-
-        &--prev{
-            @include respond(pc){
-                margin-right: 6px;
-            }
-        }
-    }
-
-
-    &__slider{
-        display: flex;
-        overflow-x: auto;
-        padding: 0 24px;
-        margin: 0 -24px;
-
-        &::-webkit-scrollbar{
-            display: none;
-        }
-
-        @include respond(tablet){
-            padding: 0 40px;
-            margin: 0 -40px;
-        }
-        @include respond(pc){
-            padding: 0;
-            margin: 0;
-        }
-    }
-
-}
-
-
-.articles{
 
     &__slider{
         margin: 0 -24px;
@@ -67,9 +18,9 @@
         @include respond(tablet){
             margin: 0 -40px;
         }
-
         @include respond(pc){
             margin: 0;
         }
     }
+
 }

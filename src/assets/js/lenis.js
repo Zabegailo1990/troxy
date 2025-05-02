@@ -2,6 +2,7 @@
 const lenis = new Lenis({
     lerp: 0.1, // Плавность (меньше = более резкий скролл)
     smooth: true, // Включить плавный скролл
+    smoothTouch: false,
     direction: 'vertical', // Вертикальный скролл
   });
   
@@ -15,3 +16,9 @@ const lenis = new Lenis({
   
   // 4. Отключение стандартного скролла браузера
   gsap.ticker.lagSmoothing(0);
+
+  window.addEventListener('touchmove', (e) => {
+    if (e.target.closest('.slider') && e.cancelable) {
+        e.preventDefault();
+    }
+}, { passive: false });

@@ -15,7 +15,7 @@
 <script src="./js//c-gradient.js"></script>
 <script src="./js/smoothScroll.js"></script>
 <script src="./vendors/jquery/jquery.min.js"></script>
-<script src="./vendors/slick/slick.min.js"></script>
+
 <script src="./js/sliderNews.js"></script>
 <script src="./js/perspective.js"></script>
 <script src="./js/header.js"></script>
@@ -30,7 +30,7 @@
 <script src="./vendors/scrollTrigger/ScrollTrigger.min.js"></script>
 <script src="./js/smoothScroll.js"></script>
 <script src="./vendors/jquery/jquery.min.js"></script>
-<script src="./vendors/slick/slick.min.js"></script>
+
 <script src="./js/header.js"></script>
 <script src="./js/menuMobile.js"></script>
 

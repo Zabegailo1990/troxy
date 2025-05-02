@@ -1,9 +1,0 @@
-$(document).ready(function () {
-  $('body')
-    .on('focus', '.c-form-info__field', function () {
-      $(this).addClass('c-form-info__field--active');
-    })
-    .on('blur', '.c-form-info__field', function () {
-      $(this).removeClass('c-form-info__field--active');
-    });
-});

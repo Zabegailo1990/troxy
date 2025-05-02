@@ -2,7 +2,7 @@
 
 .c-card-news{
     display: block;
-    min-width: 242px;
+    width: 242px;
     
     @include respond(tablet){
         width: 320px;
@@ -42,8 +42,7 @@
         }
     }
 
-
-
+    // Размеры
     &--size-l{
         width: 320px;
 

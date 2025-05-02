@@ -1,0 +1,1 @@
+$(function(){var n=".js-input";$("body").on("focus",n,function(n){$(this).addClass("js-input--active")}).on("blur",n,function(n){$(this).removeClass("js-input--active")})});

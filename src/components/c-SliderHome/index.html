@@ -1,19 +1,24 @@
-<div class="c-slider-home @@class">
-    @@include('../c-Panel/index.html', {
-        class: "c-slider-home__panel",
-    })
-    <div class="c-slider-home__carousel">
-        <div class="c-slider-home__slide">
-            <img src="./images/slider-home.jpg" alt="" class="c-slider-home__img">
-        </div>
-        <div class="c-slider-home__slide">
-            <img src="./images/slider-home.jpg" alt="" class="c-slider-home__img">
-        </div>
-        <div class="c-slider-home__slide">
-            <img src="./images/slider-home.jpg" alt="" class="c-slider-home__img">
-        </div>
-        <div class="c-slider-home__slide">
-            <img src="./images/slider-home.jpg" alt="" class="c-slider-home__img">
-        </div>
+<div class="swiper c-slider-home @@class">
+    <div class="swiper-wrapper c-slider-home__inner">
+        <picture class="swiper-slide c-slider-home__slide">
+            <source class="c-slider-home__img" media="(min-width: 1440px)" srcset="./images/slider__home_pc.jpg">
+            <source class="c-slider-home__img" media="(min-width: 780px)" srcset="./images/slider__home_tb.jpg">
+            <img class="c-slider-home__img" src="./images/slider__home_mb.jpg">
+        </picture>
+        <picture class="swiper-slide c-slider-home__slide">
+            <source class="c-slider-home__img" media="(min-width: 1440px)" srcset="./images/slider__home_pc.jpg">
+            <source class="c-slider-home__img" media="(min-width: 780px)" srcset="./images/slider__home_tb.jpg">
+            <img class="c-slider-home__img" src="./images/slider__home_mb.jpg">
+        </picture>
+        <picture class="swiper-slide c-slider-home__slide">
+            <source class="c-slider-home__img" media="(min-width: 1440px)" srcset="./images/slider__home_pc.jpg">
+            <source class="c-slider-home__img" media="(min-width: 780px)" srcset="./images/slider__home_tb.jpg">
+            <img class="c-slider-home__img" src="./images/slider__home_mb.jpg">
+        </picture>
+        <picture class="swiper-slide c-slider-home__slide">
+            <source class="c-slider-home__img" media="(min-width: 1440px)" srcset="./images/slider__home_pc.jpg">
+            <source class="c-slider-home__img" media="(min-width: 780px)" srcset="./images/slider__home_tb.jpg">
+            <img class="c-slider-home__img" src="./images/slider__home_mb.jpg">
+        </picture>
     </div>
 </div>

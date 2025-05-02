@@ -1,1 +1,1 @@
-let lenis=new Lenis({lerp:.1,smooth:!0,direction:"vertical"});lenis.on("scroll",ScrollTrigger.update),gsap.ticker.add(e=>{lenis.raf(1e3*e)}),gsap.ticker.lagSmoothing(0);
+let lenis=new Lenis({lerp:.1,smooth:!0,smoothTouch:!1,direction:"vertical"});lenis.on("scroll",ScrollTrigger.update),gsap.ticker.add(e=>{lenis.raf(1e3*e)}),gsap.ticker.lagSmoothing(0),window.addEventListener("touchmove",e=>{e.target.closest(".slider")&&e.cancelable&&e.preventDefault()},{passive:!1});

@@ -3,62 +3,16 @@
 .c-slider-home{
     position: relative;
 
-    &__panel{
-        position: absolute;
-        top: 149px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1;
-
-        @include respond(tablet){
-            top: 49px;
-            left: auto;
-            right: 30px;
-            transform: translateX(0);
-        }
-
-        @include respond(pc){
-            top: 133px;
-            right: 71px;
-        }
-    }
-
-    &__carousel{
-        overflow: hidden;
-    }
-
     &__slide{
-        position: relative;
-        overflow: hidden;
         height: 200px;
         border-radius: 30px;
+        overflow: hidden;
 
         @include respond(tablet){
             height: 394px;
         }
         @include respond(pc){
             height: 609px;
-        }
-    }
-
-    .slick-slide {
-        margin: 0 10px;
-    }
-  
-    .slick-list {
-        margin: 0 -10px;
-    }
-
-    &__img{
-        position: absolute;
-        top: 84px;
-        left: 168px;
-        transform: scale(2);
-
-        @include respond(tablet){
-            position: static;
-            transform: scale(1);
-            height: 100%;
         }
     }
 }

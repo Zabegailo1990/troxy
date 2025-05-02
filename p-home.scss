@@ -136,6 +136,16 @@
         &--services{
             margin-bottom: 48px;
         }
+
+        &--articles{
+            @include respond(tablet){
+                margin: 0 -40px;
+            }
+
+            @include respond(pc){
+                margin: 0;
+            }
+        }
     }
     
     &__marquee{

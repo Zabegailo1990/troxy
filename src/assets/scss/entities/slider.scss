@@ -3,6 +3,10 @@
 .slider{
     display: flex;
     overflow-x: auto;
+    overscroll-behavior-x: contain; /* Блокирует "отскок" страницы */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x; /* Явно указываем тип скролла */
     padding: 0 24px;
 
     @include respond(tablet){
